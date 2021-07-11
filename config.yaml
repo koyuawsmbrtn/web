@@ -1,0 +1,37 @@
+baseurl: "/"
+languageCode: "en"
+title: "koyu's personal website"
+theme: "xmin"
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
+footnotereturnlinkcontents: "↩"
+
+permalinks:
+  post: "/post/:year/:month/:day/:slug/"
+
+menu:
+  main:
+    - name: Home
+      url: ""
+      weight: 10
+    - name: About
+      url: "about/"
+      weight: 20
+    - name: Notes
+      url: "notes/"
+      weight: 30
+      weight: 70
+    - name: Portfolio
+      url: "portfolio/"
+      weight: 90
+    - name: Contact
+      url: "contact/"
+      weight: 100
+
+params:
+  description: "A website built through Hugo and blogdown."
+  footer: "Made with 🐟 in 🇩🇪\n\nProudly powered by [Hugo](https://gohugo.io)"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

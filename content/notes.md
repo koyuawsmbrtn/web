@@ -1,0 +1,11 @@
+---
+title: Notes and Documentation
+---
+
+These are things I have written down so I don't forget them. You can try these out as well.
+
+* [Bookmarks](/bookmarks)
+* [Books and Anime](/books-and-anime)
+* [Current tech setup and lifestyle](/setup)
+* [Fediverse server list](/fedilist)
+* [Xbox](/xbox)

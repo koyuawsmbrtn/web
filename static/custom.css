@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #000;
+    color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+}
+hr {
+    margin: 0;
+}
+.article-meta,
+.menu a {
+    background: transparent;
+}
+a,
+a:visited {
+    color: #fbbd1a;
+}
+footer {
+    line-height: 1;
+}
+.fa-rss {
+    color: orange;
+}
+img:not(.emoji, .except) {
+    border-radius: 5px;
+    margin: 5px;
+}
+.avatar {
+    border-radius: 50% !important;
+}
+.social {
+    font-size: 24pt;
+    margin-right: 4px;
+}
+.emoji {
+    width: 15px;
+    height: 15px;
+}
+.title {
+    line-height: 1.1;
+}
+.menu li {
+    padding: 2px;
+}
+thead, tfoot, tr:nth-child(even) {
+    background: transparent;
+}
