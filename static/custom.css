@@ -19,7 +19,8 @@ hr {
     margin: 0;
 }
 .article-meta,
-.menu a {
+.menu a,
+blockquote {
     background: transparent;
 }
 a,
