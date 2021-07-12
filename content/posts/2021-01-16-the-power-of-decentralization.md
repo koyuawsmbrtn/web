@@ -9,17 +9,9 @@ categories:
   - Uncategorized
 
 ---
-So before Signal went down we were having some great discussions in our koyu.space Signal group. Now it&#8217;s been more than 24 hours since it&#8217;s down and this thanks to this guy.<figure class="wp-block-embed is-type-rich is-provider-twitter wp-block-embed-twitter">
+So before Signal went down we were having some great discussions in our koyu.space Signal group. Now it&#8217;s been more than 24 hours since it&#8217;s down and this thanks to this guy.
 
-<div class="wp-block-embed__wrapper">
-  <blockquote class="twitter-tweet" data-width="550" data-dnt="true">
-    <p lang="en" dir="ltr">
-      Use Signal
-    </p>&mdash; Elon Musk (@elonmusk) 
-    
-    <a href="https://twitter.com/elonmusk/status/1347165127036977153?ref_src=twsrc%5Etfw">January 7, 2021</a>
-  </blockquote>
-</div></figure> 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Use Signal</p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1347165127036977153?ref_src=twsrc%5Etfw">January 7, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 So why does decentralization matter? Well, it reduces the amount of friction if you want something that works reliably. For example if your server goes down one day, then you are the one you could point your fingers at. This makes such a network ultra-reliable if a user could just jump to the next available server. I think centralization of a network and therefore of power was never a great idea.
 
