@@ -26,6 +26,6 @@ Compile butt:
 make -j4
 sudo make install</code></pre>
 
-Now run the command butt from your terminal&nbsp;🎉<figure class="wp-block-image size-full is-resized">
+Now run the command butt from your terminal&nbsp;🎉
 
-<img loading="lazy" src="https://web.koyu.space/wp-content/uploads/2020/09/1595465454-290531-877d9f0c099bd7ad.png" alt="" class="wp-image-94" width="1653" height="991" srcset="https://web.koyu.space/wp-content/uploads/2020/09/1595465454-290531-877d9f0c099bd7ad.png 1653w, https://web.koyu.space/wp-content/uploads/2020/09/1595465454-290531-877d9f0c099bd7ad-300x180.png 300w, https://web.koyu.space/wp-content/uploads/2020/09/1595465454-290531-877d9f0c099bd7ad-1024x614.png 1024w, https://web.koyu.space/wp-content/uploads/2020/09/1595465454-290531-877d9f0c099bd7ad-768x460.png 768w, https://web.koyu.space/wp-content/uploads/2020/09/1595465454-290531-877d9f0c099bd7ad-1536x921.png 1536w, https://web.koyu.space/wp-content/uploads/2020/09/1595465454-290531-877d9f0c099bd7ad-1200x719.png 1200w" sizes="(max-width: 1653px) 100vw, 1653px" /> </figure>
+<img src="/wp-content/uploads/2020/09/1595465454-290531-877d9f0c099bd7ad.png" alt="" width="640"></figure>

@@ -57,3 +57,10 @@ img:not(.emoji, .except) {
 thead, tfoot, tr:nth-child(even) {
     background: transparent;
 }
+code {
+    background: #666;
+    padding: 3px;
+}
+pre {
+    box-shadow: none;
+}
