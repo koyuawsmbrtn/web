@@ -9,3 +9,4 @@ These are things I have written down so I don't forget them. You can try these o
 * [Current tech setup and lifestyle](/setup)
 * [Fediverse server list](/fedilist)
 * [Xbox](/xbox)
+* [Getting the latest Overwatch to run on Linux again](/overwatch-linux)
