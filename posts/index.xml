@@ -1,0 +1,192 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on koyu's personal website</title><link>https://web.koyu.space/posts/</link><description>Recent content in Posts on koyu's personal website</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 30 Jun 2021 01:37:07 +0000</lastBuildDate><atom:link href="https://web.koyu.space/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Windows 11…</title><link>https://web.koyu.space/2021/06/30/windows-11/</link><pubDate>Wed, 30 Jun 2021 01:37:07 +0000</pubDate><guid>https://web.koyu.space/2021/06/30/windows-11/</guid><description>&lt;p>Where should I even start, I’m disappointed…really disappointed. When I tried Windows 11 in a virtual machine it looked like it could be the next Windows XP or Windows 7. Instead it turned out that you can’t really get Windows 11 to run, even on fairly modern machines. This brings a lot of problems with it I’ll discuss in this article.&lt;/p>
+&lt;h2 id="the-e-waste-problem">The e-waste problem&lt;/h2>
+&lt;p>E-waste has been troubling us for decades now since technology existed. When computers were new nobody was thinking about potential environmentally dangerous things that’s inside of any computer. Windows computers were never built to last, because with each release Microsoft is putting the bar one higher on the system requirements. Surely any computer that’s modern could run Windows 11 perfectly fine, but the biggest issue is that Microsoft is deliberately whitelisting a very tiny fraction of computer parts out there. This doesn’t only make consumers want to buy a new PC, but also produces a lot of e-waste, because you’re throwing away your whole computer fleet for an operating system that would technically be supported on those computers you have thrown away. I could have also made the argument, that packaging the Windows operating system also produces some amount of waste, but Microsoft kind of learned that people could download ISOs off the internet and flash them onto USB sticks they already own. The problem is that Microsoft just went one step backwards with Windows 11 by removing a way to download ISO files and either forcing people to buy a boxed version or a PC preloaded with Windows 11. If you care about not being burned to death by dragging summer heats (and climate change is real) then I’d recommend that your next PC should run Linux instead, because for this you won’t need an entirely new computer.&lt;/p>
+&lt;h2 id="drm-and-more">DRM and more&lt;/h2>
+&lt;p>In general I have nothing against people excercising their right to not have their works stolen, but in the case of Microsoft it’s a completely different story. Actively hindering people to customize, refine or otherwise make the experience better is a crime against humanity. What do I mean specifically? This means that Windows 11 really tries to first make secure boot mandantory. We may not know if there will be machines locked only to run Windows, but this is against any defintion of what a computer should be. Users should have the freedom to run any program they wish on a computer, this especially includes operating systems. Also Microsoft is actively encouraging people into buying more shitty DRM services like the Adobe Creative Cloud right through their DRM-infested store front, the Microsoft Store. There is no more such disgusting thing than putting hurdles in place for something people invested real money in.&lt;/p>
+&lt;h2 id="are-you-even-trying">Are you even trying?&lt;/h2>
+&lt;p>Now we just talked about the technical aspects (or at least the glimpse of what I could get what Windows 11 will look like), but what about the general polish of the OS? I mean, yes, it’s Windows after all and Microsoft wasn’t so good with designing any user interface in their entiry history of their existance, but let’s take a look. I must say, that the whole design looks dated after staring at it for about a week or so. Don’t get me wrong, ther are even people trying to &lt;a href="https://youtu.be/MzQblqLzSF4" data-type="URL" data-id="https://youtu.be/MzQblqLzSF4" target="_blank" rel="noreferrer noopener">switch out their Macs for that design&lt;/a>, but I am not really a fan of it anymore. I just don’t get it, this looks exactly like KDE Plasma 5 and they &lt;a href="https://redd.it/oa53ii" data-type="URL" data-id="https://redd.it/oa53ii" target="_blank" rel="noreferrer noopener">even use the same wording in their ads&lt;/a>! Microsoft seems to not have it done right another time. Just no.&lt;/p>
+&lt;h2 id="conclusions">Conclusions&lt;/h2>
+&lt;p>Windows 11 will still be the bloated mess that everyone knows and loves since decades. Nothing special has been added to Windows 11 what we Linux users already had in the 90s. This is a really disappointing OS and I hope Microsoft just gives up on Windows entirely. It’s on life support, embrace it!&lt;/p></description></item><item><title>Getting the Corona Warn-App (and similar) to run on /e/OS</title><link>https://web.koyu.space/2021/05/26/getting-the-corona-warn-app-and-similar-to-run-on-e-os/</link><pubDate>Wed, 26 May 2021 22:41:00 +0000</pubDate><guid>https://web.koyu.space/2021/05/26/getting-the-corona-warn-app-and-similar-to-run-on-e-os/</guid><description>&lt;p>Some of you already heard that I use /e/OS as a daily driver now. /e/OS is an operating system for mobile phones (a few of them to be precise) made by the /e/ foundation. Unlike traditional mobile operating systems like Android or iOS the whole thing doesn’t track you. I think your phone should be your phone and not Google’s or Apple’s. Recently after seeing the video by Laura and Aral I immediately noticed that other than iOS my other option towards a privacy-friendly, but low-cost mobile device would be /e/OS.&lt;/p>
+&lt;h2 id="so-how-do-i-install-my-covid-19-tracking-app">So how do I install my COVID-19 tracking app?&lt;/h2>
+&lt;p>Here in Germany we have an app that’s called the Corona Warn-App, yours may be called differently, but the process is the same for every other app.&lt;/p>
+&lt;p>To get started you do these steps (assuming you got /e/OS installed):&lt;/p>
+&lt;ol start="0">
+&lt;li>
+Unlock your phone
+&lt;/li>
+&lt;li>
+Swipe to the App store and tap the icon
+&lt;/li>
+&lt;li>
+Then you tap categories
+&lt;/li>
+&lt;li>
+If you are in the categories view you now scroll down and tap System apps
+&lt;/li>
+&lt;li>
+Afterwards you hit &amp;#8220;Install&amp;#8221; on the only app that&amp;#8217;s there called &amp;#8220;microG Exposure Notifications&amp;#8221;
+&lt;/li>
+&lt;li>
+Then go back and hit the search icon and search for your desired COVID-19 tracking app made by your government and hit install there
+&lt;/li>
+&lt;li>
+Go to settings, system, microG and tap &amp;#8220;Exposure Notifications&amp;#8221; and enable it
+&lt;/li>
+&lt;li>
+Launch your COVID-19 tracking app and set it up.
+&lt;/li>
+&lt;/ol>
+&lt;p>You are now helping you and others detecting COVID-19 in your area! 🎉&lt;/p>
+&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://vimeo.com/342972799" target="_blank" rel="noreferrer noopener">The video by Laura Kalbag and Aral Balkan about “Small Tech”&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://e.foundation" target="_blank" rel="noreferrer noopener">/e/foundation website&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>The ly display manager</title><link>https://web.koyu.space/2021/05/11/the-ly-display-manager/</link><pubDate>Tue, 11 May 2021 22:38:00 +0000</pubDate><guid>https://web.koyu.space/2021/05/11/the-ly-display-manager/</guid><description>&lt;p>Some time ago I found a nice TTY-based display manager. I know that some folks have put startx into their .bashrc or start it manually which is okay, but not nearly as good as having a full-blown display manager that starts fast and loads everything including your user session. ly is also included in koyuOS, my own operating system based on Arch Linux, because koyuOS should be as leightweight, but easy-to-use as possible. I think I found the middle-ground there. I think choosing ly was a better decision than lightdm, because display managers like these already load up a whole X server in itself which makes the bootup process a little slower. My current koyuOS installation is using EFISTUB so I don’t have to use bootloaders and all that crap to load up my OS, the EFI firmware on-board handles it all nicely for me. I also disabled NetworkManager-wait-online.service, because it heavily influenced boot times by a few seconds. I hope I could help and you should definitely use ly, it’s a great display manager.&lt;/p>
+&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/koyuspace/koyuos" data-type="URL" data-id="https://github.com/koyuspace/koyuos" target="_blank" rel="noreferrer noopener">koyuOS&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://aur.archlinux.org/packages/ly/" data-type="URL" data-id="https://aur.archlinux.org/packages/ly/" target="_blank" rel="noreferrer noopener">ly on the AUR&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/nullgemm/ly" target="_blank" rel="noreferrer noopener">ly on GitHub&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Why I like the fediverse</title><link>https://web.koyu.space/2021/03/08/why-i-like-the-fediverse/</link><pubDate>Mon, 08 Mar 2021 18:10:23 +0000</pubDate><guid>https://web.koyu.space/2021/03/08/why-i-like-the-fediverse/</guid><description>&lt;p>I have been a fediverse user pretty much almost since around when Google+ and Diaspora were a thing. What I liked about Diaspora specifically was that it was easy for me to reach people that have similar interests as me like anime, tech and music. My biggest interest in the fediverse was the open and diverse nature of the network, because unlike traditional social networks it gave me a reason to dig deeper into maintaining my own server which I did when I began hosting a Mastodon in April 2018. Also it was open-source and decentralized and gave me a lot of freedoms in terms of customizability.&lt;/p>
+&lt;p>If you know me a little longer you know how much I love customizing things (which might be the reason why I enjoy games like Minecraft or Sims so much, but that’ll be for another blog post). Also what about the people? A social network is worth nothing without users and that’s what is the driving motivation why I like the fediverse so much, because if I wanted to have my own social network I don’t have to start from scratch and can base on an existing network. As you can see the fediverse is a cool thing and I hope more and more websites use ActivityPub (especially Twitter) so others and me can follow people over there.&lt;/p></description></item><item><title>Exploring Gemini</title><link>https://web.koyu.space/2021/02/05/exploring-gemini/</link><pubDate>Fri, 05 Feb 2021 10:11:13 +0000</pubDate><guid>https://web.koyu.space/2021/02/05/exploring-gemini/</guid><description>&lt;p>After a bit passing of time I thought to have a look at the Gemini network and see what it has to offer. The best way to start getting into Gemini is going to the official website of Gemini and have a look at the clients and proxies. koyu.space also offers you a little bit of space for your own gemini capsule. A capsule is just a synonym for a website, but since Gemini isn’t the WWW it’s called a capsule.&lt;/p>
+&lt;h2 id="differences-between-the-www-and-gemini">Differences between the WWW and Gemini&lt;/h2>
+&lt;p>Gemini URLs start with gemini:// and servers run on port 1965 (an unprivileged port). The file format for Gemini isn’t HTML, it’s GMI (short form of Gemini) with the unofficial MIME-type text/gemini. Files are served over a protocol using TCP and and modern features like TLS and GMI files are text-only with links to other capsules (just like in the early days of the WWW). Status codes are made up of two instead of three digets e.g. 2x means OK and 3x means redirect. User authentication can happen over input fields or cerificates (which is the recommended way), but so far no capsule utilizes user authentication. It has a search engine just like on the WWW, but is pretty barebones. Gemini also has mirrors of clearnet websites.&lt;/p>
+&lt;p>Taken from the project’s Gemini capsule it tries to be the following&lt;/p>
+&lt;ul>
+&lt;li>Is heavier than gopher&lt;/li>
+&lt;li>Is lighter than the web&lt;/li>
+&lt;li>Will not replace either&lt;/li>
+&lt;li>Strives for maximum power to weight ratio&lt;/li>
+&lt;li>Takes user privacy very seriously&lt;/li>
+&lt;/ul>
+&lt;h2 id="clients">Clients&lt;/h2>
+&lt;p>My clients of choice are AV-98 (CLI) and Lagrange (GUI). There are currently two proxies at portal.mozz.us (which I use) and at proxy.vulpes.one.&lt;/p>
+&lt;h2 id="where-to-start-and-good-sites">Where to start and good sites&lt;/h2>
+&lt;p>If you want to host your own capsule you can set up your own VPS with a server software of your choice. Chris Were &lt;a href="https://portal.mozz.us/gemini/gem.chriswere.uk/gemserver.gmi" target="_blank" rel="noreferrer noopener">has written down&lt;/a> a guide for it. You can also ask someone to host it for you, koyu.space and tilde.zone offer free space for your Gemini capsule.&lt;/p>
+&lt;p>Gemini directories inside of Gemini are available at medusae.space and directory.randomroad.net. geminispace.info is an updated version of the GUS search engine (which somehow doesn’t update its index since a few months as of writing). This blog is also available inside of Gemini.&lt;/p></description></item><item><title>The power of decentralization</title><link>https://web.koyu.space/2021/01/16/the-power-of-decentralization/</link><pubDate>Sat, 16 Jan 2021 15:51:43 +0000</pubDate><guid>https://web.koyu.space/2021/01/16/the-power-of-decentralization/</guid><description>&lt;p>So before Signal went down we were having some great discussions in our koyu.space Signal group. Now it’s been more than 24 hours since it’s down and this thanks to this guy.&lt;/p>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">Use Signal&lt;/p>&amp;mdash; Elon Musk (@elonmusk) &lt;a href="https://twitter.com/elonmusk/status/1347165127036977153?ref_src=twsrc%5Etfw">January 7, 2021&lt;/a>&lt;/blockquote> &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;p>So why does decentralization matter? Well, it reduces the amount of friction if you want something that works reliably. For example if your server goes down one day, then you are the one you could point your fingers at. This makes such a network ultra-reliable if a user could just jump to the next available server. I think centralization of a network and therefore of power was never a great idea.&lt;/p>
+&lt;p>This is what I liked about the 90s web. Everyone was basically forced to have their own website and therefore compete with their raw information they shared. Blogs were ultra-popular until the early 2010s and I really liked it to read my favourite blogs, especially taking care of RSS Feed lists in my feedreader. This was way better than Facebook, Twitter and the sorts.&lt;/p>
+&lt;p>Then we also have the fediverse which is exchanging data all over the place. The cool thing about the fediverse is that information is getting spread across different servers (Mastodon for example caches text content from remote servers) and websites can intercommunicate with each other. This was the internet I was dreaming of when I was reading blogs most of the time. Being now a blog-owner myself would make me very proud if we had more people hosting a blog and sharing their ideas on the internet.&lt;/p>
+&lt;p>In the end nobody would really listen to me, but imagine what a wonderful world the internet could be if everyone had their own little space they own and control and host everything on their own.&lt;/p></description></item><item><title>Rambling about Linux vs. Windows</title><link>https://web.koyu.space/2020/11/04/rambling-about-linux-vs-windows/</link><pubDate>Wed, 04 Nov 2020 23:38:22 +0000</pubDate><guid>https://web.koyu.space/2020/11/04/rambling-about-linux-vs-windows/</guid><description>&lt;p>After Effects alternative? Blender!&lt;br>
+GNOME for example uses it to create their 2D info graphic animations and AFAIK you can also add effects (which After Effects is all about)&lt;/p>
+&lt;p>Anti-cheat, I must say yes..that’s a thing, but that’s anti-competitive behaviour from Windows developers. Some developers even check and block Wine!&lt;/p>
+&lt;p>LibreOffice is a great office suite, it has everything I need and I even wrote my college papers on it. Works great!&lt;/p>
+&lt;p>CAD software is a whole different story and I hope there will be some good programs to do it right, same for very specialized Windows software for let’s say big machines.&lt;/p>
+&lt;p>These are just Windows/Linux side-by-side…but the end-goal of Linux is not growing bigger, it’s just to have a perfectly capable operating system for most people next to the proprietary walled gardens we already have for decades now. I think where Linux can shine is 1) everywhere else, but not on the desktop 2) the average grandma user that just wants to write them e-mails and surf “The Internet”.&lt;/p>
+&lt;p>Sure Linux has its advantages, but if we want to help it to grow we should get all the rather inexperienced people onto the boat and then laugh about hardcore Windows gamers then. But again: Linux’s end goal is not to grow bigger, it’s just an alternative (or better: a break) from all the garbled mess we have on the desktop.&lt;/p>
+&lt;p>What do I like about Windows?&lt;/p>
+&lt;ul>
+&lt;li>Great hardware compatibility&lt;/li>
+&lt;li>Modern features well supported (disk encryption, TPM module configuration, OEM boot logo etc.)&lt;/li>
+&lt;li>Powerful applications (Adobe, MS Office etc.)&lt;/li>
+&lt;li>Games (sorry, Linux)&lt;/li>
+&lt;li>A “known” thing everyone knows how to use it (because they probably already have a Windows computer at home)&lt;/li>
+&lt;/ul>
+&lt;p>What am I not liking about Windows?&lt;/p>
+&lt;ul>
+&lt;li>Privacy&lt;/li>
+&lt;li>Annoying nags (Cortana, Windows Update etc.)&lt;/li>
+&lt;li>Inconsistent user interface (Win32 VS UWP)&lt;/li>
+&lt;li>Almost empty Windows Store (Developers, Developers, Developers)&lt;/li>
+&lt;li>Stuff breaks more easily, especially after updates&lt;/li>
+&lt;li>Messed up Spooler (printing is hell on Windows, really)&lt;/li>
+&lt;li>Gets slow over time forcing me to switch OS or hardware&lt;/li>
+&lt;li>Preinstalled bloatware&lt;/li>
+&lt;li>Stressful user interface&lt;/li>
+&lt;li>Almost no freedoms changing things around to suit your needs&lt;/li>
+&lt;li>Costs money even though they already serve ads and mine data&lt;/li>
+&lt;li>Installer doesn’t like more than three drives and Windows Home only likes up to 16GB of RAM, Windows Pro only 2TB (but I would never be able to afford a machine with more than 2TB of RAM)&lt;/li>
+&lt;li>Community is almost dead, at least I barely get any help for my Windows system and have to fix stuff on blind luck alone&lt;/li>
+&lt;li>Updates require a restart&lt;/li>
+&lt;/ul>
+&lt;p>What do I like about Linux?&lt;/p>
+&lt;ul>
+&lt;li>A stable, fast and efficient system&lt;/li>
+&lt;li>Hackable down to the core, literally&lt;/li>
+&lt;li>Easy to use interface&lt;/li>
+&lt;li>No bloat, nags or crap&lt;/li>
+&lt;li>Free (both cost and actual freedom)&lt;/li>
+&lt;li>Updates actually fix stuff&lt;/li>
+&lt;li>Doesn’t slow down after more than half a year of use&lt;/li>
+&lt;li>Simply is my friendliest companion&lt;/li>
+&lt;li>Development is easy! (especially developing stuff for servers as they already run on Linux most of the time)&lt;/li>
+&lt;li>Installation just works (except if you use Ubuntu lol)&lt;/li>
+&lt;li>If you don’t like it patch it out&lt;/li>
+&lt;li>Generally smaller and less bloated (see above)&lt;/li>
+&lt;li>Hell lot of customization features (see above)&lt;/li>
+&lt;li>Somebody probably has a fix for it&lt;/li>
+&lt;li>Huge and active community&lt;/li>
+&lt;li>Updates don’t really require a restart and updates update everything on my system, both my software and my operating system&lt;/li>
+&lt;/ul>
+&lt;p>What am I not liking about Linux? (and yes, it’s not perfect)&lt;/p>
+&lt;ul>
+&lt;li>It’s free if you don’t value your time&lt;/li>
+&lt;li>Games (Windows just has too much of them)&lt;/li>
+&lt;li>Hardware support may be spotty (which is today almost not a problem and most of the time there are workarounds…thanks HP)&lt;/li>
+&lt;li>Not many vocal vendors selling Linux machines (which is the #1 reason why the Linux desktop isn’t there yet even though Linux was initially thought as a desktop OS)&lt;/li>
+&lt;li>Some OSS software isn’t as good as their proprietary counterparts (nothing can beat Adobe and it annoys the hell out of me that I can’t close Spotify to tray)&lt;/li>
+&lt;li>Fragmented choice of user interfaces and system base structures (makes it harder to optimize for one platform only, QT or GTK, does it have systemd etc.)&lt;/li>
+&lt;li>Butthurt /g/ community wanting to make Linux as inaccessible to “normies” as possible&lt;/li>
+&lt;li>Some radical opinions about FLOSS and Stallman which I am not a fan of&lt;/li>
+&lt;li>Chicken-egg problem (with users come developers, but developers want users)&lt;/li>
+&lt;/ul>
+&lt;p>TL;DR computers are garbage and society is shit. Linux rocks, but Windows does as well. I would prefer Linux though, because most of the time I spend on a computer is doing actual work and that’s where Linux can shine.&lt;/p></description></item><item><title>How to plan and host a Mastodon instance</title><link>https://web.koyu.space/2020/11/01/how-to-plan-and-host-a-mastodon-instance/</link><pubDate>Sun, 01 Nov 2020 00:57:24 +0000</pubDate><guid>https://web.koyu.space/2020/11/01/how-to-plan-and-host-a-mastodon-instance/</guid><description>&lt;p>As you might have heard I host my own Mastodon instance with a few other people. You might plan to host your own as well (and in most cases create a single-user instance). Maybe you are not okay with the server you’re currently on or you want to get into the dirty bits of hosting and maintaining a Mastodon instance. In this guide you will find recommendations on how to host your own Mastodon instance and what issues you might encounter while running it.&lt;/p>
+&lt;h2 id="resource-consumption">Resource consumption&lt;/h2>
+&lt;p>So before we start I’ll tell you what koyu.space consumes (a Mastodon instance with 2.1k users, an averaged-sized instance):&lt;/p>
+&lt;ul>
+&lt;li>12GB RAM in idle&lt;/li>
+&lt;li>40GB database storage (on a SSD, because we get a lot of queries)&lt;/li>
+&lt;li>More than 120GB of media (on a CDN, because it’s cheaper to host &lt;em>that&lt;/em> many media files plus we don’t have the bandwidth to stream all this)&lt;/li>
+&lt;/ul>
+&lt;p>So that might sound a lot, but that’s because we host user data of 2.1k people which are quite a lot. Your single-user instance might be happy with 2-4GB of RAM and 20GB for the DB and OS plus a CDN (because maybe you have way too many cat pictures to post).&lt;/p>
+&lt;h2 id="hosting-providers">Hosting providers&lt;/h2>
+&lt;h3 id="mastohost">masto.host&lt;/h3>
+&lt;p>masto.host is a very friendly and easy way to start your new Mastodon instance. Just sign up and it works. Hugo is a nice guy and fixed a lot of issues I encountered when I was having my instance over there. The only downside is that you don’t get into the fun stuff on actually hosting and maintaining a Mastodon instance, but it’s a good thing if you have no idea what you’re doing and you’re still not ready to play with the big guns (a Linux console). You can get a Mastodon instance up and running in 24 hours and servers start at six bucks a month. You can choose a subdomain (which is free) or bring in your own (they usually start at 90 cents per year, especially .xyz domains). If you plan to modify Mastodon and want to run it then you can’t do it here for security reasons.&lt;/p>
+&lt;h3 id="digitalocean">DigitalOcean&lt;/h3>
+&lt;p>DigitalOcean is the next host I can recommend for people who want to tinker with a Linux system and want to set up everything by themselves. They also have been successful if I had any issues. The only problem is that it might get expensive over time. Otherwise their servers run stable and fast as well which is pretty much needed for Mastodon (especially disk bandwidth for the database).&lt;/p>
+&lt;h2 id="setup-and-help">Setup and Help&lt;/h2>
+&lt;p>If you use Masto.host your Mastodon instance is already set up. It’s fully-managed hosting after all meaning you get a Mastodon instance without lifting a finger. On DigitalOcean on the other hand you have two options where one has been proven the most successful. First the DigitalOcean Markteplace already has an image with Mastodon preinstalled, but most of the time it’s a very outdated version and I am not even sure if it works correctly once set up. The other option (which is also the best) is to install it manually. You can follow the instructions over on &lt;a rel="noreferrer noopener" href="https://docs.joinmastodon.org" data-type="URL" data-id="https://docs.joinmastodon.org" target="_blank">docs.joinmastodon.org&lt;/a> which are very detailed and explain the topic very well. If you plan to have users and want them to receive e-mails you also have to get an SMTP server from somwhere. I was pretty happy with mailbox.org which want 2,50€ a month so they can continue to offer their services while being privacy-friendly (and their mail service is very fitting for a support desk+Mastodon mailer). Also a good thing about their service is that I was able to pay with my debit card over PayPal, because I don’t own a credit card, but they also offer more payment options one of which is the anonymous Paysafecard (which you can get in every gas station here in Germany and pay with cash which is the most anonymous way to pay).&lt;/p>
+&lt;p>So these are my recommendations on how to get started on hosting your own Mastodon instance. I hope I could open up your eyes a little bit and if you need a little help you can reach me on IRC at irc.koyu.space or via e-mail on &lt;a href="mailto:me@koyu.space">me@koyu.space&lt;/a>. Thanks for reading!&lt;/p></description></item><item><title>How to compile butt on Solus</title><link>https://web.koyu.space/2020/07/23/how-to-compile-butt-on-solus/</link><pubDate>Thu, 23 Jul 2020 02:51:43 +0000</pubDate><guid>https://web.koyu.space/2020/07/23/how-to-compile-butt-on-solus/</guid><description>&lt;p>This is a small tutorial on how I got &lt;code>butt&lt;/code> (broadcast using this tool) working on Solus.&lt;/p>
+&lt;p>First download the source code from here: &lt;a href="https://danielnoethen.de/butt/" target="_blank" rel="noreferrer noopener">&lt;a href="https://danielnoethen.de/butt/">https://danielnoethen.de/butt/&lt;/a>&lt;/a>&lt;br>
+and extract it. Now navigate to that folder with your terminal and issue the following commands in that folder.&lt;/p>
+&lt;p>Install compiler and dependencies:&lt;/p>
+&lt;pre class="wp-block-code">&lt;code>sudo eopkg install -c system.devel
+sudo eopkg install libogg-devel libvorbis-devel lame-devel libflac-devel portaudio-devel libsamplerate-devel fdk-aac-devel fltk-devel opus-devel libx11-devel bdwgc-dbginfo libpng-devel fontconfig-devel libxfixes-devel libxext-devel libxft-devel&lt;/code>&lt;/pre>
+&lt;p>Compile butt:&lt;/p>
+&lt;pre class="wp-block-code">&lt;code>./configure --prefix=/usr
+make -j4
+sudo make install&lt;/code>&lt;/pre>
+&lt;p>Now run the command butt from your terminal 🎉&lt;/p>
+&lt;p>&lt;img src="https://web.koyu.space/wp-content/uploads/2020/09/1595465454-290531-877d9f0c099bd7ad.png" alt="" width="640">&lt;/figure>&lt;/p></description></item><item><title>What happens if Twitter implemented ActivityPub or “It’s actually a good thing if Twitter implemented ActivityPub”</title><link>https://web.koyu.space/2019/12/21/what-happens-if-twitter-implemented-activitypub/</link><pubDate>Sat, 21 Dec 2019 14:33:17 +0000</pubDate><guid>https://web.koyu.space/2019/12/21/what-happens-if-twitter-implemented-activitypub/</guid><description>&lt;h2 id="wednesday-april-15-2020">Wednesday, April 15 2020&lt;/h2>
+&lt;p>It’s my 21st birthday and I’m waking up like usual and go to work. Once I come back home everyone I like is standing in my room and we had a big birthday party. But something is odd. I go to my computer, turn it on and wait a minute for it to boot up, open up a browser and open up koyu.space. My whole timeline is freaking out, everyone is talking about that Twitter implemented ActivityPub and therefore everyone on Twitter was suddendly able to communicate with my users on koyu.space. I shouted “Fuck, Twitter implemented ActivityPub” and the music stopped. Everyone around me was quiet for a couple of seconds until the music turned back on and everyone was cheering that Twitter finally did one thing right then what will happen next is actually a good thing which I will explain below.&lt;/p>
+&lt;h2 id="thursday-april-16-2020">Thursday, April 16 2020&lt;/h2>
+&lt;p>With the hangover from yesterday’s birthday party I woke up and went to my computer to check my notifications. Everyone was freaking out and I got a bunch of warnings how bad Twitter could be and everything so I just sat down, opened up the moderation queue: empty, I went to the accounts tab and filtered by domain “twitter.com”: everything looked clean. My mouth moved silently with the words “What the fuck?” and I just waited for some more days for my server to seed all accounts from Twitter.&lt;/p>
+&lt;h2 id="monday-april-20-2020">Monday, April 20 2020&lt;/h2>
+&lt;p>I woke up, went to work like usual and came back home and opened up koyu.space in my browser between a news article about that Twitter implemented ActivityPub and some Rule34 for me to post. So I went through all the work to find and eliminate bad behaving Twitter users or other controversial figures like Donald Trump. I didn’t ban the controversial figures though, I just muted them, because sometimes it’s just useful if you want to see what they did wrong today. I couldn’t activate authorized_fetch_mode, because that would break a lot of compatibility with Keybase and especially Twitter. So I just continue to filter out all the bad guys on Twitter until I got a clean enough view of what’s really happening. I thought &lt;strong>“This method is far better than anything else people did, because I would essentially keep the important people from Twitter and ban all the bad guys and it wouldn’t cost me that much work, because Mastodon was designed not to federate with everyone when a new server emerges except if you would activate relays.”&lt;/strong>&lt;/p>
+&lt;h2 id="tuesday-may-12-2020">Tuesday, May 12 2020&lt;/h2>
+&lt;p>I saw a couple of people joining koyu.space all of the sudden. Someone on Twitter screwed up again, but since no one really needs Twitter to still communicate with the people over there people were just going to the next Mastodon instances around them. Since I am listed on joinmastodon.org everyone could see me instantly and join my server. I filtered out all the bad guys and spam for a couple of days and then everything was still fine. Since Twitter introduced ActivityPub into their software it benefited everyone and actually made a lot of people switch to Mastodon. Twitter even went so far and actually started an advertisement campaign on Twitter to make people have a look at all the other softwares implementing ActivityPub, especially Pleroma and Mastodon. It was like the kickstart into a new world, a new internet with new faces.&lt;/p></description></item><item><title>A brief review of Madeon’s new “Good Faith” album</title><link>https://web.koyu.space/2019/12/15/a-brief-review-of-madeons-new-good-faith-album/</link><pubDate>Sun, 15 Dec 2019 09:57:39 +0000</pubDate><guid>https://web.koyu.space/2019/12/15/a-brief-review-of-madeons-new-good-faith-album/</guid><description>&lt;p>Yesterday evening I just opened up my Spotify and got notified about Madeon’s new album “Good Faith”, so eager I was waiting I grabbed a listen and found it great. I must say it’s a whole lot different what Madeon is usually doing like what we saw in Adventure.&lt;/p>
+&lt;h2 id="some-trivia">Some trivia&lt;/h2>
+&lt;p>On /r/madeon there was a riddle to solve which was quite refreshing and introduced us to some new groups of characters like “The Architects”. Later on their logos were seen everywhere like in some visual videos for Good Faith. The beam on the album cover on the Shelter EP might imply a new album which was proven to be right.&lt;/p>
+&lt;h2 id="the-ingredients">The ingredients&lt;/h2>
+&lt;p>&lt;strong>Warning: Spoilers ahead&lt;/strong>&lt;/p>
+&lt;p>The album starts with the three songs which have been teased on YouTube first and which became different EPs which might imply that these are the important songs. “Dream Dream Dream” seems like the warmup phase, “All My Friends” seems to imply something like “Welcome back, I’m still here. Did you miss me?”. Then we are taken to “Be Fine” which in some way has a little bit of a Gospel charme to it. After these three songs we are taken to Nirvana and Mania which transition with an epic drum play. Listen to yourself, it’s truly magical.&lt;/p>
+&lt;p>Nirvana itself sounds like something you could lean back with and feel all the musical elements. It actually starts quite normal still, but transitions into some Fantasy-like music which then transitions to Mania. Mania then sounds pretty funky which Madeon is quite known for in the normal part. The drums which are used to transition between these songs become the high-hats in Mania later on.&lt;/p>
+&lt;p>Around 1:30 we hear a pretty solid and great lead which then transitions back to the drums part we’ve heard at the beginning and then ends with a big bass hit and a piano solo with some crackles which then stop and then Miracle plays. Miracle itself sounds pretty chill and something you would listen in a warm winter sweater with a cup of tea or hot chocolate in front of a chimney. Around 1:06 it begins with Madeon’s usual style we know from his “Adventure” album. The song again ends again with a piano solo and Madeon singing.&lt;/p>
+&lt;p>Then we continue to listen to “No Fear No More” which also sounds like a solid Madeon song. Around 2:05 we see some sorta anime-like piano and some rocky things later on. Madeon really has it with piano in this album.&lt;/p>
+&lt;p>After this we listen to “Hold Me Just Because” which seems like a heart-breaking song. The song begins with a snippet from some sorta sitcom and then the actual song begins playing. The song ends with some French-speaking voice snippet.&lt;/p>
+&lt;p>“Heavy With Hoping” seems style-wise the same from “Hold me just because”. Another sad song on the album. Madeon, are you okay?&lt;/p>
+&lt;p>Borealis sounds like something Daft Punk would make, but also has some sad elements. Wtf.&lt;/p>
+&lt;h2 id="closing-words">Closing words&lt;/h2>
+&lt;p>The album seems to be pretty good and solid. It’s been years since we last heard something from Madeon and this is just crushing it. The album was worth waiting and I can recommend it to anyone else.&lt;/p></description></item><item><title>A quick introduction to the Fediverse</title><link>https://web.koyu.space/2019/06/23/a-quick-introduction-to-the-fediverse/</link><pubDate>Sun, 23 Jun 2019 00:54:24 +0000</pubDate><guid>https://web.koyu.space/2019/06/23/a-quick-introduction-to-the-fediverse/</guid><description>&lt;p>The Fediverse is a word consisting of “federation” and “universe” and is a place on the internet where a lot of people are communicating. It’s a social media platform, but can be more than this. It’s weird and exciting and I love that.&lt;/p>
+&lt;p>While you heard of Twitter and Facebook, you propably didn’t heard about Mastodon, Pleroma, GNU Social and PeerTube, right? These other things are social media platforms like the big brothers, but with a twist. Instead of relying on one big server, everything is being spread out. The data, moderation, costs and so on are all in the hands of it’s users.&lt;/p>
+&lt;p>The Fediverse kinda works like E-Mail. You don’t have to be on one server to communicate with people from another server and if one server goes down the rest of the network keeps running. This also means you can have a couple of different accounts on other servers with the same e-mail address as well (these are called “alts”).&lt;/p>
+&lt;p>So if I am on koyu.space and you are on e.g. mastodon.social then I could just go and interact with you like we were on the same site. Digging deeper you find out that even my blog is on the fediverse. It doesn’t have to be Mastodon you’re going with.&lt;/p>
+&lt;p>And this is where it gets spicy: Imagine you could comment a video on YouTube with your Facebook account without having to register for YouTube. This already works for the fediverse: If you’re posting a comment with Pleroma on a PeerTube video it magically appears on the PeerTube video.&lt;/p>
+&lt;blockquote class="wp-block-quote">
+&lt;p>
+Imagine you could comment a video on YouTube with your Facebook account without having to register for YouTube. This already works for the fediverse […]
+&lt;/p>
+&lt;/blockquote>
+&lt;p>And that’s not all: Every software implementing the protocols used for federation (usually ActivityPub) can be in the fediverse, even my blog! Most of this software also has features that set it apart from the usual big social network.&lt;/p>
+&lt;p>So now you’re thinking I am selling you the big fairy-tale, right? Think again. While the userbase of the fediverse is relatively small it’s a good alternative to currently well-established social networks. You will find people there in all shapes and sizes and maybe you will find people you can sympathize with. Who knows?&lt;/p></description></item></channel></rss>
