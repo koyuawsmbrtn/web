@@ -64,3 +64,12 @@ code {
 pre {
     box-shadow: none;
 }
+#nowplaying {
+    position: absolute;
+    right: 20px;
+}
+@media(max-width:800px) {
+    #nowplaying {
+        display: none;
+    }
+}
