@@ -3,7 +3,11 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background: #000;
+    background: url(/rlbunnylook_yellow.png)#000;
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-attachment: fixed;
     color: #fff;
 }
 h1,
@@ -79,11 +83,18 @@ pre {
 }
 .date {
     font-size: 10pt;
+    vertical-align: top;
+    padding-top: 5px;
 }
 .articles > li > a,
 .menu > li > a {
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
+}
+.articles > li,
+.articles {
+    list-style: none;
+    padding: 0;
 }
 @media(max-width:800px) {
     #nowplaying {
