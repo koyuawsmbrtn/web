@@ -3,11 +3,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background: url(/rlbunnylook_yellow.png)#000;
-    background-size: 300px;
-    background-repeat: no-repeat;
-    background-position: bottom left;
-    background-attachment: fixed;
+    background-color: #000;
     color: #fff;
 }
 h1,
@@ -95,6 +91,15 @@ pre {
 .articles {
     list-style: none;
     padding: 0;
+}
+@media(min-width:800px) {
+    body {
+        background-image: url(/rlbunnylook_yellow.png);
+        background-size: 300px;
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-attachment: fixed;
+    }
 }
 @media(max-width:800px) {
     #nowplaying {
