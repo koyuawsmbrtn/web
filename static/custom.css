@@ -92,14 +92,8 @@ pre {
     list-style: none;
     padding: 0;
 }
-@media(min-width:800px) {
-    body {
-        background-image: url(/rlbunnylook_yellow.png);
-        background-size: 300px;
-        background-repeat: no-repeat;
-        background-position: bottom left;
-        background-attachment: fixed;
-    }
+.emoji[alt="🇩🇪"] {
+    vertical-align: bottom;
 }
 @media(max-width:800px) {
     #nowplaying {
