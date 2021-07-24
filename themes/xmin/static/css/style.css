@@ -12,7 +12,6 @@ body {
   text-decoration: none;
   background: #eee;
   padding: 5px;
-  border-radius: 5px;
 }
 .menu, .article-meta, footer { text-align: center; }
 .title { font-size: 1.1em; }
