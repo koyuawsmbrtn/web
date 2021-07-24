@@ -68,10 +68,22 @@ pre {
 }
 #nowplaying {
     position: absolute;
-    right: 20px;
+    top: 10px;
+    right: 10px;
+    font-size: 10pt;
+}
+#nowplaying .fa {
+    font-size: 6pt;
+    padding-right: 4px;
+    vertical-align: middle;
 }
 .date {
     font-size: 10pt;
+}
+.articles > li > a,
+.menu > li > a {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
 }
 @media(max-width:800px) {
     #nowplaying {
