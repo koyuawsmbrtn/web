@@ -21,5 +21,4 @@ $(document).ready(function() {
     window.setInterval(function() {
         updateNowPlaying();
     }, 500);
-    $("body").html($("body").html().replaceAll("href=\"https://", "target=\"_blank\" href=\"https://"));
 });
