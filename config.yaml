@@ -27,10 +27,6 @@ menu:
       url: "contact/"
       weight: 100
 
-params:
-  description: "A website built through Hugo and blogdown."
-  footer: "Made with 🐟 in 🇩🇪\n\nProudly powered by [Hugo](https://gohugo.io)"
-
 markup:
   goldmark:
     renderer:
