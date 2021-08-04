@@ -11,5 +11,3 @@ title: About me
   * Listens to any music style
   * My brain might crash randomly, because it runs Windows. Sad.
   * Can program in the devil&#8217;s programming language: JavaScript
-
-I am also on <a href="https://tilde.club/~koyu/" target="_blank" rel="noopener noreferrer">Tilderadio</a> with my rock show every Thursday at 18:00 UTC.
