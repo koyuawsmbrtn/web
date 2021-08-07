@@ -8,7 +8,7 @@ I&#8217;m trying to keep my belongings as minimal as possible which is a lifesty
   * Sony CMT-EH25 Soundsystem
   * Acer X223w (Gen 2) display
   * Fujitsu beige display with 1280&#215;1024 resolution sometimes connected if I need a second display
-  * Custom built PC with a GTX 750, AMD FX-8320, 16GB DDR3 RAM, 250GB SSD (OS), 1TB HDD (fast, data), 1TB HDD (slow, archive), 1TB HDD (external, archive/backups) running standard Ubuntu 20.04 LTS called Zelda
+  * Custom built PC with a GTX 750, AMD FX-8320, 16GB DDR3 RAM, 250GB SSD (OS), 1TB HDD (fast, data), 1TB HDD (slow, archive), 1TB HDD (external, archive/backups) running elementary OS 6 called Zelda
   * Razer Ornata Chroma with OpenRazer
   * Sony Xperia XA2 H3110 smartphone (pioneer) running the stock ROM called Cloe
   * Nokia 6300 4G running KaiOS for development purposes, not a daily driver
