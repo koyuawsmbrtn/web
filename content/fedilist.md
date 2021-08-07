@@ -230,6 +230,23 @@ This is a list of instances I will recommend and meet all my requirements to be 
       <img style="width: 150px;" src="https://quietplace.xyz/apple-touch-icon.png" />
     </td>
   </tr>
+  <tr>
+    <td>
+      misskey.biribiri.dev
+    </td>
+    <td>
+      The network of 10k Misaka clones! Now powered by Misskey.
+    </td>
+    <td>
+      Doesn't block anything
+    </td>
+    <td>
+      A Misskey instance which is home for Misaka clones!
+    </td>
+    <td>
+      <img style="width: 150px;" src="https://misskey.biribiri.dev/files/33a6ce51-521d-46ed-9fc7-7cfb90226533" />
+    </td>
+  </tr>
 </table>
 
 I will probably add more instances to this list. If you know more instances that meet the above requirements and should be listed let me know at @koyu@koyu.space.
