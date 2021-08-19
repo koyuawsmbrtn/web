@@ -215,23 +215,6 @@ This is a list of instances I will recommend and meet all my requirements to be 
   </tr>
   <tr>
     <td>
-      quietplace.xyz
-    </td>
-    <td>
-      This is a city that holds the many dreams and stories of its people. Most of these stories are left untold. But some few find solace in the embrace […]
-    </td>
-    <td>
-      Doesn’t block anything, don’t be stupid, tag your stuff, etc.
-    </td>
-    <td>
-      The first Misskey instance in this list. Friendly admin, quiet place.
-    </td>
-    <td>
-      <img style="width: 150px;" src="https://quietplace.xyz/apple-touch-icon.png" />
-    </td>
-  </tr>
-  <tr>
-    <td>
       misskey.biribiri.dev
     </td>
     <td>
@@ -245,6 +228,23 @@ This is a list of instances I will recommend and meet all my requirements to be 
     </td>
     <td>
       <img style="width: 150px;" src="https://misskey.biribiri.dev/files/33a6ce51-521d-46ed-9fc7-7cfb90226533" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      metu.life
+    </td>
+    <td>
+      METU Life claims to be a chill social media for Middle East Technical University members.
+    </td>
+    <td>
+      Doesn't block anything
+    </td>
+    <td>
+      A chill social media for Middle East Technical University members. Requires a metu.edu.tr e-mail address.
+    </td>
+    <td>
+      <img style="width: 150px;" src="https://metu.life/img/pb-icon-big.png" />
     </td>
   </tr>
 </table>
