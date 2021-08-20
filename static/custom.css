@@ -66,12 +66,6 @@ code {
 pre {
     box-shadow: none;
 }
-#nowplaying {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 10pt;
-}
 #nowplaying .fa {
     font-size: 6pt;
     padding-right: 4px;
