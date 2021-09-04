@@ -8,6 +8,17 @@
     <title>{{ $title }}</title>
     <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" />
+    {{ with .Summary }}<meta name="description" content="{{ . }}">{{ end }}
+    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Permalink | absURL }}">
+    <meta property="og:title" content="{{ .Title }}">
+    {{ with .Summary }}<meta name="og:description" content="{{ . }}">{{ end }}
+    {{ with .Params.featured_image }}<meta property="og:image" content="{{ . }}">{{ end }}
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    {{ with .OutputFormats.Get "RSS" -}}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+    {{- end }}
     {{ partial "head_custom.html" . }}
   </head>
 
