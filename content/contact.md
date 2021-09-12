@@ -11,4 +11,6 @@ I'm most active over on Telegram, Discord, Snapchat, Fediverse and via E-Mail an
 For the technically inclined:
 XMPP: koyu@0day.im
 Matrix: @koyu:leftism.su (Phone only)
+
+You can also send me a message via Delta Chat
 ```
