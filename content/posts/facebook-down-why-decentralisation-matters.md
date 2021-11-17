@@ -4,6 +4,7 @@ author: koyu
 type: post
 date: 2021-10-04
 featured_image: https://images.unsplash.com/photo-1568378780196-a9a0444a9151?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDE3fHxkZWxldGUlMjBmYWNlYm9va3xlbnwwfHx8fDE2MzMzODMyMDA&ixlib=rb-1.2.1&q=80&w=2000
+url: /facebook-down-why-decentralisation-matters/
 comments:
   host: koyu.space
   username: koyuchan

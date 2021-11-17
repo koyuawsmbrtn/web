@@ -4,6 +4,7 @@ author: koyu
 type: post
 date: 2021-11-09
 featured_image: https://images.unsplash.com/photo-1621739165914-7155e5d4816e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDh8fGVsb24lMjBtdXNrfGVufDB8fHx8MTYzNTYzMDAzNQ&ixlib=rb-1.2.1&q=80&w=2000
+url: /why-ai-cryptocurrency-metaverse-and-all-that-crap-doesnt-matter/
 comments:
   host: koyu.space
   username: koyuchan
