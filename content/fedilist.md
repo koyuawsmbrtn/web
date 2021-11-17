@@ -57,7 +57,7 @@ This is a list of instances I will recommend and meet all my requirements to be 
       Generalist Pleroma instance with cat ears and other fun custom mods
     </td>
     <td>
-      <img class="wp-image-166" style="width: 150px;" src="/wp-content/uploads/2020/11/blob.jpg" alt="" srcset="/wp-content/uploads/2020/11/blob.jpg 256w, /wp-content/uploads/2020/11/blob-150x150.jpg 150w" sizes="(max-width: 256px) 100vw, 256px" />
+      <img class="wp-image-166" style="width: 150px" src="https://web.koyu.space/content/images/2020/11/blob.jpg" alt="">
     </td>
   </tr>
   <tr>
@@ -68,13 +68,13 @@ This is a list of instances I will recommend and meet all my requirements to be 
       Floppy outdated
     </td>
     <td>
-      Doesn&#8217;t block anything, don&#8217;t be stupid, tag your stuff etc.
+      Doesn’t block anything, don’t be stupid, tag your stuff etc.
     </td>
     <td>
       The answer to floppy.tokyo. Pleroma instance with custom Vaporwave-styled theme.
     </td>
     <td>
-      <img class="wp-image-164" style="width: 150px;" src="/wp-content/uploads/2020/11/logo.png" alt="" />
+      <img class="wp-image-164" style="width: 150px" src="https://web.koyu.space/content/images/2020/11/logo.png" alt="">
     </td>
   </tr>
   <tr>
@@ -85,13 +85,13 @@ This is a list of instances I will recommend and meet all my requirements to be 
       A cool community, I guess.
     </td>
     <td>
-      Blocks known bad actors, don&#8217;t be stupid, tag your stuff etc.
+      Blocks known bad actors, don’t be stupid, tag your stuff etc.
     </td>
     <td>
       Mastodon instance by the owner of niu.moe. Tries to bring back all the old niu memories. Also with custom theme.
     </td>
     <td>
-      <img class="wp-image-150" style="width: 150px;" src="/wp-content/uploads/2020/11/preview-b71f8f19db9f6dec0768332404514644.jpg" alt="" srcset="/wp-content/uploads/2020/11/preview-b71f8f19db9f6dec0768332404514644.jpg 1201w, /wp-content/uploads/2020/11/preview-b71f8f19db9f6dec0768332404514644-300x157.jpg 300w, /wp-content/uploads/2020/11/preview-b71f8f19db9f6dec0768332404514644-1024x537.jpg 1024w, /wp-content/uploads/2020/11/preview-b71f8f19db9f6dec0768332404514644-768x403.jpg 768w" sizes="(max-width: 1201px) 100vw, 1201px" />
+      <img class="wp-image-150" style="width: 150px" src="https://web.koyu.space/content/images/2020/11/preview-b71f8f19db9f6dec0768332404514644.jpg" alt="">
     </td>
   </tr>
   <tr>
@@ -102,13 +102,13 @@ This is a list of instances I will recommend and meet all my requirements to be 
       We host free internet services for you and your friends
     </td>
     <td>
-      Blocks Gab and other known bad actors, don&#8217;t be stupid, tag your stuff etc.
+      Blocks Gab and other known bad actors, don’t be stupid, tag your stuff etc.
     </td>
     <td>
       glitch-soc instance with custom mods and themes. 16384 characters and friendly people.
     </td>
     <td>
-      <img class="wp-image-172" style="width: 150px;" src="/wp-content/uploads/2020/11/pb-icon_large.png" alt="" srcset="/wp-content/uploads/2020/11/pb-icon_large.png 7000w, /wp-content/uploads/2020/11/pb-icon_large-300x300.png 300w, /wp-content/uploads/2020/11/pb-icon_large-1024x1024.png 1024w, /wp-content/uploads/2020/11/pb-icon_large-150x150.png 150w, /wp-content/uploads/2020/11/pb-icon_large-768x768.png 768w, /wp-content/uploads/2020/11/pb-icon_large-1536x1536.png 1536w, /wp-content/uploads/2020/11/pb-icon_large-2048x2048.png 2048w, /wp-content/uploads/2020/11/pb-icon_large-1200x1200.png 1200w" sizes="(max-width: 7000px) 100vw, 7000px" />
+      <img class="wp-image-172" style="width: 150px" src="https://web.koyu.space/content/images/2020/11/pb-icon_large.png" alt="">
     </td>
   </tr>
   <tr>
@@ -125,7 +125,7 @@ This is a list of instances I will recommend and meet all my requirements to be 
       STEM-oriented instance with own custom mods. Also perfect for writers, because of the character limit (65535).
     </td>
     <td>
-      <img class="wp-image-156" style="width: 150px;" src="/wp-content/uploads/2020/11/colored-qoto-thumbnail.png" alt="" srcset="/wp-content/uploads/2020/11/colored-qoto-thumbnail.png 10240w, /wp-content/uploads/2020/11/colored-qoto-thumbnail-300x158.png 300w, /wp-content/uploads/2020/11/colored-qoto-thumbnail-1024x538.png 1024w, /wp-content/uploads/2020/11/colored-qoto-thumbnail-768x403.png 768w, /wp-content/uploads/2020/11/colored-qoto-thumbnail-1536x806.png 1536w, /wp-content/uploads/2020/11/colored-qoto-thumbnail-2048x1075.png 2048w, /wp-content/uploads/2020/11/colored-qoto-thumbnail-1200x630.png 1200w" sizes="(max-width: 10240px) 100vw, 10240px" />
+      <img class="wp-image-156" style="width: 150px" src="https://web.koyu.space/content/images/2020/11/colored-qoto-thumbnail.png" alt="">
     </td>
   </tr>
   <tr>
@@ -133,16 +133,16 @@ This is a list of instances I will recommend and meet all my requirements to be 
       ieji.de
     </td>
     <td>
-      ieji is romaji for 家(house)路(street), together it means &#8220;the way home / a home / homeland&#8221;
+      ieji is romaji for 家(house)路(street), together it means “the way home / a home / homeland”
     </td>
     <td>
-      Blocks Gab and other known bad actors, don&#8217;t be stupid, tag your stuff etc.
+      Blocks Gab and other known bad actors, don’t be stupid, tag your stuff etc.
     </td>
     <td>
       Generalist Mastodon instance from Germany. Uses FOSS whenever possible. Can be accessed via Tor.
     </td>
     <td>
-      <img class="wp-image-206" style="width: 150px;" src="/wp-content/uploads/2021/01/iejimas_white.png" />
+      <img class="wp-image-206" style="width: 150px" src="https://web.koyu.space/content/images/2021/01/iejimas_white.png">
     </td>
   </tr>
   <tr>
@@ -150,10 +150,10 @@ This is a list of instances I will recommend and meet all my requirements to be 
       social.tchncs.de
     </td>
     <td>
-      One of the first Mastodon instances, there is no specific topic we&#8217;re into, just enjoy your time!
+      One of the first Mastodon instances, there is no specific topic we’re into, just enjoy your time!
     </td>
     <td>
-      Blocks Gab and other known bad actors, don&#8217;t be stupid, tag your stuff etc.
+      Blocks Gab and other known bad actors, don’t be stupid, tag your stuff etc.
     </td>
     <td>
       Big generalist instance from Germany. One of the first few Mastodon instances.
@@ -238,7 +238,6 @@ This is a list of instances I will recommend and meet all my requirements to be 
       METU Life claims to be a chill social media for Middle East Technical University members.
     </td>
     <td>
-      Doesn't block anything
     </td>
     <td>
       A chill social media for Middle East Technical University members. Requires a metu.edu.tr e-mail address.
@@ -247,6 +246,23 @@ This is a list of instances I will recommend and meet all my requirements to be 
       <img style="width: 150px;" src="https://metu.life/img/pb-icon-big.png" />
     </td>
   </tr>
+  <tr>
+    <td>
+      udongein.xyz
+    </td>
+    <td>
+      Your comfy, friendly instance of Pleroma
+    </td>
+    <td>
+      Blocks Gab and other known bad actors, don’t be stupid, tag your stuff etc.
+    </td>
+    <td>
+      Comfy anime-styled Pleroma instance with a greenish bamboo theme.
+    </td>
+    <td>
+      <img style="width: 150px" src="https://udongein.xyz/favicon.png">
+    </td>
+  </tr>
 </table>
 
-I will probably add more instances to this list. If you know more instances that meet the above requirements and should be listed let me know at @koyu@koyu.space.
+I will probably add more instances to this list. If you know more instances that meet the above requirements and should be listed let me know at @koyuchan@koyu.space.
