@@ -26,7 +26,7 @@
         data['descendants'].length > 0) {
           document.getElementById('mastodon-comments-list').innerHTML = "";
           data['descendants'].forEach(function(reply) {
-            reply.account.display_name = escapeHtml(reply.account.display_name);
+            reply.account.display_name = twemoji.parse(escapeHtml(reply.account.display_name));
             reply.account.emojis.forEach(emoji => {
               reply.account.display_name = reply.account.display_name.replace(`:${emoji.shortcode}:`,
                 `<img src="${escapeHtml(emoji.static_url)}" class="emoji" alt="Emoji ${emoji.shortcode}" height="16" width="16" />`);
