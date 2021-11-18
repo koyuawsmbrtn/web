@@ -8,3 +8,4 @@ title: Portfolio
 * [Fossil](https://fossil.koyu.space) -- Gemini client written in Vala and GTK
 * [GemProxy](https://gemproxy.koyu.space/koyu.space/koyu/) - Yet another Gemini proxy service
 * [Kimchi](https://github.com/koyuspace/kimchi) - Server management tool written in Vue and Express
+* [E43](https://github.com/koyuspace/e43) - Telegram bot with various functions
