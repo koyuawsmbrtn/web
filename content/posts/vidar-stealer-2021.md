@@ -5,7 +5,7 @@ featured_image: https://images.unsplash.com/photo-1582502580092-0dc3088c7aeb?ixl
 comments:
   host: koyu.space
   username: koyuchan
-  id: noid
+  id: 107320558341477140
 ---
 
 One of Vidar’s unique behaviors is in obtaining dynamic configuration and C2 connectivity. Once executed, Vidar’s first step is to receive its configuration, by abusing the Mastodon social network.
