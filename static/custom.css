@@ -144,6 +144,6 @@ button {
 
 @media(min-width:800px) {
     .mastodon-comment {
-        width: 350px;
+        width: 95%;
     }
 }
