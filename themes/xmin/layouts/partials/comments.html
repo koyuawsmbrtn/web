@@ -31,6 +31,11 @@
               reply.account.display_name = reply.account.display_name.replace(`:${emoji.shortcode}:`,
                 `<img src="${escapeHtml(emoji.static_url)}" class="emoji" alt="Emoji ${emoji.shortcode}" height="16" width="16" />`);
             });
+            reply.content = twemoji.parse(reply.content);
+            reply.emojis.forEach(emoji => {
+              reply.content = reply.content.replace(`:${emoji.shortcode}:`,
+                `<img src="${escapeHtml(emoji.static_url)}" class="emoji" alt="Emoji ${emoji.shortcode}" height="16" width="16" />`);
+            });
             mastodonComment =
               `<div class="mastodon-comment">
                   <div class="avatar">
