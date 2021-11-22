@@ -10,7 +10,7 @@ comments:
   id: 107320017410641584
 ---
 
-After I stumbled upon [solene&rsquo;s blog post](https://gemproxy.koyu.space/perso.pw/blog//articles/how-I-ended-liking-gnome.gmi) about GNOME and accessibility I also wanted to say what I personally think about GNOME as well.
+After I stumbled upon [solene&rsquo;s blog post](https://dataswamp.org/~solene/2021-11-10-how-I-ended-liking-gnome.html) about GNOME and accessibility I also wanted to say what I personally think about GNOME as well.
 
 ## A solid desktop
 
