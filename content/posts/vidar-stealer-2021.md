@@ -14,4 +14,6 @@ Mastodon, is an open-source social network that imitates Twitter on many levels.
 
 Vidar connects to a predefined user within the Mastadon network via an HTTPS protocol so it can access the C2 IP for further instructions.
 
+![Vidar Stealer C2 Bot](https://cyberint.com/wp-content/uploads/2021/10/Vidar-Stealer-2.png)
+
 Highlighted from https://cyberint.com/blog/research/vidar-stealer-abuses-mastadon-social-network/
