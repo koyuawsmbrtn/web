@@ -1,6 +1,8 @@
 ---
 title: "Security notice: Vidar Stealer abuses the Mastodon social network"
+author: koyu
 date: 2021-11-22T12:44:56+01:00
+type: post
 featured_image: https://images.unsplash.com/photo-1582502580092-0dc3088c7aeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80
 comments:
   host: koyu.space
