@@ -7,7 +7,7 @@ featured_image: https://images.unsplash.com/photo-1614728263952-84ea256f9679?ixl
 comments:
   host: koyu.space
   username: koyuchan
-  id: noid
+  id: 107323566417077397
 ---
 
 In this post I'm running down different ways to speed up your Linux system.
@@ -37,4 +37,4 @@ Usually my system shuts off in three seconds so waiting around three seconds for
 
 ## Using EFISTUB instead of a bootloader
 
-If supported EFISTUB loads your kernel directly using your EFI chip. This is great, because you don't have to bootloader then that searches for everything that's required to boot up your system. Depending on your distribution it's a different experience. On Arch you simply install `efistubmgr-git` from the AUR which is a EFISTUB management tool written by an old friend of mine. I wonder what that guy does these days.
+If supported EFISTUB loads your kernel directly using your EFI chip. This is great, because you don't need a bootloader then that searches for everything that's required to boot up your system. Depending on your distribution it's a different experience. On Arch you simply install `efistubmgr-git` from the AUR which is a EFISTUB management tool written by an old friend of mine. I wonder what that guy does these days.
