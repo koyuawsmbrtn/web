@@ -12,7 +12,7 @@ comments:
 
 One of Vidar’s unique behaviors is in obtaining dynamic configuration and C2 connectivity. Once executed, Vidar’s first step is to receive its configuration, by abusing the Mastodon social network.
 
-Mastodon, is an open-source social network that imitates Twitter on many levels. Recent cases suggest that threat actors set up social profiles (Figure 2) in Mastodon as a communication channel with the stealers. The social profiles don’t contain much more than a random post. The description of the profile contains the IP of the C2 the stealer should communicate with to receive configuration, dependency files and the location to which to upload its stolen data.
+Mastodon, is an open-source social network that imitates Twitter on many levels. Recent cases suggest that threat actors set up social profiles in Mastodon as a communication channel with the stealers. The social profiles don’t contain much more than a random post. The description of the profile contains the IP of the C2 the stealer should communicate with to receive configuration, dependency files and the location to which to upload its stolen data.
 
 Vidar connects to a predefined user within the Mastadon network via an HTTPS protocol so it can access the C2 IP for further instructions.
 
