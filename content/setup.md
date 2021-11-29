@@ -12,4 +12,4 @@ I'm trying to keep my belongings as minimal as possible which is a lifestyle cal
 -   Razer Ornata Chroma
 -   Nokia G20 with Android One
 -   Nokia 6300 4G running KaiOS for development purposes, not a daily driver
--   HP 255 G6 laptop with 4GB RAM and some crappy AMD CPU running Fedora 35 called Luna
+-   HP 255 G6 laptop with 4GB RAM and some crappy AMD CPU running Linux Mint 20.2 called Luna
