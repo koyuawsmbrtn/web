@@ -14,7 +14,7 @@ One of Vidar’s unique behaviors is in obtaining dynamic configuration and C2 c
 
 Mastodon, is an open-source social network that imitates Twitter on many levels. Recent cases suggest that threat actors set up social profiles in Mastodon as a communication channel with the stealers. The social profiles don’t contain much more than a random post. The description of the profile contains the IP of the C2 the stealer should communicate with to receive configuration, dependency files and the location to which to upload its stolen data.
 
-Vidar connects to a predefined user within the Mastadon network via an HTTPS protocol so it can access the C2 IP for further instructions.
+Vidar connects to a predefined user within the Mastodon network via an HTTPS protocol so it can access the C2 IP for further instructions.
 
 ![Vidar Stealer C2 Bot](https://cyberint.com/wp-content/uploads/2021/10/Vidar-Stealer-2.png)
 
