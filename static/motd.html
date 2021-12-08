@@ -1,1 +1,16 @@
-
+<br>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+	$(document).ready(function() {
+		$.get("/api/v1/trends/links", function(data) {
+			console.log(data);
+			data.forEach(function(item) {
+				var host = item.url.replaceAll("http:", "").replaceAll("https:", "").replaceAll("//", "").replaceAll("www.", "").split("/")[0].toUpperCase();
+				$("#news").append("<a href=\""+item.url+"\" class=\"status-card\" target=\"_blank\" rel=\"noopener noreferrer\"><div class=\"status-card__image\"><canvas class=\"status-card__image-preview status-card__image-preview--hidden\" width=\"32\" height=\"32\"></canvas><img src=\""+item.image+"\" alt=\"\" class=\"status-card__image-image\" style=\"\"></div><div class=\"status-card__content\"><strong class=\"status-card__title\" title=\""+item.title+"\">"+item.title+"</strong><p class=\"status-card__description\">"+item.description+"…</p><span class=\"status-card__host\">"+host+"</span></div></a>");
+			});
+		});
+	});
+</script>
+<span class="column-link column-link--transparent"><i role="img" class="fa fa-newspaper-o column-link__icon fa-fw"></i><span>News</span></span>
+<div id="news"></div>
+<br>
