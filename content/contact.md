@@ -7,13 +7,12 @@ Use one of the buttons below to contact me:
 
 * I'm most active over on Telegram, Discord, Snapchat, Fediverse and via E-Mail and you can reach me best between 10 and 22 in CET/CEST. Please wait a few hours for a response as I have a lot of people messaging me.
 * I answer every friend request on the Xbox network, but only favourite people I already met.
-* If you try and message me on XMPP, Matrix or Delta Chat you may have to wait longer as the only client is on my phone.
-* Starting 04.11.2021 all my e-mails are signed with my PGP key below.
+* If you try and message me on XMPP or Delta Chat you may have to wait longer as the only client is on my phone.
 
 ```
 For the technically inclined:
 XMPP: koyu@0day.im
-Matrix: @koyu:leftism.su
+Matrix: @koyu:im.koyu.space
 PGP: 8cac14db5e1c9fa2
 
 You can also send me a message via Delta Chat
