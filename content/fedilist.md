@@ -57,7 +57,7 @@ This is a list of instances I will recommend and meet all my requirements to be 
       Generalist Pleroma instance with cat ears and other fun custom mods
     </td>
     <td>
-      <img class="wp-image-166" style="width: 150px" src="https://web.koyu.space/content/images/2020/11/blob.jpg" alt="">
+      <img class="wp-image-166" style="width: 150px" src="/wp-content/uploads/2020/11/blob.jpg" alt="">
     </td>
   </tr>
   <tr>
@@ -74,7 +74,7 @@ This is a list of instances I will recommend and meet all my requirements to be 
       The answer to floppy.tokyo. Pleroma instance with custom Vaporwave-styled theme.
     </td>
     <td>
-      <img class="wp-image-164" style="width: 150px" src="https://web.koyu.space/content/images/2020/11/logo.png" alt="">
+      <img class="wp-image-164" style="width: 150px" src="/wp-content/uploads/2020/11/logo.png" alt="">
     </td>
   </tr>
   <tr>
@@ -91,7 +91,7 @@ This is a list of instances I will recommend and meet all my requirements to be 
       Mastodon instance by the owner of niu.moe. Tries to bring back all the old niu memories. Also with custom theme.
     </td>
     <td>
-      <img class="wp-image-150" style="width: 150px" src="https://web.koyu.space/content/images/2020/11/preview-b71f8f19db9f6dec0768332404514644.jpg" alt="">
+      <img class="wp-image-150" style="width: 150px" src="/wp-content/uploads/2020/11/preview-b71f8f19db9f6dec0768332404514644.jpg" alt="">
     </td>
   </tr>
   <tr>
@@ -108,7 +108,7 @@ This is a list of instances I will recommend and meet all my requirements to be 
       glitch-soc instance with custom mods and themes. 16384 characters and friendly people.
     </td>
     <td>
-      <img class="wp-image-172" style="width: 150px" src="https://web.koyu.space/content/images/2020/11/pb-icon_large.png" alt="">
+      <img class="wp-image-172" style="width: 150px" src="/wp-content/uploads/2020/11/pb-icon_large.png" alt="">
     </td>
   </tr>
   <tr>
@@ -125,7 +125,7 @@ This is a list of instances I will recommend and meet all my requirements to be 
       STEM-oriented instance with own custom mods. Also perfect for writers, because of the character limit (65535).
     </td>
     <td>
-      <img class="wp-image-156" style="width: 150px" src="https://web.koyu.space/content/images/2020/11/colored-qoto-thumbnail.png" alt="">
+      <img class="wp-image-156" style="width: 150px" src="/wp-content/uploads/2020/11/colored-qoto-thumbnail.png" alt="">
     </td>
   </tr>
   <tr>
@@ -142,7 +142,7 @@ This is a list of instances I will recommend and meet all my requirements to be 
       Generalist Mastodon instance from Germany. Uses FOSS whenever possible. Can be accessed via Tor.
     </td>
     <td>
-      <img class="wp-image-206" style="width: 150px" src="https://web.koyu.space/content/images/2021/01/iejimas_white.png">
+      <img class="wp-image-206" style="width: 150px" src="/wp-content/uploads/2021/01/iejimas_white.png">
     </td>
   </tr>
   <tr>

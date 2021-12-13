@@ -10,3 +10,6 @@ $RECYCLE.BIN/
 
 # OSX
 .DS_Store
+
+# Hugo build lock
+.hugo_build.lock
