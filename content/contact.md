@@ -14,7 +14,6 @@ Use one of the buttons below to contact me:
 * I'm most active over on Telegram, Discord, Snapchat, Fediverse and via E-Mail and you can reach me best between 10 and 22 in CET/CEST. Please wait a few hours for a response as I have a lot of people messaging me.
 * I answer every friend request on the Xbox network, but only favourite people I already met.
 * If you try and message me on XMPP or Delta Chat you may have to wait longer as the only client is on my phone.
-* Telegram is bridged to my Matrix account, so if you try to call me over there it won't work
 
 ```
 For the technically inclined:
