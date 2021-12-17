@@ -7,7 +7,7 @@ Anime
 
 ### Watching
 
-* *Currently watching no Anime or reading Manga (O_O;)*
+* Aggretsuko: Season 4
 
 ### Completed
 
