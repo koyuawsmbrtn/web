@@ -27,7 +27,7 @@ blockquote {
 }
 a,
 a:visited {
-    color: #fbbd1a;
+    color: magenta;
 }
 footer {
     line-height: 1;
@@ -94,7 +94,7 @@ pre {
 
 .button,
 button {
-    background: #fbbd1a !important;
+    background: magenta !important;
     color: #000 !important;
     border: 0;
     padding: 10px;
