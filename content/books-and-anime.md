@@ -5,15 +5,12 @@ title: Books and Anime
 Anime
 -----
 
-### Watching
-
-* Aggretsuko: Season 4
-
 ### Completed
 
 * Aggretsuko
 * Aggretsuko: Season 2
 * Aggretsuko: Season 3
+* Aggretsuko: Season 4
 * Castle in the Sky
 * Kiki's Delivery Service
 * My Neighbor Totoro
