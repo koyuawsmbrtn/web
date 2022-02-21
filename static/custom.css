@@ -1,10 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
-
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #000;
-    color: #fff;
+    font-weight: 400;
+    background-color: #fde2ff;
+    color: #333;
 }
 h1,
 h2,
@@ -12,7 +9,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Oswald', sans-serif;
+    color: #8884ff;
     font-weight: 600;
     margin: 0;
     margin-top: 20px;
@@ -27,7 +24,7 @@ blockquote {
 }
 a,
 a:visited {
-    color: magenta;
+    color: #c74f8d;
 }
 footer {
     line-height: 1;
@@ -57,7 +54,7 @@ thead, tfoot, tr:nth-child(even) {
     background: transparent;
 }
 code {
-    background: #666;
+    background: #999;
     padding: 3px;
 }
 pre {
@@ -73,9 +70,18 @@ pre {
     vertical-align: top;
     padding-top: 5px;
 }
+.article-meta .date {
+    color: #ccc;
+}
+.article-meta {
+    border-radius: 10px;
+}
+.article-meta h1,
+.article-meta p {
+    padding: 5px;
+}
 .articles > li > a,
 .menu > li > a {
-    font-family: 'Oswald', sans-serif;
     font-weight: 300;
 }
 .articles > li,
@@ -94,8 +100,8 @@ pre {
 
 .button,
 button {
-    background: magenta !important;
-    color: #000 !important;
+    background: #c74f8d !important;
+    color: #fde2ff !important;
     border: 0;
     padding: 10px;
     text-decoration: none;
@@ -103,7 +109,7 @@ button {
 }
 
 .mastodon-comment {
-    background: #222;
+    background: #eee;
     padding: 10px;
     margin: 10px;
     display: inline-flex;
@@ -134,7 +140,7 @@ button {
 
 .article-content {
     margin-top: 60px;
-    background: #333;
+    background: #fff;
     padding: 20px;
     border-radius: 10px;
 }
