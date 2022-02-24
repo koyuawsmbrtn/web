@@ -3,6 +3,7 @@ title: koyu's personal website
 ---
 
 <div class="article-meta">
+<b>Standing with Ukraine 🇺🇦️</b>
 <h1>koyu's personal website</h1>
 </div>
 

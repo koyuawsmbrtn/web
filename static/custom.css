@@ -43,6 +43,7 @@ img:not(.emoji, .except) {
 .emoji {
     width: 15px;
     height: 15px;
+    vertical-align: middle;
 }
 .title {
     line-height: 1.1;
@@ -75,6 +76,7 @@ pre {
 }
 .article-meta {
     border-radius: 10px;
+    margin-top: 20px;
 }
 .article-meta h1,
 .article-meta p {
