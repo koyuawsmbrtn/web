@@ -263,6 +263,23 @@ This is a list of instances I will recommend and meet all my requirements to be 
       <img style="width: 150px" src="https://udongein.xyz/favicon.png">
     </td>
   </tr>
+  <tr>
+    <td>
+      kirei.moe
+    </td>
+    <td>
+      Kirei Social
+    </td>
+    <td>
+      Doesn't block anything, don't be stupid, tag your stuff etc.
+    </td>
+    <td>
+      Pink cherry blossom anime-styled Pleroma instance
+    </td>
+    <td>
+      <img style="width: 150px" src="https://kirei.moe/media/ae373139a1f2d1395a6d3138c321933540d9f2affe0fd93b56cee8d19542afb1.jpg">
+    </td>
+  </tr>
 </table>
 
 I will probably add more instances to this list. If you know more instances that meet the above requirements and should be listed let me know at @koyuchan@koyu.space.
