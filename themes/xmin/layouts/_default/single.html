@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 <div class="article-meta">
-{{ with .Params.featured_image }}<style>.article-meta { background: url({{ . }}) #444; background-size: cover; background-position: center center; background-blend-mode: multiply; }</style>{{ end }}
+{{ with .Params.featured_image }}<style>.article-meta { margin-top: 0px !important; background: url({{ . }}) #444; background-size: cover; background-position: center center; background-blend-mode: multiply; }</style>{{ end }}
 <h1><span class="title">{{ .Title | markdownify }}</span></h1>
 {{ if (gt .Params.date 0) }}<p class="date">{{ .Date.Format "02.01.2006" }}</p>{{ end }}
 </div>

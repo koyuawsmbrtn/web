@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+
 body {
-    font-weight: 400;
-    background-color: #fde2ff;
-    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #000;
+    color: #fff;
 }
 h1,
 h2,
@@ -9,7 +12,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #8884ff;
+    font-family: 'Oswald', sans-serif;
     font-weight: 600;
     margin: 0;
     margin-top: 20px;
@@ -24,7 +27,7 @@ blockquote {
 }
 a,
 a:visited {
-    color: #c74f8d;
+    color: #fbbd1a;
 }
 footer {
     line-height: 1;
@@ -36,6 +39,9 @@ img:not(.emoji, .except) {
     border-radius: 5px;
     margin: 5px;
 }
+.avatar {
+    border-radius: 50% !important;
+}
 .social {
     font-size: 24pt;
     margin-right: 4px;
@@ -43,7 +49,6 @@ img:not(.emoji, .except) {
 .emoji {
     width: 15px;
     height: 15px;
-    vertical-align: middle;
 }
 .title {
     line-height: 1.1;
@@ -55,7 +60,7 @@ thead, tfoot, tr:nth-child(even) {
     background: transparent;
 }
 code {
-    background: #999;
+    background: #666;
     padding: 3px;
 }
 pre {
@@ -71,19 +76,9 @@ pre {
     vertical-align: top;
     padding-top: 5px;
 }
-.article-meta .date {
-    color: #ccc;
-}
-.article-meta {
-    border-radius: 10px;
-    margin-top: 20px;
-}
-.article-meta h1,
-.article-meta p {
-    padding: 5px;
-}
 .articles > li > a,
 .menu > li > a {
+    font-family: 'Oswald', sans-serif;
     font-weight: 300;
 }
 .articles > li,
@@ -102,8 +97,8 @@ pre {
 
 .button,
 button {
-    background: #c74f8d !important;
-    color: #fde2ff !important;
+    background: #fbbd1a !important;
+    color: #000 !important;
     border: 0;
     padding: 10px;
     text-decoration: none;
@@ -111,7 +106,7 @@ button {
 }
 
 .mastodon-comment {
-    background: #eee;
+    background: #222;
     padding: 10px;
     margin: 10px;
     display: inline-flex;
@@ -142,7 +137,7 @@ button {
 
 .article-content {
     margin-top: 60px;
-    background: #fff;
+    background: #333;
     padding: 20px;
     border-radius: 10px;
 }
@@ -151,4 +146,8 @@ button {
     .mastodon-comment {
         width: 95%;
     }
+}
+
+.article-meta {
+  margin-top: 10px;
 }
