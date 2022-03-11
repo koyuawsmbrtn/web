@@ -94,7 +94,7 @@ This is a list of instances I will recommend and meet all my requirements to be 
       <img class="wp-image-150" style="width: 150px" src="/wp-content/uploads/2020/11/preview-b71f8f19db9f6dec0768332404514644.jpg" alt="">
     </td>
   </tr>
-  <tr>
+<!--  <tr>
     <td>
       koyu.space
     </td>
@@ -110,7 +110,7 @@ This is a list of instances I will recommend and meet all my requirements to be 
     <td>
       <img class="wp-image-172" style="width: 150px" src="/wp-content/uploads/2020/11/pb-icon_large.png" alt="">
     </td>
-  </tr>
+  </tr> -->
   <tr>
     <td>
       qoto.org
