@@ -280,6 +280,24 @@ This is a list of instances I will recommend and meet all my requirements to be 
       <img style="width: 150px" src="https://kirei.moe/media/ae373139a1f2d1395a6d3138c321933540d9f2affe0fd93b56cee8d19542afb1.jpg">
     </td>
   </tr>
+  <tr>
+    <td>
+      chinwag.org
+    </td>
+    <td>
+      The happiest place on the internet
+    </td>
+    <td>
+      Don't be stupid, tag your stuff etc.
+    </td>
+    <td>
+      Green Oxford-styled pub Mastodon instance
+    </td>
+    <td>
+      <img style="width: 150px" src="https://static.chinwag.org/site_uploads/files/000/000/006/original/cigarmanwoman.svg">
+    </td>
+  </tr>
+
 </table>
 
 I will probably add more instances to this list. If you know more instances that meet the above requirements and should be listed let me know at @koyuchan@koyu.space.
