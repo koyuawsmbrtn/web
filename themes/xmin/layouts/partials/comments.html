@@ -43,10 +43,10 @@
                   </div>
                   <div class="content">
                     <div class="author">
-                    <span>${reply.account.display_name}</span>
-                    <span class="disabled">${escapeHtml(reply.account.acct)}</span>
-                      <a class="date" href="${reply.uri}" rel="nofollow">
-                        ${reply.created_at.substr(0, 10)}
+                    <span><b>${reply.account.display_name}</b></span>
+                    <span>(@${escapeHtml(reply.account.acct)})</span><br>
+                      <a href="${reply.uri}" rel="nofollow">
+                        View comment
                       </a>
                     </div>
                     <div class="mastodon-comment-content">${reply.content}</div> 
