@@ -13,6 +13,7 @@ Use one of the buttons below to contact me:
 
 * I'm most active over on Telegram, Fediverse and via E-Mail and you can reach me best between 10 and 22 in CET/CEST. Please wait a few hours for a response as I have a lot of people messaging me.
 * I answer every friend request on the Xbox network, but only favourite people I already met.
+* All my e-mails are signed with PGP to verify it's me and not some random dude who spoofed my e-mail address
 
 ```
 For the technically inclined:
