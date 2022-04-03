@@ -151,3 +151,13 @@ button {
 .article-meta {
   margin-top: 10px;
 }
+
+@media(min-width:800px) {
+    #discord {
+        float: right;
+    }
+}
+
+#socialbuttons {
+    text-align: center;
+}
