@@ -18,4 +18,4 @@ Vidar connects to a predefined user within the Mastodon network via an HTTPS pro
 
 ![Vidar Stealer C2 Bot](https://cyberint.com/wp-content/uploads/2021/10/Vidar-Stealer-2.png)
 
-Highlighted from https://cyberint.com/blog/research/vidar-stealer-abuses-mastadon-social-network/
+Highlighted from [https://cyberint.com/blog/research/vidar-stealer-abuses-mastadon-social-network/](https://cyberint.com/blog/research/vidar-stealer-abuses-mastadon-social-network/)

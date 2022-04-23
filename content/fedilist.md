@@ -159,7 +159,7 @@ This is a list of instances I will recommend and meet all my requirements to be 
       Big generalist instance from Germany. One of the first few Mastodon instances.
     </td>
     <td>
-      <img class="wp-image-168" style="width: 150px;" src="/wp-content/uploads/2020/11/logo-1.png" alt="" srcset="/wp-content/uploads/2020/11/logo-1.png 200w, /wp-content/uploads/2020/11/logo-1-150x150.png 150w" sizes="(max-width: 200px) 100vw, 200px" />
+      <img class="wp-image-168" style="width: 150px;" src="/wp-content/uploads/2020/11/logo-1.png" />
     </td>
   </tr>
   <tr>
@@ -176,7 +176,7 @@ This is a list of instances I will recommend and meet all my requirements to be 
       Glitchy-hackery instance style. Can also count themselves to the &#8220;first few&#8221;
     </td>
     <td>
-      <img class="wp-image-175" style="width: 150px;" src="/wp-content/uploads/2020/11/logo-cybre-e5f7d490f241e9de9484e194fbc0d3fb.png" alt="" srcset="/wp-content/uploads/2020/11/logo-cybre-e5f7d490f241e9de9484e194fbc0d3fb.png 434w, /wp-content/uploads/2020/11/logo-cybre-e5f7d490f241e9de9484e194fbc0d3fb-300x300.png 300w, /wp-content/uploads/2020/11/logo-cybre-e5f7d490f241e9de9484e194fbc0d3fb-150x150.png 150w" sizes="(max-width: 434px) 100vw, 434px" />
+      <img class="wp-image-175" style="width: 150px;" src="/wp-content/uploads/2020/11/logo-cybre-e5f7d490f241e9de9484e194fbc0d3fb.png" />
     </td>
   </tr>
   <tr>
@@ -210,7 +210,7 @@ This is a list of instances I will recommend and meet all my requirements to be 
       Moe-themed Pleroma instance. Probably the cutest thing I&#8217;ve seen.
     </td>
     <td>
-      <img class="wp-image-186" style="width: 150px;" src="/wp-content/uploads/2020/11/logo-4.png" alt="" srcset="/wp-content/uploads/2020/11/logo-4.png 266w, /wp-content/uploads/2020/11/logo-4-150x150.png 150w" sizes="(max-width: 266px) 100vw, 266px" />
+      <img class="wp-image-186" style="width: 150px;" src="/wp-content/uploads/2020/11/logo-4.png" />
     </td>
   </tr>
   <tr>
