@@ -1,7 +1,7 @@
 ---
 title: About me
 ---
-<img alt="Here's a picture of me" src="/me.png" height="250" style="float:right;">
+<img alt="Here's a picture of me" src="/me.png" height="250" style="float:right;margin-top:0 !important;">
 
   * Is 23 years old
   * Likes computers and anything above
