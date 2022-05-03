@@ -21,7 +21,7 @@ Game and app list
 -   Minecraft
 -   Minecraft Dungeons
 -   Overwatch
--   Forza Horizon 5
+-   Sonic Generations
 -   Netflix
 -   Spotify
 -   YouTube
