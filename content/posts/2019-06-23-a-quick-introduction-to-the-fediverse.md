@@ -11,7 +11,7 @@ categories:
 ---
 The Fediverse is a word consisting of “federation” and “universe” and is a place on the internet where a lot of people are communicating. It’s a social media platform, but can be more than this. It’s weird and exciting and I love that.
 
-While you heard of Twitter and Facebook, you propably didn’t heard about Mastodon, Pleroma, GNU Social and PeerTube, right? These other things are social media platforms like the big brothers, but with a twist. Instead of relying on one big server, everything is being spread out. The data, moderation, costs and so on are all in the hands of it’s users.
+While you heard of Twitter and Facebook, you probably haven't heard about Mastodon, Pleroma, GNU Social and PeerTube, right? These other things are social media platforms like the big brothers, but with a twist. Instead of relying on one big server, everything is being spread out. The data, moderation, costs and so on are all in the hands of it’s users.
 
 The Fediverse kinda works like E-Mail. You don’t have to be on one server to communicate with people from another server and if one server goes down the rest of the network keeps running. This also means you can have a couple of different accounts on other servers with the same e-mail address as well (these are called “alts”).
 
