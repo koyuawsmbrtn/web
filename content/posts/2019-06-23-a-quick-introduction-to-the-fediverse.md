@@ -15,10 +15,10 @@ While you heard of Twitter and Facebook, you probably haven't heard about Mastod
 
 The Fediverse kinda works like E-Mail. You don’t have to be on one server to communicate with people from another server and if one server goes down the rest of the network keeps running. This also means you can have a couple of different accounts on other servers with the same e-mail address as well (these are called “alts”).
 
-So if I am on koyu.space and you are on e.g. mastodon.social then I could just go and interact with you like we were on the same site. Digging deeper you find out that even my blog is on the fediverse. It doesn’t have to be Mastodon you’re going with.
+So if I am on koyu.space and you are on e.g. mastodon.social then I could just go and interact with you like we were on the same site. It doesn’t have to be Mastodon you’re going with.
 
 Imagine you could comment a video on YouTube with your Facebook account without having to register for YouTube. This already works for the fediverse: If you’re posting a comment with Pleroma on a PeerTube video it magically appears on the PeerTube video.
 
-Every software implementing the protocols used for federation (usually ActivityPub) can be in the fediverse, even my blog! Most of this software also has features that set it apart from the usual big social network.
+Every software implementing the protocols used for federation (usually ActivityPub) can be in the fediverse! Most of this software also has features that set it apart from the usual big social networks. 
 
-So now you’re thinking I am selling you the big fairy-tale, right? Think again. While the userbase of the fediverse is relatively small it’s a good alternative to currently well-established social networks. You will find people there in all shapes and sizes and maybe you will find people you can sympathize with. Who knows?
+While the userbase of the fediverse is relatively small it’s a good alternative to currently well-established social networks. You will find people there in all shapes and sizes and maybe you will find people you can sympathize with.
