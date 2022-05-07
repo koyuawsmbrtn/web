@@ -17,14 +17,8 @@ The Fediverse kinda works like E-Mail. You don’t have to be on one server to c
 
 So if I am on koyu.space and you are on e.g. mastodon.social then I could just go and interact with you like we were on the same site. Digging deeper you find out that even my blog is on the fediverse. It doesn’t have to be Mastodon you’re going with.
 
-And this is where it gets spicy: Imagine you could comment a video on YouTube with your Facebook account without having to register for YouTube. This already works for the fediverse: If you’re posting a comment with Pleroma on a PeerTube video it magically appears on the PeerTube video.
+Imagine you could comment a video on YouTube with your Facebook account without having to register for YouTube. This already works for the fediverse: If you’re posting a comment with Pleroma on a PeerTube video it magically appears on the PeerTube video.
 
-<blockquote class="wp-block-quote">
-  <p>
-    Imagine you could comment a video on YouTube with your Facebook account without having to register for YouTube. This already works for the fediverse […]
-  </p>
-</blockquote>
-
-And that’s not all: Every software implementing the protocols used for federation (usually ActivityPub) can be in the fediverse, even my blog! Most of this software also has features that set it apart from the usual big social network.
+Every software implementing the protocols used for federation (usually ActivityPub) can be in the fediverse, even my blog! Most of this software also has features that set it apart from the usual big social network.
 
 So now you’re thinking I am selling you the big fairy-tale, right? Think again. While the userbase of the fediverse is relatively small it’s a good alternative to currently well-established social networks. You will find people there in all shapes and sizes and maybe you will find people you can sympathize with. Who knows?
