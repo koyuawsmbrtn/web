@@ -39,4 +39,4 @@ If you use Masto.host your Mastodon instance is already set up. It&#8217;s fully
 
 
 
-So these are my recommendations on how to get started on hosting your own Mastodon instance. I hope I could open up your eyes a little bit and if you need a little help you can reach me on IRC at irc.koyu.space or via e-mail on me@koyu.space. Thanks for reading!
+So these are my recommendations on how to get started on hosting your own Mastodon instance. I hope I could open up your eyes a little bit and if you need a little help you can reach me on Telegram at @bubblineyuri or via e-mail on me@koyu.space. Thanks for reading!
