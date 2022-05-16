@@ -1,5 +1,6 @@
 {{ with .Params.comments }}
 <div class="article-content">
+  <div id="likes"></div>
   <h2>Comments</h2>
   <p>You can use your account on the fediverse to reply to this <a class="link" target="_blank" href="https://{{ .host }}/@{{ .username }}/{{ .id }}">post</a>.</p>
   <p><a class="button" href="https://{{ .host }}/interact/{{ .id }}?type=reply">Reply</a></p>
@@ -15,6 +16,15 @@
            .replace(/"/g, "&quot;")
            .replace(/'/g, "&#039;");
    }
+
+   fetch('https://{{ .host }}/api/v1/statuses/{{ .id }}')
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      var likefield = document.getElementById("likes");
+      likefield.innerHTML = "<img class=\"emoji\" draggable=\"false\" alt=\"👍\" src=\"https://twemoji.maxcdn.com/v/13.1.0/svg/1f44d.svg\"> "+data["favourites_count"]+" <i class=\"fa fa-retweet\" aria-hidden=\"true\" style=\"margin-left: 10px;color:#87ceeb;\"></i> "+data["reblogs_count"];
+    });
 
   fetch('https://{{ .host }}/api/v1/statuses/{{ .id }}/context')
     .then(function(response) {
