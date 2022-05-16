@@ -22,4 +22,4 @@ Since anyone with some degree of technical knowledge can invent a wireless spec 
 
 ## Is cordless the future?
 
-No, definitely not. Going cordless is the most horrible future one can imagine as you use control over your device, face vendor lock-in and destroy your environment.
+No, definitely not. Going cordless is the most horrible future one can imagine as you lose control over your device, face vendor lock-in and destroy your environment.
