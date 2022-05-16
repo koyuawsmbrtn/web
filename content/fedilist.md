@@ -297,6 +297,23 @@ This is a list of instances I will recommend and meet all my requirements to be 
       <img style="width: 150px" src="https://static.chinwag.org/site_uploads/files/000/000/006/original/cigarmanwoman.svg">
     </td>
   </tr>
+  <tr>
+    <td>
+      berserker.town
+    </td>
+    <td>
+      A berserker's gateway to the Mastodon social network. Run by a Norwegian, with servers in Finland.
+    </td>
+    <td>
+      Don't be stupid, tag your stuff etc.
+    </td>
+    <td>
+	Nordic generalist instance
+    </td>
+    <td>
+      <img style="width: 150px" src="https://berserker.town/system/site_uploads/files/000/000/002/original/toppng.com-viking-logo-vector-570x413.png">
+    </td>
+  </tr>
 
 </table>
 
