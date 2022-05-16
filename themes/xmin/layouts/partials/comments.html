@@ -23,7 +23,7 @@
     })
     .then(function(data) {
       var likefield = document.getElementById("likes");
-      likefield.innerHTML = "<img class=\"emoji\" draggable=\"false\" alt=\"👍\" src=\"https://twemoji.maxcdn.com/v/13.1.0/svg/1f44d.svg\"> "+data["favourites_count"]+" <i class=\"fa fa-retweet\" aria-hidden=\"true\" style=\"margin-left: 10px;color:#87ceeb;\"></i> "+data["reblogs_count"];
+      likefield.innerHTML = "👍 "+data["favourites_count"]+" <i class=\"fa fa-retweet\" aria-hidden=\"true\" style=\"margin-left: 10px;color:#87ceeb;\"></i> "+data["reblogs_count"];
     });
 
   fetch('https://{{ .host }}/api/v1/statuses/{{ .id }}/context')
