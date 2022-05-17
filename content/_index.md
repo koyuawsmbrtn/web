@@ -3,7 +3,7 @@ title: koyu's personal website
 ---
 
 <div class="article-meta">
-<b>Standing with Ukraine 🇺🇦️</b>
+<b>Standing with Ukraine <img class="emoji" draggable="false" alt="🇺🇦" src="https://twemoji.maxcdn.com/v/13.1.0/svg/1f1fa-1f1e6.svg"></b>
 <h1>koyu's personal website</h1>
 </div>
 
