@@ -25,4 +25,5 @@ Use one of the buttons below to contact me:
 ```
 For the technically inclined:
 PGP: 5a0d9e28fde1fc5e9d8cca5a8cac14db5e1c9fa2
+XMPP: koyu@0day.im (OMEMO required)
 ```
