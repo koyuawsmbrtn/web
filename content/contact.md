@@ -27,3 +27,10 @@ For the technically inclined:
 PGP: 5a0d9e28fde1fc5e9d8cca5a8cac14db5e1c9fa2
 XMPP: koyu@0day.im (OMEMO required)
 ```
+
+<br>
+
+<div class="section">
+<h3>XMPP QR code:</h3>
+<img src="/xmpp.png" height="120">
+</div>

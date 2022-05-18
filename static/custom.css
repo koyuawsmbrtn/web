@@ -146,6 +146,10 @@ button {
     .mastodon-comment {
         width: 95%;
     }
+    .section {
+        width: 50%;
+        margin: 0 auto;
+    }
 }
 
 .article-meta {
@@ -159,5 +163,12 @@ button {
 }
 
 #socialbuttons {
+    text-align: center;
+}
+
+.section {
+    background: #333;
+    padding: 10px;
+    border-radius: 10px;
     text-align: center;
 }
