@@ -9,8 +9,6 @@ title: Contact me
 
 <br>
 
-<div id="discord"></div>
-
 <div id="socialbuttons">
 Use one of the buttons below to contact me:
 
