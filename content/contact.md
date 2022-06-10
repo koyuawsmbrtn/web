@@ -22,8 +22,9 @@ Use one of the buttons below to contact me:
 Note: As of June 7 2022 I don't sign my e-mails anymore.
 
 ```
-For the technically inclined:
+More ways to contact me:
 PGP: 5a0d9e28fde1fc5e9d8cca5a8cac14db5e1c9fa2
+Session: 05be7d9dfd28e75f10e3f99c06be222b3022191506bfa3ac633a7cfb0e1419917a
 XMPP/E-Mail: me@koyu.space
 ```
 
