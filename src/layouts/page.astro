@@ -2,7 +2,10 @@
 import Navigation from "../components/navigation.astro";
 import Layout from "../layouts/base.astro";
 import Footer from "../components/footer.astro";
-const { title } = Astro.props;
+let title = Astro.props.title;
+if (title === undefined) {
+	title = Astro.props.content.title;
+}
 ---
 <Layout title={title}>
 	<Navigation />
