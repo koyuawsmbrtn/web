@@ -1,0 +1,28 @@
+---
+let title = "koyu's personal website"
+if (Astro.props.title !== undefined) {
+    title = title+" | "+Astro.props.title;
+}
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+        <link rel="me" href="https://koyu.space/@koyuchan">
+        <link rel="me" href="https://qoto.org/@koyu">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/8b5d897402.js" crossorigin="anonymous"></script>
+        <script src="https://twemoji.maxcdn.com/v/13.1.0/twemoji.min.js" integrity="sha384-gPMUf7aEYa6qc3MgqTrigJqf4gzeO6v11iPCKv+AP2S4iWRWCoWyiR+Z7rWHM/hU" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/app.js"></script>
+		<title>{title}</title>
+	</head>
+	<body>
+        <main>
+            <slot/>
+        </main>
+	</body>
+</html>
