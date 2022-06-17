@@ -1,0 +1,20 @@
+---
+import Navigation from "../components/navigation.astro";
+import Banner from "../components/banner.astro";
+import Layout from "../layouts/base.astro";
+import Footer from "../components/footer.astro";
+import Social from "../components/social.astro";
+---
+<Layout>
+	<Navigation />
+	<div class="article-meta">
+		<Banner />
+		<h1>koyu's personal website</h1>
+	</div>
+	<br>
+	<slot />
+	<br><br>
+	<Social />
+	<br>
+	<Footer />
+</Layout>
