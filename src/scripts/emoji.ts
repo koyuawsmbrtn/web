@@ -1,6 +1,2 @@
-import $ from "jquery";
 import twemoji from "twemoji";
-
-$(document).ready(function() {
-    $("main").html(twemoji.parse($("main").html(), {folder: "svg", ext: ".svg"}));
-});
+document.getElementsByTagName("body")[0].innerHTML = twemoji.parse(document.getElementsByTagName("body")[0].innerHTML);
