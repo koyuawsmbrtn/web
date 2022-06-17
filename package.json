@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "deploy": "vercel deploy"
   },
   "devDependencies": {
     "astro": "^1.0.0-beta.47"
