@@ -10,4 +10,5 @@ These are things I have written down so I don't forget them. You can try these o
 * [Fediverse server list](/notes/fedilist)
 * [Xbox](/notes/xbox)
 * [Getting the latest Overwatch to run on Linux again](/notes/overwatch-linux)
+* [Configuring an nginx reverse proxy](/notes/nginx-proxy)
 * <a href="https://tilde.club/~koyu/" target="_blank">Radio show archive</a>
