@@ -10,11 +10,11 @@
     "deploy": "vercel deploy --prod"
   },
   "devDependencies": {
-    "astro": "^1.0.0-beta.47"
+    "astro": "^1.0.0"
   },
   "dependencies": {
-    "@astrojs/vercel": "^0.2.3",
+    "@astrojs/vercel": "^1.0.0",
     "twemoji": "^14.0.2",
-    "vercel": "^25.1.0"
+    "vercel": "^27.3.8"
   }
 }
