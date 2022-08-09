@@ -1,0 +1,100 @@
+[
+    {
+        "instance": "fedi.absturztau.be",
+        "description": "Pleroma: An efficient and flexible fediverse server",
+        "moderation": "%%general%%",
+        "special": "Generalist Pleroma instance with cat ears and other fun custom mods",
+        "logo": "https://fedi.absturztau.be/static/logo_puniko.png"
+    },
+    {
+        "instance": "cdrom.tokyo",
+        "description": "Floppy outdated",
+        "moderation": "%%free%%",
+        "special": "The answer to floppy.tokyo. Pleroma instance with custom Vaporwave-styled theme.",
+        "logo": "https://cdrom.tokyo/static/logo.png"
+    },
+    {
+        "instance": "raru.re",
+        "description": "A cool community, I guess.",
+        "moderation": "%%general%%",
+        "special": "Mastodon instance by the owner of niu.moe. Tries to bring back all the old niu memories. Also with custom theme.",
+        "logo": "https://raw.githubusercontent.com/Miaourt/rarure/master/src/mastodon/images/elephant_ui_plane.svg"
+    },
+    {
+        "instance": "fedi.koyu.space",
+        "description": "We host free internet services for you and your friends",
+        "moderation": "%%general%%",
+        "special": "Pleroma instance with custom theme. 840 characters and friendly people.",
+        "logo": "https://content.koyu.space/img/pb-icon.svg"
+    },
+    {
+        "instance": "qoto.org",
+        "description": "QOTO: Question Others to Teach Ourselves. A STEM-oriented instance.",
+        "moderation": "%%general%%",
+        "special": "STEM-oriented instance with own custom mods and themes. Also perfect for writers, because of the character limit (65535).",
+        "logo": "https://storage.gra.cloud.ovh.net/v1/AUTH_011f6e315d3744d498d93f6fa0d9b5ee/qotoorg/site_uploads/files/000/000/003/original/lab-transparent.png"
+    },
+    {
+        "instance": "ieji.de",
+        "description": "ieji is romaji for 家(house)路(street), together it means “the way home / a home / homeland”",
+        "moderation": "%%free%%",
+        "special": "Generalist Mastodon instance from Germany. Uses FOSS whenever possible. Can be accessed via Tor.",
+        "logo": "/fedilist/ieji.png"
+    },
+    {
+        "instance": "social.tchncs.de",
+        "description": "One of the first Mastodon instances, there is no specific topic we’re into, just enjoy your time!",
+        "moderation": "%%gab%%",
+        "special": "Big generalist instance from Germany. One of the first few Mastodon instances.",
+        "logo": "https://tchncs.de/logo.png"
+    },
+    {
+        "instance": "cybre.space",
+        "description": "ｃｙｂｒｅｓｐａｃｅ: the social hub of the information superhighway",
+        "moderation": "Probably blocks known bad actors, don’t be stupid, tag your stuff etc.",
+        "special": "Glitchy-hackery instance style. Can also count themselves to the “first few”",
+        "logo": "https://cybre.space/packs/media/images/logo-cybre-9b7c2de5a819feaf36403748a4d132dc.png"
+    },
+    {
+        "instance": "blob.cat",
+        "description": "blob.cat, an instance for blobcats (blobfoxes are ok too) ",
+        "moderation": " Blocks instances that do active harm to their users, don’t be stupid, tag your stuff, etc.",
+        "special": "Blobcat-themed Pleroma instance. Very friendly community.",
+        "logo": "https://blob.cat/static/logo.png"
+    },
+    {
+        "instance": "misskey.biribiri.dev",
+        "description": "The network of 10k Misaka clones! Now powered by Misskey.",
+        "moderation": "Doesn't block anything",
+        "special": "A Misskey instance which is home for Misaka clones!",
+        "logo": "https://misskey.biribiri.dev/files/33a6ce51-521d-46ed-9fc7-7cfb90226533"
+    },
+    {
+        "instance": "udongein.xyz",
+        "description": "Your comfy, friendly instance of Pleroma",
+        "moderation": "%%general%%",
+        "special": "Comfy anime-styled Pleroma instance with a greenish bamboo theme.",
+        "logo": "https://udongein.xyz/static/logo.png"
+    },
+    {
+        "instance": "kirei.moe",
+        "description": "Kirei Social",
+        "moderation": "%%free%%",
+        "special": "Pink cherry blossom anime-styled Pleroma instance",
+        "logo": "https://kirei.moe/media/f1439d004011e1ca8b420d34976b981e17fa72f94673f52b59075018caf953c1.png"
+    },
+    {
+        "instance": "chinwag.org",
+        "description": "The happiest place on the internet",
+        "moderation": "%%free2%%",
+        "special": "Green Oxford-styled pub Mastodon instance",
+        "logo": "https://static.chinwag.org/site_uploads/files/000/000/006/original/chinwag-social-mascot.svg"
+    },
+    {
+        "instance": "berserker.town",
+        "description": "A berserker's gateway to the Mastodon social network. Run by a Norwegian, with servers in Finland.",
+        "moderation": "%%general%%",
+        "special": "Nordic generalist instance",
+        "logo": "https://berserker.town/system/site_uploads/files/000/000/002/original/toppng.com-viking-logo-vector-570x413.png"
+    }
+]
