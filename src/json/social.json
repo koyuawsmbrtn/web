@@ -28,6 +28,13 @@
         }
     },
     {
+        "url": "https://github.com/koyuawsmbrtn",
+        "icon": {
+            "style": "simple-icons",
+            "name": "github"
+        }
+    },
+    {
         "url": "https://matrix.to/#/@koyu:mozilla.org",
         "icon": {
             "style": "simple-icons",
