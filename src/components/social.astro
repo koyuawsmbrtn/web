@@ -1,11 +1,12 @@
+---
+import { Icon } from 'astro-icon';
+import social from "../json/social.json";
+---
+
 <div id="socialbuttons">
-    <a href="https://koyu.space/@koyuchan" target="_blank" class="social" rel="me noopener"><i class="fab fa-mastodon"></i></a>
-    <a href="https://steamcommunity.com/id/bubblineyuri" class="social" target="_blank" rel="noopener"><i class="fab fa-steam"></i></a> 
-    <a href="http://live.xbox.com/Profile?Gamertag=bubblineyuri" class="social" target="_blank" rel="noopener"><i class="fab fa-xbox"></i></a>
-    <a href="https://tube.tchncs.de/c/leonie/videos" class="social" target="_blank" rel="noopener"><i class="fab fa-peertube"></i></a>
-    <a href="https://matrix.to/#/@koyu:mozilla.org" class="social" target="_blank" rel="noopener"><i class="fab fa-matrix-org"></i></a>
-    <a href="mailto:me@koyu.space" class="social" rel="noopener"><i class="fa fa-envelope"></i></a>
-    <a href="xmpp:me@koyu.space" class="social" rel="noopener"><i class="fab fa-xmpp"></i></a>
+  {social.map((e) => (
+    <a href={e.url} class="social" target="_blank" rel="noopener"><Icon pack={e.icon.style} name={e.icon.name} /></a>
+  ))}
 </div>
 
 <style>

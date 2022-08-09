@@ -1,0 +1,51 @@
+[
+    {
+        "url": "https://fedi.koyu.space/koyu",
+        "icon":  {
+            "style": "simple-icons",
+            "name": "pleroma"
+        }
+    },
+    {
+        "url": "https://steamcommunity.com/id/bubblineyuri",
+        "icon": {
+            "style": "fa-brands",
+            "name": "steam-symbol"
+        }
+    },
+    {
+        "url": "http://live.xbox.com/Profile?Gamertag=bubblineyuri",
+        "icon": {
+            "style": "simple-icons",
+            "name": "xbox"
+        }
+    },
+    {
+        "url": "https://tube.tchncs.de/c/leonie/videos",
+        "icon": {
+            "style": "simple-icons",
+            "name": "peertube"
+        }
+    },
+    {
+        "url": "https://matrix.to/#/@koyu:mozilla.org",
+        "icon": {
+            "style": "simple-icons",
+            "name": "matrix"
+        }
+    },
+    {
+        "url": "mailto:me@koyu.space",
+        "icon": {
+            "style": "fa-solid",
+            "name": "envelope"
+        }
+    },
+    {
+        "url": "xmpp:me@koyu.space",
+        "icon": {
+            "style": "simple-icons",
+            "name": "xmpp"
+        }
+    }
+]

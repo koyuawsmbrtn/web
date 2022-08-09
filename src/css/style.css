@@ -46,9 +46,9 @@ img:not(.emoji, .except) {
 .avatar {
     border-radius: 50% !important;
 }
-.social {
-    font-size: 24pt;
-    margin-right: 4px;
+.social > svg {
+    height: 24pt;
+    padding: 4px;
 }
 .emoji {
     width: 15px;
