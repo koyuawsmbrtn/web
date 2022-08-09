@@ -1,5 +1,5 @@
-@import url('/fonts/open-sans/open-sans.css');
-@import url('/fonts/oswald/oswald.css');
+@import url('../fonts/open-sans/open-sans.css');
+@import url('../fonts/oswald/oswald.css');
 
 body {
     font-family: 'Open Sans', sans-serif;
