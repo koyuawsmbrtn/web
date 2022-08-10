@@ -1,0 +1,22 @@
+[
+    {
+        "page": "",
+        "name": "Home"
+    },
+    {
+        "page": "about",
+        "name": "About"
+    },
+    {
+        "page": "notes",
+        "name": "Notes"
+    },
+    {
+        "page": "fedilist",
+        "name": "Fedilist"
+    },
+    {
+        "page": "portfolio",
+        "name": "Portfolio"
+    }
+]

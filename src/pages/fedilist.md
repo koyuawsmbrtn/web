@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/fedilist.astro
+layout: ../layouts/fedilist.astro
 ---
 
 This is a list of instances I will recommend and meet all my requirements to be a good and welcoming space while having common sense.
