@@ -1,0 +1,10 @@
+---
+const notes = await Astro.glob("../pages/notes/*.md");
+---
+
+<ul>
+    {notes.map(({url, frontmatter}) => (
+        <li><a href={url}>{frontmatter.title}</a></li>
+    ))}
+    <li><a href="https://tilde.club/~koyu/" target="_blank">Radio show archive</a></li>
+</ul>
