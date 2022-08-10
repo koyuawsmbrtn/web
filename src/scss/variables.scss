@@ -1,0 +1,13 @@
+// Fonts
+$font-body: "Open Sans", sans-serif;
+$font-heading: "Oswald", sans-serif;
+
+// Colors
+$background: #000;
+$content: #333;
+$foreground: #fff;
+$border: darken($foreground, 10%);
+$border-quote: darken($foreground, 20%);
+$table-border: darken($foreground, 25%);
+$code-background: lighten($background, 10%);
+$accent: #fbbd1a;

@@ -1,0 +1,12 @@
+@import "variables";
+.menu li {
+    padding: 2px;
+}
+.menu { padding: 0; }
+.menu li { display: inline-block; }
+.article-meta, .menu a {
+    text-decoration: none;
+    padding: 5px;
+    font-family: $font-heading;
+}
+.menu, .article-meta, footer { text-align: center; }

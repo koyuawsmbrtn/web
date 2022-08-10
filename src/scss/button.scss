@@ -1,0 +1,10 @@
+@import "variables";
+.button,
+button {
+    background: $accent !important;
+    color: $background !important;
+    border: 0;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
