@@ -13,10 +13,9 @@
     "astro": "^1.0.1"
   },
   "dependencies": {
-    "@astrojs/vercel": "^1.0.0",
+    "@astrojs/netlify": "^1.0.0",
     "astro-icon": "^0.7.3",
     "sass": "^1.54.4",
-    "twemoji": "^14.0.2",
-    "vercel": "^27.4.0"
+    "twemoji": "^14.0.2"
   }
 }
