@@ -10,10 +10,10 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@astrojs/compiler@^0.23.1":
-  version "0.23.1"
-  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.23.1.tgz#acfa7ca3c4e587b269b746bed0e625c9c2e558cb"
-  integrity sha512-KsoDrASGwTKZoWXbjy8SlIeoDv7y1OfBJtHVLuPuzhConA8e0SZpGzFqIuVRfG4bhisSTptZLDQZ7oxwgPv2jA==
+"@astrojs/compiler@^0.23.3":
+  version "0.23.3"
+  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.23.3.tgz#25af8efda9c92dbc8745341c3a2544caa4c689dc"
+  integrity sha512-eBWo0d3DoRDeg2Di1/5YJtOXh5eGFSjJMp1wVoVfoITHR4egdUGgsrDHZTzj0a25M/S9W5S6SpXCyNWcqi8jOA==
 
 "@astrojs/language-server@^0.20.0":
   version "0.20.3"
@@ -73,10 +73,10 @@
     uvu "^0.5.0"
     vfile-message "^3.0.0"
 
-"@astrojs/netlify@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/netlify/-/netlify-1.0.0.tgz#54a0809262069b3402c1175724304fbb77df051a"
-  integrity sha512-6tispCOmiUi6r+RroNhD8SgFhzrjk8rJSOwLYro1wdzNAceA5mC71kRv9Z9UMNQqAh5xRzS8evcGNxG9Ajo6AA==
+"@astrojs/netlify@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@astrojs/netlify/-/netlify-1.0.1.tgz#928906bba12e83b1132cfba0f4b53cd920061346"
+  integrity sha512-AQNrKg6DSNrG55hJBuzlEe9akER9simEaDapoEUspC4eXFN3H6OzvS+THKdksp7PyXMHNZxR/LYiM1T56yMBzA==
   dependencies:
     "@astrojs/webapi" "^1.0.0"
     esbuild "^0.14.43"
@@ -611,12 +611,12 @@ astro-icon@^0.7.3:
     resolve-pkg "^2.0.0"
     svgo "^2.8.0"
 
-astro@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-1.0.1.tgz#8b1c7e4d7ba3c906ab98f5407ac3894f1c1db953"
-  integrity sha512-oQltZ7Yk+ShztRL5NO+nyXVIZqBHjlL6yn6oDeJ/a+6D/rN6KMZQquKP21j87nSwnSnEUjS73EsFsIEvrxG4Tw==
+astro@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-1.0.4.tgz#4f4e81f55304450be5e71b1f8e0a512e97fe6a65"
+  integrity sha512-wNXmDSHnhiFcEeMy2VWMJV1i8mPx8Lu4qLBfZSmP9nWrc/oxgBZfDQTWOj0/NFu+MkfZ2JEGJlL9RZFmHrKlew==
   dependencies:
-    "@astrojs/compiler" "^0.23.1"
+    "@astrojs/compiler" "^0.23.3"
     "@astrojs/language-server" "^0.20.0"
     "@astrojs/markdown-remark" "^1.0.0"
     "@astrojs/telemetry" "^1.0.0"
@@ -668,7 +668,7 @@ astro@^1.0.1:
     tsconfig-resolver "^3.0.1"
     unist-util-visit "^4.1.0"
     vfile "^5.3.2"
-    vite "3.0.4"
+    vite "3.0.5"
     yargs-parser "^21.0.1"
     zod "^3.17.3"
 
@@ -2502,7 +2502,7 @@ postcss-load-config@^3.1.4:
     lilconfig "^2.0.5"
     yaml "^1.10.2"
 
-postcss@^8.4.14:
+postcss@^8.4.14, postcss@^8.4.16:
   version "8.4.16"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.16.tgz#33a1d675fac39941f5f445db0de4db2b6e01d43c"
   integrity sha512-ipHE1XBvKzm5xI7hiHCZJCSugxvsdq2mPnsq5+UF+VHCjiBvtDrlxJfMBToWaP9D5XlgNmcFGqoHmUn0EYEaRQ==
@@ -3207,13 +3207,13 @@ vfile@^5.0.0, vfile@^5.3.2:
     unist-util-stringify-position "^3.0.0"
     vfile-message "^3.0.0"
 
-vite@3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-3.0.4.tgz#c61688d6b97573e96cf5ac25f2d68597b5ce68e8"
-  integrity sha512-NU304nqnBeOx2MkQnskBQxVsa0pRAH5FphokTGmyy8M3oxbvw7qAXts2GORxs+h/2vKsD+osMhZ7An6yK6F1dA==
+vite@3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-3.0.5.tgz#56b8d52e00bbbd5f21d02f0868dc613b3246ecc6"
+  integrity sha512-bRvrt9Tw8EGW4jj64aYFTnVg134E8hgDxyl/eEHnxiGqYk7/pTPss6CWlurqPOUzqvEoZkZ58Ws+Iu8MB87iMA==
   dependencies:
     esbuild "^0.14.47"
-    postcss "^8.4.14"
+    postcss "^8.4.16"
     resolve "^1.22.1"
     rollup "^2.75.6"
   optionalDependencies:
