@@ -42,6 +42,13 @@
         }
     },
     {
+        "url": "https://t.me/bubblineyuri",
+	"icon": {
+	    "style": "simple-icons",
+	    "name": "telegram"
+	}
+    },
+    {
         "url": "mailto:me@koyu.space",
         "icon": {
             "style": "fa-solid",
