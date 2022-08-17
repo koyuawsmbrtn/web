@@ -611,10 +611,10 @@ astro-icon@^0.7.3:
     resolve-pkg "^2.0.0"
     svgo "^2.8.0"
 
-astro@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-1.0.4.tgz#4f4e81f55304450be5e71b1f8e0a512e97fe6a65"
-  integrity sha512-wNXmDSHnhiFcEeMy2VWMJV1i8mPx8Lu4qLBfZSmP9nWrc/oxgBZfDQTWOj0/NFu+MkfZ2JEGJlL9RZFmHrKlew==
+astro@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-1.0.6.tgz#9978c31d7d8359f951a7800e737dddfdfdba2641"
+  integrity sha512-QAkdkzP3PbauiO4YnOgVTWY6z26heKruoXW9TnN8Bbmwtf7DUFIchi6CFSAVYSONX8XtRnj+p6fCkk06OWfJ4w==
   dependencies:
     "@astrojs/compiler" "^0.23.3"
     "@astrojs/language-server" "^0.20.0"
