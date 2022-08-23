@@ -13,10 +13,15 @@ function getMod(s) {
 }
 
 function removeSub(s) {
+  let d = undefined;
   let p = s.split(".");
   if (p.length == 3) {
-    return `${p[1]}.${p[2]}`;
+    d = `${p[1]}.${p[2]}`;
   }
+  if (d == undefined) {
+    d = s;
+  }
+  return d;
 }
 ---
 
@@ -53,8 +58,14 @@ function removeSub(s) {
         {e.special}
       </td>
       <td>
-        <img style="width: 150px" src={e.logo} alt={`${removeSub(e.instance)} Logo`} />
+        <img style="width: 150px" src={e.logo} alt={`${removeSub(e.instance)} Logo`} class={`instance-${removeSub(e.instance).replace(".", "")}`} />
       </td>
     </tr>
   ))}
 </table>
+
+<style>
+  .instance-snowdintown {
+    image-rendering: pixelated;
+  }
+</style>
