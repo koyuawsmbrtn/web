@@ -42,6 +42,13 @@
         }
     },
     {
+        "url": "https://discord.gg/AZDdt9gEDu",
+        "icon": {
+            "style": "simple-icons",
+            "name": "discord"
+        }
+    },
+    {
         "url": "https://t.me/bubblineyuri",
 	"icon": {
 	    "style": "simple-icons",
