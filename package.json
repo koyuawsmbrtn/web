@@ -9,12 +9,11 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^1.1.6"
+    "astro": "^1.2.3"
   },
   "dependencies": {
-    "@astrojs/netlify": "^1.0.2",
     "astro-icon": "^0.7.3",
-    "sass": "^1.54.8",
+    "sass": "^1.54.9",
     "twemoji": "^14.0.2"
   }
 }
