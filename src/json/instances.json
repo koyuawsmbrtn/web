@@ -110,5 +110,12 @@
         "moderation": "%%general%%",
         "special": "Undertale-themed Pleroma instance, queer- and leftist run",
         "logo": "https://snowdin.town/static/savepoint.png"
+    },
+    {
+        "instance": "im-in.space",
+        "description": "A generalist Mastodon instance with a nice domain name. Running on Glitch Social's fork with a custom theme!",
+        "moderation": "%%gab%%",
+        "special": "Portal-themed Glitch-soc instance with custom theme and spaaaaceee",
+        "logo": "/fedilist/im-in-space.png"
     }
 ]
