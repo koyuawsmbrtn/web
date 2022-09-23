@@ -7,13 +7,6 @@
         }
     },
     {
-        "url": "https://steamcommunity.com/id/bubblineyuri",
-        "icon": {
-            "style": "fa-brands",
-            "name": "steam-symbol"
-        }
-    },
-    {
         "url": "http://live.xbox.com/Profile?Gamertag=bubblineyuri",
         "icon": {
             "style": "simple-icons",
@@ -42,24 +35,10 @@
         }
     },
     {
-        "url": "https://discord.gg/AZDdt9gEDu",
-        "icon": {
-            "style": "simple-icons",
-            "name": "discord"
-        }
-    },
-    {
         "url": "mailto:me@koyu.space",
         "icon": {
             "style": "fa-solid",
             "name": "envelope"
-        }
-    },
-    {
-        "url": "xmpp:me@koyu.space",
-        "icon": {
-            "style": "simple-icons",
-            "name": "xmpp"
         }
     }
 ]
