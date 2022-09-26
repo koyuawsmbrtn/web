@@ -70,13 +70,6 @@
         "logo": "https://misskey.biribiri.dev/files/33a6ce51-521d-46ed-9fc7-7cfb90226533"
     },
     {
-        "instance": "udongein.xyz",
-        "description": "Your comfy, friendly instance of Pleroma",
-        "moderation": "%%general%%",
-        "special": "Comfy anime-styled Pleroma instance with a greenish bamboo theme.",
-        "logo": "https://udongein.xyz/static/logo.png"
-    },
-    {
         "instance": "kirei.moe",
         "description": "Kirei Social",
         "moderation": "%%free%%",
