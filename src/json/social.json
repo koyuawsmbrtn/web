@@ -28,6 +28,13 @@
         }
     },
     {
+        "url": "xmpp:me@koyu.space",
+        "icon": {
+            "style": "simple-icons",
+            "name": "xmpp"
+        }
+    },
+    {
         "url": "https://matrix.to/#/@koyu:mozilla.org",
         "icon": {
             "style": "simple-icons",
