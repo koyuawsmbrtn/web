@@ -8,20 +8,20 @@ Put this into something like `/etc/nginx/sites-enabled/yoursite` and test the co
 ```
 server {
 
-	listen 443;
+    listen 443;
 
-	index index.html index.htm index.nginx-debian.html;
+    index index.html index.htm index.nginx-debian.html;
 
-	server_name example.com;
+    server_name example.com;
 
-	location / {
+    location / {
         client_max_body_size 200M;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
-		proxy_pass http://localhost:3000;
-	}
+        proxy_pass http://localhost:3000;
+    }
 
     include /etc/letsencrypt/options-ssl-nginx.conf;
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
