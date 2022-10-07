@@ -1,9 +1,9 @@
 [
     {
-        "url": "https://fedi.koyu.space/koyu",
+        "url": "https://sns.koyu.space/@koyu",
         "icon":  {
-            "style": "simple-icons",
-            "name": "pleroma"
+            "style": "fa",
+            "name": "share-alt"
         }
     },
     {
