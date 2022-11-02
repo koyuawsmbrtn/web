@@ -28,13 +28,6 @@
         }
     },
     {
-        "url": "https://matrix.to/#/@koyu:mozilla.org",
-        "icon": {
-            "style": "simple-icons",
-            "name": "matrix"
-        }
-    },
-    {
         "url": "mailto:me@koyu.space",
         "icon": {
             "style": "fa-solid",
