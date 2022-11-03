@@ -1,9 +1,9 @@
 [
     {
-        "url": "https://sns.koyu.space/@koyu",
+        "url": "https://koyu.space/@koyu",
         "icon":  {
-            "style": "fa",
-            "name": "share-alt"
+            "style": "simple-icons",
+            "name": "mastodon"
         }
     },
     {
