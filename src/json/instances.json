@@ -25,7 +25,7 @@
         "description": "We host free internet services for you and your friends",
         "moderation": "%%general%%",
         "special": "Pleroma instance with custom theme. 840 characters and friendly people.",
-        "logo": "https://content.koyu.space/img/pb-icon.svg"
+        "logo": "https://cdn.koyu.space/assets/pb-icon.svg"
     },
     {
         "instance": "qoto.org",
