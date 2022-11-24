@@ -21,10 +21,10 @@
         "logo": "https://raw.githubusercontent.com/Miaourt/rarure/master/src/mastodon/images/elephant_ui_plane.svg"
     },
     {
-        "instance": "fedi.koyu.space",
+        "instance": "koyu.space",
         "description": "We host free internet services for you and your friends",
         "moderation": "%%general%%",
-        "special": "Pleroma instance with custom theme. 840 characters and friendly people.",
+        "special": "Mastodon instance with custom theme. Queer-owned, hosted in Germany and using green energy.",
         "logo": "https://cdn.koyu.space/assets/pb-icon.svg"
     },
     {
