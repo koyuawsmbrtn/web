@@ -13,7 +13,7 @@ This is a list of instances I will recommend and meet all my requirements to be 
   * You are 100% sure your instance will live on for a long period of time
   * Regular backups of user data or any other data safety measures
   * GDPR compliant (e.g. no Google Analytics and allowing users to request or delete their data, hosting preferably EU-based)
-  * Transport layer security (TLS) so packets are safe and sound when being in transit (this doesn&#8217;t mean admins or law enforcement are not permitted to read your messages, if you want safe communication use an encrypted messaging service like Element)
+  * Transport layer security (TLS) so packets are safe and sound when being in transit (this doesn&#8217;t mean admins or law enforcement are not permitted to read your messages, if you want safe communication use an encrypted messaging service like Signal)
   * You guarantee a certain amount of uptime (ideally >90%)
   * Your instance shouldn&#8217;t be too generalist that it&#8217;d look plain and boring (mastodon.social and mstdn.io you are sadly out of luck here)
   * Your instance should have less than 50k users so they are spread out evenly (who&#8217;s gonna pay for all that bandwidth)
