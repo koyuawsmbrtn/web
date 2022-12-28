@@ -70,13 +70,6 @@
         "logo": "https://misskey.biribiri.dev/files/33a6ce51-521d-46ed-9fc7-7cfb90226533"
     },
     {
-        "instance": "kirei.moe",
-        "description": "Kirei Social",
-        "moderation": "%%free%%",
-        "special": "Pink cherry blossom anime-styled Pleroma instance",
-        "logo": "https://kirei.moe/media/f1439d004011e1ca8b420d34976b981e17fa72f94673f52b59075018caf953c1.png"
-    },
-    {
         "instance": "chinwag.org",
         "description": "The happiest place on the internet",
         "moderation": "%%free2%%",
