@@ -9,7 +9,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^1.8.0"
+    "astro": "^1.9.1"
   },
   "dependencies": {
     "@astrojs/turbolinks": "^0.1.4",
