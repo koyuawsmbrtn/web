@@ -7,6 +7,13 @@
         }
     },
     {
+        "url": "https://matrix.to/#/@koyu:mozilla.org",
+        "icon":  {
+            "style": "simple-icons",
+            "name": "matrix"
+        }
+    },
+    {
         "url": "http://live.xbox.com/Profile?Gamertag=bubblineyuri",
         "icon": {
             "style": "simple-icons",
