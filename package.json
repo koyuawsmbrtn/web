@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
+    "dev": "node tasks/download-images.js && astro dev",
+    "start": "node tasks/download-images.js && astro dev",
     "build": "node tasks/download-images.js && astro build",
     "preview": "astro preview",
     "download-images": "node tasks/download-images.js",
