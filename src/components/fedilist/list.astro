@@ -58,7 +58,7 @@ function removeSub(s) {
         {e.special}
       </td>
       <td>
-        <img style="width: 150px" src={e.logo} alt={`${removeSub(e.instance)} Logo`} class={`instance-${removeSub(e.instance).replace(".", "")}`} />
+        <img style="width: 150px" src={e.logo.startsWith("http://") || e.logo.startsWith("https://") ? `/fedilist/${removeSub(e.instance).replace(".", "")}.${e.logo.split("/")[e.logo.split("/").length - 1].split(".")[1] == undefined || e.logo.split("/")[e.logo.split("/").length - 1].split(".")[1].startsWith("com") ? "png" : e.logo.split("/")[e.logo.split("/").length - 1].split(".")[1]}` : e.logo} alt={`${removeSub(e.instance)} Logo`} class={`instance-${removeSub(e.instance).replace(".", "")}`} />
       </td>
     </tr>
   ))}

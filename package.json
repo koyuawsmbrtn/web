@@ -5,16 +5,21 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
+    "build": "node tasks/download-images.js && astro build",
+    "preview": "astro preview",
+    "download-images": "node tasks/download-images.js",
+    "clean": "node tasks/clean.js",
+    "prepare": "husky install"
   },
   "devDependencies": {
-    "astro": "^1.9.2"
+    "astro": "^2.0.4"
   },
   "dependencies": {
-    "@astrojs/turbolinks": "^0.1.4",
+    "@astrojs/turbolinks": "^0.1.5",
     "astro-icon": "^0.8.0",
-    "sass": "^1.57.1",
+    "husky-init": "^8.0.0",
+    "request": "^2.88.2",
+    "sass": "^1.58.0",
     "turbolinks": "^5.2.0",
     "twemoji": "^14.0.2"
   }
