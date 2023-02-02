@@ -10,12 +10,35 @@ import "../scss/index.scss";
 
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <SEO description={Astro.props.description} />
-        <link rel="me" href="https://koyu.space/@koyu">
-        <link rel="me" href="https://qoto.org/@koyu">
-        <link rel="shortcut icon" href="/favicon.ico">
+        <SEO
+        charset="utf-8"
+        description={Astro.props.description}
+        openGraph={{
+            basic: {
+                title: title,
+                type: "website",
+                image: "https://web.koyu.space/avatar.png"
+            },
+            image: {
+                alt: "koyu's personal website"
+            }
+        }}
+        extend={{
+        link: [
+            { rel: "shortcut icon", href: "/favicon.ico" },
+            { rel: "me", href: "https://koyu.space/@koyu" },
+            { rel: "me", href: "https://qoto.org/@koyu" },
+        ],
+        meta: [
+            {
+            name: "twitter:image",
+            content: "https://web.koyu.space/avatar.png",
+            },
+            { name: "twitter:title", content: title },
+            { name: "twitter:description", content: Astro.props.description },
+            { name: "viewport", content: "width=device-width" },
+        ],
+        }} />
         <script src="../ts/twemoji.ts"></script>
         <title>{title}</title>
     </head>
