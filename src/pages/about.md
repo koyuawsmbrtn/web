@@ -2,6 +2,9 @@
 title: About me
 layout: ../layouts/page.astro
 ---
+
+Here are a few quick facts about me
+
 <img alt="Here's a picture of me" src="/me.png" height="250" style="float:right;margin-top:0 !important;">
 
   * Is 23 years old

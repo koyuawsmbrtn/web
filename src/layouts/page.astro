@@ -2,12 +2,31 @@
 import Navigation from "../components/navigation.astro";
 import Layout from "../layouts/base.astro";
 import Footer from "../components/footer.astro";
-let title = Astro.props.title;
-if (title === undefined) {
-	title = Astro.props.content.title;
+let description: string = "";
+let title = "";
+if (Astro.props.title === undefined) {
+	title = Astro.props.frontmatter.title;
+} else {
+	title = Astro.props.title;
+}
+try {
+	if (Astro.slots.has('default')) {
+  		description = await Astro.slots.render("default");
+	}
+	description = description.match(/<p>(.*?)<\/p>/)[1];
+	if (description.length > 252 || !description.endsWith(".")) {
+		description = description.substring(0,252)+"...";
+	}
+} catch (err) {
+	description = title;
+	try {
+		if (Astro.props.frontmatter.description !== undefined) {
+			description = Astro.props.frontmatter.description;
+		}
+	} catch (e) {}
 }
 ---
-<Layout title={title}>
+<Layout title={title} description={description}>
 	<Navigation />
 	<div class="article-meta">
 		<h1>{title}</h1>

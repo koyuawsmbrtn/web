@@ -1,9 +1,10 @@
 ---
-let title = "koyu's personal website"
+let title = "koyu's personal website";
 if (Astro.props.title !== undefined) {
     title = title+" | "+Astro.props.title;
 }
 
+import { SEO } from "astro-seo";
 import "../scss/index.scss";
 ---
 
@@ -11,9 +12,11 @@ import "../scss/index.scss";
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
+        <SEO title={Astro.props.title} description={Astro.props.description} />
         <link rel="me" href="https://koyu.space/@koyu">
         <link rel="me" href="https://qoto.org/@koyu">
         <link rel="shortcut icon" href="/favicon.ico">
+        <script src="../ts/twemoji.ts"></script>
         <title>{title}</title>
     </head>
     <body>
