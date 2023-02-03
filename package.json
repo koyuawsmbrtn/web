@@ -9,6 +9,7 @@
     "preview": "astro preview",
     "download-images": "node tasks/download-images.js",
     "clean": "node tasks/clean.js",
+    "add-descriptions": "node tasks/add-descriptions.js",
     "prepare": "husky install"
   },
   "devDependencies": {

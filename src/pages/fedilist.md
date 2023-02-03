@@ -1,5 +1,6 @@
 ---
 layout: ../layouts/fedilist.astro
+description: This is a list of instances I will recommend and meet all my requirements to be a good and welcoming space while having common sense.
 ---
 
 This is a list of instances I will recommend and meet all my requirements to be a good and welcoming space while having common sense.

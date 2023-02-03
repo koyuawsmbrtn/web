@@ -9,22 +9,12 @@ if (Astro.props.title === undefined) {
 } else {
 	title = Astro.props.title;
 }
+description = title;
 try {
-	if (Astro.slots.has('default')) {
-  		description = await Astro.slots.render("default");
+	if (Astro.props.frontmatter.description !== undefined) {
+		description = Astro.props.frontmatter.description;
 	}
-	description = description.match(/<p>(.*?)<\/p>/)[1];
-	if (description.length > 252 || !description.endsWith(".")) {
-		description = description.substring(0,252)+"...";
-	}
-} catch (err) {
-	description = title;
-	try {
-		if (Astro.props.frontmatter.description !== undefined) {
-			description = Astro.props.frontmatter.description;
-		}
-	} catch (e) {}
-}
+} catch (e) {}
 ---
 <Layout title={title} description={description}>
 	<Navigation />

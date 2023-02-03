@@ -1,6 +1,7 @@
 ---
 title: Bookmarks
 layout: ../../layouts/page.astro
+description: [Chris Were](https://chriswere.uk)...
 ---
 
 * [Chris Were](https://chriswere.uk)

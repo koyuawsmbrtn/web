@@ -1,6 +1,7 @@
 ---
 title: About me
 layout: ../layouts/page.astro
+description: Here are a few quick facts about me...
 ---
 
 Here are a few quick facts about me
