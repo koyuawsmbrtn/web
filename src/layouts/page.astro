@@ -15,6 +15,11 @@ try {
 		description = Astro.props.frontmatter.description;
 	}
 } catch (e) {}
+try {
+	if (Astro.props.description !== undefined) {
+		description = Astro.props.description;
+	}
+} catch (e) {}
 ---
 <Layout title={title} description={description}>
 	<Navigation />
