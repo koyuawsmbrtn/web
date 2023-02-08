@@ -1,0 +1,35 @@
+---
+import Navigation from "../components/navigation.astro";
+import Layout from "../layouts/base.astro";
+import Footer from "../components/footer.astro";
+let description: string = "";
+let title = "";
+if (Astro.props.title === undefined) {
+	title = Astro.props.frontmatter.title;
+} else {
+	title = Astro.props.title;
+}
+description = title;
+try {
+	if (Astro.props.frontmatter.description !== undefined) {
+		description = Astro.props.frontmatter.description;
+	}
+} catch (e) {}
+try {
+	if (Astro.props.description !== undefined) {
+		description = Astro.props.description;
+	}
+} catch (e) {}
+const image = "url(/blog/"+Astro.props.frontmatter.image+".png)";
+---
+<style define:vars={{image}}>.article-meta { background: var(--image) #444; background-size: cover; background-position: center center; background-blend-mode: multiply; }</style>
+<Layout title={title} description={description}>
+	<Navigation />
+	<div class="article-meta">
+		<h1><span class="title">{title}</span></h1>
+		<p class="date">{Astro.props.frontmatter.pubDate.split("T")[0]}</p>
+	</div>
+	<br>
+	<slot />
+	<Footer />
+</Layout>

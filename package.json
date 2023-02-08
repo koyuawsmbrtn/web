@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "node tasks/download-images.js && astro dev",
-    "start": "node tasks/download-images.js && astro dev",
+    "dev": "node tasks/download-images.js & astro dev",
+    "start": "node tasks/download-images.js & astro dev",
     "build": "node tasks/download-images.js && astro build",
     "preview": "astro preview",
     "download-images": "node tasks/download-images.js",
@@ -16,6 +16,7 @@
     "astro": "^2.0.6"
   },
   "dependencies": {
+    "@astrojs/rss": "^2.1.0",
     "@astrojs/turbolinks": "^0.1.5",
     "astro-icon": "^0.8.0",
     "astro-seo": "^0.7.0",
