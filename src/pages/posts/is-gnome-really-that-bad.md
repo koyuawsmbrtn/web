@@ -20,5 +20,3 @@ GNOME comes with a variety of applications to get stuff done. What I like especi
 ## What is the point in "removing features"?
 
 This isn't removing features really, they rather get moved into a seperate extension than clogging up the desktop. I think of GNOME more as a base system to build your specific user experience and user interface changes on top. If you want to extend your desktop just add extensions to match your workflow.
-
-<br><center><video src="/video/We need to talk about GNOME. [FNZqj16XYrs].mp4" alt="We need to talk about GNOME. - Wolfgang's Channel" title="We need to talk about GNOME. - Wolfgang's Channel" poster="/video/We need to talk about GNOME. [FNZqj16XYrs].webp" width="640" height="360" controls></video></center>
