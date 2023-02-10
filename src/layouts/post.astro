@@ -20,7 +20,12 @@ try {
 		description = Astro.props.description;
 	}
 } catch (e) {}
-const image = "url(/blog/"+Astro.props.frontmatter.image+".png)";
+let image = "";
+if (Astro.props.frontmatter.image !== undefined) {
+	image = "url(/blog/"+Astro.props.frontmatter.image+".png)";
+} else {
+	image = "url("+Astro.props.frontmatter.featured_image+")";
+}
 ---
 <style define:vars={{image}}>.article-meta { background: var(--image) #444; background-size: cover; background-position: center center; background-blend-mode: multiply; }</style>
 <Layout title={title} description={description}>
