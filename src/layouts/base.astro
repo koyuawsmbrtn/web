@@ -42,8 +42,12 @@ import "../scss/index.scss";
         <title>{title}</title>
     </head>
     <body>
-        <main>
+        <main id="swup">
             <slot/>
         </main>
+        <script>
+            import Swup from 'swup';
+            const swup = new Swup();
+        </script>
     </body>
 </html>
