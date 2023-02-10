@@ -25,7 +25,6 @@
     "request": "^2.88.2",
     "sanitize-html": "^2.9.0",
     "sass": "^1.58.0",
-    "turbolinks": "^5.2.0",
     "twemoji": "^14.0.2"
   }
 }
