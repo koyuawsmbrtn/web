@@ -14,6 +14,13 @@
         }
     },
     {
+        "url": "https://t.me/bubblineyuri",
+        "icon": {
+            "style": "simple-icons",
+            "name": "telegram"
+        }
+    },
+    {
         "url": "http://live.xbox.com/Profile?Gamertag=bubblineyuri",
         "icon": {
             "style": "simple-icons",
