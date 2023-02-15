@@ -3,6 +3,7 @@ const notes = await Astro.glob("../pages/notes/*.md");
 ---
 
 <ul>
+    <li><a href="/fedilist">Fediverse server list</a></li>
     {notes.map(({url, frontmatter}) => (
         <li><a href={url}>{frontmatter.title}</a></li>
     ))}

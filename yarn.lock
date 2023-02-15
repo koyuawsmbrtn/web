@@ -15,10 +15,10 @@
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.29.17.tgz#5c65e18fd5dde9620dcc1794a858609b66408215"
   integrity sha512-6ZbRGVunUMHxROD9Cleqkrfrj/kM9o43nLVwycdxCexCB5G372evy2ZM46LhaG/k5B5yC0PByNHTaGny0ll3iQ==
 
-"@astrojs/compiler@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-1.0.1.tgz#ed5d758c9824cc497361b632f1570d9ce2a4ce31"
-  integrity sha512-77aacobLKcL98NmhK3OBS5EHIrX9gs1ckB/vGSIdkVZuB7u51V4jh05I6W0tSvG7/86tALv6QtHTRZ8rLhFTbQ==
+"@astrojs/compiler@^1.1.0":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-1.1.1.tgz#a106f265f7f4fa04db288818d05be2dd64f2471b"
+  integrity sha512-JRDEARnuUUOlKUE4XVu8+NoeNWpOHtYQW39uWjqTbpefMjL95og54vTKLHqeUajXWeY115zZtO7jIVdOmQ1IPQ==
 
 "@astrojs/language-server@^0.28.3":
   version "0.28.3"
@@ -740,12 +740,12 @@ astro-seo@^0.7.0:
   resolved "https://registry.yarnpkg.com/astro-seo/-/astro-seo-0.7.0.tgz#74ff0accfbc0eb52475418988683f2a259fe9112"
   integrity sha512-G7zJUr4lfKLeqfWx2g5rfuBsOsIOfqxIOqErQfrMsMchDFfLFxNKAuW8yAo8hynJJwBvtGyS/vOXgGdMVVCFrA==
 
-astro@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-2.0.6.tgz#94d903066514b4e95a04a71121a0403716e9f025"
-  integrity sha512-aI8Ijy2EpMyP5SpjmDJpEUdNL6CUAxnja6IeaBC1BokD/mNAnijtmMnTyWVI3UeEZ727wYLISQMyqCfEUq8VNA==
+astro@^2.0.11:
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-2.0.11.tgz#22f59cbef36bd6b538e23004479092ee18729909"
+  integrity sha512-dXBuHE1ZYfafHyjhe7ZUkcZzGGInWrLCMeHAML//+mdySr/htDsiMo8DN25Ld5siKClsCvyXgxitu651wSWcyw==
   dependencies:
-    "@astrojs/compiler" "^1.0.1"
+    "@astrojs/compiler" "^1.1.0"
     "@astrojs/language-server" "^0.28.3"
     "@astrojs/markdown-remark" "^2.0.1"
     "@astrojs/telemetry" "^2.0.0"
@@ -3021,10 +3021,10 @@ sass-formatter@^0.7.5:
   dependencies:
     suf-log "^2.5.3"
 
-sass@^1.58.0:
-  version "1.58.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.58.0.tgz#ee8aea3ad5ea5c485c26b3096e2df6087d0bb1cc"
-  integrity sha512-PiMJcP33DdKtZ/1jSjjqVIKihoDc6yWmYr9K/4r3fVVIEDAluD0q7XZiRKrNJcPK3qkLRF/79DND1H5q1LBjgg==
+sass@^1.58.1:
+  version "1.58.1"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.58.1.tgz#17ab0390076a50578ed0733f1cc45429e03405f6"
+  integrity sha512-bnINi6nPXbP1XNRaranMFEBZWUfdW/AF16Ql5+ypRxfTvCRTTKrLsMIakyDcayUt2t/RZotmL4kgJwNH5xO+bg==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"

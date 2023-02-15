@@ -1,0 +1,41 @@
+label,
+input,
+textarea,
+button {
+    display: block;
+    margin-top: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    background: #fff;
+    outline: 0;
+    padding: 8px;
+    border: 0;
+    border-radius: 4px;
+    width: 100%;
+}
+
+label {
+    margin-top: 10px;
+}
+
+form {
+    display: block;
+    margin: 0 auto;
+}
+
+@media(min-width: 800px) {
+    form {
+        width: 50%;
+    }
+}
+
+@media(max-width: 800px) {
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 95% !important;
+    }
+}

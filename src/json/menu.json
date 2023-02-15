@@ -12,11 +12,11 @@
         "name": "Notes"
     },
     {
-        "page": "fedilist",
-        "name": "Fedilist"
-    },
-    {
         "page": "portfolio",
         "name": "Portfolio"
+    },
+    {
+        "page": "contact",
+        "name": "Contact"
     }
 ]

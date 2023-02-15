@@ -5,8 +5,8 @@ if (Astro.props.title !== undefined) {
 }
 
 import { SEO } from "astro-seo";
-import "../scss/index.scss";
 import Banner from "../components/banner.astro";
+import "../scss/index.scss";
 ---
 
 <html lang="en">
@@ -43,7 +43,7 @@ import Banner from "../components/banner.astro";
         <title>{title}</title>
     </head>
     <body>
-        <div class="banner"><Banner /></div>
+        <Banner />
         <main>
             <slot/>
         </main>
