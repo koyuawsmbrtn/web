@@ -27,7 +27,14 @@ if (Astro.props.frontmatter.image !== undefined) {
 	image = "url("+Astro.props.frontmatter.featured_image+")";
 }
 ---
-<style define:vars={{image}}>.article-meta { background: var(--image) #444; background-size: cover; background-position: center center; background-blend-mode: multiply; }</style>
+<style define:vars={{image}}>
+    .article-meta {
+        background: var(--image) #444 !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-blend-mode: multiply !important;
+    }
+</style>
 <Layout title={title} description={description}>
 	<Navigation />
 	<div class="article-meta">
