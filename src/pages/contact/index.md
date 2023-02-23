@@ -15,6 +15,9 @@ description: "Contact me"
     <label>Message: <textarea name="message" rows="12" cols="32" required></textarea></label>
   </p>
   <p>
+    <label>Attachment: <input type="file" name="attachment" rows="12" cols="32" required /></label>
+  </p>
+  <p>
     <button type="submit">Send</button>
   </p>
 </form>
