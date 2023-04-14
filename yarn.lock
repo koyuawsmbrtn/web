@@ -38,10 +38,10 @@
     vscode-languageserver-types "^3.17.1"
     vscode-uri "^3.0.3"
 
-"@astrojs/markdown-remark@^2.1.3":
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/@astrojs/markdown-remark/-/markdown-remark-2.1.3.tgz#b80b12de01a13d41473a1e06341a5d44cd2c4f48"
-  integrity sha512-Di8Qbit9p7L7eqKklAJmiW9nVD+XMsNHpaNzCLduWjOonDu9fVgEzdjeDrTVCDtgrvkfhpAekuNXrp5+w4F91g==
+"@astrojs/markdown-remark@^2.1.4":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/@astrojs/markdown-remark/-/markdown-remark-2.1.4.tgz#7f23cf2f967d5040fe74b04df25d4e37bea7311c"
+  integrity sha512-z5diCcFo2xkBAJ11KySAIKpZZkULZmzUvWsZ2VWIOrR6QrEgEfVl5jTpgPSedx4m+xUPuemlUviOotGB7ItNsQ==
   dependencies:
     "@astrojs/prism" "^2.1.0"
     github-slugger "^1.4.0"
@@ -733,14 +733,14 @@ astro-seo@^0.7.2:
   resolved "https://registry.yarnpkg.com/astro-seo/-/astro-seo-0.7.2.tgz#b6ef5d1590063631c03394fbeb501973a0460912"
   integrity sha512-YnSqj4E6vbF7wRk3gcxOPHBjenhfgaINEJlTsnu4sovAyfyGEdQksbioYKoZ+vERRDaYvEricfSzC6fc9lieww==
 
-astro@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-2.2.2.tgz#aecc7287a9b129441724e624951e41159af80fe9"
-  integrity sha512-RmV/UiOW3losWRbR8CeFDFDtjBOdFdBTEccXF9sT/ZxLz7T9SglevtOHgKwTSRPgUM9c0LteFDFcHDY3OYBgDg==
+astro@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-2.3.0.tgz#5ab82fbb402d89c46c114a834caaef2a59081d03"
+  integrity sha512-1t8U6vDHQLT0gw0IXZLtJKDIShCcJwOuh0K1JyPgFwu1famb/ggyvsqp9nxBZIbNV8BcAWDHrJA+Z7hh1oEiWA==
   dependencies:
     "@astrojs/compiler" "^1.3.1"
     "@astrojs/language-server" "^0.28.3"
-    "@astrojs/markdown-remark" "^2.1.3"
+    "@astrojs/markdown-remark" "^2.1.4"
     "@astrojs/telemetry" "^2.1.0"
     "@astrojs/webapi" "^2.1.0"
     "@babel/core" "^7.18.2"
@@ -790,7 +790,7 @@ astro@^2.2.2:
     vite "^4.2.1"
     vitefu "^0.2.4"
     yargs-parser "^21.0.1"
-    zod "^3.17.3"
+    zod "^3.20.6"
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -3015,10 +3015,10 @@ sass-formatter@^0.7.5:
   dependencies:
     suf-log "^2.5.3"
 
-sass@^1.61.0:
-  version "1.61.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.61.0.tgz#d1f6761bb833887b8fdab32a24e052c40531d02b"
-  integrity sha512-PDsN7BrVkNZK2+dj/dpKQAWZavbAQ87IXqVvw2+oEYI+GwlTWkvbQtL7F2cCNbMqJEYKPh1EcjSxsnqIb/kyaQ==
+sass@^1.62.0:
+  version "1.62.0"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.62.0.tgz#3686b2195b93295d20765135e562366b33ece37d"
+  integrity sha512-Q4USplo4pLYgCi+XlipZCWUQz5pkg/ruSSgJ0WRDSb/+3z9tXUOkQ7QPYn4XrhZKYAK4HlpaQecRwKLJX6+DBg==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
@@ -3685,10 +3685,10 @@ yocto-queue@^0.1.0:
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
-zod@^3.17.3:
-  version "3.17.10"
-  resolved "https://registry.yarnpkg.com/zod/-/zod-3.17.10.tgz#8716a05e6869df6faaa878a44ffe3c79e615defb"
-  integrity sha512-IHXnQYQuOOOL/XgHhgl8YjNxBHi3xX0mVcHmqsvJgcxKkEczPshoWdxqyFwsARpf41E0v9U95WUROqsHHxt0UQ==
+zod@^3.20.6:
+  version "3.21.4"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.21.4.tgz#10882231d992519f0a10b5dd58a38c9dabbb64db"
+  integrity sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==
 
 zwitch@^2.0.0:
   version "2.0.2"
