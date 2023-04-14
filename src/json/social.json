@@ -14,6 +14,13 @@
         }
     },
     {
+        "url": "https://koyuawsmbrtn.itch.io/",
+        "icon": {
+            "style": "simple-icons",
+            "name": "itchdotio"
+        }
+    },
+    {
         "url": "http://live.xbox.com/Profile?Gamertag=bubblineyuri",
         "icon": {
             "style": "simple-icons",
