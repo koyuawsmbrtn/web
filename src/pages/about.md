@@ -8,7 +8,7 @@ Here are a few quick facts about me
 
 <img alt="Here's a picture of me" src="/me.png" height="250" style="float:right;margin-top:0 !important;">
 
-  * Is 23 years old
+  * Is 24 years old
   * Likes computers and anything above
   * Can read out Brathering without pronouncing it in English
   * Speaks German and English fluently and can read and understand romanic languages like Spanish, French or Italian
