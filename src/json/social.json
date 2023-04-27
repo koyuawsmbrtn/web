@@ -21,6 +21,13 @@
         }
     },
     {
+        "url": "https://tiktok.com/@bubblineyuri",
+        "icon": {
+            "style": "simple-icons",
+            "name": "tiktok"
+        }
+    },
+    {
         "url": "http://live.xbox.com/Profile?Gamertag=bubblineyuri",
         "icon": {
             "style": "simple-icons",
