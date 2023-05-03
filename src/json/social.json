@@ -1,58 +1,58 @@
 [
-    {
-        "url": "https://koyu.space/@koyu",
-        "icon":  {
-            "style": "simple-icons",
-            "name": "mastodon"
-        }
-    },
-    {
-        "url": "https://matrix.to/#/@koyu:koyu.space",
-        "icon":  {
-            "style": "simple-icons",
-            "name": "matrix"
-        }
-    },
-    {
-        "url": "https://koyuawsmbrtn.itch.io/",
-        "icon": {
-            "style": "simple-icons",
-            "name": "itchdotio"
-        }
-    },
-    {
-        "url": "https://tiktok.com/@bubblineyuri",
-        "icon": {
-            "style": "simple-icons",
-            "name": "tiktok"
-        }
-    },
-    {
-        "url": "http://live.xbox.com/Profile?Gamertag=bubblineyuri",
-        "icon": {
-            "style": "simple-icons",
-            "name": "xbox"
-        }
-    },
-    {
-        "url": "https://tube.tchncs.de/c/leonie/videos",
-        "icon": {
-            "style": "simple-icons",
-            "name": "peertube"
-        }
-    },
-    {
-        "url": "https://github.com/koyuawsmbrtn",
-        "icon": {
-            "style": "simple-icons",
-            "name": "github"
-        }
-    },
-    {
-        "url": "mailto:me@koyu.space",
-        "icon": {
-            "style": "fa-solid",
-            "name": "envelope"
-        }
+  {
+    "url": "https://mk.absturztau.be/@koyu",
+    "icon": {
+      "style": "ic",
+      "name": "sharp-share"
     }
+  },
+  {
+    "url": "https://matrix.to/#/@koyu:koyu.space",
+    "icon": {
+      "style": "simple-icons",
+      "name": "matrix"
+    }
+  },
+  {
+    "url": "https://koyuawsmbrtn.itch.io/",
+    "icon": {
+      "style": "simple-icons",
+      "name": "itchdotio"
+    }
+  },
+  {
+    "url": "https://tiktok.com/@bubblineyuri",
+    "icon": {
+      "style": "simple-icons",
+      "name": "tiktok"
+    }
+  },
+  {
+    "url": "http://live.xbox.com/Profile?Gamertag=bubblineyuri",
+    "icon": {
+      "style": "simple-icons",
+      "name": "xbox"
+    }
+  },
+  {
+    "url": "https://tube.tchncs.de/c/leonie/videos",
+    "icon": {
+      "style": "simple-icons",
+      "name": "peertube"
+    }
+  },
+  {
+    "url": "https://github.com/koyuawsmbrtn",
+    "icon": {
+      "style": "simple-icons",
+      "name": "github"
+    }
+  },
+  {
+    "url": "mailto:me@koyu.space",
+    "icon": {
+      "style": "fa-solid",
+      "name": "envelope"
+    }
+  }
 ]
