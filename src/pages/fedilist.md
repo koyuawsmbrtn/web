@@ -23,6 +23,7 @@ This is a list of instances I will recommend and meet all my requirements to be 
   * Your instance can run any software (Pleroma, Misskey, Mastodon, &#8230;)
   * Must have open registrations (invite-only or manual approval okay)
   * Shouldn&#8217;t be a single user instance
+  * You actively moderate against racism, sexism, homophobia etc. on your instance
 
 <br />
 

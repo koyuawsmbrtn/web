@@ -1,45 +1,10 @@
 [
     {
-        "instance": "fedi.absturztau.be",
-        "description": "Pleroma: An efficient and flexible fediverse server",
-        "moderation": "%%general%%",
-        "special": "Generalist Pleroma instance with cat ears and other fun custom mods",
-        "logo": "https://fedi.absturztau.be/static/logo_puniko.png"
-    },
-    {
-        "instance": "cdrom.tokyo",
-        "description": "Floppy outdated",
-        "moderation": "%%free%%",
-        "special": "The answer to floppy.tokyo. Pleroma instance with custom Vaporwave-styled theme.",
-        "logo": "https://cdrom.tokyo/static/logo.png"
-    },
-    {
         "instance": "raru.re",
         "description": "A cool community, I guess.",
         "moderation": "%%general%%",
         "special": "Mastodon instance by the owner of niu.moe. Tries to bring back all the old niu memories. Also with custom theme.",
         "logo": "https://raw.githubusercontent.com/Miaourt/rarure/master/src/mastodon/images/elephant_ui_plane.svg"
-    },
-    {
-        "instance": "koyu.space",
-        "description": "We host free internet services for you and your friends",
-        "moderation": "%%general%%",
-        "special": "Mastodon instance with custom theme. Queer-owned, hosted in Germany and using green energy.",
-        "logo": "https://cdn.koyu.space/assets/pb-icon.svg"
-    },
-    {
-        "instance": "qoto.org",
-        "description": "QOTO: Question Others to Teach Ourselves. A STEM-oriented instance.",
-        "moderation": "%%general%%",
-        "special": "STEM-oriented instance with own custom mods and themes. Also perfect for writers, because of the character limit (65535).",
-        "logo": "https://storage.gra.cloud.ovh.net/v1/AUTH_011f6e315d3744d498d93f6fa0d9b5ee/qotoorg/site_uploads/files/000/000/003/original/lab-transparent.png"
-    },
-    {
-        "instance": "ieji.de",
-        "description": "ieji is romaji for 家(house)路(street), together it means “the way home / a home / homeland”",
-        "moderation": "%%free%%",
-        "special": "Generalist Mastodon instance from Germany. Uses FOSS whenever possible. Can be accessed via Tor.",
-        "logo": "/fedilist/ieji.png"
     },
     {
         "instance": "social.tchncs.de",
@@ -68,13 +33,6 @@
         "moderation": "Doesn't block anything",
         "special": "A Misskey instance which is home for Misaka clones!",
         "logo": "https://misskey.biribiri.dev/files/33a6ce51-521d-46ed-9fc7-7cfb90226533"
-    },
-    {
-        "instance": "chinwag.org",
-        "description": "The happiest place on the internet",
-        "moderation": "%%free2%%",
-        "special": "Green Oxford-styled pub Mastodon instance",
-        "logo": "https://static.chinwag.org/site_uploads/files/000/000/006/original/chinwag-social-mascot.svg"
     },
     {
         "instance": "berserker.town",
