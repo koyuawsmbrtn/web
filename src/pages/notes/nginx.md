@@ -2,6 +2,7 @@
 title: Having a good nginx config
 layout: ../../layouts/page.astro
 description: Put this into something like `/etc/nginx/sites-enabled/yoursite` and test the config with `sudo nginx -t`. If everything passed reload nginx with `sudo systemctl reload nginx`. You might have to request an SSL certificate through <a href="https://certb...
+hot: false
 ---
 
 Put this into something like `/etc/nginx/sites-enabled/yoursite` and test the config with `sudo nginx -t`. If everything passed reload nginx with `sudo systemctl reload nginx`. You might have to request an SSL certificate through <a href="https://certbot.eff.org/instructions" target="_blank">Let's Encrypt</a> if you haven't already.

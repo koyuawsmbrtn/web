@@ -1,6 +1,8 @@
 ---
-layout: ../layouts/fedilist.astro
+layout: ../../layouts/fedilist.astro
+title: Fediverse Instance recommendations
 description: This is a list of instances I will recommend and meet all my requirements to be a good and welcoming space while having common sense.
+hot: true
 ---
 
 This is a list of instances I will recommend and meet all my requirements to be a good and welcoming space while having common sense.

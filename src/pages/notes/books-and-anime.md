@@ -2,6 +2,7 @@
 title: Books and Anime
 layout: ../../layouts/page.astro
 description: Books and anime I watch and read
+hot: false
 ---
 
 Anime

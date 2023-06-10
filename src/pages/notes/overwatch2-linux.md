@@ -2,6 +2,7 @@
 title: Fixing Overwatch 2 crashing and lagging on Linux
 layout: ../../layouts/page.astro
 description: Yes, Overwatch on Linux is broken once again. This time it lags and crashes on a few systems, especially those who have a Nvidia GPU which is still a fair share of Linux users.
+hot: false
 ---
 
 Yes, Overwatch on Linux is broken once again. This time it lags and crashes on a few systems, especially those who have a Nvidia GPU which is still a fair share of Linux users.

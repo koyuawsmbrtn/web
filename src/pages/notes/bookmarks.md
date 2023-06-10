@@ -2,6 +2,7 @@
 title: Bookmarks
 layout: ../../layouts/page.astro
 description: Some bookmarks with useful tools and sites from friends...
+hot: false
 ---
 
 * [Chris Were](https://chriswere.uk)

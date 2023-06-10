@@ -21,3 +21,11 @@ description: "Contact me"
     <button type="submit">Send</button>
   </p>
 </form>
+
+<br>
+
+<center>
+
+Alternatively you can also <a href="https://calendly.com/bubblineyuri/30min" target="_blank">book a meeting</a>.
+
+</center>
