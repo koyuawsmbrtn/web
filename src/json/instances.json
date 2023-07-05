@@ -28,13 +28,6 @@
         "logo": "https://blob.cat/static/logo.png"
     },
     {
-        "instance": "misskey.biribiri.dev",
-        "description": "The network of 10k Misaka clones! Now powered by Misskey.",
-        "moderation": "Doesn't block anything",
-        "special": "A Misskey instance which is home for Misaka clones!",
-        "logo": "https://misskey.biribiri.dev/files/33a6ce51-521d-46ed-9fc7-7cfb90226533"
-    },
-    {
         "instance": "berserker.town",
         "description": "A berserker's gateway to the Mastodon social network. Run by a Norwegian, with servers in Finland.",
         "moderation": "%%general%%",
