@@ -49,13 +49,6 @@
         "logo": "https://akko.disqordia.space/favicon.png"
     },
     {
-        "instance": "snowdin.town",
-        "description": "a comfy chill akkoma instance",
-        "moderation": "%%general%%",
-        "special": "Undertale-themed Pleroma instance, queer- and leftist run",
-        "logo": "https://snowdin.town/static/savepoint.png"
-    },
-    {
         "instance": "im-in.space",
         "description": "A generalist Mastodon instance with a nice domain name. Running on Glitch Social's fork with a custom theme!",
         "moderation": "%%gab%%",
