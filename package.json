@@ -13,7 +13,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "astro": "^2.9.1"
+    "astro": "^2.9.4"
   },
   "dependencies": {
     "@astrojs/mdx": "^0.19.7",
