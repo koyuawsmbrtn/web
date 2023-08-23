@@ -28,6 +28,13 @@
     }
   },
   {
+    "url": "https://www.snapchat.com/add/bubblineyuri",
+    "icon": {
+      "style": "simple-icons",
+      "name": "snapchat"
+    }
+  },
+  {
     "url": "http://live.xbox.com/Profile?Gamertag=bubblineyuri",
     "icon": {
       "style": "simple-icons",
