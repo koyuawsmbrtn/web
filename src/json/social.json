@@ -35,6 +35,13 @@
     }
   },
   {
+    "url": "https://steamcommunity.com/id/bubblineyuri",
+    "icon": {
+      "style": "simple-icons",
+      "name": "steam"
+    }
+  },
+  {
     "url": "http://live.xbox.com/Profile?Gamertag=bubblineyuri",
     "icon": {
       "style": "simple-icons",
