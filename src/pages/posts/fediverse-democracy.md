@@ -17,7 +17,7 @@ Traditional social media platforms operate under a centralized model, giving a h
 
 ## Inclusivity and Global Connectivity
 
-**The fediverse, a network of interconnected servers, extends beyond Mastodon to include various platforms like Pleroma and Friendica**. This diversity enhances inclusivity, as users on different servers can still interact seamlessly. By transcending platform boundaries, the fediverse fosters global conversations, breaking down the walls that traditional social media often builds.
+**The fediverse, a network of interconnected servers, extends beyond Mastodon to include various platforms like Akkoma and Friendica**. This diversity enhances inclusivity, as users on different servers can still interact seamlessly. By transcending platform boundaries, the fediverse fosters global conversations, breaking down the walls that traditional social media often builds.
 
 ## No More Algorithmic Echo Chambers
 

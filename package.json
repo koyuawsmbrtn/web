@@ -13,18 +13,18 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "astro": "^2.10.14"
+    "astro": "^3.5.5"
   },
   "dependencies": {
-    "@astrojs/mdx": "^0.19.7",
-    "@astrojs/rss": "^2.4.4",
+    "@astrojs/mdx": "^1.1.5",
+    "@astrojs/rss": "^3.0.0",
     "astro-icon": "^0.8.1",
-    "astro-seo": "^0.7.6",
+    "astro-seo": "^0.8.0",
     "husky-init": "^8.0.0",
-    "jquery": "^3.7.0",
+    "jquery": "^3.7.1",
     "request": "^2.88.2",
     "sanitize-html": "^2.11.0",
-    "sass": "^1.66.1",
+    "sass": "^1.69.5",
     "twemoji": "^14.0.2"
   }
 }

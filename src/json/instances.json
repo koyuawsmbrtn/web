@@ -24,7 +24,7 @@
         "instance": "blob.cat",
         "description": "blob.cat, an instance for blobcats (blobfoxes are ok too) ",
         "moderation": " Blocks instances that do active harm to their users, don’t be stupid, tag your stuff, etc.",
-        "special": "Blobcat-themed Pleroma instance. Very friendly community.",
+        "special": "Blobcat-themed Akkoma instance. Very friendly community.",
         "logo": "https://blob.cat/static/logo.png"
     },
     {

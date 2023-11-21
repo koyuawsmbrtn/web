@@ -22,7 +22,7 @@ This is a list of instances I will recommend and meet all my requirements to be 
   * Your instance should have less than 50k users so they are spread out evenly (who&#8217;s gonna pay for all that bandwidth)
   * Your instance should stand out from the mass (theme it, add mods..whatever you feel like)
   * Data mining is a big no-no which also includes selling user data to Facebook. Stop it, it&#8217;s disgusting. This is why we are on the fediverse.
-  * Your instance can run any software (Pleroma, Misskey, Mastodon, &#8230;)
+  * Your instance can run any software (Akkoma, Misskey, Mastodon, &#8230;)
   * Must have open registrations (invite-only or manual approval okay)
   * Shouldn&#8217;t be a single user instance
   * You actively moderate against racism, sexism, homophobia etc. on your instance
