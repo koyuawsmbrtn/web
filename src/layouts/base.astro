@@ -39,11 +39,11 @@ import "../scss/index.scss";
             { name: "viewport", content: "width=device-width" },
         ],
         }} />
-        <script is:inline src="/snow.js"></script>
         <title>{title}</title>
     </head>
     <body>
         <canvas id="snow"></canvas>
+        <script is:inline src="/snow.js"></script>
         <Banner />
         <main>
             <slot/>
