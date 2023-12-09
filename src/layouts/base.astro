@@ -8,6 +8,8 @@ import { SEO } from "astro-seo";
 import Banner from "../components/banner.astro";
 import { ViewTransitions } from 'astro:transitions';
 import "../scss/index.scss";
+import Audioplayer from "../components/audioplayer.astro";
+import Snow from "../components/snow.astro";
 ---
 
 <html lang="en" transition:animate="none">
@@ -44,16 +46,8 @@ import "../scss/index.scss";
         <ViewTransitions />
     </head>
     <body>
-        <audio src="https://yt.koyu.space/latest_version?id=z6LmMCuGjfA&itag=140&local=true" id="audio" autoplay loop transition:persist></audio>
-        <script>
-            let audio = document.getElementById("audio");
-            audio.volume = 0.25;
-            setInterval(function() {
-                audio.play();
-            }, 1000);
-        </script>
-        <canvas id="snow" transition:persist></canvas>
-        <script is:inline transition:persist src="/snow.js"></script>
+        <Snow />
+        <Audioplayer />
         <Banner />
         <main>
             <slot/>
