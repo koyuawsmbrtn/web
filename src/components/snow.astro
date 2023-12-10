@@ -3,29 +3,41 @@ import { Icon } from 'astro-icon';
 ---
 
 <div id="snowbutton" transition:persist>
-    <Icon name="mdi:snowflake-off" size="24" color="white" style="position: absolute; top: 3px; right: 36px; margin: 1em; cursor: pointer;" id="snowon" transition:persist />
-    <Icon name="mdi:snowflake" size="24" color="white" style="position: absolute; top: 3px; right: 36px; margin: 1em; cursor: pointer;" id="snowoff" transition:persist />
+<Icon name="mdi:snowflake-off" size="24" color="white" style="position: absolute; top: 3px; right: 36px; margin: 1em; cursor: pointer;" id="snowon" transition:persist />
+<Icon name="mdi:snowflake" size="24" color="white" style="position: absolute; top: 3px; right: 36px; margin: 1em; cursor: pointer;" id="snowoff" transition:persist />
 </div>
 
 <canvas id="snow" transition:persist></canvas>
 <script is:inline transition:persist src="/snow.js"></script>
 
 <script>
-document.getElementById('snowbutton').addEventListener('click', function() {
-  if (document.getElementById('snow').style.display == 'none') {
-    document.getElementById('snow').style.display = 'block';
-  } else {
-    document.getElementById('snow').style.display = 'none';
-  }
-});
+    document.getElementById('snowbutton').addEventListener('click', function() {
+    if (document.getElementById('snow').style.display == 'none') {
+        document.getElementById('snow').style.display = 'block';
+    } else {
+        document.getElementById('snow').style.display = 'none';
+    }
+    });
 
-setInterval(function() {
-  if (document.getElementById('snow').style.display == 'none') {
-    document.getElementById('snowon').style.display = 'block';
-    document.getElementById('snowoff').style.display = 'none';
-  } else {
-    document.getElementById('snowon').style.display = 'none';
-    document.getElementById('snowoff').style.display = 'block';
-  }
-}, 10);
+    setInterval(function() {
+        if (document.getElementById('snow').style.display == 'none') {
+            document.getElementById('snowon').style.display = 'block';
+            document.getElementById('snowoff').style.display = 'none';
+            localStorage.setItem('snow', 'off');
+        } else {
+            document.getElementById('snowon').style.display = 'none';
+            document.getElementById('snowoff').style.display = 'block';
+            localStorage.setItem('snow', 'on');
+        }
+    }, 10);
+
+    if (localStorage.getItem('snow') == 'off') {
+        document.getElementById('snow').style.display = 'none';
+        document.getElementById('snowon').style.display = 'block';
+        document.getElementById('snowoff').style.display = 'none';
+    } else {
+        document.getElementById('snow').style.display = 'block';
+        document.getElementById('snowon').style.display = 'none';
+        document.getElementById('snowoff').style.display = 'block';
+    }
 </script>
