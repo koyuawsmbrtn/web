@@ -1,11 +1,11 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon/components';
 import social from "../json/social.json";
 ---
 
 <div id="socialbuttons">
   {social.map((e) => (
-    <a href={e.url} class="social" target="_blank" rel="noopener me"><Icon pack={e.icon.style} name={e.icon.name} /></a>
+    <a href={e.url} class="social" target="_blank" rel="noopener me"><Icon name={e.icon.style + ":" + e.icon.name} /></a>
   ))}
 </div>
 
