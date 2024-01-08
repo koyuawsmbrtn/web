@@ -13,14 +13,14 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "astro": "^4.0.9"
+    "astro": "^4.1.1"
   },
   "dependencies": {
     "@astrojs/mdx": "^2.0.3",
     "@astrojs/rss": "^4.0.1",
     "@iconify-json/fa-solid": "^1.1.8",
     "@iconify-json/ph": "^1.1.9",
-    "@iconify-json/simple-icons": "^1.1.86",
+    "@iconify-json/simple-icons": "^1.1.87",
     "astro-icon": "^1.0.2",
     "astro-seo": "^0.8.0",
     "husky-init": "^8.0.0",
