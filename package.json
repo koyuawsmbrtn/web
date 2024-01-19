@@ -13,10 +13,10 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "astro": "^4.1.2"
+    "astro": "^4.2.1"
   },
   "dependencies": {
-    "@astrojs/mdx": "^2.0.4",
+    "@astrojs/mdx": "^2.0.5",
     "@astrojs/rss": "^4.0.2",
     "@iconify-json/fa-solid": "^1.1.8",
     "@iconify-json/ph": "^1.1.10",
@@ -27,7 +27,7 @@
     "jquery": "^3.7.1",
     "request": "^2.88.2",
     "sanitize-html": "^2.11.0",
-    "sass": "^1.69.7",
+    "sass": "^1.70.0",
     "twemoji": "^14.0.2"
   }
 }
