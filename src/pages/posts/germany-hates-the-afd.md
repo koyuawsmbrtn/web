@@ -7,7 +7,7 @@ image: IMG_0887
 layout: ../../layouts/post.astro
 ---
 
-As many of you have seen I have a banner on top asking you to stop fascism in Germany. I want to briefly explain what this all means and why this is important.
+As many of you have seen I have a banner on top asking you to protest against fascism in Germany. I want to briefly explain what this all means and why this is important.
 
 ## The rise of fascism in Germany...in the 21st century
 
