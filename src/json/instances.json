@@ -14,13 +14,6 @@
         "logo": "https://tchncs.de/logo.png"
     },
     {
-        "instance": "cybre.space",
-        "description": "ｃｙｂｒｅｓｐａｃｅ: the social hub of the information superhighway",
-        "moderation": "Probably blocks known bad actors, don’t be stupid, tag your stuff etc.",
-        "special": "Glitchy-hackery instance style. Can also count themselves to the “first few”",
-        "logo": "https://cybre.space/packs/media/images/logo-cybre-9b7c2de5a819feaf36403748a4d132dc.png"
-    },
-    {
         "instance": "blob.cat",
         "description": "blob.cat, an instance for blobcats (blobfoxes are ok too) ",
         "moderation": " Blocks instances that do active harm to their users, don’t be stupid, tag your stuff, etc.",
