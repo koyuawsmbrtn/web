@@ -4,7 +4,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://web.koyu.space',
+  site: 'https://koyu.space',
   integrations: [
     mdx(),
     icon({
