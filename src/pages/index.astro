@@ -1,5 +1,4 @@
 ---
-import Social from '../components/social.astro';
 import Layout from '../layouts/page.astro';
 const allPosts = await Astro.glob('../pages/posts/*.md');
 allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
@@ -10,9 +9,6 @@ const introText = "Hi, I’m koyu (usually called Leonie in real life) and I am 
     <img src="/avatar.png" alt="Avatar" height="120" style="float:right;padding:10px" class="avatar" />
 
     <p>{introText}</p>
-
-    <br><br>
-    <Social />
 
     <br>
     <h2>Articles</h2>
