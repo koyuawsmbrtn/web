@@ -4,6 +4,8 @@ title: "Contact"
 description: "Contact me"
 ---
 
+import Phone from "../../components/phone.astro";
+
 <form name="contact" method="POST" action="/contact/success" data-netlify="true">
   <p>
     <label>Your Name: <input type="text" name="name" required /></label>
@@ -22,10 +24,6 @@ description: "Contact me"
   </p>
 </form>
 
-<br>
+<br />
 
-<center>
-
-Alternatively you can also <a href="https://calendly.com/bubblineyuri/30min" target="_blank">book a meeting</a>.
-
-</center>
+<Phone />

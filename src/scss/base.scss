@@ -92,3 +92,20 @@ footer a { text-decoration: none; }
     font-family: Oswald,sans-serif;
     margin-bottom: 40px;
 }
+
+.hwspace {
+    margin-inline: 28px;
+    margin-top: -24px;
+}
+
+@media(min-width:800px) {
+    .halfsize {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .midsize {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
