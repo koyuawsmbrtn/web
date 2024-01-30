@@ -36,3 +36,16 @@ pre {
     padding: 20px;
     border-radius: 10px;
 }
+
+.author,
+.tags {
+    font-size: 10pt;
+}
+
+.tag:after {
+    content: ", ";
+}
+
+.tag:last-child:after {
+    content: "" !important;
+}

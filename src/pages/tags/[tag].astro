@@ -1,0 +1,42 @@
+---
+import Layout from '../../layouts/page.astro';
+
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob('../posts/*.md');
+  allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+
+  /*
+  * Example data:
+  return [
+    {params: {tag: "astro"}, props: {posts: allPosts}},
+    {params: {tag: "successes"}, props: {posts: allPosts}},
+    {params: {tag: "community"}, props: {posts: allPosts}},
+    {params: {tag: "blogging"}, props: {posts: allPosts}},
+    {params: {tag: "setbacks"}, props: {posts: allPosts}},
+    {params: {tag: "learning in public"}, props: {posts: allPosts}}
+  ]
+  */
+
+  //["afd", "politics", "protest", "rl"]
+
+  return [
+    { params: { tag: "afd"}, props: { posts: allPosts }},
+    { params: { tag: "politics"}, props: { posts: allPosts }},
+    { params: { tag: "protest"}, props: { posts: allPosts }},
+    { params: { tag: "rl"}, props: { posts: allPosts }},
+    { params: { tag: "phones"}, props: { posts: allPosts }},
+  ]
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+const filteredPosts = posts.filter((post) => post.frontmatter.tags?.includes(tag));
+---
+
+<Layout title={`Posts tagged with "${tag}"`}>
+    <ul class="articles">
+      {filteredPosts.map((post) => <li><span class="date">{post.frontmatter.pubDate.split("T")[0]}</span> <a href={post.url}>{post.frontmatter.title}</a></li>)}
+    </ul>
+    <hr><br>
+    <p><a href="javascript:history.back()">&larr; Back</a></p>
+</Layout>

@@ -8,6 +8,7 @@ featured_image: /wp-content/uploads/2021/06/cedrik-wesche-qxu1RE1uahU-unsplash.j
 categories:
   - Uncategorized
 layout: ../../layouts/post.astro
+tags: ["phones", "covid"]
 ---
 Some of you already heard that I use /e/OS as a daily driver now. /e/OS is an operating system for mobile phones (a few of them to be precise) made by the /e/ foundation. Unlike traditional mobile operating systems like Android or iOS the whole thing doesn&#8217;t track you. I think your phone should be your phone and not Google&#8217;s or Apple&#8217;s. Recently after seeing the video by Laura and Aral I immediately noticed that other than iOS my other option towards a privacy-friendly, but low-cost mobile device would be /e/OS.
 
