@@ -14,7 +14,9 @@ code {
 pre {
     box-shadow: none;
 }
-.date {
+.date,
+.author,
+.tags {
     font-size: 10pt;
     vertical-align: top;
     padding-top: 5px;
@@ -35,11 +37,6 @@ pre {
     background: #333;
     padding: 20px;
     border-radius: 10px;
-}
-
-.author,
-.tags {
-    font-size: 10pt;
 }
 
 .tag:after {
