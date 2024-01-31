@@ -13,11 +13,11 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "astro": "^4.2.6"
+    "astro": "^4.2.8"
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "^4.2.0",
-    "@astrojs/mdx": "^2.1.0",
+    "@astrojs/markdown-remark": "^4.2.1",
+    "@astrojs/mdx": "^2.1.1",
     "@astrojs/rss": "^4.0.4",
     "@iconify-json/fa-solid": "^1.1.8",
     "@iconify-json/ph": "^1.1.10",
