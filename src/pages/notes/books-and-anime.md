@@ -17,6 +17,7 @@ Anime
 * Castle in the Sky
 * Kiki's Delivery Service
 * My Neighbor Totoro
+* Spirited Away
 * Citrus
 * Kill la Kill
 * Porco Rosso
