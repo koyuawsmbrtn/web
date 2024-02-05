@@ -126,6 +126,10 @@ footer a {
     transform: rotate(180deg);
 }
 
+iframe {
+    border-radius: 5px;
+}
+
 @media(min-width:800px) {
     .halfsize {
         width: 50%;
