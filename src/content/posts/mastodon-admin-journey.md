@@ -1,7 +1,6 @@
 ---
 title: Reflecting on my journey as a Mastodon admin - Prioritizing self-care and growth
 pubDate: 2023-06-12
-layout: ../../layouts/post.astro
 image: mastodon2
 ---
 

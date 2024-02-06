@@ -7,7 +7,6 @@ url: /2020/11/01/how-to-plan-and-host-a-mastodon-instance/
 featured_image: /wp-content/uploads/2020/11/taylor-vick-aWslrFhs1w4-unsplash.jpg
 categories:
   - Uncategorized
-layout: ../../layouts/post.astro
 ---
  
 

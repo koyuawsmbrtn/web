@@ -7,7 +7,6 @@ url: /2021/02/05/exploring-gemini/
 featured_image: /wp-content/uploads/2021/02/brian-mcgowan-I0fDR8xtApA-unsplash.jpg
 categories:
   - Uncategorized
-layout: ../../layouts/post.astro
 ---
 After a bit passing of time I thought to have a look at the Gemini network and see what it has to offer. The best way to start getting into Gemini is going to the official website of Gemini and have a look at the clients and proxies. koyu.space also offers you a little bit of space for your own gemini capsule. A capsule is just a synonym for a website, but since Gemini isn&#8217;t the WWW it&#8217;s called a capsule.
 

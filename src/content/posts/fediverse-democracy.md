@@ -2,7 +2,6 @@
 title: Empowering the Web - Mastodon and the Fediverse for Digital Democracy
 pubDate: 2023-11-14
 image: mastodon3
-layout: ../../layouts/post.astro
 ---
 
 The internet, once hailed as the great equalizer, has in recent years faced challenges to its democratic ideals. Social media giants monopolize the digital landscape, influencing narratives and controlling the flow of information. In response to this, a **beacon of hope emerges: Mastodon and the fediverse**, heralding a new era of democratized web interactions.

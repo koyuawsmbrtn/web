@@ -5,7 +5,6 @@ type: post
 pubDate: 2021-11-09
 image: 1621739165914-7155e5d4816e
 url: /why-ai-cryptocurrency-metaverse-and-all-that-crap-doesnt-matter/
-layout: ../../layouts/post.astro
 ---
 
 Let me start this off with saying that all the buzzwords that have been a thing the last few years are worth nothing and let me say why this is.

@@ -5,7 +5,6 @@ type: post
 pubDate: 2021-10-04
 image: 1568378780196-a9a0444a9151
 url: /facebook-down-why-decentralisation-matters/
-layout: ../../layouts/post.astro
 ---
 
 Facebook went down today and this got me thinking. The fediverse which is decentralised and opposes itself as an alternative to the centralized magasites like Facebook doesn't seem to have a problem like this.

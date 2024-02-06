@@ -1,7 +1,6 @@
 ---
 title: Mastodon's legacy on the internet
 pubDate: 2023-02-08
-layout: ../../layouts/post.astro
 image: mastodon1
 ---
 

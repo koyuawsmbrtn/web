@@ -4,7 +4,6 @@ author: koyu
 type: post
 pubDate: 2021-11-17
 image: 1509409836982-c0d71b087fd4
-layout: ../../layouts/post.astro
 ---
 
 After I stumbled upon [solene&rsquo;s blog post](https://dataswamp.org/~solene/2021-11-10-how-I-ended-liking-gnome.html) about GNOME and accessibility I also wanted to say what I personally think about GNOME as well.

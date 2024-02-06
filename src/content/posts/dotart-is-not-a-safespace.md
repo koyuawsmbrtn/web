@@ -1,7 +1,6 @@
 ---
 title: mastodon.art is not a safespace
 pubDate: 2023-07-05
-layout: ../../layouts/post.astro
 image: mastoart
 ---
 

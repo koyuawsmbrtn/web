@@ -7,7 +7,6 @@ url: /2021/03/08/why-i-like-the-fediverse/
 featured_image: /wp-content/uploads/2021/03/omar-flores-MOO6k3RaiwE-unsplash.jpg
 categories:
   - Uncategorized
-layout: ../../layouts/post.astro
 ---
 I have been a fediverse user pretty much almost since around when Google+ and Diaspora were a thing. What I liked about Diaspora specifically was that it was easy for me to reach people that have similar interests as me like anime, tech and music. My biggest interest in the fediverse was the open and diverse nature of the network, because unlike traditional social networks it gave me a reason to dig deeper into maintaining my own server which I did when I began hosting a Mastodon in April 2018. Also it was open-source and decentralized and gave me a lot of freedoms in terms of customizability.
 

@@ -5,7 +5,6 @@ type: post
 pubDate: 2021-08-23
 url: /2021/08/23/fortnite/
 image: fortnite
-layout: ../../layouts/post.astro
 ---
 
 Fortnite is my favourite game, I say that unironically. With their creative mode which has been a thing for a while now a lot of people can create custom maps where they can play with their friends or hang out on. You can even publish your map through a map code which you can pass along to people.

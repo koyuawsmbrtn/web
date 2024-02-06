@@ -4,7 +4,6 @@ author: koyu
 pubDate: 2021-11-22T12:44:56+01:00
 type: post
 image: 1582502580092-0dc3088c7aeb
-layout: ../../layouts/post.astro
 ---
 
 One of Vidar’s unique behaviors is in obtaining dynamic configuration and C2 connectivity. Once executed, Vidar’s first step is to receive its configuration, by abusing the Mastodon social network.

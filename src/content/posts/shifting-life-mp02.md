@@ -4,7 +4,6 @@ pubDate: 2024-01-30
 author: koyu
 type: post
 image: a3f193699d67ba7b76953a6424ab0d02
-layout: ../../layouts/post.astro
 tags: ["rl", "phones"]
 ---
 

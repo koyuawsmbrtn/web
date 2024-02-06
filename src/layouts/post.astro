@@ -40,7 +40,7 @@ if (Astro.props.frontmatter.image !== undefined) {
 	<Navigation />
 	<div class="article-meta">
 		<h1><span class="title">{title}</span></h1>
-		<p><span class="date">Published {Astro.props.frontmatter.pubDate.split("T")[0]} | </span>
+		<p><span class="date">Published {Astro.props.frontmatter.pubDate.toISOString().split("T")[0]} | </span>
 		<span class="author">Written by {Astro.props.frontmatter.author ? Astro.props.frontmatter.author : "koyu"}</span>
 		<span class="tags"><span set:text={Astro.props.frontmatter.tags ? " | Tags: " : ""}></span> {Astro.props.frontmatter.tags ? Astro.props.frontmatter.tags.map((tag) => (
 			<span class="tag"><a href={`/tags/${tag}`}>{tag}</a></span>

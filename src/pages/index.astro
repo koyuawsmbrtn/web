@@ -1,7 +1,10 @@
 ---
 import Layout from '../layouts/page.astro';
-const allPosts = await Astro.glob('../pages/posts/*.md');
-allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+import { getCollection } from "astro:content";
+const allPosts = await getCollection("posts", ({ data }) => {
+    return data.draft !== true;
+  });
+allPosts.sort((a, b) => Date.parse(b.data.pubDate.toISOString()) - Date.parse(a.data.pubDate.toISOString()));
 const introText = "Hi, I’m koyu (usually called Leonie in real life) and I am a programmer and sysadmin located in Northern Germany establishing internet services for you and your friends. I’m your average socialist computer nerd trying to liberate the cyberspace and meatspace for everyone. Thanks for stopping by and have a great time.";
 ---
 
@@ -13,6 +16,6 @@ const introText = "Hi, I’m koyu (usually called Leonie in real life) and I am 
     <br>
     <h2>Articles</h2>
     <ul class="articles">
-        {allPosts.map((post) => <li style={post.frontmatter.draft === true ? "display:none;" : ""}><span class="date">{post.frontmatter.pubDate.split("T")[0]}</span> <a href={post.url}>{post.frontmatter.title}</a></li>)}
+        {allPosts.map((post) => <li><span class="date">{post.data.pubDate.toISOString().split('T')[0]}</span> <a href={`/posts/${post.slug}/`}>{post.data.title}</a></li>)}
     </ul>
 </Layout>

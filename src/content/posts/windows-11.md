@@ -7,7 +7,6 @@ url: /2021/06/30/windows-11/
 featured_image: /wp-content/uploads/2021/06/freestocks-BStW5kYXw4E-unsplash.jpg
 categories:
   - Uncategorized
-layout: ../../layouts/post.astro
 ---
 Where should I even start, I&#8217;m disappointed&#8230;really disappointed. When I tried Windows 11 in a virtual machine it looked like it could be the next Windows XP or Windows 7. Instead it turned out that you can&#8217;t really get Windows 11 to run, even on fairly modern machines. This brings a lot of problems with it I&#8217;ll discuss in this article.
 

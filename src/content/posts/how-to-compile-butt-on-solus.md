@@ -7,7 +7,6 @@ url: /2020/07/23/how-to-compile-butt-on-solus/
 featured_image: /wp-content/uploads/2020/11/saso-tusar-QtgGYlug6Cw-unsplash.jpg
 categories:
   - Uncategorized
-layout: ../../layouts/post.astro
 ---
 This is a small tutorial on how I got&nbsp;`butt`&nbsp;(broadcast using this tool) working on Solus.
 

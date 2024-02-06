@@ -4,7 +4,6 @@ author: koyu
 pubDate: 2021-11-23T01:18:37+01:00
 type: post
 image: 1614728263952-84ea256f9679
-layout: ../../layouts/post.astro
 ---
 
 In this post I'm running down different ways to speed up your Linux system.

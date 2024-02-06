@@ -7,7 +7,6 @@ url: /2021/01/16/the-power-of-decentralization/
 featured_image: /wp-content/uploads/2021/01/alina-grubnyak-ZiQkhI7417A-unsplash.jpg
 categories:
   - Uncategorized
-layout: ../../layouts/post.astro
 ---
 So before Signal went down we were having some great discussions in our koyu.space Signal group. Now it&#8217;s been more than 24 hours since it&#8217;s down and this thanks to this guy.
 

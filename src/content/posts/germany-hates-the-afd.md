@@ -4,7 +4,6 @@ author: koyu
 type: post
 pubDate: 2024-01-20
 image: IMG_0887
-layout: ../../layouts/post.astro
 tags: ["afd", "politics", "protest", "rl"]
 ---
 

@@ -7,7 +7,6 @@ url: /2019/06/23/a-quick-introduction-to-the-fediverse/
 featured_image: /wp-content/uploads/2019/06/fediverse.png
 categories:
   - Uncategorized
-layout: ../../layouts/post.astro
 ---
 
 *Updated: May 5 2022*

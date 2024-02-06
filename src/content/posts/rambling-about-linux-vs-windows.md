@@ -7,7 +7,6 @@ url: /2020/11/04/rambling-about-linux-vs-windows/
 featured_image: /wp-content/uploads/2020/11/maxresdefault.jpg
 categories:
   - Uncategorized
-layout: ../../layouts/post.astro
 ---
 After Effects alternative? Blender!  
 GNOME for example uses it to create their 2D info graphic animations and AFAIK you can also add effects (which After Effects is all about)

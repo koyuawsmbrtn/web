@@ -4,7 +4,6 @@ pubDate: 2021-12-13T12:33:28+01:00
 author: koyu
 image: 1608817576203-3c27ed168bd2
 type: post
-layout: ../../layouts/post.astro
 ---
 
 The EU wants to make messaging services like WhatsApp, Telegram, Facebook Messenger, Teams, Element, Signal etc. interoperable meaning that a seemless communication between those services would be possible. This sounds great at first, because you only need one app and nothing else, but if not handled correctly this might end up in the same mess we're finding us in today. Cryptocurrencies can't be the answer as well [for obvious reasons](/why-ai-cryptocurrency-metaverse-and-all-that-crap-doesnt-matter/).
