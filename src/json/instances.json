@@ -47,5 +47,12 @@
         "moderation": "%%gab%%",
         "special": "Portal-themed Glitch-soc instance with custom theme and spaaaaceee",
         "logo": "/fedilist/im-in-space.png"
+    },
+    {
+        "instance": "eepy.moe",
+        "description": "A Sharkey instance for the eepiest of eepy beings. Registrations are more-or-less open upon request.",
+        "moderation": "%%general%%",
+        "special": "Sharkey instance for sleepy people. Friendly community, with a custom theme and a lot of eepiness",
+        "logo": "https://eepy.moe/files/2f437649-6564-4226-8b11-6ac5af41278d"
     }
 ]

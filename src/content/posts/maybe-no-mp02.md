@@ -3,7 +3,7 @@ title: Maybe the Punkt. MP02 isn't really something for me
 author: koyu
 type: post
 pubDate: 2024-02-06
-image: markus-spiske-wn-K-jX9LJ0-unsplash
+image: ash-lab-Mi5tb_R1zzw-unsplash
 tags: ["rl", "phones"]
 ---
 
