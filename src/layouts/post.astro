@@ -2,7 +2,7 @@
 import Navigation from "../components/navigation.astro";
 import Layout from "../layouts/base.astro";
 import Footer from "../components/footer.astro";
-import Commento from "../components/commento.astro";
+//import Commento from "../components/commento.astro";
 let description: string = "";
 let title = "";
 if (Astro.props.title === undefined) {
@@ -49,6 +49,5 @@ if (Astro.props.frontmatter.image !== undefined) {
 	<br>
 	<slot />
 	<br><br>
-	<Commento />
 	<Footer />
 </Layout>
