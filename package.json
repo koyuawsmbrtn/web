@@ -13,7 +13,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "astro": "^4.3.2"
+    "astro": "^4.3.5"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^4.2.1",
