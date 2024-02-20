@@ -5,7 +5,7 @@ import remarkExternalLinks from 'remark-external-links';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://koyu.space',
+  site: 'https://web.koyu.space',
   integrations: [
     mdx(),
     icon({
