@@ -15,9 +15,6 @@ export default defineConfig({
       }
     })
   ],
-  prefetch: {
-    prefetchAll: true
-  },
   markdown: {
     remarkPlugins: [[remarkExternalLinks, { target: '_blank' }]],
   },
