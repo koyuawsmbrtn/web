@@ -1,34 +1,27 @@
 if (!localStorage.getItem('notifications')) {
-    Array.prototype.forEach.call(document.getElementById("ul_o").getElementsByTagName("li"), (e => {
-        let text = e.innerText;
-        let title = e.getElementsByTagName("a")[0].innerText;
-        let date = e.getElementsByTagName("span")[0].innerText;
-        let link = e.getElementsByTagName("a")[0].getAttribute("href");
-        let notification = {
-            title: title,
-            text: text,
-            date: date,
-            link: link
-        };
-        let notifications = localStorage.getItem('notifications') ? JSON.parse(localStorage.getItem('notifications')) : [];
-        notifications.push(notification);
-        localStorage.setItem('notifications', JSON.stringify(notifications));
-    }));
+    localStorage.setItem('notifications', JSON.stringify([]));
 }
 if (window.location.pathname === "/") {
+    let items = document.getElementById("ul_o").getElementsByTagName("li").length;
+    let size = items - JSON.parse(localStorage.getItem('notifications')).length;
     if (localStorage.getItem('notifications')) {
-        document.getElementById("nc").innerHTML = JSON.parse(localStorage.getItem('notifications')).length ? JSON.parse(localStorage.getItem('notifications')).length : "N";
+        document.getElementById("nc").innerHTML = size;
     } else {
         document.getElementById("nc").innerHTML = "N";
     }
-    if (JSON.parse(localStorage.getItem('notifications')).length == 0) {
+    if (size == 0) {
         document.getElementById("nc").style.display = "none";
     } else {
         document.getElementById("nc").style.display = "block";
     }
     document.getElementById("nc").addEventListener("click", () => {
         document.getElementById("nc").style.display = "none";
-        localStorage.setItem('notifications', JSON.stringify([]));
+        let tmp = [];
+        Array.prototype.forEach.call(document.getElementById("ul_o").getElementsByTagName("li"), (e => {
+            let notification = e.getElementsByTagName("a")[0].getAttribute("href");
+            tmp.push(notification);
+        }));
+        localStorage.setItem('notifications', JSON.stringify(tmp));
     });
     document.getElementById("nc").addEventListener("mouseover", () => {
         document.getElementById("nc").style.cursor = "pointer";
@@ -36,11 +29,15 @@ if (window.location.pathname === "/") {
 } else {
     if (localStorage.getItem('notifications')) {
         let notifications = JSON.parse(localStorage.getItem('notifications'));
+        let inNotification: boolean = false;
         notifications.forEach(e => {
-            if (window.location.pathname === e.link) {
-                notifications.splice(notifications.indexOf(e), 1);
-                localStorage.setItem('notifications', JSON.stringify(notifications));
+            if (window.location.pathname === e) {
+                inNotification = true;
             }
         });
+        // Add current notification to the list
+        let notification = window.location.pathname;
+        notifications.push(notification);
+        localStorage.setItem('notifications', JSON.stringify(notifications));
     }
 }
