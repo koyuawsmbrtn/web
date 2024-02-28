@@ -14,10 +14,11 @@ const introText = "Hi, I’m koyu (usually called Leonie in real life) and I am 
     <p>{introText}</p>
 
     <br>
-    <div class="notification">
+    <!-- <div class="notification">
         <h2>Articles</h2>
         <span class="badge" id="nc">0</span>
-    </div>
+    </div> -->
+    <!-- Tempoarily disabled due to a lot of bugs -->
     <ul class="articles" id="ul_o">
         {allPosts.map((post) => <li><span class="date">{post.data.pubDate.toISOString().split('T')[0]}</span> <a href={`/posts/${post.slug}/`}>{post.data.title}</a></li>)}
     </ul>
