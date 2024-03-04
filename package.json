@@ -21,7 +21,7 @@
     "@astrojs/rss": "^4.0.5",
     "@iconify-json/fa-solid": "^1.1.8",
     "@iconify-json/ph": "^1.1.11",
-    "@iconify-json/simple-icons": "^1.1.92",
+    "@iconify-json/simple-icons": "^1.1.93",
     "astro-icon": "^1.1.0",
     "astro-seo": "^0.8.2",
     "husky-init": "^8.0.0",
