@@ -1082,10 +1082,10 @@ astro-icon@^1.1.0:
     "@iconify/types" "^2.0.0"
     "@iconify/utils" "^2.1.5"
 
-astro-seo@^0.8.2:
-  version "0.8.2"
-  resolved "https://registry.yarnpkg.com/astro-seo/-/astro-seo-0.8.2.tgz#bc1d9477796c4aebab364ce4239f386877be5da7"
-  integrity sha512-9hu+2y0QboOShFly9r+LcasfEOsWFhV5GKzsfnPG4kbNm9mqXuEP7YrUt7XrEA7rJOzC1DInOV+cIT+7zBasBQ==
+astro-seo@^0.8.3:
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/astro-seo/-/astro-seo-0.8.3.tgz#a9dd0169c7142a1ce47039156accfe055dc56870"
+  integrity sha512-gQeEh0U2yyVM0iyU8DTORK6hXMy5WH2wufrkUuNOKjI3LnYLniqgDxm1LZPQDuD6b4OHabVOi/5L88A9POCcCQ==
   dependencies:
     "@astrojs/check" "^0.5.4"
 
