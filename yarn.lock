@@ -34,15 +34,10 @@
     kleur "^4.1.5"
     yargs "^17.7.2"
 
-"@astrojs/compiler@^2.4.0":
+"@astrojs/compiler@^2.4.0", "@astrojs/compiler@^2.5.3":
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-2.6.0.tgz#0d27c9a60530766b247f0cd1359fbe468d147fe6"
   integrity sha512-c74k8iGHL3DzkosSJ0tGcHIEBEiIfBhr7eadSaPyvWlVKaieDVzVs8OW1tnRSQyBsfMc8DZQ4RcN2KAcESD8UQ==
-
-"@astrojs/compiler@^2.5.3":
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-2.5.3.tgz#eb34fa21cbd395f2b5493aa06d91dd9e9faf3bc2"
-  integrity sha512-jzj01BRv/fmo+9Mr2FhocywGzEYiyiP2GVHje1ziGNU6c97kwhYGsnvwMkHrncAy9T9Vi54cjaMK7UE4ClX4vA==
 
 "@astrojs/internal-helpers@0.2.1":
   version "0.2.1"
@@ -1089,10 +1084,10 @@ astro-seo@^0.8.2:
   dependencies:
     "@astrojs/check" "^0.5.4"
 
-astro@^4.4.4:
-  version "4.4.4"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-4.4.4.tgz#5087cca5779d888e5c5b15690fd4738bc9c7bbdc"
-  integrity sha512-EZrDTN888w4sFKqavGsHu8jSaymyxNwnoqIq5NKlMG9WNU/Xn4Yn41pUdBuAOrgNzRp1NyXXhhV6GV1pN71V2Q==
+astro@^4.4.9:
+  version "4.4.9"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-4.4.9.tgz#7450df810dd8b5ba8a7cba1c491b5fe4f9524ce5"
+  integrity sha512-FTWhzKjao7rHHiF/CqPqPS18AFad+fmUcYUFhWWIsYETHcc9g0IIIiv6cHXUE7g6mEZf7ycAa+WdboeEHUhraQ==
   dependencies:
     "@astrojs/compiler" "^2.5.3"
     "@astrojs/internal-helpers" "0.2.1"
@@ -1153,7 +1148,7 @@ astro@^4.4.4:
     tsconfck "^3.0.0"
     unist-util-visit "^5.0.0"
     vfile "^6.0.1"
-    vite "^5.1.2"
+    vite "^5.1.4"
     vitefu "^0.2.5"
     which-pm "^2.1.1"
     yargs-parser "^21.1.1"
@@ -4113,14 +4108,7 @@ semver@^6.3.1:
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.1.tgz#556d2ef8689146e46dcea4bfdd095f3434dffcb4"
   integrity sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
 
-semver@^7.3.5, semver@^7.5.4:
-  version "7.5.4"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.4.tgz#483986ec4ed38e1c6c48c34894a9182dbff68a6e"
-  integrity sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==
-  dependencies:
-    lru-cache "^6.0.0"
-
-semver@^7.3.8:
+semver@^7.3.5, semver@^7.3.8, semver@^7.5.4:
   version "7.6.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.6.0.tgz#1a46a4db4bffcccd97b743b5005c8325f23d4e2d"
   integrity sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==
@@ -4726,10 +4714,10 @@ vfile@^6.0.0, vfile@^6.0.1:
     unist-util-stringify-position "^4.0.0"
     vfile-message "^4.0.0"
 
-vite@^5.1.2:
-  version "5.1.3"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-5.1.3.tgz#dd072653a80225702265550a4700561740dfde55"
-  integrity sha512-UfmUD36DKkqhi/F75RrxvPpry+9+tTkrXfMNZD+SboZqBCMsxKtO52XeGzzuh7ioz+Eo/SYDBbdb0Z7vgcDJew==
+vite@^5.1.4:
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-5.1.4.tgz#14e9d3e7a6e488f36284ef13cebe149f060bcfb6"
+  integrity sha512-n+MPqzq+d9nMVTKyewqw6kSt+R3CkvF9QAKY8obiQn8g1fwTscKxyfaYnC632HtBXAQGc1Yjomphwn1dtwGAHg==
   dependencies:
     esbuild "^0.19.3"
     postcss "^8.4.35"
