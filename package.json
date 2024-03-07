@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "node tasks/download-images.js & astro dev",
     "start": "node tasks/download-images.js & astro dev",
+    "offline": "astro dev",
     "build": "node tasks/download-images.js && astro build",
     "preview": "astro preview",
     "download-images": "node tasks/download-images.js",
