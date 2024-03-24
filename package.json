@@ -14,22 +14,22 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "astro": "^4.5.5"
+    "astro": "^4.5.9"
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "^4.3.0",
-    "@astrojs/mdx": "^2.2.0",
+    "@astrojs/markdown-remark": "^4.3.1",
+    "@astrojs/mdx": "^2.2.1",
     "@astrojs/rss": "^4.0.5",
     "@iconify-json/fa-solid": "^1.1.8",
     "@iconify-json/ph": "^1.1.11",
-    "@iconify-json/simple-icons": "^1.1.95",
+    "@iconify-json/simple-icons": "^1.1.96",
     "astro-icon": "^1.1.0",
     "astro-seo": "^0.8.3",
     "husky-init": "^8.0.0",
     "jquery": "^3.7.1",
     "remark-external-links": "^9.0.1",
     "request": "^2.88.2",
-    "sanitize-html": "^2.12.1",
+    "sanitize-html": "^2.13.0",
     "sass": "^1.72.0",
     "twemoji": "^14.0.2"
   }
