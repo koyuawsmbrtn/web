@@ -35,13 +35,6 @@
         "logo": "/fedilist/ambrosiamoe.png"
     },
     {
-        "instance": "akko.disqordia.space",
-        "description": "Disqordia dot space is a queer, leftist, and anti-fascist fediverse instance run by a small collective of queer and trans users.",
-        "moderation": "%%general%%",
-        "special": "Akkoma instance in a very vibrant purple theme. Nice people over there as well.",
-        "logo": "https://akko.disqordia.space/favicon.png"
-    },
-    {
         "instance": "im-in.space",
         "description": "A generalist Mastodon instance with a nice domain name. Running on Glitch Social's fork with a custom theme!",
         "moderation": "%%gab%%",
