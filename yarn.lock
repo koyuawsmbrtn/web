@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-2.6.0.tgz#0d27c9a60530766b247f0cd1359fbe468d147fe6"
   integrity sha512-c74k8iGHL3DzkosSJ0tGcHIEBEiIfBhr7eadSaPyvWlVKaieDVzVs8OW1tnRSQyBsfMc8DZQ4RcN2KAcESD8UQ==
 
-"@astrojs/compiler@^2.7.0":
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-2.7.0.tgz#023799f2fefd2aa8579ea6f802226387e5922f74"
-  integrity sha512-XpC8MAaWjD1ff6/IfkRq/5k1EFj6zhCNqXRd5J43SVJEBj/Bsmizkm8N0xOYscGcDFQkRgEw6/eKnI5x/1l6aA==
+"@astrojs/compiler@^2.7.1":
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-2.7.1.tgz#a7ab59a1c87b9e6e9c6adb34bb2ca3aaa8b9d14c"
+  integrity sha512-/POejAYuj8WEw7ZI0J8JBvevjfp9jQ9Wmu/Bg52RiNwGXkMV7JnYpsenVfHvvf1G7R5sXHGKlTcxlQWhoUTiGQ==
 
 "@astrojs/internal-helpers@0.4.0":
   version "0.4.0"
@@ -71,10 +71,10 @@
     vscode-html-languageservice "^5.1.2"
     vscode-uri "^3.0.8"
 
-"@astrojs/markdown-remark@4.3.2", "@astrojs/markdown-remark@^4.3.2":
-  version "4.3.2"
-  resolved "https://registry.yarnpkg.com/@astrojs/markdown-remark/-/markdown-remark-4.3.2.tgz#0d5cb79c57ae8546ac355076c54275bade2588c5"
-  integrity sha512-4Oa4VaYiBd0MatB+rWIU/0A8pZH/sK3c2QkRYb+OO2lPl+qzevJtWaZY8hAQc4qurIOlRdn6B6ofDAGhWw+DSg==
+"@astrojs/markdown-remark@5.0.0", "@astrojs/markdown-remark@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@astrojs/markdown-remark/-/markdown-remark-5.0.0.tgz#e723584d7cc63bb698dbc140c0cd0ddebbfd82ac"
+  integrity sha512-QBXbxXZamVRoqCNN2gjDXa7qYPUkJZq7KYFfg3DX7rze3QL6xiz4N+Wg202dNPRaIkQa16BV6D8+EHibQFubRg==
   dependencies:
     "@astrojs/prism" "^3.0.0"
     github-slugger "^2.0.0"
@@ -95,12 +95,12 @@
     unist-util-visit-parents "^6.0.0"
     vfile "^6.0.1"
 
-"@astrojs/mdx@^2.2.2":
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/@astrojs/mdx/-/mdx-2.2.2.tgz#bf0ecd912bd41af372fccf8a76fbaae852ca2e31"
-  integrity sha512-5SIFtOctC813HFyqJwBf5TBvlT9sbiOOv+bdvzAoiBSab95dC7PZhss22EvUEx+897c81YoIZ4F9fg4ZkxBFIw==
+"@astrojs/mdx@^2.2.4":
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/@astrojs/mdx/-/mdx-2.2.4.tgz#7b0d44820613cf1a9a885130d297a18258612af2"
+  integrity sha512-eXCmftMsWj4vTECrc4vgdaXrA8xIvrmJ9rM37BZNK5anQ2PunUm9N8wbnK2VVTE0CAmW5U8v9y3IGps2RYGUvQ==
   dependencies:
-    "@astrojs/markdown-remark" "4.3.2"
+    "@astrojs/markdown-remark" "5.0.0"
     "@mdx-js/mdx" "^3.0.0"
     acorn "^8.11.2"
     es-module-lexer "^1.4.1"
@@ -571,17 +571,17 @@
   dependencies:
     "@iconify/types" "*"
 
-"@iconify-json/ph@^1.1.11":
-  version "1.1.11"
-  resolved "https://registry.yarnpkg.com/@iconify-json/ph/-/ph-1.1.11.tgz#e60d32cde75ebb6b2fcff0557e5037ed75dcb3ff"
-  integrity sha512-izLvLZrU7WM03zNwNWNrAySv3i45hM3D3K6USjCGBSQMUG0HB8zxwrMf4O0leDrganmuQBH7Z0DWTgyH1ET/fg==
+"@iconify-json/ph@^1.1.12":
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/@iconify-json/ph/-/ph-1.1.12.tgz#4f857844b109713571af6ec981c41675e16fee46"
+  integrity sha512-m+rXTW084YaQQHT+F8TxdkCoAh+i/5MWRoSuPmxCWPlxwMAaLT/QfyVsbEiV95HM5806U/jKpBV6F1b7Pmr3Vg==
   dependencies:
     "@iconify/types" "*"
 
-"@iconify-json/simple-icons@^1.1.97":
-  version "1.1.97"
-  resolved "https://registry.yarnpkg.com/@iconify-json/simple-icons/-/simple-icons-1.1.97.tgz#bec9247b2d472ccfebb7c36aafd85c182f0c2fa3"
-  integrity sha512-/jTwrcAM2Gh8FtgEn8mHolaoY1iNbRgH3AE8OXu7JULi4Tdp31u7bmCSIaNDTLdBrXjcDpw0y98Dm20TbauBCg==
+"@iconify-json/simple-icons@^1.1.98":
+  version "1.1.98"
+  resolved "https://registry.yarnpkg.com/@iconify-json/simple-icons/-/simple-icons-1.1.98.tgz#bce87ecff27f376de0924878981c63f252e0e9fe"
+  integrity sha512-oL1ucUCQE/aGVhb9Bvo556EcNjww9yzFITvwOKI0h3KYkF5iSAiwCqWkqxUJzrJHobQdd5R91jYfLG847G9uIA==
   dependencies:
     "@iconify/types" "*"
 
@@ -1187,14 +1187,14 @@ astro-seo@^0.8.3:
   dependencies:
     "@astrojs/check" "^0.5.4"
 
-astro@^4.5.12:
-  version "4.5.12"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-4.5.12.tgz#ffa3f6a43d051ee6fc71030a9d728d4ca8945831"
-  integrity sha512-xIJcFI2hbyV8+h5pWjL7SKD1jIP0K01fYVAH+gdAt0mJaXy+u8Mj+goD0cPlK6sEaykR+7zxQLYGKJ44U4qarg==
+astro@^4.5.16:
+  version "4.5.16"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-4.5.16.tgz#d7e67c3108dc25e0b06e2868de69553a5208da9d"
+  integrity sha512-1nOVsMq2OJiXnG6gO0Y77vTAboGN9nLQSy/8SGazq4h6x+alzbsMbQbArBgvaLzOSUXD0m91XLs3D8bOSuavrQ==
   dependencies:
-    "@astrojs/compiler" "^2.7.0"
+    "@astrojs/compiler" "^2.7.1"
     "@astrojs/internal-helpers" "0.4.0"
-    "@astrojs/markdown-remark" "4.3.2"
+    "@astrojs/markdown-remark" "5.0.0"
     "@astrojs/telemetry" "3.0.4"
     "@babel/core" "^7.24.3"
     "@babel/generator" "^7.23.3"
@@ -4204,10 +4204,10 @@ sanitize-html@^2.13.0:
     parse-srcset "^1.0.2"
     postcss "^8.3.11"
 
-sass@^1.72.0:
-  version "1.72.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.72.0.tgz#5b9978943fcfb32b25a6a5acb102fc9dabbbf41c"
-  integrity sha512-Gpczt3WA56Ly0Mn8Sl21Vj94s1axi9hDIzDFn9Ph9x3C3p4nNyvsqJoQyVXKou6cBlfFWEgRW4rT8Tb4i3XnVA==
+sass@^1.74.1:
+  version "1.74.1"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.74.1.tgz#686fc227d3707dd25cb2925e1db8e4562be29319"
+  integrity sha512-w0Z9p/rWZWelb88ISOLyvqTWGmtmu2QJICqDBGyNnfG4OUnPX9BBjjYIXUpXCMOOg5MQWNpqzt876la1fsTvUA==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
