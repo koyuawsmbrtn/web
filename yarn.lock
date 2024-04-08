@@ -578,10 +578,10 @@
   dependencies:
     "@iconify/types" "*"
 
-"@iconify-json/simple-icons@^1.1.98":
-  version "1.1.98"
-  resolved "https://registry.yarnpkg.com/@iconify-json/simple-icons/-/simple-icons-1.1.98.tgz#bce87ecff27f376de0924878981c63f252e0e9fe"
-  integrity sha512-oL1ucUCQE/aGVhb9Bvo556EcNjww9yzFITvwOKI0h3KYkF5iSAiwCqWkqxUJzrJHobQdd5R91jYfLG847G9uIA==
+"@iconify-json/simple-icons@^1.1.99":
+  version "1.1.99"
+  resolved "https://registry.yarnpkg.com/@iconify-json/simple-icons/-/simple-icons-1.1.99.tgz#7cbc2d397b030fbfde463a3824f5e54c2d35d66d"
+  integrity sha512-/csVihX/ztkl2j4Vk4JoEJv8DdQHrZafzC5QHe21Y+ztuVglvavjb4yWEn9KQHTitLH2fIMnP8+RSTxu5kdmtw==
   dependencies:
     "@iconify/types" "*"
 
