@@ -14,11 +14,11 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "astro": "^4.5.17"
+    "astro": "^4.6.1"
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "^5.0.0",
-    "@astrojs/mdx": "^2.2.4",
+    "@astrojs/markdown-remark": "^5.1.0",
+    "@astrojs/mdx": "^2.3.0",
     "@astrojs/rss": "^4.0.5",
     "@iconify-json/fa-solid": "^1.1.8",
     "@iconify-json/ph": "^1.1.12",
@@ -30,7 +30,7 @@
     "remark-external-links": "^9.0.1",
     "request": "^2.88.2",
     "sanitize-html": "^2.13.0",
-    "sass": "^1.74.1",
+    "sass": "^1.75.0",
     "twemoji": "^14.0.2"
   }
 }
