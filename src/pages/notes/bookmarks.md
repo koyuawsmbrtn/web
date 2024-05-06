@@ -12,3 +12,4 @@ hot: false
 * [Distrotube](https://distrotube.com)
 * [Snowdusk](https://tilde.club/~snowdusk/)
 * [Arch Linux Mirrorlist generator](https://archlinux.org/mirrorlist/)
+* [wiby.me small web search engine](https://wiby.me)
