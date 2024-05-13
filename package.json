@@ -30,7 +30,7 @@
     "remark-external-links": "^9.0.1",
     "request": "^2.88.2",
     "sanitize-html": "^2.13.0",
-    "sass": "^1.76.0",
+    "sass": "^1.77.1",
     "twemoji": "^14.0.2"
   }
 }
