@@ -19,7 +19,7 @@
   "dependencies": {
     "@astrojs/markdown-remark": "^5.1.0",
     "@astrojs/mdx": "^3.0.1",
-    "@astrojs/rss": "^4.0.5",
+    "@astrojs/rss": "^4.0.6",
     "@iconify-json/fa-solid": "^1.1.8",
     "@iconify-json/ph": "^1.1.13",
     "@iconify-json/simple-icons": "^1.1.102",
