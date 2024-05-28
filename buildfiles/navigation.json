@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Home",
+        "path": ""
+    },
+    {
+        "name": "About",
+        "path": "about.html"
+    },
+    {
+        "name": "Contact",
+        "path": "contact.html"
+    },
+    {
+        "name": "Files",
+        "path": "files/"
+    },
+    {
+        "name": "Portfolio",
+        "path": "portfolio.html"
+    },
+    {
+        "name": "Notes",
+        "path": "notes/"
+    }
+]
