@@ -3,6 +3,13 @@ rm -rf main.zip
 rm -rf dist
 rm -rf gemini
 rm -rf gemini-main
+rm -rf gemtext2md
+git clone https://github.com/mk270/gemtext2md
+cd gemtext2md
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain stable -y
+. "$HOME/.cargo/env"
+cargo build --release
+cp target/release/gemtext2md ../buildfiles
 wget -O main.zip https://github.com/koyuawsmbrtn/gemini/archive/refs/heads/main.zip
 unzip main.zip
 mv gemini-main gemini
