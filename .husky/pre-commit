@@ -1,4 +1,3 @@
 #!/bin/bash
-source /usr/share/nvm/init-nvm.sh
-yarn clean
+bun clean
 git add .

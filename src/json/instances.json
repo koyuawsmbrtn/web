@@ -21,20 +21,6 @@
         "logo": "https://blob.cat/static/logo.png"
     },
     {
-        "instance": "berserker.town",
-        "description": "A berserker's gateway to the Mastodon social network. Run by a Norwegian, with servers in Finland.",
-        "moderation": "%%general%%",
-        "special": "Nordic generalist instance",
-        "logo": "https://berserker.town/system/site_uploads/files/000/000/002/original/toppng.com-viking-logo-vector-570x413.png"
-    },
-    {
-        "instance": "ambrosia.moe",
-        "description": "relaxed iceshrimp space for people who are fruity and sweet",
-        "moderation": "%%general%%",
-        "special": "Iceshrimp instance, queer-owned, very friendly community",
-        "logo": "/fedilist/ambrosiamoe.png"
-    },
-    {
         "instance": "im-in.space",
         "description": "A generalist Mastodon instance with a nice domain name. Running on Glitch Social's fork with a custom theme!",
         "moderation": "%%gab%%",
