@@ -17,7 +17,7 @@
     "astro": "^4.9.2"
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "^5.1.0",
+    "@astrojs/markdown-remark": "^5.1.1",
     "@astrojs/mdx": "^3.0.1",
     "@astrojs/rss": "^4.0.6",
     "@iconify-json/fa-solid": "^1.1.8",
