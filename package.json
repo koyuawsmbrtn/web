@@ -24,7 +24,7 @@
     "@iconify-json/ph": "^1.1.13",
     "@iconify-json/simple-icons": "^1.1.107",
     "astro-icon": "^1.1.0",
-    "astro-seo": "^0.8.3",
+    "astro-seo": "^0.8.4",
     "husky-init": "^8.0.0",
     "jquery": "^3.7.1",
     "remark-external-links": "^9.0.1",
