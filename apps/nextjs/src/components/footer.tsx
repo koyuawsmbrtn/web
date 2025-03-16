@@ -16,6 +16,7 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons"
 interface LegalPage {
   _id: string
   slug: string
+  title: string
 }
 
 interface Social {
@@ -63,7 +64,8 @@ export function Footer() {
         client.fetch<LegalPage[]>(`
           *[_type == "page" && slug.current in ["imprint", "privacy", "terms"]] {
             _id,
-            "slug": slug.current
+            "slug": slug.current,
+            title
           }
         `),
         client.fetch<Social[]>(`
@@ -86,19 +88,6 @@ export function Footer() {
 
     fetchData()
   }, [])
-
-  const getLinkLabel = (slug: string) => {
-    switch (slug) {
-      case "imprint":
-        return "Imprint"
-      case "privacy":
-        return "Privacy Policy"
-      case "terms":
-        return "Terms of Service"
-      default:
-        return ""
-    }
-  }
 
   return (
     <footer className="bg-muted py-6 mt-auto">
@@ -136,7 +125,7 @@ export function Footer() {
                   href={`/${page.slug}`}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  {getLinkLabel(page.slug)}
+                  {page.title}
                 </Link>
               ))}
             </nav>

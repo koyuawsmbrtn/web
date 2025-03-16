@@ -86,7 +86,7 @@ export default function Avatars() {
                   alt={avatar.name}
                   width={200}
                   height={200}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover bg-muted"
                   loading="lazy"
                 />
               </div>

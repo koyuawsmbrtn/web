@@ -200,6 +200,20 @@
     margin-top: -3px;
     vertical-align: middle;
   }
+  form {
+    @apply space-y-4;
+  }
+  input {
+    @apply w-full border border-border rounded-md p-2 my-2;
+  }
+  input[type="submit"],
+  button[type="submit"] {
+    @apply bg-accent rounded-md p-2 w-2xs block m-auto mb-6;
+    color: var(--text-accent);
+  }
+  textarea {
+    @apply w-full border border-border rounded-md p-2 my-2 h-50;
+  }
 }
 
 @layer utilities {
