@@ -30,3 +30,6 @@
 
 # Turbo
 .turbo
+
+# Feed
+public/feed.rss
