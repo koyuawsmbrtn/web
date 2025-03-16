@@ -44,19 +44,110 @@ export const components = {
                 <div className="relative w-full my-8">
                     <Image
                         src={urlForImage(value)?.url() || ""}
-                        alt={""}
+                        alt={value.alt || ""}
                         width={800}
                         height={450}
                         className="rounded-lg w-full"
                         priority={false}
                     />
+                    {value.caption && (
+                        <figcaption className="text-sm text-muted-foreground mt-2 text-center">
+                            {value.caption}
+                        </figcaption>
+                    )}
+                </div>
+            )
+        },
+        card: function CardReference({ value }: any) {
+            const [card, setCard] = useState<any>(null)
+            const [error, setError] = useState<string | null>(null)
+
+            useEffect(() => {
+                const fetchCard = async () => {
+                    try {
+                        if (!value?.cardReference._ref) {
+                            setError('Invalid card reference')
+                            return
+                        }
+                        const data = await client.fetch(`
+                            *[_type == "card" && _id == $cardId][0] {
+                                image,
+                                "link": link,
+                                title,
+                                content
+                            }
+                        `, { cardId: value.cardReference._ref })
+                        if (!data) {
+                            setError('Card not found')
+                            return
+                        }
+                        setCard(data)
+                    } catch (err) {
+                        console.error('Error fetching card:', err)
+                        setError('Failed to load card content')
+                    }
+                }
+
+                fetchCard()
+            }, [value.cardReference._ref])
+
+            if (error) return <div className="text-red-500">{error}</div>
+            if (!card) return <Skeleton className="h-[202px] w-full my-6" />
+
+            return (
+                <Card
+                    imageSrc={urlForImage(card.image)?.url() || "/placeholder.png"}
+                    title={card.title}
+                    content={card.content}
+                    link={card.link}
+                />
+            )
+        },
+        notes: () => <Notes />,
+        blockref: function BlockRef({ value }: any) {
+            const [blockref, setBlock] = useState<any>(null)
+            const [error, setError] = useState<string | null>(null)
+
+            useEffect(() => {
+                const fetchBlock = async () => {
+                    try {
+                        const data = await client.fetch(`
+                            *[_type == "blockdocument" && _id == $blockId][0] {
+                                _id,
+                                title,
+                                html,
+                                type,
+                                tag
+                            }
+                        `, { blockId: value.blockReference._ref })
+                        setBlock(data)
+                    } catch (err) {
+                        console.error('Error fetching block:', err)
+                        setError('Failed to load block content')
+                    }
+                }
+
+                fetchBlock()
+            }, [value.blockReference._ref])
+
+            if (error) return <div className="text-red-500">{error}</div>
+            if (!blockref) return <div className="my-6 text-gray-600 text-3xl text-center">...</div>
+
+            if (blockref.tag === "avatars") {
+                return <Avatars />
+            }
+
+            return (
+                <div className="sanity-block">
+                    {blockref.html?.code && (
+                        <div dangerouslySetInnerHTML={{ __html: blockref.html.code }} />
+                    )}
                 </div>
             )
         }
     },
     block: {
         normal: ({ children }: any) => {
-            // Check if children is an array with a single text node containing "---"
             if (Array.isArray(children) &&
                 children.length === 1 &&
                 typeof children[0] === 'string' &&
@@ -64,120 +155,9 @@ export const components = {
                 return <div className="break" />
             }
 
-            // Convert children array to string content
-            const content = Array.isArray(children)
-                ? children.map(child => typeof child === 'string' ? child : '').join('')
-                : ''
-
-            // Check for card tags
-            const cardMatch = content.match(/\[card\](.*?)\[\/card\]/s)
-            if (cardMatch) {
-                const cardId = cardMatch[1].trim()
-                return <SanityCard cardId={cardId} />
-            }
-
-            function SanityCard({ cardId }: { cardId: string }) {
-                const [card, setCard] = useState<any>(null)
-                const [error, setError] = useState<string | null>(null)
-
-                useEffect(() => {
-                    const fetchCard = async () => {
-                        try {
-                            const data = await client.fetch(`
-                    *[_type == "card" && tag == $cardId][0] {
-                        tag,
-                        "imageUrl": image.asset->url,
-                        "link": link,
-                        title,
-                        content
-                    }
-                `, { cardId })
-                            setCard(data)
-                        } catch (err) {
-                            console.error('Error fetching card:', err)
-                            setError('Failed to load card content')
-                        }
-                    }
-
-                    fetchCard()
-                }, [cardId])
-
-                if (error) return <div className="text-red-500">{error}</div>
-                if (!card) return <Skeleton className="h-[202px] w-full my-6" />
-
-                return (
-                    <Card
-                        imageSrc={card.imageUrl}
-                        title={card.title}
-                        content={card.content}
-                        link={card.link}
-                    />
-                )
-            }
-
-            // Check for notes tags
-            const notesMatch = content.match(/\[notes\](.*?)\[\/notes\]/s)
-            if (notesMatch) {
-                return <Notes />
-            }
-
-            // Check for custom block tags
-            const blockMatch = content.match(/\[block\](.*?)\[\/block\]/s)
-            if (blockMatch) {
-                const blockId = blockMatch[1].trim()
-                return <SanityBlock blockId={blockId} />
-            }
-
             return <p className="my-3">{children}</p>
         }
     }
-}
-
-function SanityBlock({ blockId }: { blockId: string }) {
-    const [block, setBlock] = useState<any>(null)
-    const [error, setError] = useState<string | null>(null)
-
-    useEffect(() => {
-        const fetchBlock = async () => {
-            try {
-                const data = await client.fetch(`
-                    *[_type == "blockdocument" && tag == $blockId][0] {
-                        _id,
-                        title,
-                        html,
-                        tag,
-                        type
-                    }
-                `, { blockId })
-                setBlock(data)
-            } catch (err) {
-                console.error('Error fetching block:', err)
-                setError('Failed to load block content')
-            }
-        }
-
-        fetchBlock()
-    }, [blockId])
-
-    if (error) {
-        return <div className="text-red-500">{error}</div>
-    }
-
-    if (blockId === "avatars") {
-        return <Avatars />
-    }
-
-    if (!block) {
-        return <div className="text-gray-500 text-4xl text-center">...</div>
-    }
-
-    return (
-        <div className="sanity-block">
-            {block.html?.code && (
-                <div dangerouslySetInnerHTML={{ __html: block.html.code }} />
-            )}
-        </div>
-    )
 }
 
 export function PortableText({ value }: { value: any }) {
