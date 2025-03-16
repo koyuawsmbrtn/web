@@ -31,10 +31,11 @@ export default async function PostPage({
   return (
     <>
       <h1 className="text-4xl font-bold mb-8">{page.title}</h1>
-      <div className="flex items-start space-x-6">
-        <div className="flex flex-col space-y-2">
+      <div className="lg:flex lg:items-start space-x-6">
+        <div className="lg:flex lg:flex-col space-y-2">
           <PortableText value={page.body} />
         </div>
+        <br />
         {page.image ? <Image src={urlForImage(page.image)?.url() || "/placeholder.png"} alt={page.title} className="rounded-xl object-cover" width={250} height={250} /> : ""}
       </div>
     </>
