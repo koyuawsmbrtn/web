@@ -16,6 +16,7 @@
         "@fortawesome/free-solid-svg-icons": "^6.7.2",
         "@fortawesome/react-fontawesome": "^0.2.2",
         "@heroicons/react": "^1.0.6",
+        "@netlify/plugin-nextjs": "^5.10.0",
         "@portabletext/react": "^3.2.1",
         "@portabletext/to-html": "^2.0.14",
         "@radix-ui/react-navigation-menu": "^1.2.5",
@@ -543,6 +544,8 @@
     "@microsoft/tsdoc-config": ["@microsoft/tsdoc-config@0.17.1", "", { "dependencies": { "@microsoft/tsdoc": "0.15.1", "ajv": "~8.12.0", "jju": "~1.4.0", "resolve": "~1.22.2" } }, "sha512-UtjIFe0C6oYgTnad4q1QP4qXwLhe6tIpNTRStJ2RZEPIkqQPREAwE5spzVxsdn9UaEMUqhh0AqSx3X4nWAKXWw=="],
 
     "@napi-rs/wasm-runtime": ["@napi-rs/wasm-runtime@0.2.7", "", { "dependencies": { "@emnapi/core": "^1.3.1", "@emnapi/runtime": "^1.3.1", "@tybys/wasm-util": "^0.9.0" } }, "sha512-5yximcFK5FNompXfJFoWanu5l8v1hNGqNHh9du1xETp9HWk/B/PzvchX55WYOPaIeNglG8++68AAiauBAtbnzw=="],
+
+    "@netlify/plugin-nextjs": ["@netlify/plugin-nextjs@5.10.0", "", {}, "sha512-h2ugfCAQRhp6NIYABW+20AvVkrM/ReuELBfgkH+5DALfrKrsQXYeS1YPZi9y4bCfNFj8Zxdhu4DtuVFDiUONiA=="],
 
     "@next/env": ["@next/env@15.2.2", "", {}, "sha512-yWgopCfA9XDR8ZH3taB5nRKtKJ1Q5fYsTOuYkzIIoS8TJ0UAUKAGF73JnGszbjk2ufAQDj6mDdgsJAFx5CLtYQ=="],
 

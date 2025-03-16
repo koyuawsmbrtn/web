@@ -17,6 +17,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@heroicons/react": "^1.0.6",
+    "@netlify/plugin-nextjs": "^5.10.0",
     "@portabletext/react": "^3.2.1",
     "@portabletext/to-html": "^2.0.14",
     "@radix-ui/react-navigation-menu": "^1.2.5",
