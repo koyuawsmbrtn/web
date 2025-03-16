@@ -1,4 +1,5 @@
-import { PortableText, type SanityDocument } from "next-sanity";
+import { type SanityDocument } from "next-sanity";
+import { PortableText } from "@/components/portable-text";
 import imageUrlBuilder from "@sanity/image-url";
 import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import { client } from "@/sanity/client";
@@ -29,12 +30,12 @@ export default async function PostPage({
       {postImageUrl ? <Image
         src={postImageUrl}
         alt={post.title}
-        className="aspect-video rounded-xl"
-        width={550}
-        height={310}
+        className="aspect-video rounded-xl w-full my-8"
+        width={640}
+        height={640}
       /> : ""}
-      <h1 className="text-4xl font-bold mb-8">{post.title}</h1>
-      <p>Published: {new Date(post.publishedAt).toLocaleDateString()}</p>
+      <h1 className="text-4xl font-bold">{post.title}</h1>
+      <p className="uppercase font-bold text-muted-foreground mb-8">Published: {new Date(post.publishedAt).toLocaleDateString()}</p>
       {Array.isArray(post.body) && <PortableText value={post.body} />}
     </>
   );

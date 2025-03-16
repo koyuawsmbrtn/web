@@ -116,64 +116,80 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   h1 {
     font-size: var(--text-4xl);
   }
+
   h1:first-child {
     border: 0;
   }
+
   h2 {
     font-size: var(--text-3xl);
     border-bottom: 1px solid var(--border);
     padding-bottom: 0.5rem;
     margin-bottom: 2rem;
   }
+
   h3 {
     font-size: var(--text-2xl);
   }
+
   a {
     @apply text-accent underline;
   }
+
   a.group {
     text-decoration: none !important;
   }
+
   nav a,
   a:hover {
     @apply no-underline;
   }
+
   blockquote {
     @apply border-l-4 border-accent pl-4 my-4;
   }
+
   .break {
     height: 1px;
     margin: 2rem 0;
   }
+
   .custom-list {
     list-style-type: none;
     padding-left: 0;
     margin-left: 0;
   }
+
   .custom-list-item {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
   }
-  .custom-list-item > div:first-child {
+
+  .custom-list-item>div:first-child {
     font-weight: bold;
     color: var(--accent);
     margin-bottom: 0.5rem;
   }
+
   hr {
     border: 0;
     border-top: 1px solid var(--border);
     margin: 2rem 0;
   }
+
   .text-accent {
     color: var(--text-accent);
   }
+
   .avatar {
     height: 200px;
     border-radius: 50%;
@@ -182,37 +198,50 @@
     background-color: var(--border);
     border: 1px solid var(--border);
   }
+
   .round {
     border-radius: 50%;
   }
+
   .stroke-accent {
     stroke: var(--accent);
   }
+
   li {
     margin-left: 2rem;
     list-style: initial;
     @apply space-y-1;
   }
+
   .inline {
     display: inline;
   }
+
   svg.inline {
     margin-top: -3px;
     vertical-align: middle;
   }
+
   form {
     @apply space-y-4;
   }
+
   input {
     @apply w-full border border-border rounded-md p-2 my-2;
   }
+
   input[type="submit"],
   button[type="submit"] {
     @apply bg-accent rounded-md p-2 w-2xs block m-auto mb-6;
     color: var(--text-accent);
   }
+
   textarea {
     @apply w-full border border-border rounded-md p-2 my-2 h-50;
+  }
+
+  .no-underline {
+    text-decoration: none !important;
   }
 }
 
@@ -224,7 +253,12 @@
       }
     }
   }
+
   .dark\:text-accent {
     color: var(--text-accent) !important;
+  }
+
+  .hover\:no-underline:hover {
+    text-decoration: none !important;
   }
 }

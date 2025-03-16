@@ -9,7 +9,7 @@ import { Skeleton } from "./ui/skeleton"
 import Card from "@/components/card"
 import Notes from "./notes"
 
-const components = {
+export const components = {
     marks: {
         link: ({ value, children }: any) => {
             const href = value?.href || ''
