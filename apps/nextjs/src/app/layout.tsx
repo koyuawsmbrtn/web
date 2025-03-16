@@ -1,13 +1,24 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
+import { client } from "@/sanity/client";
+import { urlForImage } from "@/sanity/image";
 import "./globals.css";
-import { NavigationSanity } from "@/components/navigation-sanity";
+import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import ScrollToTop from "@/components/scrolltotop";
-import { useEffect } from "react";
 import Lenis from "lenis";
 import AccentColor from "@/components/accentcolor";
+
+interface Settings {
+  websiteName: string;
+  favicon: {
+    asset: {
+      _ref: string;
+    };
+  };
+}
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,17 +35,47 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [settings, setSettings] = useState<Settings | null>(null);
+
   useEffect(() => {
     new Lenis({
       autoRaf: true,
     });
+
+    const fetchSettings = async () => {
+      try {
+        const data = await client.fetch<Settings>(`
+          *[_type == "settings"][0] {
+            websiteName,
+            favicon
+          }
+        `);
+        setSettings(data);
+      } catch (err) {
+        console.error("Error fetching settings:", err);
+      }
+    };
+
+    fetchSettings();
   }, []);
+
   return (
     <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {settings?.favicon && (
+          <link 
+            rel="shortcut icon" 
+            href={urlForImage(settings.favicon).url()} 
+          />
+        )}
+        <title>{settings?.websiteName || '...'}</title>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
       >
-        <NavigationSanity />
+        <Navigation />
         <main className="container mx-auto min-h-screen max-w-4xl p-8 flex flex-col gap-4">
           <div className="prose">
             {children}

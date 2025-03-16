@@ -12,12 +12,6 @@ export const settingsType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'websiteDescription',
-      title: 'Website Description',
-      type: 'text',
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
       name: 'showTextInMenu',
       title: 'Show Text In Menu',
       type: 'boolean',

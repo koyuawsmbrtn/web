@@ -37,5 +37,10 @@ export const pageType = defineType({
       type: 'array',
       of: [{type: 'block'}],
     }),
+    defineField({
+      name: 'sortOrder',
+      type: 'number',
+      initialValue: 0,
+    }),
   ],
 })

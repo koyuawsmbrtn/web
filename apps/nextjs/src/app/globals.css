@@ -188,6 +188,18 @@
   .stroke-accent {
     stroke: var(--accent);
   }
+  li {
+    margin-left: 2rem;
+    list-style: initial;
+    @apply space-y-1;
+  }
+  .inline {
+    display: inline;
+  }
+  svg.inline {
+    margin-top: -3px;
+    vertical-align: middle;
+  }
 }
 
 @layer utilities {
@@ -197,5 +209,8 @@
         color: var(--text-accent);
       }
     }
+  }
+  .dark\:text-accent {
+    color: var(--text-accent) !important;
   }
 }

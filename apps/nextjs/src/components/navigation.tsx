@@ -11,6 +11,7 @@ interface Page {
   _id: string
   title: string
   slug: string | { current: string }
+  sortOrder?: number
 }
 
 interface Settings {
@@ -25,7 +26,7 @@ interface Settings {
 
 const useBlog = Boolean(process.env.NEXT_PUBLIC_USEBLOG);
 
-export function NavigationSanity() {
+export function Navigation() {
   const pathname = usePathname()
   const { scrollY } = useScroll()
   const logoX = useTransform(scrollY, [0, 100], [0, -24])
@@ -40,13 +41,14 @@ export function NavigationSanity() {
     const fetchData = async () => {
       try {
         setIsLoading(true)
-        // Fetch both pages and settings
+        // Update the pages query to include and sort by sortOrder
         const [pagesData, settingsData] = await Promise.all([
           client.fetch<Page[]>(`
-            *[_type == "page" && slug.current != "index" && hidden == false] | order(publishedAt desc) {
+            *[_type == "page" && slug.current != "index" && hidden == false] | order(sortOrder asc) {
               _id,
               title,
-              "slug": slug.current
+              "slug": slug.current,
+              sortOrder
             }
           `),
           client.fetch<Settings>(`
@@ -60,16 +62,27 @@ export function NavigationSanity() {
 
         let newdata = null;
         if (useBlog === true) {
-          newdata = { _id: "blog", title: "Blog", slug: "blog" };
+          newdata = { 
+            _id: "blog", 
+            title: "Blog", 
+            slug: "blog",
+            sortOrder: -1  // Ensure blog appears after home but before other pages
+          };
         }
         
         const finalPages = [{
           _id: "home",
           title: "Home",
-          slug: ""
+          slug: "",
+          sortOrder: -2  // Ensure home always appears first
         }, ...(newdata ? [newdata] : []), ...pagesData];
 
-        setPages(finalPages)
+        // Sort the final array by sortOrder
+        const sortedPages = finalPages.sort((a, b) => 
+          (a.sortOrder || 0) - (b.sortOrder || 0)
+        );
+
+        setPages(sortedPages)
         setSettings(settingsData)
       } catch (err) {
         setError("Failed to load data")
