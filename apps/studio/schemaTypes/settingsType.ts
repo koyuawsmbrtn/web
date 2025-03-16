@@ -28,5 +28,19 @@ export const settingsType = defineType({
       title: 'Logo',
       type: 'image',
     }),
+    defineField({
+      name: 'favicon',
+      title: 'Favicon',
+      type: 'image'
+    }),
+    defineField({
+      name: 'accentColor',
+      title: 'Accent Color',
+      type: 'color',
+      initialValue: '#ffffff',
+      options: {
+        disableAlpha: true,
+      },
+    }),
   ],
 })

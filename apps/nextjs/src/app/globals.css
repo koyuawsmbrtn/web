@@ -18,7 +18,7 @@
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.80 0.15 85);
+  --accent: oklch(1 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
@@ -37,6 +37,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --text-accent: oklch(0 0 0);
 }
 
 .dark {
@@ -52,7 +53,7 @@
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.80 0.15 85);
+  --accent: oklch(1 0 0);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
@@ -67,7 +68,7 @@
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: oklch(0.488 0.243 264.376);
   --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.80 0.15 85);
+  --sidebar-accent: oklch(1 0 0);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
@@ -120,9 +121,6 @@
   }
   h1 {
     font-size: var(--text-4xl);
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 0.5rem;
-    margin-bottom: 2rem;
   }
   h1:first-child {
     border: 0;
@@ -139,8 +137,8 @@
   a {
     @apply text-accent underline;
   }
-  .text-black {
-    @apply text-black;
+  a.group {
+    text-decoration: none !important;
   }
   nav a,
   a:hover {
@@ -174,15 +172,30 @@
     margin: 2rem 0;
   }
   .text-accent {
-    @apply text-accent;
+    color: var(--text-accent);
   }
-  .friend {
+  .avatar {
     height: 200px;
     border-radius: 50%;
     display: inline;
     margin: 20px;
+    background-color: var(--border);
+    border: 1px solid var(--border);
   }
   .round {
     border-radius: 50%;
+  }
+  .stroke-accent {
+    stroke: var(--accent);
+  }
+}
+
+@layer utilities {
+  .hover\:text-accent {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--text-accent);
+      }
+    }
   }
 }

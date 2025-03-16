@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer";
 import ScrollToTop from "@/components/scrolltotop";
 import { useEffect } from "react";
 import Lenis from "lenis";
+import AccentColor from "@/components/accentcolor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <ScrollToTop />
+        <AccentColor />
       </body>
     </html>
   );

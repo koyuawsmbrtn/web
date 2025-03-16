@@ -4,7 +4,8 @@ import Link from "next/link"
 import { PortableText as BasePortableText } from "@portabletext/react"
 import { useEffect, useState } from "react"
 import { client } from "@/sanity/client"
-import { motion } from "framer-motion"
+import Avatars from "@/components/avatars"
+import { Skeleton } from "./ui/skeleton"
 
 const components = {
     marks: {
@@ -49,7 +50,7 @@ const components = {
                 return <SanityBlock blockId={blockId} />
             }
 
-            return <p>{children}</p>
+            return <p className="my-3">{children}</p>
         }
     }
 }
@@ -66,7 +67,8 @@ function SanityBlock({ blockId }: { blockId: string }) {
                         _id,
                         title,
                         html,
-                        tag
+                        tag,
+                        type
                     }
                 `, { blockId })
 
@@ -83,6 +85,10 @@ function SanityBlock({ blockId }: { blockId: string }) {
 
     if (error) {
         return <div className="text-red-500">{error}</div>
+    }
+
+    if (blockId === "avatars") {
+        return <Avatars />
     }
 
     if (!block) {

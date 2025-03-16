@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { client } from "@/sanity/client"
 import Image from "next/image"
 import { urlForImage } from "@/sanity/image"
+import { Skeleton } from "./ui/skeleton"
 
 interface Page {
   _id: string
@@ -108,7 +109,7 @@ export function NavigationSanity() {
                   alt="Logo" 
                   width={32}
                   height={32}
-                  className="h-8 w-8 align-middle my-0.5 rounded-full" 
+                  className="h-8 w-8 align-middle my-0.5 rounded-full"
                 />
                 {settings?.showTextInMenu && (
                   <span className="text-lg font-semibold hidden md:block">
@@ -126,7 +127,7 @@ export function NavigationSanity() {
               className="flex space-x-4 relative"
             >
               {isLoading ? (
-                <span className="text-muted-foreground">Loading...</span>
+                <span className="text-muted-foreground"><Skeleton className="w-80 h-6" /></span>
               ) : (
                 pages.map((page) => (
                   <Link
@@ -222,7 +223,7 @@ export function NavigationSanity() {
                   href={`/${page.slug}`}
                   className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     isActive(page.slug.toString())
-                      ? "bg-accent text-black dark:text-black"
+                      ? "bg-accent text-accent dark:text-accent"
                       : "text-foreground/90 hover:text-foreground hover:bg-accent/10"
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
