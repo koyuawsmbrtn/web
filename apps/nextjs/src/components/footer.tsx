@@ -9,7 +9,14 @@ import {
   faInstagram,
   faLinkedin,
   faBluesky,
-  faTwitch
+  faTwitch,
+  faFacebook,
+  faXTwitter,
+  faYoutube,
+  faTiktok,
+  faTelegram,
+  faFlickr,
+  faWhatsapp
 } from "@fortawesome/free-brands-svg-icons"
 import { faGlobe } from "@fortawesome/free-solid-svg-icons"
 
@@ -47,6 +54,24 @@ const getSocialIcon = (slug: string) => {
       return faBluesky
     case "twitch":
       return faTwitch
+    case "facebook":
+      return faFacebook
+    case "twitter":
+      return faXTwitter
+    case "youtube":
+      return faYoutube
+    case "tiktok":
+      return faTiktok
+    case "x":
+      return faXTwitter
+    case "telegram":
+      return faTelegram
+    case "mastodon":
+      return faMastodon
+    case "flickr":
+      return faFlickr
+    case "whatsapp":
+      return faWhatsapp
     default:
       return faGlobe
   }
