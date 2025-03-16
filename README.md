@@ -19,8 +19,7 @@ A modern, performant website built with Next.js 14, ShadcnUI, Tailwind CSS, and 
 
 ### Prerequisites
 
-- Node.js 18.17 or later
-- npm or yarn
+- bun
 - Git
 
 ### Installation

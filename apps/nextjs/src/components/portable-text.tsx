@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+
 import Link from "next/link"
 import { PortableText as BasePortableText } from "@portabletext/react"
 import { useEffect, useState } from "react"

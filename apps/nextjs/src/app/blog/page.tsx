@@ -1,3 +1,4 @@
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 import Link from "next/link";
 import { type SanityDocument } from "next-sanity";
 import { client } from "@/sanity/client";
@@ -55,7 +56,7 @@ export default async function IndexPage() {
             <Link href={`/blog/${post.slug.current}`} className="no-underline group">
               <div className="aspect-video relative overflow-hidden rounded-xl">
                 <Image 
-                  src={urlForImage(post.image)?.url()} 
+                  src={urlForImage(post.image)?.url() || "/placeholder.png"} 
                   alt={post.title} 
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"

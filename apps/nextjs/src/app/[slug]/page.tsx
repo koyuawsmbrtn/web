@@ -15,6 +15,19 @@ export default async function PostPage({
 }) {
   const page = await client.fetch<SanityDocument>(PAGE_QUERY, await params, options);
 
+  if (!page) {
+    return (
+      <>
+        <h1 className="text-4xl font-bold mb-8">Error 404</h1>
+        <div className="flex items-start space-x-6">
+          <div className="flex flex-col space-y-2">
+            <p>Page not found</p>
+          </div>
+        </div>
+      </>
+    )
+  }
+
   return (
     <>
       <h1 className="text-4xl font-bold mb-8">{page.title}</h1>
@@ -22,7 +35,7 @@ export default async function PostPage({
         <div className="flex flex-col space-y-2">
           <PortableText value={page.body} />
         </div>
-        {page.image ? <Image src={urlForImage(page.image).url()} alt={page.title} className="rounded-xl object-cover" width={250} height={250} /> : ""}
+        {page.image ? <Image src={urlForImage(page.image)?.url() || "/placeholder.png"} alt={page.title} className="rounded-xl object-cover" width={250} height={250} /> : ""}
       </div>
     </>
   );

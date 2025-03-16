@@ -118,7 +118,7 @@ export function Navigation() {
             >
               <Link href="/" className="flex items-center gap-3">
                 <Image 
-                  src={settings?.logo ? urlForImage(settings.logo).url() : "/logo.svg"}
+                  src={urlForImage(settings?.logo)?.url() || "/logo.svg"}
                   alt="Logo" 
                   width={32}
                   height={32}

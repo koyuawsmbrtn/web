@@ -17,9 +17,17 @@ import {
   faTelegram,
   faFlickr,
   faWhatsapp,
-  faSnapchat
+  faSnapchat,
+  faImdb,
+  faLastfm,
+  faDiaspora,
+  faThreads,
+  faXbox,
+  faPlaystation,
+  faSteam,
+  faWordpress
 } from "@fortawesome/free-brands-svg-icons"
-import { faGlobe } from "@fortawesome/free-solid-svg-icons"
+import { faGlobe, faRss } from "@fortawesome/free-solid-svg-icons"
 
 interface LegalPage {
   _id: string
@@ -75,6 +83,24 @@ const getSocialIcon = (slug: string) => {
       return faWhatsapp
     case "snapchat":
       return faSnapchat
+    case "imdb":
+      return faImdb
+    case "lastfm":
+      return faLastfm
+    case "diaspora":
+      return faDiaspora
+    case "threads":
+      return faThreads
+    case "xbox":
+      return faXbox
+    case "playstation":
+      return faPlaystation
+    case "steam":
+      return faSteam
+    case "wordpress":
+      return faWordpress
+    case "rss":
+      return faRss
     default:
       return faGlobe
   }

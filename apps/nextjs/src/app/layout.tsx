@@ -67,7 +67,7 @@ export default function RootLayout({
         {settings?.favicon && (
           <link 
             rel="shortcut icon" 
-            href={urlForImage(settings.favicon).url()} 
+            href={urlForImage(settings?.favicon)?.url() || "/favicon.ico"} 
           />
         )}
         <title>{settings?.websiteName || '...'}</title>

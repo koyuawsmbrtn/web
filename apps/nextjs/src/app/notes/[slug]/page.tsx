@@ -25,6 +25,19 @@ export default async function PostPage({
     ? urlFor(note.image)?.width(550).height(310).url()
     : null;
 
+  if (!note) {
+    return (
+      <>
+        <h1 className="text-4xl font-bold mb-8">Error 404</h1>
+        <div className="flex items-start space-x-6">
+          <div className="flex flex-col space-y-2">
+            <p>Page not found</p>
+          </div>
+        </div>
+      </>
+    )
+  }
+
   return (
     <>
       {noteImageUrl ? <Image

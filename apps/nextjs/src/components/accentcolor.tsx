@@ -26,12 +26,14 @@ export default function AccentColor() {
                     const hex = settings.accentColor.hex
                     // Convert directly to OKLCH
                     const color = culori.oklch(culori.parse(hex))
-                    const oklchString = `oklch(${color.l} ${color.c} ${color.h})`
-                    setOklchString(oklchString)
+                    if (color) {
+                        const oklchString = `oklch(${color.l} ${color.c} ${color.h})`
+                        setOklchString(oklchString)
 
-                    // Calculate text color based on lightness
-                    const textColor = color.l > 0.5 ? "oklch(0 0 0)" : "oklch(1 0 0)"
-                    setTextColor(textColor)
+                        // Calculate text color based on lightness
+                        const textColor = color.l > 0.5 ? "oklch(0 0 0)" : "oklch(1 0 0)"
+                        setTextColor(textColor)
+                    }
                 }
             } catch (err) {
                 console.error("Error fetching accent color:", err)
