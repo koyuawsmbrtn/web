@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity'
 
 export const postType = defineType({
   name: 'post',
@@ -13,7 +13,7 @@ export const postType = defineType({
     defineField({
       name: 'slug',
       type: 'slug',
-      options: {source: 'title'},
+      options: { source: 'title' },
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -35,7 +35,54 @@ export const postType = defineType({
           type: 'block'
         },
         {
-          type: 'image'
+          type: 'image',
+          options: {
+            hotspot: true
+          },
+          fields: [
+            {
+              name: 'alt',
+              type: 'string',
+              title: 'Alternative text',
+              description: 'Important for SEO and accessibility'
+            },
+            {
+              name: 'caption',
+              type: 'string',
+              title: 'Caption',
+            }
+          ]
+        },
+        {
+          title: 'Card',
+          name: 'card',
+          type: 'object',
+          fields: [
+            {
+              title: 'Card',
+              name: 'cardReference',
+              type: 'reference',
+              to: [{ type: 'card' }]
+            }
+          ]
+        },
+        {
+          title: 'Notes List',
+          name: 'notes',
+          type: 'object'
+        },
+        {
+          title: 'Block',
+          name: 'blockref',
+          type: 'object',
+          fields: [
+            {
+              title: 'Block',
+              name: 'blockReference',
+              type: 'reference',
+              to: [{ type: 'blockdocument' }]
+            }
+          ]
         }
       ]
     }),
