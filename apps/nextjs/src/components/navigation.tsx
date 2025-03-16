@@ -110,12 +110,10 @@ export function Navigation() {
     <nav className="bg-gradient-to-b from-background to-background/80 backdrop-blur-sm border-b border-border/40 sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
-          {/* Logo - visible on both mobile and desktop */}
+          {/* Logo - different versions for mobile and desktop */}
           <div className="flex-shrink-0 flex items-center">
-            <motion.div
-              style={{ x: logoX }}
-              className="flex items-center gap-3"
-            >
+            {/* Mobile logo - no animation */}
+            <div className="sm:hidden flex items-center gap-3">
               <Link href="/" className="flex items-center gap-3">
                 <Image 
                   src={urlForImage(settings?.logo)?.url() || "/logo.svg"}
@@ -125,12 +123,35 @@ export function Navigation() {
                   className="h-8 w-8 align-middle my-0.5 rounded-full"
                 />
                 {settings?.showTextInMenu && (
-                  <span className="text-lg font-semibold hidden md:block">
+                  <span className="text-lg font-semibold">
                     {settings?.websiteName}
                   </span>
                 )}
               </Link>
-            </motion.div>
+            </div>
+            
+            {/* Desktop logo - with animation */}
+            <div className="hidden sm:block">
+              <motion.div
+                style={{ x: logoX }}
+                className="flex items-center gap-3"
+              >
+                <Link href="/" className="flex items-center gap-3">
+                  <Image 
+                    src={urlForImage(settings?.logo)?.url() || "/logo.svg"}
+                    alt="Logo" 
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 align-middle my-0.5 rounded-full"
+                  />
+                  {settings?.showTextInMenu && (
+                    <span className="text-lg font-semibold">
+                      {settings?.websiteName}
+                    </span>
+                  )}
+                </Link>
+              </motion.div>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
