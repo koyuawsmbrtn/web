@@ -4,6 +4,7 @@ import Link from "next/link"
 import { PortableText as BasePortableText } from "@portabletext/react"
 import { useEffect, useState } from "react"
 import { client } from "@/sanity/client"
+import { motion } from "framer-motion"
 
 const components = {
     marks: {
@@ -37,7 +38,7 @@ const components = {
             }
 
             // Convert children array to string content
-            const content = Array.isArray(children) 
+            const content = Array.isArray(children)
                 ? children.map(child => typeof child === 'string' ? child : '').join('')
                 : ''
 
@@ -68,7 +69,7 @@ function SanityBlock({ blockId }: { blockId: string }) {
                         tag
                     }
                 `, { blockId })
-                
+
                 console.log('Fetched block:', data)
                 setBlock(data)
             } catch (err) {
@@ -85,7 +86,7 @@ function SanityBlock({ blockId }: { blockId: string }) {
     }
 
     if (!block) {
-        return <div className="animate-pulse">...</div>
+        return <div className="text-gray-500 text-4xl text-center">...</div>
     }
 
     return (

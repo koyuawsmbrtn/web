@@ -4,11 +4,22 @@ import { usePathname } from "next/navigation"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { client } from "@/sanity/client"
 import Image from "next/image"
+import { urlForImage } from "@/sanity/image"
 
 interface Page {
   _id: string
   title: string
   slug: string | { current: string }
+}
+
+interface Settings {
+  logo: {
+    asset: {
+      _ref: string
+    }
+  }
+  websiteName: string
+  showTextInMenu: boolean
 }
 
 const useBlog = Boolean(process.env.NEXT_PUBLIC_USEBLOG);
@@ -19,48 +30,55 @@ export function NavigationSanity() {
   const logoX = useTransform(scrollY, [0, 100], [0, -24])
   const linksOpacity = useTransform(scrollY, [0, 100], [1, 0])
   const [pages, setPages] = useState<Page[]>([])
+  const [settings, setSettings] = useState<Settings | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
-    const fetchPages = async () => {
+    const fetchData = async () => {
       try {
         setIsLoading(true)
-        let data = await client.fetch<Page[]>(`
-          *[_type == "page" && slug.current != "index" && hidden == false] | order(publishedAt desc) {
-            _id,
-            title,
-            "slug": slug.current
-          }
-        `)
+        // Fetch both pages and settings
+        const [pagesData, settingsData] = await Promise.all([
+          client.fetch<Page[]>(`
+            *[_type == "page" && slug.current != "index" && hidden == false] | order(publishedAt desc) {
+              _id,
+              title,
+              "slug": slug.current
+            }
+          `),
+          client.fetch<Settings>(`
+            *[_type == "settings"][0] {
+              logo,
+              websiteName,
+              showTextInMenu
+            }
+          `)
+        ])
+
         let newdata = null;
         if (useBlog === true) {
           newdata = { _id: "blog", title: "Blog", slug: "blog" };
         }
-        if (newdata !== null) {
-          data = [{
-            _id: "home",
-            title: "Home",
-            slug: ""
-          }, newdata, ...data];
-        } else {
-          data = [{
-            _id: "home",
-            title: "Home",
-            slug: ""
-          }, ...data];
-        }
-        setPages(data)
+        
+        const finalPages = [{
+          _id: "home",
+          title: "Home",
+          slug: ""
+        }, ...(newdata ? [newdata] : []), ...pagesData];
+
+        setPages(finalPages)
+        setSettings(settingsData)
       } catch (err) {
-        setError("Failed to load pages")
-        console.error("Error fetching pages:", err)
+        setError("Failed to load data")
+        console.error("Error fetching data:", err)
       } finally {
         setIsLoading(false)
       }
     }
 
-    fetchPages()
+    fetchData()
   }, [])
 
   // Helper function to check if link is active
@@ -82,16 +100,21 @@ export function NavigationSanity() {
           <div className="flex-shrink-0 flex items-center">
             <motion.div
               style={{ x: logoX }}
-              className="flex items-center"
+              className="flex items-center gap-3"
             >
-              <Link href="/">
+              <Link href="/" className="flex items-center gap-3">
                 <Image 
-                  src="/logo.svg" 
+                  src={settings?.logo ? urlForImage(settings.logo).url() : "/logo.svg"}
                   alt="Logo" 
-                  width={24} 
-                  height={24} 
-                  className="h-8 w-8 align-middle my-0.5" 
+                  width={32}
+                  height={32}
+                  className="h-8 w-8 align-middle my-0.5 rounded-full" 
                 />
+                {settings?.showTextInMenu && (
+                  <span className="text-lg font-semibold hidden md:block">
+                    {settings?.websiteName}
+                  </span>
+                )}
               </Link>
             </motion.div>
           </div>

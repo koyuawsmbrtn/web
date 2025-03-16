@@ -4,6 +4,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { NavigationSanity } from "@/components/navigation-sanity";
 import { Footer } from "@/components/footer";
+import ScrollToTop from "@/components/scrolltotop";
+import { useEffect } from "react";
+import Lenis from "lenis";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,6 +23,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  useEffect(() => {
+    new Lenis({
+      autoRaf: true,
+    });
+  }, []);
   return (
     <html lang="en">
       <body
@@ -32,6 +40,7 @@ export default function RootLayout({
           </div>
         </main>
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );

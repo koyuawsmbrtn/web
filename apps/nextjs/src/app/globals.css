@@ -119,13 +119,22 @@
     @apply bg-background text-foreground;
   }
   h1 {
-    font-size: var(--text-2xl);
+    font-size: var(--text-4xl);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  h1:first-child {
+    border: 0;
   }
   h2 {
-    font-size: var(--text-xl);
+    font-size: var(--text-3xl);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
   }
   h3 {
-    font-size: var(--text-lg);
+    font-size: var(--text-2xl);
   }
   a {
     @apply text-accent underline;
@@ -166,5 +175,14 @@
   }
   .text-accent {
     @apply text-accent;
+  }
+  .friend {
+    height: 200px;
+    border-radius: 50%;
+    display: inline;
+    margin: 20px;
+  }
+  .round {
+    border-radius: 50%;
   }
 }

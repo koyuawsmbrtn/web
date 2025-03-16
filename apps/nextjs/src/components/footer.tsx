@@ -8,7 +8,7 @@ interface LegalPage {
 }
 
 interface Settings {
-  companyName: string
+  websiteName: string
 }
 
 export function Footer() {
@@ -27,7 +27,7 @@ export function Footer() {
         `),
         client.fetch<Settings>(`
           *[_type == "settings"][0] {
-            companyName
+            websiteName
           }
         `)
       ])
@@ -56,7 +56,7 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
           <div className="text-sm text-muted-foreground">
-            © {currentYear} {settings?.companyName || 'Company'}. All rights reserved.
+            © {currentYear} {settings?.websiteName || 'Company'}. All rights reserved.
           </div>
           {legalPages.length > 0 && (
             <nav className="flex space-x-6">
