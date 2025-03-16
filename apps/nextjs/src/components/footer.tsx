@@ -16,7 +16,8 @@ import {
   faTiktok,
   faTelegram,
   faFlickr,
-  faWhatsapp
+  faWhatsapp,
+  faSnapchat
 } from "@fortawesome/free-brands-svg-icons"
 import { faGlobe } from "@fortawesome/free-solid-svg-icons"
 
@@ -72,6 +73,8 @@ const getSocialIcon = (slug: string) => {
       return faFlickr
     case "whatsapp":
       return faWhatsapp
+    case "snapchat":
+      return faSnapchat
     default:
       return faGlobe
   }
