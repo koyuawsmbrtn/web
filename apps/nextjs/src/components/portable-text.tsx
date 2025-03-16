@@ -10,6 +10,8 @@ import Avatars from "@/components/avatars"
 import { Skeleton } from "./ui/skeleton"
 import Card from "@/components/card"
 import Notes from "./notes"
+import Image from "next/image"
+import { urlForImage } from "@/sanity/image"
 
 export const components = {
     marks: {
@@ -29,6 +31,26 @@ export const components = {
                 >
                     {children}
                 </a>
+            )
+        }
+    },
+    types: {
+        image: ({ value }: any) => {
+            if (!value?.asset?._ref) {
+                return null
+            }
+
+            return (
+                <div className="relative w-full my-8">
+                    <Image
+                        src={urlForImage(value)?.url() || ""}
+                        alt={""}
+                        width={800}
+                        height={450}
+                        className="rounded-lg w-full"
+                        priority={false}
+                    />
+                </div>
             )
         }
     },

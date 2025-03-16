@@ -50,7 +50,9 @@ export const settingsType = defineType({
       name: 'accentColor',
       title: 'Accent Color',
       type: 'color',
-      initialValue: '#ffffff',
+      initialValue: {
+        hex: '#ffffff'
+      },
       options: {
         disableAlpha: true,
       },
