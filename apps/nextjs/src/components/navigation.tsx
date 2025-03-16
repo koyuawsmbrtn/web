@@ -22,6 +22,7 @@ interface Settings {
   }
   websiteName: string
   showTextInMenu: boolean
+  showLogoInMenu: boolean
 }
 
 const useBlog = Boolean(process.env.NEXT_PUBLIC_USEBLOG);
@@ -55,21 +56,22 @@ export function Navigation() {
             *[_type == "settings"][0] {
               logo,
               websiteName,
-              showTextInMenu
+              showTextInMenu,
+              showLogoInMenu
             }
           `)
         ])
 
         let newdata = null;
         if (useBlog === true) {
-          newdata = { 
-            _id: "blog", 
-            title: "Blog", 
+          newdata = {
+            _id: "blog",
+            title: "Blog",
             slug: "blog",
             sortOrder: -1  // Ensure blog appears after home but before other pages
           };
         }
-        
+
         const finalPages = [{
           _id: "home",
           title: "Home",
@@ -78,7 +80,7 @@ export function Navigation() {
         }, ...(newdata ? [newdata] : []), ...pagesData];
 
         // Sort the final array by sortOrder
-        const sortedPages = finalPages.sort((a, b) => 
+        const sortedPages = finalPages.sort((a, b) =>
           (a.sortOrder || 0) - (b.sortOrder || 0)
         );
 
@@ -115,13 +117,13 @@ export function Navigation() {
             {/* Mobile logo - no animation */}
             <div className="sm:hidden flex items-center gap-3">
               <Link href="/" className="flex items-center gap-3">
-                <Image 
+                {settings?.showLogoInMenu && (<Image
                   src={urlForImage(settings?.logo)?.url() || "/logo.svg"}
-                  alt="Logo" 
+                  alt="Logo"
                   width={32}
                   height={32}
                   className="h-8 w-8 align-middle my-0.5 rounded-full"
-                />
+                />)}
                 {settings?.showTextInMenu && (
                   <span className="text-lg font-semibold">
                     {settings?.websiteName}
@@ -129,7 +131,7 @@ export function Navigation() {
                 )}
               </Link>
             </div>
-            
+
             {/* Desktop logo - with animation */}
             <div className="hidden sm:block">
               <motion.div
@@ -137,13 +139,13 @@ export function Navigation() {
                 className="flex items-center gap-3"
               >
                 <Link href="/" className="flex items-center gap-3">
-                  <Image 
+                  {settings?.showLogoInMenu && (<Image
                     src={urlForImage(settings?.logo)?.url() || "/logo.svg"}
-                    alt="Logo" 
+                    alt="Logo"
                     width={32}
                     height={32}
                     className="h-8 w-8 align-middle my-0.5 rounded-full"
-                  />
+                  />)}
                   {settings?.showTextInMenu && (
                     <span className="text-lg font-semibold">
                       {settings?.websiteName}
@@ -156,7 +158,7 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-start sm:ml-6">
-            <motion.div 
+            <motion.div
               style={{ opacity: linksOpacity }}
               className="flex space-x-4 relative"
             >
@@ -176,11 +178,10 @@ export function Navigation() {
                         transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                       />
                     )}
-                    <span className={`relative z-10 ${
-                      isActive(page.slug.toString())
+                    <span className={`relative z-10 ${isActive(page.slug.toString())
                         ? "text-black dark:text-black"
                         : "text-foreground/90 hover:text-foreground"
-                    }`}>
+                      }`}>
                       {page.title}
                     </span>
                   </Link>
@@ -255,11 +256,10 @@ export function Navigation() {
                 <Link
                   key={page._id}
                   href={`/${page.slug}`}
-                  className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    isActive(page.slug.toString())
+                  className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActive(page.slug.toString())
                       ? "bg-accent text-accent dark:text-accent"
                       : "text-foreground/90 hover:text-foreground hover:bg-accent/10"
-                  }`}
+                    }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {page.title}
