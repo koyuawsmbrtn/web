@@ -5,6 +5,7 @@ import {schemaTypes} from './schemaTypes'
 import {codeInput} from '@sanity/code-input'
 import {colorInput} from '@sanity/color-input'
 import {WrenchIcon} from '@sanity/icons'
+import {media} from 'sanity-plugin-media'
 
 export default defineConfig({
   name: 'default',
@@ -46,7 +47,17 @@ export default defineConfig({
             .icon(WrenchIcon),
         ])
 
-  }), visionTool(), codeInput(), colorInput()],
+  }),
+  visionTool(),
+  codeInput(),
+  colorInput(),
+  media({
+    creditLine: {
+      enabled: true,
+      excludeSources: ['unsplash'],
+    },
+  }),
+  ],
 
   schema: {
     types: schemaTypes,
