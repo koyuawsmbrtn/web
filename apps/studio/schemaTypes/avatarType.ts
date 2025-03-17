@@ -22,5 +22,18 @@ export const avatarType = defineType({
             title: 'Image',
             type: 'image',
         }),
+        defineField({
+            name: 'caption',
+            type: 'string'
+        }),
+        defineField({
+            name: 'description',
+            type: 'text'
+        }),
+        defineField({
+            name: 'socials',
+            type: 'array',
+            of: [{ type: 'reference', to: [{ type: 'social' }] }],
+        }),
     ],
 })
