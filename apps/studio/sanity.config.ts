@@ -31,6 +31,7 @@ export default defineConfig({
             .title('Notes')
             .child(S.documentList().title('Notes').filter('_type == "note"'))
             .icon(DocumentTextIcon),
+          S.divider(),
           S.listItem()
             .title('Avatars')
             .child(S.documentList().title('Avatars').filter('_type == "avatar"'))
