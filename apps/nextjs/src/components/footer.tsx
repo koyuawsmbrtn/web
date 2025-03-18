@@ -2,9 +2,9 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 import { client } from "@/sanity/client"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { 
-  faGithub, 
-  faMastodon, 
+import {
+  faGithub,
+  faMastodon,
   faDiscord,
   faInstagram,
   faLinkedin,
@@ -28,6 +28,7 @@ import {
   faWordpress
 } from "@fortawesome/free-brands-svg-icons"
 import { faGlobe, faRss } from "@fortawesome/free-solid-svg-icons"
+import Image from "next/image"
 
 interface LegalPage {
   _id: string
@@ -162,7 +163,7 @@ export function Footer() {
                     className="text-muted-foreground transition-colors"
                     aria-label={`Visit our ${social.slug.current} profile`}
                   >
-                    <FontAwesomeIcon 
+                    <FontAwesomeIcon
                       icon={getSocialIcon(social.slug.current)}
                       className="w-5 h-5"
                     />
@@ -184,6 +185,14 @@ export function Footer() {
               ))}
             </nav>
           )}
+          <div className="mt-4 sm:mt-0 flex justify-end align-middle">
+            <Image
+              src="/service-banner.png"
+              width={200}
+              height={32}
+              alt="Service Banner"
+            />
+          </div>
         </div>
       </div>
     </footer>
