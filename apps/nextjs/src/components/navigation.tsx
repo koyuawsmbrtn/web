@@ -240,11 +240,12 @@ export function Navigation() {
         {/* Mobile menu */}
         <motion.div
           id="mobile-menu"
-          className="sm:hidden"
+          className="sm:hidden overflow-hidden"
           initial={false}
           animate={{
             height: isMobileMenuOpen ? 'auto' : 0,
-            opacity: isMobileMenuOpen ? 1 : 0
+            opacity: isMobileMenuOpen ? 1 : 0,
+            pointerEvents: isMobileMenuOpen ? 'auto' : 'none'
           }}
           transition={{ duration: 0.2 }}
         >
