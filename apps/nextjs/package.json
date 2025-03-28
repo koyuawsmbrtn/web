@@ -29,7 +29,6 @@
     "clsx": "^2.1.1",
     "culori": "^4.0.1",
     "framer-motion": "^12.5.0",
-    "lenis": "^1.2.3",
     "lucide-react": "^0.482.0",
     "marked": "^15.0.7",
     "next": "15.2.3",

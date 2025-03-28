@@ -8,7 +8,6 @@ import "./globals.css";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import ScrollToTop from "@/components/scrolltotop";
-import Lenis from "lenis";
 import AccentColor from "@/components/accentcolor";
 
 interface Settings {
@@ -38,10 +37,6 @@ export default function RootLayout({
   const [settings, setSettings] = useState<Settings | null>(null);
 
   useEffect(() => {
-    new Lenis({
-      autoRaf: true,
-    });
-
     const fetchSettings = async () => {
       try {
         const data = await client.fetch<Settings>(`

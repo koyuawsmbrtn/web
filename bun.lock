@@ -28,7 +28,6 @@
         "clsx": "^2.1.1",
         "culori": "^4.0.1",
         "framer-motion": "^12.5.0",
-        "lenis": "^1.2.3",
         "lucide-react": "^0.482.0",
         "marked": "^15.0.7",
         "next": "15.2.3",
@@ -1836,8 +1835,6 @@
     "lazystream": ["lazystream@1.0.1", "", { "dependencies": { "readable-stream": "^2.0.5" } }, "sha512-b94GiNHQNy6JNTrt5w6zNyffMrNkXZb3KTkCZJb2V1xaEGCk093vkZ2jk3tpaeP33/OiXC+WvK9AxUebnf5nbw=="],
 
     "leac": ["leac@0.6.0", "", {}, "sha512-y+SqErxb8h7nE/fiEX07jsbuhrpO9lL8eca7/Y1nuWV2moNlXhyd59iDGcRf6moVyDMbmTNzL40SUyrFU/yDpg=="],
-
-    "lenis": ["lenis@1.2.3", "", { "peerDependencies": { "@nuxt/kit": ">=3.0.0", "react": ">=17.0.0", "vue": ">=3.0.0" }, "optionalPeers": ["@nuxt/kit", "react", "vue"] }, "sha512-H3VUn62jvQPfyxGW2F0STJPhP1VzX5r05KtiZ0uxHYD9xtbfTvj2eX/Km26+x13zlaKfHacEe1DTC3ouFrxw+g=="],
 
     "leven": ["leven@3.1.0", "", {}, "sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A=="],
 
