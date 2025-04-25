@@ -9,6 +9,6 @@
     "apps/*"
   ],
   "dependencies": {
-    "turbo": "^2.4.4"
+    "turbo": "^2.5.1"
   }
 }
