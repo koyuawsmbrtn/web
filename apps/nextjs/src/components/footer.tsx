@@ -159,9 +159,9 @@ export function Footer() {
                     key={social._id}
                     href={social.url}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer me"
                     className="text-muted-foreground transition-colors"
-                    aria-label={`Visit our ${social.slug.current} profile`}
+                    aria-label={`${social.slug.current}`}
                   >
                     <FontAwesomeIcon
                       icon={getSocialIcon(social.slug.current)}
