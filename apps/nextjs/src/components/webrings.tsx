@@ -2,7 +2,6 @@
 
 import { useEffect } from "react";
 
-/* eslint-disable @next/next/no-sync-scripts */
 export default function Webrings() {
     useEffect(() => {
         const transringScript = document.createElement("script");
