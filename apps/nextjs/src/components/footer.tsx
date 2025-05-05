@@ -193,8 +193,8 @@ export function Footer() {
               height={32}
               alt="Service Banner"
             />
-            <Webrings />
           </div>
+          <Webrings />
         </div>
       </div>
     </footer>
