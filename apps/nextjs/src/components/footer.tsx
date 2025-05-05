@@ -29,6 +29,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import { faGlobe, faRss } from "@fortawesome/free-solid-svg-icons"
 import Image from "next/image"
+import Webrings from "./webrings"
 
 interface LegalPage {
   _id: string
@@ -192,6 +193,7 @@ export function Footer() {
               height={32}
               alt="Service Banner"
             />
+            <Webrings />
           </div>
         </div>
       </div>

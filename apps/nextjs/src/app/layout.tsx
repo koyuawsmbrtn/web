@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 "use client";
 
 import { useState, useEffect } from "react";
@@ -66,7 +65,6 @@ export default function RootLayout({
             href={urlForImage(settings?.favicon)?.url() || "/favicon.ico"} 
           />
         )}
-        <script type="text/javascript" src="https://bonkiscoolsite.neocities.org/bonkiring/bonkiring-widget.js"></script>
         <title>{settings?.websiteName || '...'}</title>
       </head>
       <body
