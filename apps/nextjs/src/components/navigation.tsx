@@ -25,7 +25,7 @@ interface Settings {
   showLogoInMenu: boolean
 }
 
-const useBlog = Boolean(process.env.NEXT_PUBLIC_USEBLOG);
+const useBlog = true;
 
 export function Navigation() {
   const pathname = usePathname()
