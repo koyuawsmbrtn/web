@@ -65,6 +65,9 @@ export default function RootLayout({
             href={urlForImage(settings?.favicon)?.url() || "/favicon.ico"} 
           />
         )}
+        <link rel="alternate" type="application/rss+xml" 
+          title={`${settings?.websiteName || '...'} RSS Feed`}
+          href="/feed.rss" />
         <title>{settings?.websiteName || '...'}</title>
       </head>
       <body

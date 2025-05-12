@@ -41,7 +41,7 @@ async function generateRssFeed() {
         feed.item({
             title: post.title,
             description: toHTML(post.body),
-            url: `${settings.websiteUrl}/posts/${post.slug.current}`,
+            url: `${settings.websiteUrl}/blog/${post.slug.current}`,
             date: new Date(post.publishedAt),
         })
     })
