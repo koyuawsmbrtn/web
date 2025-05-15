@@ -2,8 +2,6 @@
 
 A modern, performant website built with Next.js 14, ShadcnUI, Tailwind CSS, and Sanity CMS.
 
-**Fun fact:** This website can also be used as a template as it's fully redundant and can be easily customized.
-
 ## Features
 
 - ⚡ Next.js 14 for server-side rendering and static site generation
