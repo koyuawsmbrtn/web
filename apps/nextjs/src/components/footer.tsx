@@ -25,7 +25,8 @@ import {
   faXbox,
   faPlaystation,
   faSteam,
-  faWordpress
+  faWordpress,
+  faXing,
 } from "@fortawesome/free-brands-svg-icons"
 import { faGlobe, faRss } from "@fortawesome/free-solid-svg-icons"
 import Image from "next/image"
@@ -102,6 +103,8 @@ const getSocialIcon = (slug: string) => {
       return faWordpress
     case "rss":
       return faRss
+    case "xing":
+      return faXing
     default:
       return faGlobe
   }
