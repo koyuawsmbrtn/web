@@ -1,0 +1,13 @@
+#container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#container a {
+    color: #fbbd1a;
+    font-weight: bold;
+}
+
+#container a:hover {
+    color: #fce9b8;
+}

@@ -1,0 +1,7 @@
+:root {
+    --header-image: url('/assets/img/header.png');
+    --content: rgba(31, 31, 31, 0.8);
+    --quaternary: #111;
+    --tertiary: #222;
+    --accent: #fbbd1a;
+}

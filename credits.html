@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>koyu's personal website - credits</title>
+    <link rel="stylesheet" href="/assets/css/credits.css">
+    <link rel="shortcut icon" href="/assets/img/icon.webp">
+</head>
+
+<body>
+    <div id="back">
+        <a href="main.html" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                class="icon size-3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+            </svg>
+        </a>
+    </div>
+    <main>
+        <div>
+            <section>
+                <p>a website by <span><b>Leonie Ain</b></span></p>
+            </section>
+
+            <article style="margin-bottom: 5em">
+                <h2>Graphics</h2>
+                <dl>
+                    <dt>3D Heart</dt>
+                    <dd>JM Studio</dd>
+                    <dt>Background</dt>
+                    <dd>Brad Gagnon</dd>
+                    <dt>Header</dt>
+                    <dd>sparklestroke</dd>
+                </dl>
+            </article>
+
+            <article>
+                <h2>CSS</h2>
+                <dl>
+                    <dt>Base layout</dt>
+                    <dd>sadgrl</dd>
+                    <dt>Modifications and additional CSS</dt>
+                    <dd>Leonie Ain</dd>
+                    <dt>Credits scene</dt>
+                    <dd>Jane Rivas</dd>
+                </dl>
+            </article>
+
+            <article>
+                <h2>Music</h2>
+                <dl>
+                    <dt>SID engine</dt>
+                    <dd>jsSID by <a href="https://github.com/og2t/jsSID" target="_blank">og2t</a></dd>
+                    <dt>Music</dt>
+                    <dd>New Air [2SID] by <a href="https://csdb.dk/release/?id=248648" target="_blank">The Solution</a></dd>
+                </dl>
+            </article>
+
+            <article>
+                <h2>Technology</h2>
+                <dl>
+                    <dt>Custom rendering engine</dt>
+                    <dd>Leonie Ain</dd>
+                    <dt>CSS structure</dt>
+                    <dd>Leonie Ain</dd>
+                </dl>
+            </article>
+
+            <article>
+                <h2>Special thanks</h2>
+                <dl>
+                    <dt>Testing and feedback</dt>
+                    <dd>Laura, Yannik and the rest of the <a href="https://discord.gg/s6YK2vXdt8" target="_blank">koyu discord</a></dd>
+                    <dt>Hosting</dt>
+                    <dd>Hetzner</dd>
+                    <dt>Inspiration</dt>
+                    <dd>Neocities and the whole indiweb community</dd>
+                    <dt>Support</dt>
+                    <dd>My friends and family</dd>
+                    <dt>Myself</dt>
+                    <dd>For making this website possible</dd>
+                    <dt>And you</dt>
+                    <dd>For visiting my website</dd>
+                </dl>
+            </article>
+
+            <section>
+                <h3>The End.</h3>
+            </section>
+
+        </div>
+    </main>
+    <script src="/assets/js/jsSID.js"></script>
+    <script>
+        let SIDplayer;
+        let audioContextInitialized = false;
+
+        document.addEventListener('click', function initAudio() {
+            if (!audioContextInitialized) {
+                audioContextInitialized = true;
+                startPlayback();
+                document.removeEventListener('click', initAudio);
+            }
+        }, { once: false });
+
+        function attemptPlay() {
+            try {
+                SIDplayer = new jsSID(16384, 0.0005);
+                playSID('/music/New_Air_2SID.sid', 0);
+                return true;
+            } catch (e) {
+                console.log('Retrying SID playback...');
+                return false;
+            }
+        }
+
+        function startPlayback() {
+            if (!attemptPlay()) {
+                setTimeout(startPlayback, 100);
+            }
+        }
+
+        window.addEventListener('beforeunload', () => {
+            if (SIDplayer) {
+                SIDplayer.stop();
+            }
+        });
+    </script>
+</body>
+
+</html>

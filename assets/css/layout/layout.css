@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+#flex {
+    display: flex;
+}
+
+aside {
+    background-color: #222;
+    width: 200px;
+    padding: 20px;
+    font-size: smaller;
+}
+
+main {
+    background-color: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(10px);
+    flex: 1;
+    padding: 32px;
+    order: 2;
+}
+
+@media only screen and (max-width: 800px) {
+    #flex {
+        flex-wrap: wrap;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    main {
+        order: 1;
+    }
+
+    #navbar ul {
+        flex-wrap: wrap;
+    }
+}

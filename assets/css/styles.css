@@ -1,0 +1,138 @@
+body {
+    background: #000;
+    color: #fff;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.pulse {
+    width: 150px;
+    height: 150px;
+    background-color: #fbbd1a;
+    border-radius: 50%;
+    position: relative;
+    animation: pulse 2s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a .pulse {
+    color: #000;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.pulse-ring {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.pulse-ring::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 2px solid rgba(251, 189, 26, 0.5);
+    animation: pulse 2s infinite, opacityWave 2s infinite;
+}
+
+.pulse-ring::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    border: 2px solid rgba(251, 189, 26, 0.7);
+    animation: pulse 2s infinite, opacityWave 2s infinite 0.5s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes opacityWave {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.error-container {
+    text-align: center;
+}
+
+.error-code {
+    font-size: 72px;
+    color: #fbbd1a;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    font-size: 24px;
+    color: #fff;
+}
+
+a {
+    color: #fbbd1a;
+    text-decoration: underline;
+}
+
+.error-message a {
+    color: #fbbd1a;
+    text-decoration: none;
+    margin-top: 20px;
+    display: block;
+}
+
+.icon {
+    width: inherit;
+    height: inherit;
+    display: inline;
+    margin-top: -4px;
+    vertical-align: middle;
+}
+
+.size-1 {
+    width: 24px;
+    height: 24px;
+}

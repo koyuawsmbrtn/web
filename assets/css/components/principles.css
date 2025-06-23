@@ -1,0 +1,64 @@
+.principles-section {
+    padding: 0.1rem 0;
+}
+
+.principles-container {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.principles-grid {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.principle-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.number {
+    flex: 0 0 8.333333%;
+}
+
+.number h4 {
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.principles-title {
+    flex: 0 0 41.666667%;
+}
+
+.principles-title h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.principles-description {
+    flex: 0 0 50%;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--tertiary);
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .principle-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .number,
+    .principles-title,
+    .principles-description {
+        flex: 0 0 100%;
+    }
+}

@@ -1,0 +1,46 @@
+#social {
+    padding: 20px;
+    background: #111;
+    float: right;
+    border-radius: 0 0 0 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.social-link {
+    color: #666;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #333;
+}
+
+.social-icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    filter: invert(40%);
+    transition: filter 0.3s;
+}
+
+.social-link:hover .social-icon {
+    filter: invert(20%);
+}
+
+@media screen and (max-width: 768px) {
+    #social {
+        float: none;
+        text-align: center;
+        border-radius: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}

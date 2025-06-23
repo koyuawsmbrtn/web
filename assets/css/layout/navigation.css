@@ -1,0 +1,35 @@
+#navbar {
+    height: 40px;
+    background-color: rgba(31, 31, 31, 0.8);
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    backdrop-filter: blur(10px);
+}
+
+#navbar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+#navbar li {
+    padding-top: 10px;
+}
+
+#navbar li a {
+    color: #fbbd1a;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+#navbar li a:hover {
+    color: #fce9b8;
+}
+
+@media only screen and (max-width: 800px) {
+    #navbar ul {
+        flex-wrap: wrap;
+    }
+}

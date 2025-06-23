@@ -1,0 +1,13 @@
+blockquote {
+    background-color: rgba(31, 31, 31, 0.8);
+    padding: 12px;
+    border-left: 5px solid #fbbd1a;
+    margin: 20px 0;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.quote {
+    font-style: italic;
+    margin-top: -14px;
+}
