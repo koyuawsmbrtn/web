@@ -1,0 +1,11 @@
+.date {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 10px;
+    margin-top: 2px;
+}
+
+article > p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}

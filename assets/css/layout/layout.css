@@ -21,6 +21,26 @@ main {
     order: 2;
 }
 
+.more-posts {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.breadcrumbs,
+.breadcrumbs a {
+    font-weight: normal !important;
+    font-size: 11pt !important;
+    color: #888 !important;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.size-4 {
+    width: 16px;
+    height: 16px;
+}
+
 @media only screen and (max-width: 800px) {
     #flex {
         flex-wrap: wrap;
