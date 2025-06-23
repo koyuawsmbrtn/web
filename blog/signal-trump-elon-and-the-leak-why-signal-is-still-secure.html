@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>koyu's personal website - blog</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/components/principles.css">
+    <link rel="stylesheet" href="/assets/css/components/avatars.css">
+    <link rel="stylesheet" href="/assets/css/components/social.css">
+    <link rel="stylesheet" href="/assets/css/layout/blog.css">
+    <link rel="shortcut icon" href="/assets/img/icon.webp">
+</head>
+
+<body>
+    <noscript>
+        <style>
+            body {
+                overflow: hidden;
+            }
+        </style>
+        <div class="noscript-warning">
+            <h1>JavaScript is disabled</h1>
+            <p>
+                This website requires JavaScript to function properly. Please enable JavaScript in your browser
+                settings.
+            </p>
+            <p>
+                If you are using a browser that does not support JavaScript, please consider switching to a modern
+                browser
+                that does.
+            </p>
+        </div>
+    </noscript>
+    <div id="social"></div>
+    <div id="container">
+        <div id="render-header"></div>
+        <main>
+            <div class="breadcrumbs">
+                <a href="/blog">Blog</a>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="icon size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
+                </svg>
+                <span>Signal, Trump, Elon, and the "Leak": Why Signal is Still Secure</span>
+            </div>
+            <article>
+                <h1>Signal, Trump, Elon, and the "Leak": Why Signal is Still Secure</h1>
+                <p class="date">Published on March 27, 2025</p>
+                <h2>The Incident: A Journalist's Unexpected Invitation</h2>
+                <p class="my-3">In March 2025, Jeffrey Goldberg, editor-in-chief of <em>The Atlantic</em>, was inadvertently added to a Signal group chat where top U.S. officials were discussing sensitive military operations in Yemen. This group included notable figures such as Vice President J.D. Vance and Defense Secretary Pete Hegseth. Goldberg, initially skeptical about the authenticity of the invitation, found himself privy to confidential deliberations, which he later reported on, igniting a media frenzy. (<a href="https://www.theguardian.com/us-news/2025/mar/26/new-revelations-us-signal-leak-claims-doubt-yemen?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">The Guardian</a>)</p>
+                <h2>Trump and Musk Weigh In</h2>
+                <p class="my-3">In response to the breach, former President Donald Trump suggested that Signal "could be defective," implying that the app's security might be compromised. (<a href="https://nypost.com/2025/03/26/us-news/trump-says-signal-could-be-defective/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">New York Post</a>)</p>
+                <p class="my-3">Elon Musk also entered the conversation, alleging that Signal had "known vulnerabilities." These statements cast doubts on the app's reliability, leading to widespread speculation.</p>
+                <h2>Signal's Robust Defense</h2>
+                <p class="my-3">Contrary to these claims, Signal's leadership and cybersecurity experts have consistently defended the app's integrity. Meredith Whittaker, President of the Signal Foundation, emphasized that Signal maintains full end-to-end encryption and prioritizes user privacy. She highlighted that while other platforms might collect metadata, Signal's open-source, nonprofit model ensures strict application of encryption to protect user data. (<a href="https://www.geo.tv/latest/597147-signal-ceo-defends-app-security-following-us-military-leak?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Geo.tv</a>)</p>
+                <p class="my-3">Furthermore, the incident involving Goldberg was attributed to human error rather than a flaw in Signal's technology. Accidentally adding an unintended participant to a group chat is a user mistake, not an indication of a security breach within the app itself. (<a href="https://www.wired.com/story/signalgate-isnt-about-signal?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Wired</a>)</p>
+                <h2>Why Signal Remains a Secure Choice</h2>
+                <p class="my-3">Despite the high-profile mishap, Signal continues to be a leading choice for secure communication. Here's why:</p>
+                <ul><li><strong>End-to-End Encryption:</strong> Signal encrypts messages on the sender's device and decrypts them only on the recipient's device, ensuring that no intermediaries, including Signal itself, can access the content.</li><li><strong>Minimal Data Collection:</strong> Unlike other messaging platforms, Signal collects virtually no user data, safeguarding your personal information from potential exploitation.</li><li><strong>Open-Source Transparency:</strong> Signal's code is open-source, allowing security experts worldwide to inspect and verify its integrity, fostering trust through transparency.</li></ul>
+                <h2>Conclusion</h2>
+                <p class="my-3">The recent controversy underscores a fundamental truth: even the most secure technologies cannot compensate for human error. While the accidental inclusion of a journalist in a sensitive group chat was a significant oversight, it does not reflect a deficiency in Signal's security protocols. Users must exercise caution and double-check participant lists when handling confidential information. In the realm of private communication, Signal remains a robust and reliable tool, provided it is used responsibly.</p>
+            </article>
+        </main>
+        <div id="render-footer"></div>
+    </div>
+    <script src="/assets/js/renderer.js"></script>
+    <script src="assets/js/social.js"></script>
+</body>
+
+</html>

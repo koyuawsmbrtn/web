@@ -4,21 +4,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>koyu's website - enter</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="shortcut icon" href="images/icon.webp">
+    <title>koyu's personal website - main</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/components/principles.css">
+    <link rel="stylesheet" href="/assets/css/components/avatars.css">
+    <link rel="stylesheet" href="/assets/css/components/social.css">
+    <link rel="shortcut icon" href="/assets/img/icon.webp">
+
 </head>
 
 <body>
-    <main class="container">
-        <a href="main.html">
-            <div class="pulse-ring">
-                <div class="pulse">
-                    <span>enter</span>
+    <noscript>
+        <style>
+            body {
+                overflow: hidden;
+            }
+        </style>
+        <div class="noscript-warning">
+            <h1>JavaScript is disabled</h1>
+            <p>
+                This website requires JavaScript to function properly. Please enable JavaScript in your browser settings.
+            </p>
+            <p>
+                If you are using a browser that does not support JavaScript, please consider switching to a modern browser
+                that does.
+            </p>
+        </div>
+    </noscript>
+    <div id="social"></div>
+    <div id="container">
+        <div id="render-header"></div>
+        <main>
+            <h1 id="wave">👋</h1>
+            <p id="intro">
+                Hi, I’m koyu (usually called Leonie in real life) and I am a programmer and sysadmin located in Northern
+                Germany establishing internet services for you and your friends. I’m your average computer nerd trying
+                to liberate the cyberspace for everyone.
+                <a href="about.html" class="link">
+                    More about me
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                        stroke="currentColor" class="icon size-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                </a>
+            </p>
+            <blockquote>“We first make our habits, and then our habits make us.”</blockquote>
+            <p class="quote">
+                – John Dryden
+            </p>
+            <h2>My principles</h2>
+            <div class="principles-section">
+                <div class="principles-container">
+
+                    <div class="principles-grid">
+                        <!-- Principle 1 -->
+                        <div class="principle">
+                            <div class="principle-content">
+                                <div class="number">
+                                    <h4 id="1">1.</h4>
+                                </div>
+                                <div class="principles-title">
+                                    <h4 id="explore">If you can't have it make it yourself</h4>
+                                </div>
+                                <div class="principles-description">
+                                    <p>A lot of people think they can't have anything, because they don't even try. If
+                                        you want something so bad just do it yourself. Windows sucks? Make your own OS.
+                                        Your fridge broke? Repair it yourself. There is nothing you can't do.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- Principle 2 -->
+                        <div class="principle">
+                            <div class="principle-content">
+                                <div class="number">
+                                    <h4 id="2">2.</h4>
+                                </div>
+                                <div class="principles-title">
+                                    <h4 id="execute">Keep it simple, one thing for every purpose</h4>
+                                </div>
+                                <div class="principles-description">
+                                    <p>That's also a thing I hate about smartphones. If you bought a smartphone just
+                                        because of the camera why didn't you buy a camera in the first place? I know it
+                                        sounds stupid, but really having a thing that does a thing well instead of one
+                                        thing that does everything bad equally, why not keeping it simple?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- Principle 3 -->
+                        <div class="principle">
+                            <div class="principle-content">
+                                <div class="number">
+                                    <h4 id="3">3.</h4>
+                                </div>
+                                <div class="principles-title">
+                                    <h4 id="evaluate">Never look back</h4>
+                                </div>
+                                <div class="principles-description">
+                                    <p>This is the hardest part. Especially quitting social media. It's like quitting
+                                        smoking. If you had a good streak continue and improve. Never look back.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </a>
-    </main>
+            <h2>My friends</h2>
+            <div class="avatars-container">
+                <div id="avatars"></div>
+            </div>
+        </main>
+            <div id="render-footer"></div>
+    </div>
+    <script src="/assets/js/renderer.js"></script>
+    <script src="/assets/js/avatars.js"></script>
+    <script src="assets/js/social.js"></script>
 </body>
-
 </html>
