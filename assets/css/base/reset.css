@@ -9,6 +9,7 @@ body {
     background-size: 65px;
     color: #fff;
     background-image: url("/assets/img/code.jpg");
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
