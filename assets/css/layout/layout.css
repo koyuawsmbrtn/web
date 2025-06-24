@@ -41,6 +41,17 @@ main {
     height: 16px;
 }
 
+.right {
+    float: right;
+    padding: 20px;
+    padding-left: 48px;
+}
+
+.right img {
+    border-radius: 4px;
+    height: 300px;
+}
+
 @media only screen and (max-width: 800px) {
     #flex {
         flex-wrap: wrap;
