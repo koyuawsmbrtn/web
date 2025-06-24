@@ -10,14 +10,16 @@
 </head>
 
 <body>
+    <audio src="New_Air_2SID.mp3" autoplay id="audio"></audio>
     <div id="back">
         <a href="index.html" class="back-link">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                class="icon size-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="icon size-3">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
             </svg>
         </a>
     </div>
+    <div id="playpause" onclick="togglePlayPause()"></div>
     <main>
         <div>
             <section>
@@ -62,7 +64,8 @@
                 <h2>Special thanks</h2>
                 <dl>
                     <dt>Testing and feedback</dt>
-                    <dd>Laura, Yannik and the rest of the <a href="https://discord.gg/s6YK2vXdt8" target="_blank">koyu discord</a></dd>
+                    <dd>Laura, Yannik and the rest of the <a href="https://discord.gg/s6YK2vXdt8" target="_blank">koyu
+                            discord</a></dd>
                     <dt>Hosting</dt>
                     <dd>Neocities</dd>
                     <dt>Inspiration</dt>
@@ -82,6 +85,7 @@
 
         </div>
     </main>
+    <script src="/assets/js/player.js"></script>
 </body>
 
 </html>

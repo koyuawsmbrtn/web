@@ -58,8 +58,8 @@ div {
     top: 0;
     left: 0;
     right: 0;
-    /*animation: scroll 10s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite*/
-    animation: scroll 35s linear infinite
+    animation: scroll 35s linear infinite;
+    animation-play-state: paused;
 }
 
 @keyframes scroll {
@@ -174,15 +174,33 @@ b {
     font-weight: 700;
 }
 
-#back .icon {
+#back,
+#playpause {
     color: #fff;
     background: #333;
     border: 1px solid #fff;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     cursor: pointer;
     padding: 1px;
+    z-index: 99999999;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: none !important;
+    animation: none !important;
+}
+
+#playpause {
+    left: 30px !important;
+}
+
+#back a {
+    color: #fff;
+    text-decoration: none;
 }
 
 .size-3 {
