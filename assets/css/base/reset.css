@@ -1,5 +1,10 @@
 * {
     box-sizing: border-box;
+    cursor: url(/assets/cursors/normal.cur), auto;
+}
+
+a {
+    cursor: url(/assets/cursors/link.cur),pointer !important;
 }
 
 body {
