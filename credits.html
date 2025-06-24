@@ -50,16 +50,6 @@
             </article>
 
             <article>
-                <h2>Music</h2>
-                <dl>
-                    <dt>SID engine</dt>
-                    <dd>jsSID by <a href="https://github.com/og2t/jsSID" target="_blank">og2t</a></dd>
-                    <dt>Music</dt>
-                    <dd>New Air [2SID] by <a href="https://csdb.dk/release/?id=248648" target="_blank">The Solution</a></dd>
-                </dl>
-            </article>
-
-            <article>
                 <h2>Technology</h2>
                 <dl>
                     <dt>Custom rendering engine</dt>
@@ -93,42 +83,6 @@
 
         </div>
     </main>
-    <script src="/assets/js/jsSID.js"></script>
-    <script>
-        let SIDplayer;
-        let audioContextInitialized = false;
-
-        document.addEventListener('click', function initAudio() {
-            if (!audioContextInitialized) {
-                audioContextInitialized = true;
-                startPlayback();
-                document.removeEventListener('click', initAudio);
-            }
-        }, { once: false });
-
-        function attemptPlay() {
-            try {
-                SIDplayer = new jsSID(16384, 0.0005);
-                playSID('/music/New_Air_2SID.sid', 0);
-                return true;
-            } catch (e) {
-                console.log('Retrying SID playback...');
-                return false;
-            }
-        }
-
-        function startPlayback() {
-            if (!attemptPlay()) {
-                setTimeout(startPlayback, 100);
-            }
-        }
-
-        window.addEventListener('beforeunload', () => {
-            if (SIDplayer) {
-                SIDplayer.stop();
-            }
-        });
-    </script>
 </body>
 
 </html>
