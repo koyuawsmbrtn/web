@@ -3,7 +3,9 @@
     cursor: url(/assets/cursors/normal.cur), auto;
 }
 
-a {
+a,
+a img,
+img a {
     cursor: url(/assets/cursors/link.cur),pointer !important;
 }
 
