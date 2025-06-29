@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>koyu's personal website - notes</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/components/principles.css">
+    <link rel="stylesheet" href="/assets/css/components/avatars.css">
+    <link rel="stylesheet" href="/assets/css/components/social.css">
+    <link rel="stylesheet" href="/assets/css/layout/blog.css">
+    <link rel="shortcut icon" href="/assets/img/icon.webp">
+</head>
+
+<body>
+    <noscript>
+        <style>
+            body {
+                overflow: hidden;
+            }
+        </style>
+        <div class="noscript-warning">
+            <h1>JavaScript is disabled</h1>
+            <p>
+                This website requires JavaScript to function properly. Please enable JavaScript in your browser
+                settings.
+            </p>
+            <p>
+                If you are using a browser that does not support JavaScript, please consider switching to a modern
+                browser
+                that does.
+            </p>
+        </div>
+    </noscript>
+    <div id="social"></div>
+    <div id="container">
+        <div id="render-header"></div>
+        <main>
+            <div class="breadcrumbs">
+                <a href="/notes">Notes</a>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="icon size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
+                </svg>
+                <span>nginx Config</span>
+            </div>
+            <article>
+                <h1>nginx Config</h1>
+                <p>Put this into something like&nbsp;<code>/etc/nginx/sites-enabled/yoursite</code>&nbsp;and test the
+                    config with&nbsp;<code>sudo nginx -t</code>. If everything passed reload nginx
+                    with&nbsp;<code>sudo systemctl reload nginx</code>. You might have to request an SSL certificate
+                    through&nbsp;<a href="https://certbot.eff.org/instructions">Let&rsquo;s Encrypt</a>&nbsp;if you
+                    haven&rsquo;t already.</p>
+                <p>&nbsp;</p>
+                <p><code>server {<br /><br />    listen 443;<br /><br />    index index.php index.html index.htm index.nginx-debian.html;<br /><br />    server_name example.com;<br /><br />    add_header Access-Control-Allow-Origin "*";<br /><br />    # For static sites, use rewrite rules if you use<br />    # something like Astro for cleaner URLs.<br />    # root /var/www/html/;<br />    # rewrite ^([^\\.]*[^\\/])$ $1/ break;<br /><br />    location / {<br />        # For static sites, comment block <br />        # below to disable proxy.<br />        # try_files $uri $uri/ =404;<br />        client_max_body_size 200M;<br />        proxy_set_header Host $host;<br />        proxy_set_header X-Real-IP $remote_addr;<br />        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;<br />        proxy_set_header X-Forwarded-Proto $scheme;<br />        proxy_pass &lt;http://localhost:3000&gt;;<br />    }<br /><br />    # PHP configuration<br />    # location ~ \\.php$ {<br />    #     include snippets/fastcgi-php.conf;<br />    #     fastcgi_pass unix:/var/run/php/php-fpm.sock;<br />    # }<br /><br />    include /etc/letsencrypt/options-ssl-nginx.conf;<br />    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;<br /><br />    ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem; # managed by Certbot<br />    ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem; # managed by Certbot<br />}<br /><br />server {<br />    if ($host = $host) {<br />        return 301 https://$host$request_uri;<br />    }<br />    server_name $host;<br />    return 404;<br />}<br /></code>
+                </p>
+            </article>
+        </main>
+        <div id="render-footer"></div>
+    </div>
+    <script src="/assets/js/renderer.js"></script>
+    <script src="/assets/js/social.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>koyu's personal website - notes</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/components/principles.css">
+    <link rel="stylesheet" href="/assets/css/components/avatars.css">
+    <link rel="stylesheet" href="/assets/css/components/social.css">
+    <link rel="stylesheet" href="/assets/css/layout/blog.css">
+    <link rel="shortcut icon" href="/assets/img/icon.webp">
+</head>
+
+<body>
+    <noscript>
+        <style>
+            body {
+                overflow: hidden;
+            }
+        </style>
+        <div class="noscript-warning">
+            <h1>JavaScript is disabled</h1>
+            <p>
+                This website requires JavaScript to function properly. Please enable JavaScript in your browser
+                settings.
+            </p>
+            <p>
+                If you are using a browser that does not support JavaScript, please consider switching to a modern
+                browser
+                that does.
+            </p>
+        </div>
+    </noscript>
+    <div id="social"></div>
+    <div id="container">
+        <div id="render-header"></div>
+        <main>
+            <div class="breadcrumbs">
+                <a href="/notes">Notes</a>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="icon size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
+                </svg>
+                <span>Buttery Smooth Plasma Experience on NVIDIA</span>
+            </div>
+            <article>
+                <h1>Buttery Smooth Plasma Experience on NVIDIA</h1>
+                <p>As we all know, Plasma experience on X11 with an NVIDIA GPU is not very smooth out of the box at
+                    least this was the case for me with latest Plasma (v6.0.4) on my GeForce GTX 1660 Super, reading
+                    through countless posts and tutorials on how to remedy the stutters and the lags and experimenting
+                    with different combinations of settings I finally managed to get a smooth tear-free Plasma working,
+                    and to save others from the time-consuming research and the frustration here&rsquo;s what worked for
+                    and hopefully for others too.</p>
+                <p>Before going further, I wanna mention that I did these testing and the experiments on a clean install
+                    of the latest Manjaro KDE and NVIDIA proprietary drivers (550.78) and enabled the &ldquo;Show
+                    FPS&rdquo; effect just to measure the performance differences and here are the stats:</p>
+                <p><strong>With stock settings for Plasma and the NVIDIA X Server:</strong></p>
+                <p>Stutters and lags on the start menu closing and the application window opening when launching certain
+                    KDE applications such as&nbsp;<em>System Settings</em>&nbsp;with&nbsp;<strong>the frame rate
+                        dropping from</strong>&nbsp;<strong><em>60 FPS</em></strong>&nbsp;<strong>to
+                        around</strong>&nbsp;<strong><em>30 FPS</em></strong>&nbsp;which was horribly noticeable! 😰</p>
+                <p><strong>After applying the optimal settings for Plasma and the NVIDIA X Server:</strong></p>
+                <p>BUTTERY SMOOOOOTH animations! 🤩 I feel like I&rsquo;m experiencing the beauty of Plasma for the
+                    first time after weeks of using it! And frame rates dropping only
+                    to&nbsp;<strong>just</strong>&nbsp;<strong><em>57 FPS</em></strong>&nbsp;when launching from the
+                    start menu! That&rsquo;s an almost&nbsp;<strong>10X IMPROVEMENT</strong>&nbsp;in my case!</p>
+                <p>So without further ado here&rsquo;s the solution&hellip;</p>
+                <h3><strong>TL;DR</strong></h3>
+                <p><strong>Plasma settings:</strong></p>
+                <p><strong>Compositor:</strong></p>
+                <ol>
+                    <li><strong>Allow application to block compositing:</strong>&nbsp;Unchecked</li>
+                </ol>
+                <p><strong>Workspace Behavior -&gt; General Behavior:</strong></p>
+                <ol>
+                    <li><strong>Animation speed:</strong>&nbsp;One or two notches to the left
+                        toward&nbsp;<strong><em>slow</em></strong>&nbsp;(Default was the middle)</li>
+                </ol>
+                <p><strong>NVIDIA X Server settings:</strong></p>
+                <ul>
+                    <li><strong>OpenGL Settings -&gt; Allow Flipping:</strong>&nbsp;Unchecked</li>
+                </ul>
+                <p>Now this is the magic trick, disabling this is enough to get smooth animations&nbsp;<strong>BUT
+                        there&rsquo;s a caveat, disabling this introduces another common issue NVIDIA users face on
+                        KDE:</strong>&nbsp;<strong><em>SCREEN TEARS!!!</em></strong>&nbsp;🥴 But fret not, here&rsquo;s
+                    also the fix for that 😁 :</p>
+                <ul>
+                    <li><strong><del>OpenGL Settings -&gt; Sync to
+                                VBlank:</del></strong>&nbsp;<del>Unchecked</del>&nbsp;This causes hiccups during virtual
+                        desktop switches, so leave enabled unless needed to change.</li>
+                    <li><strong>X Server Display Configuration:</strong></li>
+                </ul>
+                <ol>
+                    <li>Click on&nbsp;<strong>Advanced</strong>&nbsp;then select the
+                        maximum&nbsp;<strong>Resolution</strong>&nbsp;and&nbsp;<strong>Refresh Rate</strong></li>
+                    <li>Check&nbsp;<strong>&ldquo;Force Composition
+                            Pipeline&rdquo;</strong>&nbsp;(<strong>NOT</strong>&nbsp;the
+                        Force&nbsp;<strong>Full</strong>&hellip; option)</li>
+                    <li>Click on&nbsp;<strong>Save to X Configuration file</strong>&nbsp;and a dialog pops up, Click
+                        on&nbsp;<strong>Show Preview</strong>&nbsp;to preview the file contents.</li>
+                    <li>Find&nbsp;<strong>Section &ldquo;Device&rdquo;</strong>&nbsp;and below the line that starts
+                        with&nbsp;<strong>BoardName</strong>&nbsp;add&nbsp;<code>Option "TripleBuffer" "On"</code></li>
+                </ol>
+                <p><em>Your Device section will look something like this:</em></p>
+                <p>Section "Device"<br /> Identifier "Device0"<br /> Driver "nvidia"<br /> VendorName "NVIDIA
+                    Corporation"<br /> BoardName "GeForce GT 710"<br /> Option "TripleBuffer"
+                    "On"<br />EndSection<br /><br /></p>
+                <ol>
+                    <li>Hit&nbsp;<strong>Save</strong>&nbsp;and enter your password to save the file</li>
+                    <li>Open up your Text Editor and paste the following: <code>export KWIN_TRIPLE_BUFFER=1</code></li>
+                    <li>Save it
+                        as&nbsp;<code>kwin.sh</code>&nbsp;in&nbsp;<code>~/.config/plasma-workspace/env/</code>&nbsp;(if
+                        the directories do not exist, create them)</li>
+                    <li>Add permission just to be on the safe side,
+                        run:&nbsp;<code>chmod a+x ~/.config/plasma-workspace/env/kwin.sh</code></li>
+                    <li>Reboot!</li>
+                </ol>
+                <p><strong>And that&rsquo;s it, enjoy your buttery smooth tear-free Plasma on X11 with your NVIDIA
+                        GPU!</strong>&nbsp;😉</p>
+                <h3><strong>NOTES:</strong></h3>
+                <ul>
+                    <li>Sometimes upon wake-up from sleep I get a notification stating&nbsp;<strong><em>Desktop effects
+                                were restarted due to a graphics reset</em></strong>&nbsp;! And after that stutters and
+                        lags are back! Even restarting the Compositor will not help, only a&nbsp;<strong>cold
+                            reboot</strong>&nbsp;will fix this.&nbsp;<strong>But this was the case even with stock
+                            settings, only this time lags are even more significant due to configurations put in place
+                            to force slower smoother animations.</strong>&nbsp;If anyone has a solution for this, please
+                        share, thank you.</li>
+                    <li>As I mentioned before, I applied this on a&nbsp;<strong>clean install,</strong>&nbsp;I suggest
+                        the same for you just to have a clean slate and eliminate any hidden factors or settings you
+                        experimented a few months ago that don&rsquo;t remember now, that may be causing issues!</li>
+                </ul>
+            </article>
+        </main>
+        <div id="render-footer"></div>
+    </div>
+    <script src="/assets/js/renderer.js"></script>
+    <script src="/assets/js/social.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>koyu's personal website - notes</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/components/principles.css">
+    <link rel="stylesheet" href="/assets/css/components/avatars.css">
+    <link rel="stylesheet" href="/assets/css/components/social.css">
+    <link rel="stylesheet" href="/assets/css/layout/blog.css">
+    <link rel="shortcut icon" href="/assets/img/icon.webp">
+</head>
+
+<body>
+    <noscript>
+        <style>
+            body {
+                overflow: hidden;
+            }
+        </style>
+        <div class="noscript-warning">
+            <h1>JavaScript is disabled</h1>
+            <p>
+                This website requires JavaScript to function properly. Please enable JavaScript in your browser
+                settings.
+            </p>
+            <p>
+                If you are using a browser that does not support JavaScript, please consider switching to a modern
+                browser
+                that does.
+            </p>
+        </div>
+    </noscript>
+    <div id="social"></div>
+    <div id="container">
+        <div id="render-header"></div>
+        <main>
+            <div class="breadcrumbs">
+                <a href="/notes">Notes</a>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="icon size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
+                </svg>
+                <span>Arch btw</span>
+            </div>
+            <article>
+                <h1>Arch btw</h1>
+                <p>Or as some call it: installing Arch the real way</p>
+                <p>Inspired by <a href="https://retuow.github.io/">https://retuow.github.io/</a></p>
+                <p>This guide shows you how I install Arch on my machines. My average Arch Linux computers all run EFI,
+                    are x86_64 and have SSDs.</p>
+                <p>I expect that you already flashed a USB drive and booted from it. Now you should find yourself in a
+                    creepy shell. We&rsquo;ll work around that, please bear with me.</p>
+                <h2>Setting your keyboard</h2>
+                <p>Since I&rsquo;m German I also have a German keyboard. To set the proper keyboard layout use something
+                    like</p>
+                <p><code>loadkeys de-latin1-nodeadkeys</code></p>
+                <h2>Getting internet</h2>
+                <p>If you&rsquo;re connected through LAN everything is already set up. Use <code>iwctl</code> if you
+                    want to connect via WiFi for some reason. It&rsquo;s usually just executing the utility and then
+                    entering (assuming your WiFi device is <code>wlan0</code> and your SSID <code>koyu.wifi</code>)</p>
+                <code>device list<br />station wlan0 scan<br />station wlan0 get-networks<br />station wlan0 connect
+                    koyu.wifi</code>
+                <p>If you receive something with rfkill execute <code>rfkill unblock all</code> to unblock all devices
+                    or check if you run on airplane mode. You can then <code>ping koyu.space</code> to see if you can
+                    connect to the internet. That should usually work fine. If not check your network configuration. If
+                    you don&rsquo;t have WiFi or LAN use your smartphone as a LAN adapter through USB tethering. You
+                    might have to install <a
+                        href="https://wiki.archlinux.org/title/Network_configuration/Wireless#Troubleshooting_drivers_and_firmware">additional
+                        firmware</a> to make your WiFi card work if you plan to use your PC without your smartphone.</p>
+                <h2>Formatting your disk</h2>
+                <p>To format your disk first we have to find out which one to format. Run <code>lsblk</code> to get all
+                    your disks and partitions. In my case the disk is <code>/dev/sda</code>. If you happen to have an
+                    NVME drive or more than one drive in your system choose the correct one.</p>
+                <p>Once we determined the correct disk to format we will <code>dd</code> random junk onto it so we can
+                    actually partition it. Assuming it&rsquo;s <code>/dev/sda</code> we can do it like this</p>
+                <p><code>dd if=/dev/urandom of=/dev/sda bs=4M count=1</code><br /><code>sync</code></p>
+                <p>Now run <code>cfdisk /dev/sda</code> to create a new partition table and partitions. Since
+                    we&rsquo;re on EFI make sure you use a GPT partition layout. A partition is basically a virtual
+                    sub-disk of your disk.</p>
+                <p>Then set it up like this</p>
+                <p>PartitionSizeType<code>/dev/sda1</code>500MBEFI (can be found at the very
+                    top)<code>/dev/sda2</code>Rest of the diskLinux (default, leave as is)</p>
+                <p>After that format the partitions</p>
+                <code>mkfs.vfat /dev/sda1<br />mkfs.ext4 /dev/sda2</code>
+                <p>If it complains about something always press <code>y</code> to confirm.</p>
+                <p>Then mount the partitions</p>
+                <code>mount /dev/sda2 /mnt<br />mkdir /mnt/boot<br />mount /dev/sda1 /mnt/boot</code>
+                <h2>Installing Arch Linux</h2>
+                <p>Now we&rsquo;re coming to the fun part: installing Arch. We use pacstrap for that.</p>
+                <p><code>pacstrap /mnt base base-devel sudo nano git wget curl bash-completion linux linux-firmware</code>
+                </p>
+                <p>This installs a base system with sudo, development utilities (needed to compile from the AUR), bash
+                    completion and the linux kernel and its firmware.</p>
+                <p>Let it download and install all the packages and then write the partition configuration to the disk
+                    using</p>
+                <p><code>genfstab -p /mnt &gt; /mnt/etc/fstab</code></p>
+                <p>Technically this is a finished Arch installation. But we&rsquo;re still missing a few things.</p>
+                <h2>Post-install configuration</h2>
+                <p>First chroot into the Arch system</p>
+                <p><code>arch-chroot /mnt</code></p>
+                <p>Then install a &ldquo;bootloader&rdquo;. Well, technically this isn&rsquo;t a bootloader since
+                    we&rsquo;re booting the kernel using our EFI firmware. This is called EFISTUB.</p>
+                <code>pacman -Sy efibootmgr<br />efibootmgr -c -d /dev/sda -p 1 -l \vmlinuz-linux -L "Arch Linux" -u
+                    "initrd=initramfs-linux.img root=/dev/sda2"</code>
+                <p>Of course replace the partitions in that command with the ones you created.</p>
+                <p>Now we have to change the password of our root user using <code>passwd</code>. Just execute it,
+                    you&rsquo;re already root on your system. It is also perfectly normal for the password prompt not to
+                    print out asterisks. The root user is basically the super admin. It has all the privileges on your
+                    system.</p>
+                <p>If you want to give your system a name enter</p>
+                <p><code>echo yourhostname &gt; /etc/hostname</code></p>
+                <p>While we&rsquo;re at it we can change our sudo configuration so your normal user can do
+                    administrative tasks without having to ask root for it all the time. Run
+                    <code>nano /etc/sudoers</code> to edit that configuration file. Ignore the warning at the bottom and
+                    press Ctrl-W to search for the word &ldquo;wheel&rdquo; (without quotes). Now comment out the line
+                    that says something about the wheel group. Save it with Ctrl-X, confirm with y and press enter. This
+                    will be important once we create our first user.</p>
+                <p>Now you&rsquo;re back in the shell and configured everything about administration. Let&rsquo;s
+                    configure pacman using <code>nano /etc/pacman.conf</code>. I usually comment out <code>Color</code>
+                    which makes pacman more colourful and the <code>multilib</code> repository so I can install things
+                    like Steam or Wine which use 32-bit libraries. If you commented out <code>multilib</code> make sure
+                    to refresh pacman using <code>pacman -Sy</code>.</p>
+                <p>Once that&rsquo;s done we&rsquo;re configuring localization. For German localization I use these
+                    commands. If you&rsquo;re American you don&rsquo;t have to configure anything except timezones and
+                    NTP. Don&rsquo;t type out the commands with a hashtag, these are just comments.</p>
+                <code># Configure NTP and timezone<br />pacman -S ntp<br />systemctl enable ntpd<br />ln -sf
+                    /usr/share/zoneinfo/Europe/Berlin /etc/localtime<br /># Configure locales<br />echo de_DE.UTF-8 &gt;
+                    /etc/locale.gen<br />echo LANG=de_DE.UTF-8 &gt; /etc/locale.conf<br />locale-gen<br /># Configure
+                    TTY keyboard layout<br />echo KEYMAP=de-latin1-nodeadkeys &gt; /etc/vconsole.conf</code>
+                <p>Now let&rsquo;s create our first user. In this case I use the username <code>koyu</code>. You can
+                    choose your own of course.</p>
+                <code>useradd koyu<br />passwd koyu<br />usermod -aG wheel koyu<br />mkdir /home/koyu<br />chown -R
+                    koyu:koyu /home/koyu</code>
+                <p>After this we can install and enable <code>NetworkManager</code> which is responsible for internet
+                    access after the installation.</p>
+                <code>pacman -S networkmanager<br />systemctl enable NetworkManager<br />systemctl disable
+                    NetworkManager-wait-online.service</code>
+                <p>We disable the last service to cut boot times. That service usually waits for your system to come
+                    online, but sometimes your PC boots up faster than your router can give you an IP address. This is
+                    usually fine for server environments, but not for daily usage. More about that <a
+                        href="https://koyu.space/2021/11/23/speeding-up-linux-startup-and-shutdown/">here</a>.</p>
+                <p>Now we want to install an AUR manager. This allows you to install third-party packages found on the
+                    <a href="https://aur.archlinux.org">AUR</a>. I prefer <code>yay</code> so let&rsquo;s install it.
+                    Please note that you have to switch to your user, not <code>koyu</code>.</p>
+                <code>su - koyu<br />git clone https://aur.archlinux.org/yay.git<br />cd yay<br />makepkg -sifc</code>
+                <p>Now it should prompt you for a password, install dependencies, build yay and install it.</p>
+                <p>Once that&rsquo;s done you can exit out of that using Ctrl-D and out of the chroot as well with
+                    Ctrl-D. Type in <code>reboot</code> and press enter or press Ctrl-Alt-Del to reboot. Your system
+                    will reboot and you should eject your USB drive</p>
+                <h2>Installing a desktop</h2>
+                <p>Now your system should boot into a login prompt. If that&rsquo;s successful you can install a
+                    desktop. Check out the Arch Wiki on how to install them. You will also need a display manager to go
+                    along with it and reconnect to WiFi using <code>sudo nmtui</code>. If you have a Nvidia card make
+                    sure you install the <code>nvidia</code> package, otherwise you will be unable to utilize your
+                    entire graphics card. Here are guides on how to install the most popular desktop environments:</p>
+                <ul>
+                    <li><a href="https://wiki.archlinux.org/title/GNOME">GNOME</a></li>
+                    <li><a href="https://wiki.archlinux.org/title/KDE">KDE</a></li>
+                    <li><a href="https://wiki.archlinux.org/title/Xfce">XFCE</a></li>
+                    <li><a href="https://wiki.archlinux.org/title/MATE">Mate</a></li>
+                    <li><a href="https://wiki.archlinux.org/title/Cinnamon">Cinnamon</a></li>
+                </ul>
+                <p>They all differ in functionality, ease of use and performance. I prefer XFCE, but it can be
+                    cumbersome to set up. For newbies I can recommend Cinnamon since it&rsquo;s very fleshed out. Just
+                    make sure you installed a display manager like <a
+                        href="https://wiki.archlinux.org/title/LightDM">LightDM</a> or <a
+                        href="https://wiki.archlinux.org/title/GDM">GDM</a>.</p>
+                <h2>More information</h2>
+                <p>For more information check out the Arch Wiki and the <a
+                        href="https://wiki.archlinux.org/title/General_recommendations">General Recommendations</a> to
+                    make the most of your system. Especially the Arch Wiki is a great resource to understand your
+                    system, properly use and maintain it.</p>
+            </article>
+        </main>
+        <div id="render-footer"></div>
+    </div>
+    <script src="/assets/js/renderer.js"></script>
+    <script src="/assets/js/social.js"></script>
+</body>
+
+</html>

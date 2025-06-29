@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>koyu's personal website - notes</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/components/principles.css">
+    <link rel="stylesheet" href="/assets/css/components/avatars.css">
+    <link rel="stylesheet" href="/assets/css/components/social.css">
+    <link rel="stylesheet" href="/assets/css/layout/blog.css">
+    <link rel="shortcut icon" href="/assets/img/icon.webp">
+</head>
+
+<body>
+    <noscript>
+        <style>
+            body {
+                overflow: hidden;
+            }
+        </style>
+        <div class="noscript-warning">
+            <h1>JavaScript is disabled</h1>
+            <p>
+                This website requires JavaScript to function properly. Please enable JavaScript in your browser
+                settings.
+            </p>
+            <p>
+                If you are using a browser that does not support JavaScript, please consider switching to a modern
+                browser
+                that does.
+            </p>
+        </div>
+    </noscript>
+    <div id="social"></div>
+    <div id="container">
+        <div id="render-header"></div>
+        <main>
+            <div class="breadcrumbs">
+                <a href="/notes">Notes</a>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="icon size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
+                </svg>
+                <span>Operating systems</span>
+            </div>
+            <article>
+                <h1>Operating systems</h1>
+                <p>I do run and develop a few operating systems, some in-house, some open-source for anyone to use.</p>
+                <h2>koyuwatch</h2>
+                <p>An internally used RTOS based on the Watchy firmware. It&rsquo;s a simple OS with support for weather
+                    information, time syncing and also includes support for paying via Revolut and contact information
+                    for people to scan.</p>
+                <p>An early version of koyuwatch missing the WiFi indicator and wonky display of battery levels</p>
+                <p><strong>Status:</strong> working</p>
+                <p><strong>Architecture(s):</strong> Watchy based on the ESP32 microcontroller</p>
+                <p><strong>First version:</strong> Aug 12 2024</p>
+                <p><strong>Use case(s):</strong> Smartwatches</p>
+                <p><strong>License:</strong> proprietary</p>
+                <p>&nbsp;</p>
+                <h2>BreezeOS</h2>
+                <p>BreezeOS is a proprietary operating system designed for i386 (and later) retro computers. Loaded into
+                    the memory of the machine it supports switching out floppy disks during runtime. This allows a user
+                    to load the operating system using one floppy and use another floppy for programs. The only
+                    supported resolution is 640&times;360 using 16 colors. The operating system was based on MikeOS, but
+                    has later been fully rewritten and extended with ACPI support and other features. It&rsquo;s heavy
+                    use of BIOS registers for system calls makes it unportable to other architectures and platforms. The
+                    operating system is like a mix between Unix and DOS. It doesn&rsquo;t support sound other than PC
+                    speakers and drawing directly on the screen is also only possible through a video driver implemented
+                    into the application. Due to the bad design programs are limited to 32kb in memory.</p>
+                <p><strong>Status:</strong> working</p>
+                <p><strong>Architecture:</strong> x86, i386 and later</p>
+                <p><strong>First version:</strong> circa 2013</p>
+                <p><strong>Use case(s):</strong> Retro computers, virtual machines, general purpose OS</p>
+                <p><strong>License:</strong> proprietary</p>
+                <p>&nbsp;</p>
+                <h2>Sharpy</h2>
+                <p>An operating system written in C# using the Cosmos SDK. Similar to BreezeOS it&rsquo;s an operating
+                    system aimed at x86 retro computing. It tried to replace it, but ultimately failed due to the lack
+                    of a proper filesystem driver or fully working init system. The idea was that due to the codebase
+                    being in C# rather than raw assembly language it would&rsquo;ve been easier to maintain.</p>
+                <p><strong>Status:</strong> abandoned</p>
+                <p><strong>Architecture:</strong> x86</p>
+                <p><strong>First version:</strong> circa 2018</p>
+                <p><strong>Use case(s):</strong> Retro computing, successor to Breeze OS</p>
+                <p>&nbsp;</p>
+                <blockquote>Currently that&rsquo;s all I could remember. More to come!</blockquote>
+            </article>
+        </main>
+        <div id="render-footer"></div>
+    </div>
+    <script src="/assets/js/renderer.js"></script>
+    <script src="/assets/js/social.js"></script>
+</body>
+
+</html>

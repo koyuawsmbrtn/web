@@ -1,0 +1,72 @@
+table {
+  width: 100%;
+  border-collapse: separate;
+  /* wichtig für border-radius */
+  border-spacing: 0;
+  background-color: #121212;
+  color: #e0e0e0;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1rem;
+}
+
+thead tr {
+  background-color: #272727;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: none;
+  /* WICHTIG */
+  /* optional: für abgerundete Ecken */
+}
+
+td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  vertical-align: middle;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #181818;
+}
+
+tbody tr:hover {
+  background-color: #272727;
+  cursor: pointer;
+}
+
+tbody tr:focus-within {
+  outline: 2px solid #bb86fc;
+  outline-offset: -2px;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+th:first-child {
+  border-top-left-radius: 8px;
+}
+
+th:last-child {
+  border-top-right-radius: 8px;
+}
+
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}

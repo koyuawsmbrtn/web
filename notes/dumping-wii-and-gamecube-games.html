@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>koyu's personal website - notes</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/components/principles.css">
+    <link rel="stylesheet" href="/assets/css/components/avatars.css">
+    <link rel="stylesheet" href="/assets/css/components/social.css">
+    <link rel="stylesheet" href="/assets/css/layout/blog.css">
+    <link rel="shortcut icon" href="/assets/img/icon.webp">
+</head>
+
+<body>
+    <noscript>
+        <style>
+            body {
+                overflow: hidden;
+            }
+        </style>
+        <div class="noscript-warning">
+            <h1>JavaScript is disabled</h1>
+            <p>
+                This website requires JavaScript to function properly. Please enable JavaScript in your browser
+                settings.
+            </p>
+            <p>
+                If you are using a browser that does not support JavaScript, please consider switching to a modern
+                browser
+                that does.
+            </p>
+        </div>
+    </noscript>
+    <div id="social"></div>
+    <div id="container">
+        <div id="render-header"></div>
+        <main>
+            <div class="breadcrumbs">
+                <a href="/notes">Notes</a>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="icon size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
+                </svg>
+                <span>Dumping Wii and GameCube Games</span>
+            </div>
+            <article>
+                <h1>Dumping Wii and GameCube Games</h1>
+                <p>This guide shows you how to properly dump your Wii or GameCube (GC) games using CleanRip. For example
+                    I had to dump a copy of Super Mario Sunshine to get some mods working.</p>
+                <blockquote><strong>Note:</strong>&nbsp;It&rsquo;s entirely legal to dump your own games and play them
+                    either on the original hardware or using an emulator like Dolphin. You own the game after all.
+                </blockquote>
+                <h2>Requirements</h2>
+                <ul>
+                    <li><a href="https://wii.guide/">A homebrewed Wii console</a></li>
+                    <li>A copy of&nbsp;<a href="https://github.com/emukidid/cleanrip/releases/latest">CleanRip</a></li>
+                    <li>An SD card or USB drive with at least 4.7 GB of free space (8.5 GB when copying a dual layer
+                        disc).</li>
+                </ul>
+                <h2>Guide</h2>
+                <h3>Step 1: Download and install</h3>
+                <ol>
+                    <li>Unzip CleanRip and move it to the&nbsp;<code>apps</code>&nbsp;folder on your SD card.</li>
+                    <li>Insert your SD card into your Wii and launch CleanRip from the Homebrew Channel.</li>
+                </ol>
+                <h3>Step 2: Copy</h3>
+                <p>1. Choose the device you want to copy the game to &ndash; your USB drive or SD card.</p>
+                <p>2. The screen will ask if you want to download a file with checksums so you can make sure a full copy
+                    of the disc was made. It is your decision to answer yes or no to the question about downloading the
+                    file.</p>
+                <p>3. Now insert the disc you want to copy.</p>
+                <blockquote><strong>Warning:</strong>&nbsp;If you copy&nbsp;<a
+                        href="https://wiki.dolphin-emu.org/index.php?title=Category:Dual_Layer_Disc_games">one of the 13
+                        games on this list</a>, choose dual layer if CleanRip asks you about it.</blockquote>
+                <p>4. Set everything up like below</p>
+                <p>5. CleanRip will now copy your game. This may take a while as it copies the full 4.7GB of content
+                    from the disc (9.4GB on dual layer discs). If you dump a GameCube disc it should take a lot less due
+                    to the fixed size of 1.46GB on GameCube discs. Since GameCube ISOs would be less than 4GB in total
+                    you can keep them on your SD card, because FAT32 only allows less than 4GB in single file size and
+                    CleanRip works best with FAT32, even though NTFS support has been fixed. Make sure you got enough
+                    space left on your destination drive or the dump will fail.</p>
+                <p>Done! Have fun playing your freshly dumped game either on the console or an emulator. You can go and
+                    dump your entire library if you want, in case your Wii or discs are getting damaged.</p>
+            </article>
+        </main>
+        <div id="render-footer"></div>
+    </div>
+    <script src="/assets/js/renderer.js"></script>
+    <script src="/assets/js/social.js"></script>
+</body>
+
+</html>

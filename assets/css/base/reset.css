@@ -38,3 +38,14 @@ noscript {
     padding-left: 20px;
     padding-right: 20px;
 }
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    color: #f8f8f2;
+    background-color: #222;
+    padding: 2px 10px;
+    border-radius: 4px;
+    border-radius: 3px;
+    display: inline-block;
+}
