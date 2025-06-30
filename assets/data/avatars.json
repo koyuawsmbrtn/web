@@ -2,41 +2,41 @@
     {
         "name": "Jaron",
         "url": "https://pukima.site",
-        "imageUrl": "https://cdn.sanity.io/images/qo2xqopm/production/632b77dee740d83006bbd971fc053c9256cad299-512x512.png"
+        "imageUrl": "https://branding.pukima.site/images/logos/PFP.png"
     },
     {
         "name": "snowdusk",
         "url": "https://snowdusk.sdf.org/",
-        "imageUrl": "https://cdn.sanity.io/images/qo2xqopm/production/8dee78651d79ec827d37239c5a502ede74e94086-300x300.jpg"
+        "imageUrl": "/assets/img/avatars/snowdusk.jpg"
     },
     {
         "name": "Yannik",
         "url": "https://vaporvee.com/",
-        "imageUrl": "https://cdn.sanity.io/images/qo2xqopm/production/94865629d50a0df6c99c569cbdb8db1a1f60bc9f-460x460.png"
+        "imageUrl": "/assets/img/avatars/yannik.png"
     },
     {
         "name": "sub_rapier",
         "url": "https://subrapier.space/",
-        "imageUrl": "https://cdn.sanity.io/images/qo2xqopm/production/d2764cf592e3b192865f982086fc29a2ce0cff04-256x256.jpg"
+        "imageUrl": "/assets/img/avatars/sub_rapier.jpg"
     },
     {
         "name": "Erik Uden",
         "url": "https://erikuden.com/",
-        "imageUrl": "https://cdn.sanity.io/images/qo2xqopm/production/e4ff094ae9896df1b0f7575d00da77ffc7af6c66-2190x2190.jpg"
+        "imageUrl": "/assets/img/avatars/erik_uden.jpg"
     },
     {
         "name": "brayd",
         "url": "https://braydmedia.de/",
-        "imageUrl": "https://cdn.sanity.io/images/qo2xqopm/production/4dbb7a6eee5282a2c6e6829ed4ad78a963926c40-300x300.webp"
+        "imageUrl": "/assets/img/avatars/brayd.webp"
     },
     {
         "name": "Chris Were",
         "url": "https://chriswere.wales/",
-        "imageUrl": "https://cdn.sanity.io/images/qo2xqopm/production/5868bf406da371101d39ce442164b793930233a0-400x400.png"
+        "imageUrl": "/assets/img/avatars/chris_were.png"
     },
     {
         "name": "Tsia",
         "url": "https://tsia.de/",
-        "imageUrl": "https://cdn.sanity.io/images/qo2xqopm/production/b98b57033918a00e97f0b2ea39d85a8d8041c229-399x399.jpg"
+        "imageUrl": "/assets/img/avatars/tsia.jpg"
     }
 ]
