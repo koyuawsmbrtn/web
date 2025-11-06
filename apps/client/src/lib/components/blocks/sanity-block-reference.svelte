@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { client } from '$lib/sanity';
 	import Avatars from '../avatars.svelte';
+	import Contactform from './contactform.svelte';
 
 	interface BlockReferenceProps {
 		portableText: any;
@@ -60,6 +61,8 @@
 {:else if blockref}
 	{#if blockref.tag === "avatars"}
 		<Avatars />
+	{:else if blockref.tag === "contact"}
+		<Contactform />
 	{:else if blockref.html?.code}
 		<div class="sanity-block my-2">
 			{@html blockref.html.code}

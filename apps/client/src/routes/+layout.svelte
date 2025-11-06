@@ -7,7 +7,8 @@
 	import '../app.css';
 	import Navbar from '$lib/components/animated-navbar.svelte';
 	import ScrollToTop from '$lib/components/scroll-to-top.svelte';
-	
+	import { Toaster } from '$lib/components/ui/sonner/index.js';
+
 	let { children, data } = $props();
 	let accentColor = $state<string>('#000000');
 
@@ -45,7 +46,12 @@
 
 <div class="scroll-smooth font-sans antialiased" style="--accent-color: {accentColor}">
 	<Navbar settings={data.settings} navigationItems={data.navigation} />
-	<main id="main-content" tabindex="-1" class="min-h-[calc(100vh-11.3rem)] md:min-h-[calc(100vh-9.05rem)] focus:outline-none">
+	<main
+		id="main-content"
+		tabindex="-1"
+		class="min-h-[calc(100vh-11.3rem)] focus:outline-none md:min-h-[calc(100vh-9.05rem)]"
+	>
+		<Toaster />
 		{@render children()}
 	</main>
 	<ScrollToTop />
@@ -65,15 +71,17 @@
 		text-decoration: none;
 		transition: text-decoration 0.2s ease;
 	}
-	
+
 	:global(.sanity-block a:hover) {
 		text-decoration: underline;
 	}
-	
+
 	/* SVG styling inside links within sanity-block */
 	:global(.sanity-block a svg) {
 		stroke: var(--accent-color, #000);
-		transition: stroke 0.2s ease, fill 0.2s ease;
+		transition:
+			stroke 0.2s ease,
+			fill 0.2s ease;
 		margin-left: -16px;
 	}
 
