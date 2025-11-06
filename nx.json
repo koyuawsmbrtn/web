@@ -1,0 +1,93 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "cli": {
+    "packageManager": "bun"
+  },
+  "tui": {
+    "enabled": true,
+    "autoExit": true
+  },
+  "defaultBase": "main",
+  "parallel": 4,
+  "cacheDirectory": "node_modules/.cache/nx",
+  "workspaceLayout": {
+    "appsDir": "apps",
+    "libsDir": "packages"
+  },
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "sharedGlobals": ["{workspaceRoot}/.gitignore"],
+    "sanitySchema": [
+      "{projectRoot}/sanity.config.ts",
+      "{projectRoot}/schemaTypes/**/*"
+    ]
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build", "^generate"],
+      "inputs": ["default", "^default"],
+      "outputs": [
+        "{projectRoot}/dist/**",
+        "{projectRoot}/.svelte-kit/**",
+        "{projectRoot}/build/**"
+      ],
+      "cache": true
+    },
+    "dev": {
+      "cache": false,
+      "continuous": true
+    },
+    "preview": {
+      "dependsOn": ["build"],
+      "cache": false,
+      "continuous": true
+    },
+    "check": {
+      "dependsOn": ["^check"],
+      "inputs": ["default"],
+      "cache": true
+    },
+    "lint": {
+      "inputs": ["default"],
+      "cache": true
+    },
+    "format": {
+      "inputs": ["default"],
+      "cache": true
+    },
+    "deploy": {
+      "cache": false
+    },
+    "generate": {
+      "inputs": ["sanitySchema"],
+      "outputs": [
+        "{projectRoot}/schema.json",
+        "{projectRoot}/src/lib/sanity.types.ts"
+      ],
+      "cache": true
+    },
+    "update": {
+      "cache": false
+    },
+    "start": {
+      "dependsOn": ["build"],
+      "cache": false,
+      "continuous": true
+    }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "check",
+          "generate",
+          "format"
+        ],
+        "parallel": 4
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@repo/sanity-connection",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "update": "bun update --latest || npm update --latest"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/bun": "^1.2.19"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.2"
+  }
+}

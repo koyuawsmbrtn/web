@@ -1,0 +1,8 @@
+{
+  "extends": "./base.json",
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "Preserve",
+    "incremental": true
+  }
+}

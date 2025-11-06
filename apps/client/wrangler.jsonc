@@ -1,0 +1,13 @@
+{
+	"name": "koyuweb",
+	"account_id": "<ACCOUNT_ID>", // replace it with your Cloudflare account ID. Usually found at https://dash.cloudflare.com/<ACCOUNT_ID>
+	"main": "./.cloudflare/worker.js",
+	"site": {
+		"bucket": "./.cloudflare/public"
+	},
+	"build": {
+		"command": "bun run build"
+	},
+	"compatibility_date": "2021-11-12",
+    "compatibility_flags": ["nodejs_compat"]
+}
