@@ -38,6 +38,7 @@
     "colorette": "^2.0.20",
     "fs-extra": "^11.3.0",
     "sanity-plugin-media": "^4.0.0",
+    "svelte-remixicon": "^2.8.0",
     "tailwindcss": "^4.1.17"
   }
 }

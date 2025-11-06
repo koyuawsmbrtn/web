@@ -3,27 +3,30 @@
 	import { client } from '$lib/sanity';
 	import type { Settings } from '$lib/sanity.types';
 	import {
-		Github,
-		MessageCircle,
-		Instagram,
-		Linkedin,
-		Twitch,
-		Facebook,
-		Twitter,
-		Youtube,
-		Send,
-		Camera,
-		Phone,
-		Ghost,
-		Film,
-		Music,
-		Globe,
-		Gamepad2,
-		FileText,
-		Rss,
-		User,
-		X
-	} from 'lucide-svelte';
+		RiGithubLine,
+		RiInstagramLine,
+		RiLinkedinLine,
+		RiTwitchLine,
+		RiFacebookLine,
+		RiTwitterLine,
+		RiYoutubeLine,
+		RiTiktokLine,
+		RiTelegramLine,
+		RiFlickrLine,
+		RiWhatsappLine,
+		RiSnapchatLine,
+		RiThreadsLine,
+		RiXboxLine,
+		RiPlaystationLine,
+		RiSteamLine,
+		RiWordpressLine,
+		RiRssLine,
+		RiXingLine,
+		RiGlobeLine,
+		RiFilmLine,
+		RiBlueskyLine
+	} from 'svelte-remixicon';
+
 
 	let { settings }: { settings: Settings } = $props();
 
@@ -47,34 +50,32 @@
 
 	const getSocialIcon = (slug: string) => {
 		const iconMap: Record<string, any> = {
-			github: Github,
-			mastodon: MessageCircle,
-			discord: MessageCircle,
-			instagram: Instagram,
-			linkedin: Linkedin,
-			bluesky: Twitter,
-			twitch: Twitch,
-			facebook: Facebook,
-			twitter: Twitter,
-			x: X,
-			youtube: Youtube,
-			tiktok: Music,
-			telegram: Send,
-			flickr: Camera,
-			whatsapp: Phone,
-			snapchat: Ghost,
-			imdb: Film,
-			lastfm: Music,
-			diaspora: Globe,
-			threads: MessageCircle,
-			xbox: Gamepad2,
-			playstation: Gamepad2,
-			steam: Gamepad2,
-			wordpress: FileText,
-			rss: Rss,
-			xing: User
+			github: RiGithubLine,
+			instagram: RiInstagramLine,
+			linkedin: RiLinkedinLine,
+			bluesky: RiBlueskyLine,
+			twitch: RiTwitchLine,
+			facebook: RiFacebookLine,
+			twitter: RiTwitterLine,
+			x: RiXingLine,
+			youtube: RiYoutubeLine,
+			tiktok: RiTiktokLine,
+			telegram: RiTelegramLine,
+			flickr: RiFlickrLine,
+			whatsapp: RiWhatsappLine,
+			snapchat: RiSnapchatLine,
+			imdb: RiFilmLine,
+			lastfm: RiTiktokLine,
+			diaspora: RiGlobeLine,
+			threads: RiThreadsLine,
+			xbox: RiXboxLine,
+			playstation: RiPlaystationLine,
+			steam: RiSteamLine,
+			wordpress: RiWordpressLine,
+			rss: RiRssLine,
+			xing: RiXingLine
 		};
-		return iconMap[slug] || Globe;
+		return iconMap[slug] || RiGlobeLine;
 	};
 
 	onMount(async () => {
