@@ -8,6 +8,11 @@
 	let isSending = $state<boolean>(false);
 
 	function handleSubmit() {
+		if (!email.includes('@') && !email.includes('.')) {
+			toast.error('Please enter a valid email address.');
+			return;
+		}
+
 		isSending = true;
 		fetch("/api/resend", {
 			method: "POST",
@@ -53,6 +58,6 @@
 		<label>Message: <textarea name="message" bind:value={message} required></textarea></label>
 	</p>
 	<p>
-		<Button onclick={handleSubmit} disabled={!name || !email || !message || isSending}>Send</Button>
+		<Button onclick={handleSubmit} disabled={!name.trim() || !email.trim() || !message.trim() || isSending}>Send</Button>
 	</p>
 </div>
