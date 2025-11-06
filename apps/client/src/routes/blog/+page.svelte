@@ -107,7 +107,7 @@
 				{@const extendedBlog = blog as any}
 
 				<Card
-					class="focus-within:ring-primary/20 group cursor-pointer overflow-hidden transition-all focus-within:ring-2 hover:shadow-md"
+					class="focus-within:ring-primary/20 group cursor-pointer overflow-hidden transition-all focus-within:ring-2 hover:shadow-md pt-0"
 					onclick={() => navigateToPost(blog.slug?.current)}
 					onkeydown={(e) => {
 						if (e.key === 'Enter' || e.key === ' ') {

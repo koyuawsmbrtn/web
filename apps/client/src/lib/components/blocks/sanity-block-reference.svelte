@@ -3,6 +3,7 @@
 	import { client } from '$lib/sanity';
 	import Avatars from '../avatars.svelte';
 	import Contactform from './contactform.svelte';
+	import LastfmCard from './lastfm-card.svelte';
 
 	interface BlockReferenceProps {
 		portableText: any;
@@ -63,6 +64,8 @@
 		<Avatars />
 	{:else if blockref.tag === "contact"}
 		<Contactform />
+	{:else if blockref.tag === "nowplaying"}
+		<LastfmCard />
 	{:else if blockref.html?.code}
 		<div class="sanity-block my-2">
 			{@html blockref.html.code}
