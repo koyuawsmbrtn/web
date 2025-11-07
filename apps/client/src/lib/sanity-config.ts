@@ -1,7 +1,7 @@
 // Centralized Sanity configuration for consistent performance settings
 export const SANITY_CONFIG = {
-	// CDN and caching
-	useCdn: true,
+	// CDN and caching - DISABLED for instant updates
+	useCdn: false,
 	
 	// API versioning
 	apiVersion: '2024-12-01',
@@ -13,11 +13,11 @@ export const SANITY_CONFIG = {
 		maxWidth: 1920
 	},
 	
-	// Cache durations (in milliseconds)
+	// Cache durations (in milliseconds) - reduced for faster updates
 	cacheDurations: {
-		navigation: 60 * 60 * 1000, // 1 hour
-		settings: 60 * 60 * 1000, // 1 hour
-		pages: 5 * 60 * 1000, // 5 minutes
-		blog: 5 * 60 * 1000 // 5 minutes
+		navigation: 5 * 60 * 1000, // 5 minutes
+		settings: 5 * 60 * 1000, // 5 minutes
+		pages: 1 * 60 * 1000, // 1 minute
+		blog: 1 * 60 * 1000 // 1 minute
 	}
 };

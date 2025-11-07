@@ -3,5 +3,5 @@ import { sanityConnection } from '@repo/sanity-connection';
 
 export const serverClient = client.withConfig({
 	token: sanityConnection.publicViewerToken,
-	useCdn: true // Use CDN for faster responses
+	useCdn: false // Disable CDN for instant updates from Sanity
 });

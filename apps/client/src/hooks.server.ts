@@ -11,11 +11,11 @@ const sanityHandle = createRequestHandler();
 const cacheHandle: Handle = async ({ event, resolve }) => {
 	const response = await resolve(event);
 	
-	// Add cache headers for static pages (adjust as needed)
+	// Shorter cache for dynamic content (1 minute browser, 2 minutes edge)
 	if (event.url.pathname.startsWith('/blog') || 
 	    event.url.pathname === '/' ||
 	    event.url.pathname.match(/^\/[^/]+$/)) {
-		response.headers.set('Cache-Control', 'public, max-age=300, s-maxage=600, stale-while-revalidate=86400');
+		response.headers.set('Cache-Control', 'public, max-age=60, s-maxage=120, stale-while-revalidate=300');
 	}
 	
 	return response;
