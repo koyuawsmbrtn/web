@@ -20,13 +20,26 @@ To trigger instant cache purging when you publish content in Sanity Studio:
 openssl rand -base64 32
 ```
 
-### 2. Add to Vercel Environment Variables
+### 2. Create a Vercel Deploy Hook
+
+1. Go to your Vercel project dashboard
+2. Navigate to **Settings** → **Git** → **Deploy Hooks**
+3. Click **Create Hook**
+   - **Name**: Sanity Webhook Revalidation
+   - **Branch**: main (or your production branch)
+4. Copy the generated webhook URL (e.g., `https://api.vercel.com/v1/integrations/deploy/...`)
+
+### 3. Add Environment Variables to Vercel
 
 Go to your Vercel project settings and add:
 - **Variable Name**: `SANITY_REVALIDATE_SECRET`
-- **Value**: [your generated secret]
+  - **Value**: [your generated secret from step 1]
+- **Variable Name**: `VERCEL_DEPLOY_HOOK`
+  - **Value**: [the deploy hook URL from step 2]
 
-### 3. Configure Sanity Webhook
+Make sure to add these for **Production** environment (and Preview/Development if desired).
+
+### 4. Configure Sanity Webhook
 
 1. Go to https://sanity.io/manage
 2. Select your project
@@ -46,30 +59,50 @@ Go to your Vercel project settings and add:
 
 6. Save the webhook
 
-### 4. Test the Webhook
+### 5. Test the Webhook
 
 After setup, when you:
 1. Edit content in Sanity Studio
 2. Click **Publish**
-3. Your site should update within 1-2 minutes (cache expiry time)
+3. Your site will automatically redeploy on Vercel (takes 30-60 seconds)
+4. Changes will be live as soon as the deployment completes
 
-## Without Webhook Setup
+## How It Works
 
-Even without webhooks, changes will now appear much faster:
+When you publish content in Sanity:
+1. Sanity sends a webhook to `/api/revalidate`
+2. The endpoint verifies the secret token
+3. It triggers a Vercel deployment using the deploy hook
+4. Vercel rebuilds and redeploys your site (~30-60 seconds)
+5. Changes are instantly visible once deployment completes
+
+## Without Deploy Hook
+
+If you don't set up the `VERCEL_DEPLOY_HOOK`:
 - **Before**: 5-10 minutes (or manual redeploy needed)
 - **After**: 1-2 minutes (browser cache expiry)
+- With hook: ~60 seconds (full redeploy)
 
 ## Performance Considerations
 
-Disabling the CDN means:
-- ✅ Instant updates (data is always fresh)
-- ⚠️ Slightly slower response times (queries hit Sanity's API directly)
-- ⚠️ More API requests (each page load queries Sanity)
+### Option 1: Automatic Redeployment (Recommended)
+With `VERCEL_DEPLOY_HOOK` configured:
+- ✅ Always up-to-date content (~60 seconds after publish)
+- ✅ No stale cache issues
+- ⚠️ Each publish triggers a full rebuild
+- ⚠️ Vercel build minutes usage (usually not an issue)
 
-For most use cases, this is acceptable. If performance becomes an issue, consider:
-- Re-enabling CDN and using webhooks with cache purging
-- Implementing ISR (Incremental Static Regeneration) with SvelteKit adapter-vercel
-- Using SvelteKit's built-in cache with shorter TTLs
+### Option 2: Cache-based Updates
+Without `VERCEL_DEPLOY_HOOK`:
+- ✅ No rebuild needed
+- ✅ Lower resource usage
+- ⚠️ Updates appear in 1-2 minutes (cache expiry)
+- ⚠️ Slightly slower Sanity API responses (CDN disabled)
+
+### Recommendations:
+- **Content sites with frequent updates**: Use automatic redeployment
+- **Low-traffic or rarely updated sites**: Use cache-based updates
+- **High-traffic sites**: Consider re-enabling CDN with longer cache times and redeployment
 
 ## Troubleshooting
 

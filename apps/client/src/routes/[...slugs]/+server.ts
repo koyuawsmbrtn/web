@@ -33,6 +33,12 @@ const app = new Elysia({ prefix: '/api' })
 		})
 	})
 	.post('/revalidate', async ({ body, query, set }) => {
+		// Sanity webhook endpoint for automatic redeployment
+		// When content is published in Sanity, this endpoint:
+		// 1. Verifies the secret token
+		// 2. Triggers a Vercel deployment via deploy hook
+		// 3. Site rebuilds with fresh content (~30-60 seconds)
+		
 		// Verify the request is from Sanity (optional but recommended)
 		const secret = query.secret;
 		if (REVALIDATE_SECRET && secret !== REVALIDATE_SECRET) {
@@ -48,13 +54,38 @@ const app = new Elysia({ prefix: '/api' })
 				slug: body.slug?.current
 			});
 
-			// On Vercel, this will purge the edge cache
-			// The actual revalidation happens automatically on next request
+			// Trigger a Vercel deployment via deploy hook
+			const VERCEL_DEPLOY_HOOK = process.env.VERCEL_DEPLOY_HOOK;
 			
+			if (VERCEL_DEPLOY_HOOK) {
+				try {
+					const deployResponse = await fetch(VERCEL_DEPLOY_HOOK, {
+						method: 'POST',
+					});
+					
+					if (deployResponse.ok) {
+						const deployData = await deployResponse.json();
+						console.log('Vercel deployment triggered:', deployData);
+						
+						return {
+							revalidated: true,
+							now: Date.now(),
+							message: 'Deployment triggered successfully',
+							deploymentId: deployData.job?.id
+						};
+					} else {
+						console.error('Failed to trigger deployment:', deployResponse.status);
+					}
+				} catch (deployError) {
+					console.error('Error triggering deployment:', deployError);
+				}
+			}
+
+			// Fallback: Just log the event
 			return {
 				revalidated: true,
 				now: Date.now(),
-				message: 'Cache will be updated on next request'
+				message: 'Webhook received. Set VERCEL_DEPLOY_HOOK to enable automatic deployments.'
 			};
 		} catch (err) {
 			console.error('Error processing revalidate webhook:', err);
