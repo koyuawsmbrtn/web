@@ -27,6 +27,8 @@
 	{/if}
 	{#if pageData?.image}
 		<meta property="og:image" content={generateImageUrl(pageData.image)} />
+	{:else}
+		<meta property="og:image" content={generateImageUrl(data.settings?.ogImage)} />
 	{/if}
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={meta.title || pageData?.title || ''} />
