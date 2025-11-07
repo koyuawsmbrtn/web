@@ -14,7 +14,7 @@
 	<title>{meta.title || pageData?.title || 'Page'}</title>
 	<meta name="description" content={meta.description || ''} />
 	<meta property="og:title" content={meta.title || pageData?.title || ''} />
-	<meta property="og:description" content={meta.description || ''} />
+	<meta property="og:description" content={meta.description || pageData?.description || ''} />
 	<meta property="og:type" content="article" />
 	{#if pageData.publishedAt}
 		<meta property="article:published_time" content={pageData.publishedAt} />
