@@ -14,7 +14,7 @@
 	<title>{meta.title || pageData?.title || 'Page'}</title>
 	<meta name="description" content={meta.description || ''} />
 	<meta property="og:title" content={meta.title || pageData?.title || ''} />
-	<meta property="og:description" content={meta.description || pageData?.description || ''} />
+	<meta property="og:description" content={pageData?.description || ''} />
 	<meta property="og:type" content="article" />
 	{#if pageData.publishedAt}
 		<meta property="article:published_time" content={pageData.publishedAt} />
@@ -27,7 +27,7 @@
 	<meta property="og:image" content={generateImageUrl(data.settings?.ogImage)} />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={meta.title || pageData?.title || ''} />
-	<meta name="twitter:description" content={meta.description || ''} />
+	<meta name="twitter:description" content={pageData?.description || ''} />
 </svelte:head>
 
 <main class="container mx-auto min-h-screen max-w-3xl md:max-w-4xl p-8 flex flex-col gap-4">
