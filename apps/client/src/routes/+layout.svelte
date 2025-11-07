@@ -17,11 +17,6 @@
 
 <svelte:head>
 	<title>{data.settings?.title || 'Website'}</title>
-	<meta name="description" content={data.settings?.description || ''} />
-	<meta property="og:title" content={data.settings?.longTitle || data.settings?.title || ''} />
-	<meta property="og:description" content={data.settings?.description || ''} />
-	<meta name="twitter:title" content={data.settings?.longTitle || data.settings?.title || ''} />
-	<meta name="twitter:description" content={data.settings?.description || ''} />
 	<meta name="robots" content="index, follow" />
 	{#if data.logo}
 		<link rel="icon" href={generateImageUrl(data.settings.favicon)} />
