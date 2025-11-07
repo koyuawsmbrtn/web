@@ -3,7 +3,7 @@
 	import { client } from '$lib/sanity';
 	import imageUrlBuilder from '@sanity/image-url';
 
-	let { image, alt = '', width = 1200, height = 600, class: className = '' } = $props();
+	let { image, alt = '', width = 1200, height = 600, class: className = '', priority = false } = $props();
 
 	const { projectId, dataset } = client.config();
 	const builder = imageUrlBuilder({ projectId: projectId ?? '', dataset: dataset ?? '' });
@@ -52,7 +52,8 @@
 		{alt}
 		{width}
 		{height}
-		loading="lazy"
+		loading={priority ? 'eager' : 'lazy'}
+		fetchpriority={priority ? 'high' : 'auto'}
 		class="h-full w-full object-cover object-center {className}"
 	/>
 {/if}

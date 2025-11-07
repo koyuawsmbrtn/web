@@ -154,6 +154,8 @@
 								alt={settings?.websiteName || 'Logo'}
 								width="24"
 								height="24"
+								loading="eager"
+								fetchpriority="high"
 								class="h-6 w-6 object-cover rounded-full"
 							/>
 						{/if}
@@ -175,6 +177,8 @@
 									alt={settings?.websiteName || 'Logo'}
 									width="24"
 									height="24"
+									loading="eager"
+									fetchpriority="high"
 									class="h-6 w-6 object-cover rounded-full"
 								/>
 							{/if}

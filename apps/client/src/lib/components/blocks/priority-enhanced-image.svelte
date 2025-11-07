@@ -3,10 +3,9 @@
 
 	interface EnhancedImageProps {
 		portableText: any;
-		priority?: boolean;
 	}
 
-	let { portableText, priority = false }: EnhancedImageProps = $props();
+	let { portableText }: EnhancedImageProps = $props();
 	const { value } = portableText;
 
 	const imageUrl = $derived(
@@ -20,8 +19,8 @@
 			src={imageUrl}
 			alt={value.alt || ''}
 			class="rounded-lg w-full"
-			loading={priority ? 'eager' : 'lazy'}
-			fetchpriority={priority ? 'high' : 'auto'}
+			loading="eager"
+			fetchpriority="high"
 		/>
 		{#if value.caption}
 			<figcaption class="text-sm text-neutral-600 mt-2 text-center">

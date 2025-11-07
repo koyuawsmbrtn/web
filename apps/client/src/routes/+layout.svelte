@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { VisualEditing } from '@sanity/visual-editing/svelte';
 	import { LiveMode } from '@sanity/svelte-loader';
 	import { client } from '$lib/sanity';
@@ -10,23 +9,9 @@
 	import { Toaster } from '$lib/components/ui/sonner/index.js';
 
 	let { children, data } = $props();
-	let accentColor = $state<string>('#000000');
-
-	onMount(async () => {
-		try {
-			const settings = await client.fetch(`
-				*[_type == "settings"][0] {
-					accentColor
-				}
-			`);
-
-			if (settings?.accentColor?.hex) {
-				accentColor = settings.accentColor.hex;
-			}
-		} catch (err) {
-			console.error('Error fetching accent color:', err);
-		}
-	});
+	
+	// Use server-loaded accent color instead of client-side fetch
+	const accentColor = $derived(data.accentColor || '#000000');
 </script>
 
 <svelte:head>
@@ -40,6 +25,8 @@
 	{#if data.logo}
 		<link rel="icon" href={data.logo.url} />
 		<link rel="apple-touch-icon" href={data.logo.url} />
+		<!-- Preload logo for faster LCP -->
+		<link rel="preload" as="image" href={data.logo.url} fetchpriority="high" />
 	{/if}
 	<link rel="manifest" href="/manifest.webmanifest" />
 </svelte:head>

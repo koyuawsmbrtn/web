@@ -7,6 +7,7 @@
 	import SanityBlockReference from './blocks/sanity-block-reference.svelte';
 	import SanityNotes from './blocks/sanity-notes.svelte';
 	import EnhancedImage from './blocks/enhanced-image.svelte';
+	import PriorityEnhancedImage from './blocks/priority-enhanced-image.svelte';
 	import EnhancedLink from './blocks/enhanced-link.svelte';
 	import EnhancedParagraph from './blocks/enhanced-paragraph.svelte';
 	import Callout from './blocks/callout.svelte';
@@ -14,10 +15,19 @@
 	import Blockquote from './blocks/blockquote.svelte';
 
 	// Accept both 'body' and 'content' props for flexibility
-	let { body, content }: { body?: BlockContent; content?: BlockContent } = $props();
+	let { body, content, prioritizeFirstImage = true }: { body?: BlockContent; content?: BlockContent; prioritizeFirstImage?: boolean } = $props();
 	
 	// Use whichever prop is provided
 	const blockContent = $derived(content || body);
+	
+	// Check if content has images and we should prioritize the first one
+	const hasImages = $derived(
+		blockContent?.some((block: any) => 
+			block._type === 'image' || block._type === 'imageWithAlt'
+		) || false
+	);
+	
+	const shouldUsePriority = $derived(prioritizeFirstImage && hasImages);
 </script>
 
 <div
@@ -35,8 +45,8 @@
 			components={{
 				types: {
 					callout: Callout,
-					image: EnhancedImage,
-					imageWithAlt: EnhancedImage,
+					image: shouldUsePriority ? PriorityEnhancedImage : EnhancedImage,
+					imageWithAlt: shouldUsePriority ? PriorityEnhancedImage : EnhancedImage,
 					file: SanityFile,
 					button: SanityButton,
 					card: SanityCardReference,
