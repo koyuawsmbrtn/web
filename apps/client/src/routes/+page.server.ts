@@ -5,6 +5,7 @@ const PAGE_QUERY = `*[_type == "page" && slug.current == "index"][0]{
   _id,
   _type,
   title,
+  description,
   body,
   slug
 }`;

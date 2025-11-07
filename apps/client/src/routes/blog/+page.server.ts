@@ -79,7 +79,7 @@ export const load: PageServerLoad = async ({ url, depends }) => {
 			},
 			meta: {
 				title: 'Blog',
-				description: 'Read our latest blog posts and articles.'
+				description: blogIntro?.content || 'Read our latest blog posts and articles.'
 			}
 		};
 	} catch (error) {

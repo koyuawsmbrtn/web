@@ -7,6 +7,7 @@
 	import { formatDate } from '$lib/utils';
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
+	import { generateImageUrl } from '$lib/helper/image-url';
 
 	let { data }: { data: PageData } = $props();
 
@@ -68,12 +69,13 @@
 	<title>{meta.title}</title>
 	<meta name="description" content={meta.description} />
 	<meta property="og:title" content={meta.title} />
-	<meta property="og:description" content={meta.description} />
+	<meta property="og:description" content={intro.content || intro.html?.code.replace("<p>", "").replace("</p>", "").split("\n")[0] || ''} />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="/blog" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={meta.title} />
-	<meta name="twitter:description" content={meta.description} />
+	<meta name="twitter:description" content={intro.content || intro.html?.code.replace("<p>", "").replace("</p>", "").split("\n")[0] || ''} />
+	<meta property="og:image" content={generateImageUrl(data.settings?.ogImage)} />
 </svelte:head>
 
 <main class="container mx-auto min-h-screen max-w-6xl p-8">

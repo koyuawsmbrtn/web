@@ -9,6 +9,7 @@ const PAGE_QUERY = `*[_type == "page" && slug.current == $slug][0]{
 	_updatedAt,
 	_rev,
 	title,
+	description,
 	slug,
 	tags,
 	publishedAt,
@@ -62,7 +63,7 @@ export const load: PageServerLoad = async ({ params }) => {
 		}
 
 		// Extract description from first block
-		const description = extractDescription(page.body);
+		const description = page.description || extractDescription(page.body);
 
 		return {
 			page, // Changed from 'custom' to 'page' for clarity
