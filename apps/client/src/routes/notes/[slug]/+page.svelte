@@ -1,9 +1,8 @@
 <script lang="ts">
-	import type { NoteData } from './$types';
 	import SanityBlock from '$lib/components/sanity-block.svelte';
 	import { generateImageUrl } from '$lib/helper/image-url';
 
-	let { data }: { data: NoteData } = $props();
+	let { data }: { data: any } = $props();
 
 	// Use the 'note' property to match the server load function
 	const noteData = $derived(data?.note);
@@ -19,6 +18,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={meta.title || noteData?.title || ''} />
 	<meta name="twitter:description" content={meta.description || ''} />
+	<meta property="og:image" content={generateImageUrl(data.settings?.ogImage)} />
 </svelte:head>
 
 <main class="container mx-auto flex min-h-screen max-w-3xl flex-col gap-4 p-8 md:min-w-[58vw]">
@@ -39,7 +39,7 @@
 			{/if}
 
 			{#if noteData.image}
-				<div class="flex-shrink-0 md:ml-6 md:w-80">
+				<div class="shrink-0 md:ml-6 md:w-80">
 					<img
 						src={generateImageUrl(noteData.image, 400, 300)}
 						alt={noteData.image.alt || noteData.title}

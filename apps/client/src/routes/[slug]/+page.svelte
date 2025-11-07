@@ -51,7 +51,7 @@
 			{/if}
 
 			{#if pageData.image}
-				<div class="flex-shrink-0 md:ml-6 md:w-80">
+				<div class="shrink-0 md:ml-6 md:w-80">
 					<img
 						src={generateImageUrl(pageData.image, 400, 300)}
 						alt={pageData.image.alt || pageData.title}

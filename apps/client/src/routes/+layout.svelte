@@ -20,7 +20,6 @@
 	<meta name="description" content={data.settings?.description || ''} />
 	<meta property="og:title" content={data.settings?.longTitle || data.settings?.title || ''} />
 	<meta property="og:description" content={data.settings?.description || ''} />
-	<meta property="og:image" content={generateImageUrl(data.settings?.ogImage)} />
 	<meta name="twitter:title" content={data.settings?.longTitle || data.settings?.title || ''} />
 	<meta name="twitter:description" content={data.settings?.description || ''} />
 	<meta name="robots" content="index, follow" />
@@ -92,6 +91,7 @@
 		outline: none;
 		transition: all 0.2s ease;
 		font-size: 0.875rem;
+		width: 65%;
 		display: block;
 		box-sizing: border-box;
 	}
