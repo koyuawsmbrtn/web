@@ -7,6 +7,7 @@
 	import Navbar from '$lib/components/animated-navbar.svelte';
 	import ScrollToTop from '$lib/components/scroll-to-top.svelte';
 	import { Toaster } from '$lib/components/ui/sonner/index.js';
+	import { generateImageUrl } from '$lib/helper/image-url';
 
 	let { children, data } = $props();
 	
@@ -19,11 +20,12 @@
 	<meta name="description" content={data.settings?.description || ''} />
 	<meta property="og:title" content={data.settings?.longTitle || data.settings?.title || ''} />
 	<meta property="og:description" content={data.settings?.description || ''} />
+	<meta property="og:image" content={generateImageUrl(data.settings?.ogImage)} />
 	<meta name="twitter:title" content={data.settings?.longTitle || data.settings?.title || ''} />
 	<meta name="twitter:description" content={data.settings?.description || ''} />
 	<meta name="robots" content="index, follow" />
 	{#if data.logo}
-		<link rel="icon" href={data.logo.url} />
+		<link rel="icon" href={generateImageUrl(data.settings.favicon)} />
 		<link rel="apple-touch-icon" href={data.logo.url} />
 		<!-- Preload logo for faster LCP -->
 		<link rel="preload" as="image" href={data.logo.url} fetchpriority="high" />
@@ -90,7 +92,6 @@
 		outline: none;
 		transition: all 0.2s ease;
 		font-size: 0.875rem;
-		width: 65%;
 		display: block;
 		box-sizing: border-box;
 	}

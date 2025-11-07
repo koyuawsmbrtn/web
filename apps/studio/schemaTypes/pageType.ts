@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import {defineField, defineSearchFilter, defineType} from 'sanity'
 
 export const pageType = defineType({
   name: 'page',
@@ -15,6 +15,19 @@ export const pageType = defineType({
       type: 'boolean',
       validation: (rule) => rule.required(),
       initialValue: false,
+    }),
+    defineField({
+      name: 'description',
+      type: 'text',
+      rows: 3,
+    }),
+    defineField({
+      name: 'tags',
+      type: 'array',
+      of: [{type: 'string'}],
+      options: {
+        layout: 'tags',
+      },
     }),
     defineField({
       name: 'slug',

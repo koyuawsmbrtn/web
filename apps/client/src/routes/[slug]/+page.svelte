@@ -25,6 +25,9 @@
 			<meta property="article:tag" content={tag} />
 		{/each}
 	{/if}
+	{#if pageData?.image}
+		<meta property="og:image" content={generateImageUrl(pageData.image)} />
+	{/if}
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={meta.title || pageData?.title || ''} />
 	<meta name="twitter:description" content={meta.description || ''} />

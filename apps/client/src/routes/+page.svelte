@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import SanityBlock from '$lib/components/sanity-block.svelte';
+	import { generateImageUrl } from '$lib/helper/image-url';
 
 	let { data }: { data: PageData } = $props();
 
@@ -15,14 +16,16 @@
 	<meta property="og:title" content={meta.title || pageData?.title || ''} />
 	<meta property="og:description" content={meta.description || ''} />
 	<meta property="og:type" content="article" />
-	<meta property="og:url" content={meta.url || ''} />
-	{#if meta.publishedAt}
-		<meta property="article:published_time" content={meta.publishedAt} />
+	{#if pageData.publishedAt}
+		<meta property="article:published_time" content={pageData.publishedAt} />
 	{/if}
-	{#if meta.tags}
-		{#each meta.tags as tag}
+	{#if pageData.tags}
+		{#each pageData.tags as tag}
 			<meta property="article:tag" content={tag} />
 		{/each}
+	{/if}
+	{#if pageData?.image}
+		<meta property="og:image" content={generateImageUrl(pageData.image)} />
 	{/if}
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={meta.title || pageData?.title || ''} />

@@ -47,6 +47,11 @@ export const settingsType = defineType({
       type: 'image'
     }),
     defineField({
+      name: 'ogImage',
+      title: 'Open Graph Image',
+      type: 'image',
+    }),
+    defineField({
       name: 'accentColor',
       title: 'Accent Color',
       type: 'color',

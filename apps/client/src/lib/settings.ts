@@ -13,6 +13,7 @@ export async function fetchSettings(prop?: string | undefined) {
 			 websiteName,
 			 showTextInMenu,
 			 showLogoInMenu,
+			 ogImage,
 			 accentColor`
 		}
 	  }`);

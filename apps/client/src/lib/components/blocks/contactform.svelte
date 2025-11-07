@@ -1,6 +1,9 @@
 <script lang="ts">
 	import Button from '../ui/button/button.svelte';
 	import { toast } from 'svelte-sonner';
+	import { Label } from '../ui/label';
+	import { Input } from '../ui/input';
+	import { Textarea } from '../ui/textarea';
 
 	let name = $state<string>('');
 	let email = $state<string>('');
@@ -49,13 +52,13 @@
 
 <div class="sanity-block my-2">
 	<p>
-		<label>Your Name: <input type="text" name="name" bind:value={name} required /></label>
+		<Label>Your Name: <Input type="text" name="name" bind:value={name} required class="w-full md:w-1/2" /></Label>
 	</p>
 	<p>
-		<label>Your Email: <input type="email" name="email" bind:value={email} required /></label>
+		<Label>Your Email: <Input type="email" name="email" bind:value={email} required class="w-full md:w-1/2" /></Label>
 	</p>
 	<p>
-		<label>Message: <textarea name="message" bind:value={message} required></textarea></label>
+		<Label>Message: <Textarea name="message" bind:value={message} required class="w-full md:w-1/2" /></Label>
 	</p>
 	<p>
 		<Button onclick={handleSubmit} disabled={!name.trim() || !email.trim() || !message.trim() || isSending}>Send</Button>
