@@ -17,7 +17,7 @@ export const load: PageServerLoad = async () => {
 			page,
 			meta: {
 				title: page?.title || 'Home',
-				description: 'Welcome to my portfolio'
+				description: page?.description || ''
 			}
 		};
 	} catch (error) {
@@ -26,7 +26,7 @@ export const load: PageServerLoad = async () => {
 			page: null,
 			meta: {
 				title: 'Home',
-				description: 'Welcome to my portfolio'
+				description: ''
 			}
 		};
 	}
