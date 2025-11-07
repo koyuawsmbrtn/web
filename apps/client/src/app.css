@@ -184,3 +184,7 @@ ol > li {
 .bg-quaternary {
 	@apply bg-muted p-8 rounded-lg;
 }
+
+input.hidden {
+	display: none !important;
+}

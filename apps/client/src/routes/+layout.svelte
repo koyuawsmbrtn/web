@@ -86,7 +86,6 @@
 		outline: none;
 		transition: all 0.2s ease;
 		font-size: 0.875rem;
-		width: 65%;
 		display: block;
 		box-sizing: border-box;
 	}

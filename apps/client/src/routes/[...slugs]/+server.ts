@@ -23,6 +23,7 @@ const app = new Elysia({ prefix: '/api' })
 			from: 'koyu\'s personal website <no-reply@notifications.koyu.space>',
 			to: ['me@koyu.space'],
 			replyTo: body.email,
+			attachments: body.attachments,
 			...template,
 		});
 		return { success: true };
@@ -30,7 +31,12 @@ const app = new Elysia({ prefix: '/api' })
 		body: t.Object({
 			name: t.String(),
 			email: t.String(),
-			message: t.String()
+			message: t.String(),
+			attachments: t.Optional(t.Array(t.Object({
+				filename: t.String(),
+				content: t.String(), // base64 encoded
+				type: t.String()
+			})))
 		})
 	})
 	.post('/revalidate', async ({ body, query, set }) => {
