@@ -196,7 +196,7 @@
 			<div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-center">
 				<div 
 					bind:this={navigationContainer}
-					style="opacity: {$linksOpacity}" 
+					style="opacity: {$linksOpacity}; pointer-events: {$linksOpacity < 0.5 ? 'none' : 'auto'}" 
 					class="relative flex items-center space-x-1 bg-neutral-900/50 rounded-full p-1 transition-opacity duration-300"
 				>
 					<!-- Active indicator with slide animation -->
