@@ -8,7 +8,7 @@ export default defineConfig({
 		rollupOptions: {
 			output: {
 				manualChunks: {
-					'sanity-vendor': ['@sanity/image-url', '@portabletext/svelte'],
+					'sanity-vendor': ['@portabletext/svelte'],
 				}
 			}
 		}
