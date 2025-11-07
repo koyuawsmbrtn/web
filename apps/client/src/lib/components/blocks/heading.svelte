@@ -5,7 +5,7 @@
 	const { value } = portableText;
 
 	const getHeadingClass = (style: string) => {
-		const baseClasses = 'font-bold tracking-tight';
+		const baseClasses = 'font-bold';
 
 		switch (style) {
 			case 'h1':
