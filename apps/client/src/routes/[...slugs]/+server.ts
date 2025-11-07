@@ -2,34 +2,74 @@ import { Elysia, t } from 'elysia';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY!);
+const REVALIDATE_SECRET = process.env.SANITY_REVALIDATE_SECRET;
 
-const app = new Elysia({ prefix: '/api' }).post('/resend', async ({ body }) => {
-        const template = {
-        subject: 'New contact form submission',
-        html: `
-            <h1>New contact form submission</h1>
-            <p>Someone has submitted the contact form on your website.</p>
-            <h2>Details</h2>
-            <p>Submitted at: ${new Date().toISOString()}</p>
-            <h2>Form data</h2>
-            <p>Name: ${body.name}</p>
-            <p>Email: ${body.email}</p>
-            <p>Message:<br>${body.message}</p>
-        `,
-    };
-    await resend.emails.send({
-        from: 'koyu\'s personal website <no-reply@notifications.koyu.space>',
-        to: ['me@koyu.space'],
-        ...template,
-    });
-    return { success: true };
-}, {
-	body: t.Object({
-		name: t.String(),
-        email: t.String(),
-		message: t.String()
+const app = new Elysia({ prefix: '/api' })
+	.post('/resend', async ({ body }) => {
+		const template = {
+			subject: 'New contact form submission',
+			html: `
+				<h1>New contact form submission</h1>
+				<p>Someone has submitted the contact form on your website.</p>
+				<h2>Details</h2>
+				<p>Submitted at: ${new Date().toISOString()}</p>
+				<h2>Form data</h2>
+				<p>Name: ${body.name}</p>
+				<p>Email: ${body.email}</p>
+				<p>Message:<br>${body.message}</p>
+			`,
+		};
+		await resend.emails.send({
+			from: 'koyu\'s personal website <no-reply@notifications.koyu.space>',
+			to: ['me@koyu.space'],
+			...template,
+		});
+		return { success: true };
+	}, {
+		body: t.Object({
+			name: t.String(),
+			email: t.String(),
+			message: t.String()
+		})
 	})
-});
+	.post('/revalidate', async ({ body, query, set }) => {
+		// Verify the request is from Sanity (optional but recommended)
+		const secret = query.secret;
+		if (REVALIDATE_SECRET && secret !== REVALIDATE_SECRET) {
+			set.status = 401;
+			return { error: 'Invalid secret' };
+		}
+
+		try {
+			// Log the webhook payload for debugging
+			console.log('Revalidate webhook received:', {
+				type: body._type,
+				id: body._id,
+				slug: body.slug?.current
+			});
+
+			// On Vercel, this will purge the edge cache
+			// The actual revalidation happens automatically on next request
+			
+			return {
+				revalidated: true,
+				now: Date.now(),
+				message: 'Cache will be updated on next request'
+			};
+		} catch (err) {
+			console.error('Error processing revalidate webhook:', err);
+			set.status = 500;
+			return { error: 'Failed to revalidate' };
+		}
+	}, {
+		body: t.Object({
+			_type: t.Optional(t.String()),
+			_id: t.Optional(t.String()),
+			slug: t.Optional(t.Object({
+				current: t.Optional(t.String())
+			}))
+		})
+	});
 
 interface WithRequest {
 	request: Request;

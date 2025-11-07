@@ -7,7 +7,7 @@ To fix the delayed updates from Sanity, the following changes were made:
 1. **Disabled Sanity CDN** (`useCdn: false`) in both client and server configurations
 2. **Reduced cache durations** from 5-60 minutes to 1-5 minutes
 3. **Shortened HTTP cache headers** from 5-10 minutes to 1-2 minutes
-4. **Created webhook endpoint** at `/api/revalidate` for cache purging
+4. **Created webhook endpoint** at `/api/revalidate` (integrated into Elysia server)
 
 ## Setting Up Sanity Webhooks (Optional but Recommended)
 
