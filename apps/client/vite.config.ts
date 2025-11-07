@@ -4,14 +4,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
 	plugins: [sveltekit()],
 	build: {
-		cssMinify: 'lightningcss',
-		rollupOptions: {
-			output: {
-				manualChunks: {
-					'sanity-vendor': ['@sanity/client', '@sanity/image-url', '@portabletext/svelte'],
-				}
-			}
-		}
+		cssMinify: 'lightningcss'
 	},
 	server: {
 		fs: {
