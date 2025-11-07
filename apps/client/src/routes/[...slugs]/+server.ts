@@ -22,6 +22,7 @@ const app = new Elysia({ prefix: '/api' })
 		await resend.emails.send({
 			from: 'koyu\'s personal website <no-reply@notifications.koyu.space>',
 			to: ['me@koyu.space'],
+			replyTo: body.email,
 			...template,
 		});
 		return { success: true };
