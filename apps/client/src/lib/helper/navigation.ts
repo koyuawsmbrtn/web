@@ -229,7 +229,7 @@ async function fetchPagesByTag(tagId: string, pageType: string): Promise<PageRes
 // Cache the navigation data for better performance
 let navigationCache: NavigationItem[] | null = null;
 let cacheTimestamp: number = 0;
-const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+const CACHE_DURATION = 60 * 60 * 1000; // 60 minutes - longer cache for production
 
 export async function getCachedNavigation(): Promise<NavigationItem[]> {
 	const now = Date.now();

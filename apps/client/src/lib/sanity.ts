@@ -5,7 +5,7 @@ export const client = createClient({
 	projectId: sanityConnection.projectId,
 	dataset: sanityConnection.dataset,
 	apiVersion: '2024-12-01',
-	useCdn: false,
+	useCdn: true, // CRITICAL: Use CDN for better performance in production
 	token: sanityConnection.publicViewerToken,
 	ignoreBrowserTokenWarning: true,
 	stega: {

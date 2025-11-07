@@ -31,6 +31,7 @@
 				.width(targetWidth)
 				.height(targetHeight)
 				.format('webp')
+				.quality(85) // Better performance with slightly lower quality
 				.auto('format');
 
 			return imageBuilder.url();

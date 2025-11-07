@@ -30,6 +30,7 @@ export function generateImageUrl(
 			.fit('max')
 			.width(width || 1920)
 			.format('webp')
+			.quality(85) // Reduce quality slightly for better performance
 			.auto('format');
 		// Cropping doesnt really work. But it is here for future reference i guess. Fucking Sanity is so retarded.
 		if (image.crop && width && height) {
