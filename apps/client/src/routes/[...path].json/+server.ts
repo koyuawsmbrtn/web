@@ -84,6 +84,13 @@ async function generateBlogPostJSON(slug: string) {
 			slug,
 			publishedAt,
 			body,
+			image {
+				asset-> {
+					_id,
+					url
+				},
+				alt
+			},
 			tags[]->title
 		}
 	`, { slug });
@@ -107,7 +114,7 @@ async function generateBlogPostJSON(slug: string) {
 		}, { status: 404 });
 	}
 	
-	const particleDoc = convertBlogPostToParticle(post);
+	const particleDoc = await convertBlogPostToParticle(post);
 	return json(particleDoc);
 }
 
@@ -141,6 +148,6 @@ async function generatePageJSON(slug: string) {
 		}, { status: 404 });
 	}
 	
-	const particleDoc = convertPageToParticle(page);
+	const particleDoc = await convertPageToParticle(page);
 	return json(particleDoc);
 }

@@ -27,6 +27,13 @@ export const GET: RequestHandler = async ({ params }) => {
 				slug,
 				publishedAt,
 				body,
+				image {
+					asset-> {
+						_id,
+						url
+					},
+					alt
+				},
 				"tags": tags[]->title
 			}
 		`, { slug });
@@ -50,7 +57,7 @@ export const GET: RequestHandler = async ({ params }) => {
 			}, { status: 404 });
 		}
 		
-		const particleDoc = convertBlogPostToParticle(post);
+		const particleDoc = await convertBlogPostToParticle(post);
 		
 		return json(particleDoc, {
 			headers: {

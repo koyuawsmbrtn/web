@@ -48,7 +48,7 @@ export const GET: RequestHandler = async ({ params }) => {
 			}, { status: 404 });
 		}
 		
-		const particleDoc = convertPageToParticle(page);
+		const particleDoc = await convertPageToParticle(page);
 		
 		return json(particleDoc, {
 			headers: {

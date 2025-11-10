@@ -50,7 +50,7 @@ export const GET: RequestHandler = async ({ params }) => {
 			}, { status: 404 });
 		}
 		
-		const particleDoc = convertNoteToParticle(note);
+		const particleDoc = await convertNoteToParticle(note);
 		
 		return json(particleDoc, {
 			headers: {
