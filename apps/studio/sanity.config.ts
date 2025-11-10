@@ -4,7 +4,7 @@ import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
 import {codeInput} from '@sanity/code-input'
 import {colorInput} from '@sanity/color-input'
-import {WrenchIcon, ComposeIcon, DocumentIcon, DocumentTextIcon, UsersIcon, CodeBlockIcon, BlockElementIcon, DiamondIcon} from '@sanity/icons'
+import {WrenchIcon, ComposeIcon, DocumentIcon, DocumentTextIcon, UsersIcon, CodeBlockIcon, BlockElementIcon, DiamondIcon, SparklesIcon} from '@sanity/icons'
 import {media} from 'sanity-plugin-media'
 
 export default defineConfig({
@@ -48,6 +48,10 @@ export default defineConfig({
             .title('Socials')
             .child(S.documentList().title('Socials').filter('_type == "social"'))
             .icon(DiamondIcon),
+          S.listItem()
+            .title('Particle Directory Items')
+            .child(S.documentList().title('Particle Directory Items').filter('_type == "directoryItem"'))
+            .icon(SparklesIcon),
           S.divider(),
           S.listItem()
             .title('Settings')

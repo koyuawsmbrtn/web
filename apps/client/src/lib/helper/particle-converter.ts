@@ -545,7 +545,7 @@ export async function convertBlogPostToParticle(post: any): Promise<ParticleDocu
 		{
 			type: 'button',
 			label: 'Back to Blog',
-			action: '/blog.json'
+			action: '/blog'
 		}
 	);
 
@@ -590,7 +590,14 @@ export function createIndexParticle(settings: any, navigation: any[]): ParticleD
 			content.push({
 				type: 'button',
 				label: 'About',
-				action: '/about.json'
+				action: '/about'
+			});
+		}
+		if (item.name.toLowerCase() === 'blog') {
+			content.push({
+				type: 'button',
+				label: 'Directory',
+				action: '/directory'
 			});
 		}
 	}
@@ -598,6 +605,77 @@ export function createIndexParticle(settings: any, navigation: any[]): ParticleD
 	return {
 		format: 'particle',
 		title: sanitizeText(settings?.websiteName) || 'Website',
+		content
+	};
+}
+
+/**
+ * Lists all URLs in the Particle Directory
+ */
+export function createDirectoryParticle(items: any[]): ParticleDocument {
+	const content: ParticleContent[] = [];
+
+	content.push({
+		type: 'paragraph',
+		text: '*koyu\'s Particle Directory*',
+		style: { 'text-align': 'center', 'margin-bottom': 30 }
+	});
+
+	if (!items || items.length === 0) {
+		content.push({
+			type: 'paragraph',
+			text: 'No directory items found yet. Check back later!',
+			style: { 'text-align': 'center' }
+		});
+	} else {
+		content.push({ type: 'separator' });
+
+		for (const item of items) {
+			content.push({
+				type: 'paragraph',
+				text: `*${sanitizeText(item.title) || 'Untitled Item'}*`
+			});
+
+			if (item.description) {
+				content.push({
+					type: 'paragraph',
+					text: processTextWithLineBreaks(sanitizeText(item.description)),
+					style: { 'margin-top': 10 }
+				});
+			}
+
+			content.push({
+				type: 'button',
+				label: 'Visit',
+				action: item.url || '/'
+			});
+
+			content.push({ type: 'separator' });
+		}
+	}
+
+	// Add contact info to be added
+	content.push({
+		type: 'paragraph',
+		text: 'To suggest an addition to the directory, please contact me using the button below.',
+		style: { 'text-align': 'center', 'margin-top': 20, 'margin-bottom': 20 }
+	});
+	content.push({
+		type: 'button',
+		label: 'Contact Me',
+		action: '/contact.json'
+	});	
+
+	// Back to home button
+	content.push({
+		type: 'button',
+		label: 'Back to Home',
+		action: '/'
+	});
+
+	return {
+		format: 'particle',
+		title: 'Particle Directory',
 		content
 	};
 }
@@ -697,7 +775,7 @@ export async function convertNoteToParticle(note: any): Promise<ParticleDocument
 		{
 			type: 'button',
 			label: 'Back to Notes',
-			action: '/notes.json'
+			action: '/notes'
 		}
 	);
 
@@ -762,7 +840,7 @@ export function createNotesIndexParticle(notes: any[]): ParticleDocument {
 				content.push({
 					type: 'button',
 					label: 'Read More',
-					action: `/notes/${slug}.json`
+					action: `/notes/${slug}`
 				});
 			}
 
@@ -838,7 +916,7 @@ export function createBlogIndexParticle(posts: any[]): ParticleDocument {
 				content.push({
 					type: 'button',
 					label: 'Read More',
-					action: `/blog/${slug}.json`
+					action: `/blog/${slug}`
 				});
 			}
 
