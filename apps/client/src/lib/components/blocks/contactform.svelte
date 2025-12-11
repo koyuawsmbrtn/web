@@ -20,7 +20,8 @@
 		return new Promise((resolve, reject) => {
 			const reader = new FileReader();
 			reader.onload = () => {
-				const base64Content = typeof reader.result === 'string' ? reader.result.split(',')[1] ?? '' : '';
+				const base64Content =
+					typeof reader.result === 'string' ? (reader.result.split(',')[1] ?? '') : '';
 				resolve({ filename: file.name, content: base64Content, type: file.type });
 			};
 			reader.onerror = () => reject(new Error('Failed to read file'));
@@ -36,13 +37,14 @@
 
 		isSending = true;
 		// Use pre-encoded attachments if available; otherwise encode now
-		const files = encodedAttachments.length === attachments.length
-			? encodedAttachments
-			: await Promise.all(attachments.map(fileToBase64));
-		fetch("/api/resend", {
-			method: "POST",
+		const files =
+			encodedAttachments.length === attachments.length
+				? encodedAttachments
+				: await Promise.all(attachments.map(fileToBase64));
+		fetch('/api/resend', {
+			method: 'POST',
 			headers: {
-				"Content-Type": "application/json"
+				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify({
 				name,
@@ -51,13 +53,13 @@
 				attachments: files
 			})
 		})
-			.then(response => {
+			.then((response) => {
 				if (!response.ok) {
 					throw new Error('Network response was not ok');
 				}
 				return response.json();
 			})
-			.then(data => {
+			.then((data) => {
 				toast.success('Message sent successfully!');
 				name = '';
 				email = '';
@@ -65,7 +67,7 @@
 				attachments = [];
 				encodedAttachments = [];
 			})
-			.catch(error => {
+			.catch((error) => {
 				toast.error('Failed to send message.');
 				console.error('There was a problem with the fetch operation:', error);
 			})
@@ -77,17 +79,42 @@
 
 <div class="sanity-block my-2">
 	<p>
-		<Label>Your Name: <Input type="text" name="name" bind:value={name} required class="w-full md:w-1/2" /></Label>
+		<Label
+			>Your Name: <Input
+				type="text"
+				name="name"
+				bind:value={name}
+				required
+				class="w-full md:w-1/2"
+			/></Label
+		>
 	</p>
 	<p>
-		<Label>Your Email: <Input type="email" name="email" bind:value={email} required class="w-full md:w-1/2" /></Label>
+		<Label
+			>Your Email: <Input
+				type="email"
+				name="email"
+				bind:value={email}
+				required
+				class="w-full md:w-1/2"
+			/></Label
+		>
 	</p>
 	<p>
-		<Label>Message: <Textarea name="message" bind:value={message} required class="w-full md:w-1/2" /></Label>
+		<Label
+			>Message: <Textarea
+				name="message"
+				bind:value={message}
+				required
+				class="w-full md:w-1/2"
+			/></Label
+		>
 	</p>
 	<p>
 		<Label>
-			<br><p>Attachments:</p><br>
+			<br />
+			<p>Attachments:</p>
+			<br />
 			<FileDropZone
 				class="w-full md:w-1/2"
 				onUpload={async (files) => {
@@ -97,9 +124,11 @@
 				maxFiles={5}
 				maxFileSize={10 * 1024 * 1024}
 			/>
-				<div class="flex flex-col gap-2">
+		</Label>
+	</p>
+	<div class="flex flex-col gap-2">
 		{#each attachments as file, i (file.name)}
-			<div class="flex place-items-center justify-between mt-2 w-1/2">
+			<div class="mt-2 flex w-full place-items-center justify-between md:w-1/2">
 				<div class="flex place-items-center gap-2">
 					{#if file.type.startsWith('image/')}
 						{#await URL.createObjectURL(file) then src}
@@ -107,19 +136,19 @@
 								<img
 									{src}
 									alt={file.name}
-									class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-clip"
+									class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 overflow-clip"
 								/>
 							</div>
 						{/await}
 					{:else}
-						<div class="size-9 flex place-items-center justify-center rounded-md bg-muted">
+						<div class="bg-muted flex size-9 place-items-center justify-center rounded-md">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"
 								viewBox="0 0 24 24"
 								stroke-width="1.5"
 								stroke="currentColor"
-								class="size-5 text-muted-foreground"
+								class="text-muted-foreground size-5"
 							>
 								<path
 									stroke-linecap="round"
@@ -135,6 +164,7 @@
 					</div>
 				</div>
 				<Button
+					type="button"
 					variant="destructive"
 					size="icon"
 					onclick={() => {
@@ -150,19 +180,17 @@
 						stroke="currentColor"
 						class="size-4"
 					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							d="M6 18L18 6M6 6l12 12"
-						/>
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
 					</svg>
 				</Button>
 			</div>
 		{/each}
 	</div>
-		</Label>
-	</p><br>
+	<br />
 	<p>
-		<Button onclick={handleSubmit} disabled={!name.trim() || !email.trim() || !message.trim() || isSending}>Send</Button>
+		<Button
+			onclick={handleSubmit}
+			disabled={!name.trim() || !email.trim() || !message.trim() || isSending}>Send</Button
+		>
 	</p>
 </div>
