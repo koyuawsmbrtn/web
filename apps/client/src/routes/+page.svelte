@@ -28,6 +28,8 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={meta.title || pageData?.title || ''} />
 	<meta name="twitter:description" content={pageData?.description || ''} />
+	<link rel="me" href="https://koyu.social/@koyu" />
+	<meta name="fediverse:creator" content="@koyu@koyu.social" />
 </svelte:head>
 
 <main class="container mx-auto min-h-screen max-w-3xl md:max-w-4xl p-8 flex flex-col gap-4">

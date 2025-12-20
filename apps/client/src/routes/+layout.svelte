@@ -25,6 +25,8 @@
 		<link rel="preload" as="image" href={data.logo.url} fetchpriority="high" />
 	{/if}
 	<link rel="manifest" href="/manifest.webmanifest" />
+	<link rel="me" href="https://koyu.social/@koyu" />
+	<meta name="fediverse:creator" content="@koyu@koyu.social" />
 </svelte:head>
 
 <div class="scroll-smooth font-sans antialiased" style="--accent-color: {accentColor}">
