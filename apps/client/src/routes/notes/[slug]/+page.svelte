@@ -19,6 +19,8 @@
 	<meta name="twitter:title" content={meta.title || noteData?.title || ''} />
 	<meta name="twitter:description" content={meta.description || ''} />
 	<meta property="og:image" content={generateImageUrl(data.settings?.ogImage)} />
+	<link rel="me" href="https://koyu.social/@koyu" />
+	<meta name="fediverse:creator" content="@koyu@koyu.social" />
 </svelte:head>
 
 <main class="container mx-auto flex min-h-screen max-w-3xl flex-col gap-4 p-8 md:min-w-[58vw]">
