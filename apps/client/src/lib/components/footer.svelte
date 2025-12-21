@@ -24,7 +24,8 @@
 		RiXingLine,
 		RiGlobeLine,
 		RiFilmLine,
-		RiBlueskyLine
+		RiBlueskyLine,
+		RiMastodonLine
 	} from 'svelte-remixicon';
 
 
@@ -41,6 +42,7 @@
 		slug: {
 			current: string;
 		};
+		title: string;
 		url: string;
 	}
 
@@ -73,7 +75,8 @@
 			steam: RiSteamLine,
 			wordpress: RiWordpressLine,
 			rss: RiRssLine,
-			xing: RiXingLine
+			xing: RiXingLine,
+			mastodon: RiMastodonLine
 		};
 		return iconMap[slug] || RiGlobeLine;
 	};
@@ -92,7 +95,8 @@
 					*[_type == "social"] {
 						_id,
 						slug,
-						url
+						url,
+						title
 					}
 				`)
 			]);
@@ -125,7 +129,7 @@
 								rel="noopener noreferrer me"
 								class="text-neutral-400 hover:text-neutral-200 transition-colors"
 								aria-label={social.slug.current}
-								title={social.slug.current}
+								title={social.title}
 							>
 								<IconComponent size={20} />
 							</a>
