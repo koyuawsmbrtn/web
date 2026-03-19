@@ -7,6 +7,7 @@
 	import Skeleton from './ui/skeleton/skeleton.svelte';
 	import { generateImageUrl } from '$lib/helper/image-url';
 	import { browser } from '$app/environment';
+	import { RiPlayLine, RiPauseLine } from 'svelte-remixicon';
 
 	interface Page {
 		_id: string;
@@ -43,6 +44,8 @@
 	let scrollY = $state(0);
 	let activeIndicator = $state<HTMLDivElement | null>(null);
 	let navigationContainer = $state<HTMLDivElement | null>(null);
+	let nowPlaying = $state("");
+	let isPlaying = $state(false);
 
 	// Scroll-based animations
 	const logoX = tweened(0, { duration: 300, easing: cubicOut });
@@ -66,7 +69,7 @@
 		if (browser) {
 			const logoOffset = Math.min(scrollY / 100, 1) * -24;
 			const opacityValue = Math.max(1 - scrollY / 100, 0);
-			
+
 			logoX.set(logoOffset);
 			linksOpacity.set(opacityValue);
 		}
@@ -85,6 +88,29 @@
 			scrollY = window.scrollY;
 		}
 	}
+
+	// last.fm player events
+	function getLastFm() {
+     	const LASTFM_API_KEY = "d74f9fdb9c79a50ffac2ca0700892ca1";
+     	const username = "bubblineyuri";
+     	const url = "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&format=json&api_key=" + LASTFM_API_KEY + "&limit=1&user=" + username;
+     	fetch(url)
+    		.then(response => response.json())
+    		.then(data => {
+    		  console.log(data);
+              if (data.recenttracks && data.recenttracks.track && data.recenttracks.track.length > 0) {
+                const track = data.recenttracks.track[0];
+                nowPlaying = track.artist["#text"] + " – " + track.name;
+                isPlaying = true;
+              } else {
+                const track = data.recenttracks.track[0];
+                nowPlaying = track.name + " by " + track.artist["#text"];
+                isPlaying = false;
+              }
+    		});
+	}
+
+	getLastFm();
 
 	onMount(() => {
 		if (browser) {
@@ -108,11 +134,11 @@
 
 		const linkElements = navigationContainer.querySelectorAll('[data-nav-link]');
 		const activeElement = linkElements[activeIndex];
-		
+
 		if (activeElement) {
 			const containerRect = navigationContainer.getBoundingClientRect();
 			const elementRect = activeElement.getBoundingClientRect();
-			
+
 			indicatorPosition.set({
 				left: elementRect.left - containerRect.left,
 				width: elementRect.width
@@ -194,9 +220,9 @@
 
 			<!-- Desktop Navigation -->
 			<div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-center">
-				<div 
+				<div
 					bind:this={navigationContainer}
-					style="opacity: {$linksOpacity}; pointer-events: {$linksOpacity < 0.5 ? 'none' : 'auto'}" 
+					style="opacity: {$linksOpacity}; pointer-events: {$linksOpacity < 0.5 ? 'none' : 'auto'}"
 					class="relative flex items-center space-x-1 bg-neutral-900/50 rounded-full p-1 transition-opacity duration-300"
 				>
 					<!-- Active indicator with slide animation -->
@@ -205,7 +231,7 @@
 						class="absolute top-1 bottom-1 bg-yellow-400/20 rounded-full transition-all duration-400 ease-out"
 						style="left: {$indicatorPosition.left}px; width: {$indicatorPosition.width}px;"
 					></div>
-					
+
 					{#if isLoading}
 						<div class="flex items-center space-x-2 px-4 py-2">
 							<Skeleton class="w-12 h-4 bg-neutral-700" />
@@ -229,6 +255,18 @@
 						{/if}
 					{/if}
 				</div>
+			</div>
+
+			<!-- Now Playing -->
+			<div class="ml-auto flex items-center text-sm text-neutral-300">
+				<p class="flex items-center">
+				    {#if isPlaying}
+				        <RiPlayLine class="inline-block mr-2" />
+				    {:else}
+				        <RiPauseLine class="inline-block mr-2" />
+				    {/if}
+				    {nowPlaying}
+				</p>
 			</div>
 
 			<!-- Mobile menu button -->
