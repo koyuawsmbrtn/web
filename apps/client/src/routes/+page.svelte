@@ -2,6 +2,7 @@
 	import type { PageData } from './$types';
 	import SanityBlock from '$lib/components/sanity-block.svelte';
 	import { generateImageUrl } from '$lib/helper/image-url';
+	import Name from '$lib/components/name.svelte';
 
 	let { data }: { data: PageData } = $props();
 
@@ -36,6 +37,7 @@
 	{#if pageData}
 		{#if pageData.body}
 			<div class="items-start mt-2 mb-8 text-left" style="max-width: 100%;">
+				<Name />
 				<SanityBlock content={pageData.body} />
 			</div>
 		{:else}

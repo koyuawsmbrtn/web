@@ -25,6 +25,7 @@
 		"@sanity/visual-editing": "^3.2.4",
 		"@sveltejs/adapter-cloudflare-workers": "^2.9.0",
 		"lucide-svelte": "^0.552.0",
+		"motion": "^12.38.0",
 		"zod": "^4.3.6"
 	},
 	"devDependencies": {
