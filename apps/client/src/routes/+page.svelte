@@ -3,6 +3,7 @@
 	import SanityBlock from '$lib/components/sanity-block.svelte';
 	import { generateImageUrl } from '$lib/helper/image-url';
 	import Name from '$lib/components/name.svelte';
+	import Avatars from '$lib/components/avatars.svelte';
 
 	let { data }: { data: PageData } = $props();
 
@@ -38,7 +39,9 @@
 		{#if pageData.body}
 			<div class="items-start mt-2 mb-8 text-left" style="max-width: 100%;">
 				<Name />
-				<SanityBlock content={pageData.body} />
+				<div class="block mb-16"></div>
+				<h1>My friends</h1><br />
+				<Avatars />
 			</div>
 		{:else}
 			<p class="text-neutral-600">No content available.</p>
