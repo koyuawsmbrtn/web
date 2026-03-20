@@ -19,6 +19,7 @@
 	let error = $state<string | null>(null);
 	let isLoading = $state(true);
 	let gridEl = $state<HTMLElement>(undefined!);
+	let hasPlayed = $state(false);
 
 	const STAGGER_DELAY = 0.08;
 
@@ -66,9 +67,13 @@
 		);
 
 		items.forEach((item) => observer.observe(item));
+
+		sessionStorage.setItem('avatars-animation-played', 'true');
 	}
 
 	onMount(async () => {
+		hasPlayed = sessionStorage.getItem('avatars-animation-played') === 'true';
+
 		try {
 			const data = await client.fetch<Avatar[]>(`
 				*[_type == "avatar"] {
@@ -88,7 +93,7 @@
 	});
 
 	$effect(() => {
-		if (!isLoading && avatars.length > 0) {
+		if (!isLoading && avatars.length > 0 && !hasPlayed) {
 			requestAnimationFrame(() => {
 				animateAvatars();
 			});
@@ -123,7 +128,7 @@
 						rel="noopener noreferrer"
 						class="group avatar-item"
 						data-index={i}
-						style="opacity: 0; filter: blur(12px); transform: translateY(8px);"
+						style={hasPlayed ? '' : 'opacity: 0; filter: blur(12px); transform: translateY(8px);'}
 					>
 						<div class="aspect-square overflow-hidden rounded-full border border-neutral-700 transition-all duration-300 hover:border-neutral-500">
 							<img

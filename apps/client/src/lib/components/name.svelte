@@ -31,6 +31,16 @@
         const totalSlides = slides.length;
         const finalY = -(totalSlides - 1) * ITEM_HEIGHT;
 
+        if (sessionStorage.getItem('name-animation-played')) {
+            trackEl.style.transform = `translateY(${finalY}px)`;
+            bottomFadeEl.style.opacity = '0';
+            topFadeEl.style.opacity = '0';
+            containerEl.style.width = '90px';
+            containerEl.style.verticalAlign = 'top';
+            containerEl.style.marginTop = '-4px';
+            return;
+        }
+
         const scrollAnim = animate(
             trackEl,
             { y: [0, finalY] },
@@ -77,7 +87,9 @@
                     duration: 0.5,
                     ease: widthEase,
                 }
-            );
+            ).then(() => {
+                sessionStorage.setItem('name-animation-played', 'true');
+            });
         });
     });
 </script>
