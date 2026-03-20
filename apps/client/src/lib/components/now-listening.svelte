@@ -5,7 +5,7 @@
 
 	const LASTFM_API_KEY = 'd74f9fdb9c79a50ffac2ca0700892ca1';
 	const username = 'bubblineyuri';
-	const REFRESH_INTERVAL_MS = 30_000;
+	const REFRESH_INTERVAL_MS = 5_000;
 	const SESSION_KEY = 'listening-animation-played';
 
 	interface LastFmTrack {
@@ -153,7 +153,15 @@
 					track = newTrack;
 					fetchPreview(newTrack.artist['#text'], newTrack.name);
 				} else {
-					track = newTrack;
+					// Same track — merge only mutable fields in-place to avoid re-render
+					if (newTrack['@attr']) {
+						track['@attr'] = newTrack['@attr'];
+					} else {
+						delete track['@attr'];
+					}
+					if (newTrack.date) {
+						track.date = newTrack.date;
+					}
 				}
 			} else {
 				track = null;
