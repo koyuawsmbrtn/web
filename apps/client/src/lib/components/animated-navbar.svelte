@@ -44,8 +44,6 @@
 	let scrollY = $state(0);
 	let activeIndicator = $state<HTMLDivElement | null>(null);
 	let navigationContainer = $state<HTMLDivElement | null>(null);
-	let nowPlaying = $state("");
-	let isPlaying = $state(false);
 
 	// Scroll-based animations
 	const logoX = tweened(0, { duration: 300, easing: cubicOut });
@@ -88,29 +86,6 @@
 			scrollY = window.scrollY;
 		}
 	}
-
-	// last.fm player events
-	function getLastFm() {
-     	const LASTFM_API_KEY = "d74f9fdb9c79a50ffac2ca0700892ca1";
-     	const username = "bubblineyuri";
-     	const url = "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&format=json&api_key=" + LASTFM_API_KEY + "&limit=1&user=" + username;
-     	fetch(url)
-    		.then(response => response.json())
-    		.then(data => {
-    		  console.log(data);
-              if (data.recenttracks && data.recenttracks.track && data.recenttracks.track.length > 0) {
-                const track = data.recenttracks.track[0];
-                nowPlaying = track.artist["#text"] + " – " + track.name;
-                isPlaying = true;
-              } else {
-                const track = data.recenttracks.track[0];
-                nowPlaying = track.name + " by " + track.artist["#text"];
-                isPlaying = false;
-              }
-    		});
-	}
-
-	getLastFm();
 
 	onMount(() => {
 		if (browser) {
@@ -255,24 +230,6 @@
 						{/if}
 					{/if}
 				</div>
-			</div>
-
-			<!-- Now Playing (desktop only) -->
-			<div class="hidden sm:flex ml-auto items-center shrink-0 max-w-50 lg:max-w-70">
-				{#if nowPlaying}
-					<p class="flex items-center text-sm text-neutral-400 truncate gap-1.5">
-						{#if isPlaying}
-							<span class="shrink-0 flex items-center">
-								<RiPlayLine size="14" />
-							</span>
-						{:else}
-							<span class="shrink-0 flex items-center">
-								<RiPauseLine size="14" />
-							</span>
-						{/if}
-						<span class="truncate">{nowPlaying}</span>
-					</p>
-				{/if}
 			</div>
 
 			<!-- Mobile menu button -->

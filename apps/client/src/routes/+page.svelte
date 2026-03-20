@@ -23,6 +23,7 @@
 	let divider1El = $state<HTMLElement>(undefined!);
 	let divider2El = $state<HTMLElement>(undefined!);
 	let hasPlayed = $state(false);
+	let isWidgetPlaying = $state(false);
 
 	const EASE: [number, number, number, number] = [0.4, 0.0, 0.2, 1.0];
 
@@ -137,11 +138,11 @@
 					<SocialLinks />
 				</div>
 			</div>
-		</section>
 
-		<!-- Now Listening -->
-		<section class="container mx-auto max-w-3xl md:max-w-4xl px-8 py-6">
-			<NowListening />
+			<!-- Now Listening — top-right, sticky only when playing -->
+			<div class="now-listening-float" class:now-listening-sticky={isWidgetPlaying}>
+				<NowListening bind:playing={isWidgetPlaying} />
+			</div>
 		</section>
 
 		<!-- Divider 1 -->
@@ -208,6 +209,32 @@
 {/if}
 
 <style>
+	.now-listening-float {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		z-index: 40;
+		max-width: 20rem;
+		transition: none;
+	}
+
+	.now-listening-float.now-listening-sticky {
+		position: fixed;
+		top: 4.5rem;
+	}
+
+	@media (max-width: 767px) {
+		.now-listening-float {
+			display: none;
+		}
+	}
+
+	@media (min-width: 1280px) {
+		.now-listening-float {
+			right: 2rem;
+		}
+	}
+
 	.hero-glow {
 		position: absolute;
 		top: -40%;

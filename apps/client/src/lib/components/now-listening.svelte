@@ -24,6 +24,12 @@
 		artworkUrl100: string;
 	}
 
+	interface Props {
+		playing?: boolean;
+	}
+
+	let { playing = $bindable(false) }: Props = $props();
+
 	let track = $state<LastFmTrack | null>(null);
 	let isLoading = $state(true);
 	let hasError = $state(false);
@@ -377,6 +383,7 @@
 		if (isPreviewPlaying && previewAudio) {
 			previewAudio.pause();
 			isPreviewPlaying = false;
+			playing = false;
 			if (animationFrameId) {
 				cancelAnimationFrame(animationFrameId);
 				animationFrameId = null;
@@ -404,6 +411,7 @@
 
 			previewAudio.addEventListener('ended', () => {
 				isPreviewPlaying = false;
+				playing = false;
 				previewProgress = 0;
 				startIdleWave();
 			});
@@ -411,6 +419,7 @@
 			previewAudio.addEventListener('error', () => {
 				isLoadingPreview = false;
 				isPreviewPlaying = false;
+				playing = false;
 				console.error('Failed to load preview audio');
 				startIdleWave();
 			});
@@ -430,6 +439,7 @@
 
 		previewAudio.play().then(() => {
 			isPreviewPlaying = true;
+			playing = true;
 			isLoadingPreview = false;
 			startActiveWave();
 		}).catch((err) => {
