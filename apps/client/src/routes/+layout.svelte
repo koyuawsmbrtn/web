@@ -8,11 +8,40 @@
 	import ScrollToTop from '$lib/components/scroll-to-top.svelte';
 	import { Toaster } from '$lib/components/ui/sonner/index.js';
 	import { generateImageUrl } from '$lib/helper/image-url';
+	import { onNavigate } from '$app/navigation';
+	import { onMount } from 'svelte';
+	import Lenis from 'lenis';
 
 	let { children, data } = $props();
-	
+
+	onMount(() => {
+		new Lenis({
+			autoRaf: true,
+		});
+	});
+
+
+
 	// Use server-loaded accent color instead of client-side fetch
 	const accentColor = $derived(data.accentColor || '#000000');
+
+	onNavigate((navigation) => {
+		if (!document.startViewTransition) {
+			window.scrollTo({ top: 0 });
+			return;
+		}
+
+		return new Promise((resolve) => {
+			const transition = document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+
+			transition.finished.then(() => {
+				window.scrollTo({ top: 0 });
+			});
+		});
+	});
 </script>
 
 <svelte:head>
@@ -35,6 +64,7 @@
 		id="main-content"
 		tabindex="-1"
 		class="min-h-[calc(100vh-11.3rem)] focus:outline-none md:min-h-[calc(100vh-9.05rem)]"
+		style="view-transition-name: main-content;"
 	>
 		<Toaster />
 		{@render children()}
@@ -50,6 +80,30 @@
 </div>
 
 <style>
+	@keyframes fade-in {
+		from { opacity: 0; }
+	}
+
+	@keyframes fade-out {
+		to { opacity: 0; }
+	}
+
+	:global(::view-transition-old(root)) {
+		animation: none;
+	}
+
+	:global(::view-transition-new(root)) {
+		animation: none;
+	}
+
+	:global(::view-transition-old(main-content)) {
+		animation: 200ms ease-out both fade-out;
+	}
+
+	:global(::view-transition-new(main-content)) {
+		animation: 300ms ease-in both fade-in;
+	}
+
 	/* Link styling only for content inside sanity-block */
 	:global(.sanity-block a) {
 		color: var(--accent-color, #000);
