@@ -644,16 +644,16 @@
 			<div class="card skeleton-card">
 				<div class="skeleton-art"></div>
 				<div class="skeleton-info">
-					<div class="skeleton-line skeleton-line-wide"></div>
-					<div class="skeleton-line skeleton-line-medium"></div>
-					<div class="skeleton-line skeleton-line-narrow"></div>
+					<div class="skeleton-line skeleton-track"></div>
+					<div class="skeleton-line skeleton-artist"></div>
+					<div class="skeleton-line skeleton-status"></div>
 				</div>
 			</div>
 		</div>
 	</div>
 {:else if !hasError && track}
 	<div
-		class="card-wrapper"
+		class="card-wrapper min-w-2xs"
 		bind:this={cardEl}
 		style={hasPlayed ? '' : 'opacity: 0; filter: blur(12px); transform: translateY(12px);'}
 	>
@@ -774,6 +774,7 @@
 
 	.card-container {
 		position: relative;
+		min-width: 18rem;
 		max-width: 24rem;
 		overflow: hidden;
 		border-radius: 1rem;
@@ -1080,28 +1081,36 @@
 	.skeleton-info {
 		display: flex;
 		flex-direction: column;
-		gap: 0.375rem;
+		gap: 0.5rem;
 		flex: 1;
-		min-width: 0;
+		min-width: 8rem;
 	}
 
 	.skeleton-line {
-		height: 0.625rem;
 		border-radius: 0.25rem;
 		background: oklch(0.25 0 0);
 		animation: shimmer 1.5s ease-in-out infinite;
 	}
 
-	.skeleton-line-wide {
+	/* Track name — matches .track-name font-size: 0.875rem, line-height: 1.25rem */
+	.skeleton-track {
+		height: 0.875rem;
 		width: 75%;
+		animation-delay: 0s;
 	}
 
-	.skeleton-line-medium {
+	/* Artist name — matches .artist-name font-size: 0.75rem, line-height: 1rem */
+	.skeleton-artist {
+		height: 0.6875rem;
 		width: 55%;
+		animation-delay: 0.15s;
 	}
 
-	.skeleton-line-narrow {
+	/* Status line — matches .status-line font-size: 0.75rem */
+	.skeleton-status {
+		height: 0.5rem;
 		width: 35%;
+		animation-delay: 0.3s;
 	}
 
 	@keyframes shimmer {
