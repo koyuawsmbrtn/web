@@ -5,7 +5,7 @@
 
 	const LASTFM_API_KEY = 'd74f9fdb9c79a50ffac2ca0700892ca1';
 	const username = 'bubblineyuri';
-	const REFRESH_INTERVAL_MS = 1_000;
+	const REFRESH_INTERVAL_MS = 30_000;
 	const SESSION_KEY = 'listening-animation-played';
 
 	interface LastFmTrack {
