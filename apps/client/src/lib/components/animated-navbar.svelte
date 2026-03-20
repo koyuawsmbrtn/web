@@ -257,16 +257,22 @@
 				</div>
 			</div>
 
-			<!-- Now Playing -->
-			<div class="ml-auto flex items-center text-sm text-neutral-300">
-				<p class="flex items-center">
-				    {#if isPlaying}
-				        <RiPlayLine class="inline-block mr-2" />
-				    {:else}
-				        <RiPauseLine class="inline-block mr-2" />
-				    {/if}
-				    {nowPlaying}
-				</p>
+			<!-- Now Playing (desktop only) -->
+			<div class="hidden sm:flex ml-auto items-center shrink-0 max-w-50 lg:max-w-70">
+				{#if nowPlaying}
+					<p class="flex items-center text-sm text-neutral-400 truncate gap-1.5">
+						{#if isPlaying}
+							<span class="shrink-0 flex items-center">
+								<RiPlayLine size="14" />
+							</span>
+						{:else}
+							<span class="shrink-0 flex items-center">
+								<RiPauseLine size="14" />
+							</span>
+						{/if}
+						<span class="truncate">{nowPlaying}</span>
+					</p>
+				{/if}
 			</div>
 
 			<!-- Mobile menu button -->
