@@ -19,8 +19,6 @@
 
     let trackEl: HTMLElement;
     let containerEl: HTMLElement;
-    let bottomFadeEl: HTMLElement;
-    let topFadeEl: HTMLElement;
     let measureEl: HTMLElement;
 
     const SCROLL_DURATION = 2.4;
@@ -33,8 +31,8 @@
 
         if (sessionStorage.getItem('name-animation-played')) {
             trackEl.style.transform = `translateY(${finalY}px)`;
-            bottomFadeEl.style.opacity = '0';
-            topFadeEl.style.opacity = '0';
+            containerEl.style.maskImage = 'none';
+            containerEl.style.webkitMaskImage = 'none';
             containerEl.style.width = '90px';
             containerEl.style.verticalAlign = 'top';
             containerEl.style.marginTop = '-4px';
@@ -51,27 +49,10 @@
             }
         );
 
-        animate(
-            bottomFadeEl,
-            { opacity: [1, 1, 0] },
-            {
-                duration: SCROLL_DURATION,
-                ease: SCROLL_EASE,
-                delay: SCROLL_DELAY,
-            }
-        );
-
-        animate(
-            topFadeEl,
-            { opacity: [1, 1, 0] },
-            {
-                duration: SCROLL_DURATION,
-                ease: SCROLL_EASE,
-                delay: SCROLL_DELAY,
-            }
-        );
-
         scrollAnim.then(() => {
+            // Remove the mask so the final word displays cleanly
+            containerEl.style.maskImage = 'none';
+            containerEl.style.webkitMaskImage = 'none';
             const currentWidth = containerEl.offsetWidth;
 
             const widthEase: [number, number, number, number] = [0.4, 0.0, 0.2, 1.0];
@@ -95,7 +76,7 @@
 </script>
 
 <span class="measure-hidden" bind:this={measureEl}>{lastSlide}</span>
-<div class="sanity-block my-2"><h1>Hi, I'm <span class="slot-container" bind:this={containerEl} style="width: {maxLen + 2}ch; height: {ITEM_HEIGHT}px;"><span class="slot-track" bind:this={trackEl}>{#each slides as slide}<span class="slot-item" style="height: {ITEM_HEIGHT}px;">{slide}</span>{/each}</span><span class="slot-fade-top" bind:this={topFadeEl}></span><span class="slot-fade-bottom" bind:this={bottomFadeEl}></span></span> (usually called Leonie in real life) and I am a programmer and sysadmin located in Northern Germany establishing internet services for you and your friends. I'm your average computer nerd trying to liberate the cyberspace for everyone. <a href="/about">More about me <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" class="stroke-accent inline" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a></h1></div>
+<div class="sanity-block my-2"><h1>Hi, I'm <span class="slot-container" bind:this={containerEl} style="width: {maxLen + 2}ch; height: {ITEM_HEIGHT}px;"><span class="slot-track" bind:this={trackEl}>{#each slides as slide}<span class="slot-item" style="height: {ITEM_HEIGHT}px;">{slide}</span>{/each}</span></span> (usually called Leonie in real life) and I am a programmer and sysadmin located in Northern Germany establishing internet services for you and your friends. I'm your average computer nerd trying to liberate the cyberspace for everyone. <a href="/about">More about me <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" class="stroke-accent inline" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a></h1></div>
 
 <style>
     .measure-hidden {
@@ -111,6 +92,20 @@
         position: relative;
         overflow: hidden;
         vertical-align: bottom;
+        -webkit-mask-image: linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 35%,
+            black 65%,
+            transparent 100%
+        );
+        mask-image: linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 35%,
+            black 65%,
+            transparent 100%
+        );
     }
 
     .slot-track {
@@ -126,25 +121,5 @@
         text-align: center;
         flex-shrink: 0;
         white-space: nowrap;
-    }
-
-    .slot-fade-top,
-    .slot-fade-bottom {
-        position: absolute;
-        left: 0;
-        right: 0;
-        height: 40%;
-        pointer-events: none;
-        z-index: 2;
-    }
-
-    .slot-fade-top {
-        top: 0;
-        background: linear-gradient(to bottom, oklch(0.145 0 0) 0%, transparent 100%);
-    }
-
-    .slot-fade-bottom {
-        bottom: 0;
-        background: linear-gradient(to top, oklch(0.145 0 0) 0%, transparent 100%);
     }
 </style>
