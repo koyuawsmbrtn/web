@@ -430,6 +430,12 @@
 				}
 				startIdleWave();
 			});
+			// Reset progress after the ring fades out
+			setTimeout(() => {
+				if (!isPreviewPlaying) {
+					previewProgress = 0;
+				}
+			}, 550);
 			return;
 		}
 
@@ -679,7 +685,11 @@
 
 					<!-- Progress ring around album art when playing -->
 					{#if isPreviewPlaying || previewProgress > 0}
-						<svg class="progress-ring" viewBox="0 0 60 60">
+						<svg
+							class="progress-ring"
+							class:progress-ring-hidden={!isPreviewPlaying && previewProgress > 0}
+							viewBox="0 0 60 60"
+						>
 							<circle
 								class="progress-ring-bg"
 								cx="30"
@@ -792,6 +802,11 @@
 		flex-shrink: 0;
 		border-radius: 0.75rem;
 		overflow: hidden;
+		transition: border-radius 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.is-playing-preview .album-art-wrapper {
+		border-radius: 50%;
 	}
 
 	.album-art {
@@ -800,6 +815,11 @@
 		border-radius: 0.75rem;
 		object-fit: cover;
 		flex-shrink: 0;
+		transition: border-radius 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.is-playing-preview .album-art {
+		border-radius: 50%;
 	}
 
 	.album-art-placeholder {
@@ -813,6 +833,11 @@
 		font-size: 1.5rem;
 		background: oklch(0.2 0 0 / 80%);
 		color: oklch(0.5 0 0);
+		transition: border-radius 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.is-playing-preview .album-art-placeholder {
+		border-radius: 50%;
 	}
 
 	.preview-btn {
@@ -826,10 +851,14 @@
 		border: none;
 		cursor: pointer;
 		opacity: 0;
-		transition: opacity 0.2s ease;
+		transition: opacity 0.2s ease, border-radius 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 		border-radius: 0.75rem;
 		z-index: 3;
 		padding: 0;
+	}
+
+	.is-playing-preview .preview-btn {
+		border-radius: 50%;
 	}
 
 	.preview-btn:hover {
@@ -865,6 +894,12 @@
 		height: calc(100% + 4px);
 		z-index: 4;
 		pointer-events: none;
+		opacity: 1;
+		transition: opacity 0.5s ease;
+	}
+
+	.progress-ring-hidden {
+		opacity: 0;
 	}
 
 	.progress-ring-bg {
