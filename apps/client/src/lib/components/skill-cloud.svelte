@@ -287,6 +287,18 @@
 		};
 	}
 
+	function nonPassiveTouch(node: HTMLElement, index: number) {
+		function handler(e: TouchEvent) {
+			onPointerDown(e, index);
+		}
+		node.addEventListener('touchstart', handler, { passive: false });
+		return {
+			destroy() {
+				node.removeEventListener('touchstart', handler);
+			}
+		};
+	}
+
 	function onPointerDown(e: MouseEvent | TouchEvent, index: number) {
 		e.preventDefault();
 		const pos = getPointerPos(e);
@@ -463,7 +475,7 @@
 						--skill-color: {getCategoryColor(skill.category)};
 					"
 					onmousedown={(e: MouseEvent) => onPointerDown(e, i)}
-					ontouchstart={(e: TouchEvent) => onPointerDown(e, i)}
+					use:nonPassiveTouch={i}
 					role="listitem"
 				>
 					{skill.name}
