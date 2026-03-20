@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { client } from '$lib/sanity';
 	import Avatars from '../avatars.svelte';
+	import SkillCloud from '../skill-cloud.svelte';
 	import Contactform from './contactform.svelte';
 	import LastfmCard from './lastfm-card.svelte';
 
@@ -35,7 +36,12 @@
 					title,
 					html,
 					type,
-					tag
+					tag,
+					"skills": *[_type == "skillCloud"][0].skills[] {
+						name,
+						category,
+						proficiency
+					}
 				}
 			`, { blockId: value.blockReference._ref });
 
@@ -66,6 +72,8 @@
 		<Contactform />
 	{:else if blockref.tag === "nowplaying"}
 		<LastfmCard />
+	{:else if blockref.tag === "skills"}
+		<SkillCloud skills={blockref.skills} />
 	{:else if blockref.html?.code}
 		<div class="sanity-block my-2">
 			{@html blockref.html.code}
