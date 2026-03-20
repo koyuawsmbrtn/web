@@ -47,8 +47,13 @@
 	let animationFrameId: number | null = null;
 	let audioContext: AudioContext | null = null;
 	let analyser: AnalyserNode | null = null;
+	let gainNode: GainNode | null = null;
 	let sourceNode: MediaElementAudioSourceNode | null = null;
 	let sourceConnected = false;
+
+	const FADE_DURATION = 0.45; // seconds
+	const TARGET_VOLUME = 0.5;
+	let fadeOutTimer: ReturnType<typeof setTimeout> | null = null;
 
 	// Resolved accent color for canvas drawing (CSS vars can't be used in canvas API)
 	let accentR = 200;
@@ -199,13 +204,46 @@
 			analyser.fftSize = 256;
 			analyser.smoothingTimeConstant = 0.8;
 
+			gainNode = audioContext.createGain();
+			gainNode.gain.value = 0; // start silent — fadeIn will ramp up
+
 			sourceNode = audioContext.createMediaElementSource(previewAudio);
-			sourceNode.connect(analyser);
+			// Chain: source → gain → analyser → destination
+			sourceNode.connect(gainNode);
+			gainNode.connect(analyser);
 			analyser.connect(audioContext.destination);
 			sourceConnected = true;
 		} catch (err) {
 			console.error('Failed to setup audio analyser:', err);
 		}
+	}
+
+	/** Smoothly ramp gain from current value to target over FADE_DURATION. */
+	function fadeIn() {
+		if (!gainNode || !audioContext) return;
+		gainNode.gain.cancelScheduledValues(audioContext.currentTime);
+		gainNode.gain.setValueAtTime(gainNode.gain.value, audioContext.currentTime);
+		gainNode.gain.linearRampToValueAtTime(TARGET_VOLUME, audioContext.currentTime + FADE_DURATION);
+	}
+
+	/** Smoothly ramp gain to 0, then call the callback (e.g. pause). */
+	function fadeOut(onComplete?: () => void) {
+		if (!gainNode || !audioContext) {
+			onComplete?.();
+			return;
+		}
+		if (fadeOutTimer) {
+			clearTimeout(fadeOutTimer);
+			fadeOutTimer = null;
+		}
+		gainNode.gain.cancelScheduledValues(audioContext.currentTime);
+		gainNode.gain.setValueAtTime(gainNode.gain.value, audioContext.currentTime);
+		gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + FADE_DURATION);
+		// Wait for the fade to finish, then run callback
+		fadeOutTimer = setTimeout(() => {
+			fadeOutTimer = null;
+			onComplete?.();
+		}, FADE_DURATION * 1000 + 30); // small buffer to ensure ramp completes
 	}
 
 	/** Draw idle ambient wave (no audio data — pure sine-based). */
@@ -381,15 +419,17 @@
 		if (!previewUrl) return;
 
 		if (isPreviewPlaying && previewAudio) {
-			previewAudio.pause();
+			// Fade out, then pause
 			isPreviewPlaying = false;
 			playing = false;
-			if (animationFrameId) {
-				cancelAnimationFrame(animationFrameId);
-				animationFrameId = null;
-			}
-			// Go back to idle wave
-			startIdleWave();
+			fadeOut(() => {
+				previewAudio?.pause();
+				if (animationFrameId) {
+					cancelAnimationFrame(animationFrameId);
+					animationFrameId = null;
+				}
+				startIdleWave();
+			});
 			return;
 		}
 
@@ -397,7 +437,8 @@
 			isLoadingPreview = true;
 			previewAudio = new Audio(previewUrl);
 			previewAudio.crossOrigin = 'anonymous';
-			previewAudio.volume = 0.5;
+			// Volume is controlled via GainNode, so set the element to full
+			previewAudio.volume = 1;
 
 			previewAudio.addEventListener('canplaythrough', () => {
 				isLoadingPreview = false;
@@ -410,6 +451,11 @@
 			});
 
 			previewAudio.addEventListener('ended', () => {
+				// The track ended naturally — fade is not needed, but reset gain
+				if (gainNode) {
+					gainNode.gain.cancelScheduledValues(0);
+					gainNode.gain.value = 0;
+				}
 				isPreviewPlaying = false;
 				playing = false;
 				previewProgress = 0;
@@ -441,6 +487,7 @@
 			isPreviewPlaying = true;
 			playing = true;
 			isLoadingPreview = false;
+			fadeIn();
 			startActiveWave();
 		}).catch((err) => {
 			console.error('Playback failed:', err);
@@ -514,18 +561,34 @@
 		return () => {
 			clearInterval(interval);
 			window.removeEventListener('resize', handleResize);
+			if (fadeOutTimer) {
+				clearTimeout(fadeOutTimer);
+				fadeOutTimer = null;
+			}
 			if (previewAudio) {
-				previewAudio.pause();
-				previewAudio = null;
+				// Quick fade on destroy so there's no pop
+				if (gainNode && audioContext && audioContext.state === 'running') {
+					gainNode.gain.cancelScheduledValues(audioContext.currentTime);
+					gainNode.gain.setValueAtTime(gainNode.gain.value, audioContext.currentTime);
+					gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + 0.15);
+					setTimeout(() => {
+						previewAudio?.pause();
+						previewAudio = null;
+						audioContext?.close();
+					}, 180);
+				} else {
+					previewAudio.pause();
+					previewAudio = null;
+					audioContext?.close();
+				}
+			} else if (audioContext) {
+				audioContext.close();
 			}
 			if (animationFrameId) {
 				cancelAnimationFrame(animationFrameId);
 				animationFrameId = null;
 			}
 			idleWaveRunning = false;
-			if (audioContext) {
-				audioContext.close();
-			}
 		};
 	});
 
