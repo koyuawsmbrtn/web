@@ -5,6 +5,7 @@
 	import Footer from '$lib/components/footer.svelte';
 	import '../app.css';
 	import Navbar from '$lib/components/animated-navbar.svelte';
+	import NowListening from '$lib/components/now-listening.svelte';
 	import ScrollToTop from '$lib/components/scroll-to-top.svelte';
 	import { Toaster } from '$lib/components/ui/sonner/index.js';
 	import { generateImageUrl } from '$lib/helper/image-url';
@@ -13,6 +14,8 @@
 	import Lenis from 'lenis';
 
 	let { children, data } = $props();
+
+	let isWidgetPlaying = $state(false);
 
 	onMount(() => {
 		new Lenis({
@@ -60,6 +63,12 @@
 
 <div class="scroll-smooth font-sans antialiased" style="--accent-color: {accentColor}">
 	<Navbar settings={data.settings} navigationItems={data.navigation} />
+
+	<!-- Now Listening — global, persists across navigations, outside view-transition scope -->
+	<div class="now-listening-float" class:now-listening-sticky={isWidgetPlaying}>
+		<NowListening bind:playing={isWidgetPlaying} />
+	</div>
+
 	<main
 		id="main-content"
 		tabindex="-1"
@@ -80,6 +89,31 @@
 </div>
 
 <style>
+	.now-listening-float {
+		position: absolute;
+		top: 5rem;
+		right: 1rem;
+		z-index: 40;
+		max-width: 20rem;
+	}
+
+	.now-listening-float.now-listening-sticky {
+		position: fixed;
+		top: 4.5rem;
+	}
+
+	@media (max-width: 767px) {
+		.now-listening-float {
+			display: none;
+		}
+	}
+
+	@media (min-width: 1280px) {
+		.now-listening-float {
+			right: 2rem;
+		}
+	}
+
 	@keyframes fade-in {
 		from { opacity: 0; }
 	}

@@ -5,7 +5,7 @@
 	import Name from '$lib/components/name.svelte';
 	import TypedTagline from '$lib/components/typed-tagline.svelte';
 	import SocialLinks from '$lib/components/social-links.svelte';
-	import NowListening from '$lib/components/now-listening.svelte';
+
 	import Avatars from '$lib/components/avatars.svelte';
 	import LatestPosts from '$lib/components/latest-posts.svelte';
 	import Cta from '$lib/components/cta.svelte';
@@ -23,7 +23,7 @@
 	let divider1El = $state<HTMLElement>(undefined!);
 	let divider2El = $state<HTMLElement>(undefined!);
 	let hasPlayed = $state(false);
-	let isWidgetPlaying = $state(false);
+
 
 	const EASE: [number, number, number, number] = [0.4, 0.0, 0.2, 1.0];
 
@@ -139,10 +139,6 @@
 				</div>
 			</div>
 
-			<!-- Now Listening — top-right, sticky only when playing -->
-			<div class="now-listening-float" class:now-listening-sticky={isWidgetPlaying}>
-				<NowListening bind:playing={isWidgetPlaying} />
-			</div>
 		</section>
 
 		<!-- Divider 1 -->
@@ -209,32 +205,6 @@
 {/if}
 
 <style>
-	.now-listening-float {
-		position: absolute;
-		top: 1rem;
-		right: 1rem;
-		z-index: 40;
-		max-width: 20rem;
-		transition: none;
-	}
-
-	.now-listening-float.now-listening-sticky {
-		position: fixed;
-		top: 4.5rem;
-	}
-
-	@media (max-width: 767px) {
-		.now-listening-float {
-			display: none;
-		}
-	}
-
-	@media (min-width: 1280px) {
-		.now-listening-float {
-			right: 2rem;
-		}
-	}
-
 	.hero-glow {
 		position: absolute;
 		top: -40%;
