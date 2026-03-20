@@ -3,7 +3,11 @@
 	import SanityBlock from '$lib/components/sanity-block.svelte';
 	import { generateImageUrl } from '$lib/helper/image-url';
 	import Name from '$lib/components/name.svelte';
+	import TypedTagline from '$lib/components/typed-tagline.svelte';
+	import SocialLinks from '$lib/components/social-links.svelte';
+	import NowListening from '$lib/components/now-listening.svelte';
 	import Avatars from '$lib/components/avatars.svelte';
+	import LatestPosts from '$lib/components/latest-posts.svelte';
 	import Cta from '$lib/components/cta.svelte';
 	import { onMount } from 'svelte';
 	import { animate } from 'motion';
@@ -15,8 +19,47 @@
 
 	let heroEl = $state<HTMLElement>(undefined!);
 	let friendsHeadingEl = $state<HTMLElement>(undefined!);
-	let dividerEl = $state<HTMLElement>(undefined!);
+	let blogHeadingEl = $state<HTMLElement>(undefined!);
+	let divider1El = $state<HTMLElement>(undefined!);
+	let divider2El = $state<HTMLElement>(undefined!);
 	let hasPlayed = $state(false);
+
+	const EASE: [number, number, number, number] = [0.4, 0.0, 0.2, 1.0];
+
+	function fadeInOnScroll(el: HTMLElement | null, delay = 0) {
+		if (!el) return;
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (!entry.isIntersecting) return;
+					animate(
+						el,
+						{ opacity: [0, 1] },
+						{
+							duration: 0.6,
+							ease: EASE,
+							delay,
+						}
+					);
+					el.animate(
+						[
+							{ filter: 'blur(8px)', transform: 'translateY(10px)' },
+							{ filter: 'blur(0px)', transform: 'translateY(0px)' },
+						],
+						{
+							duration: 600,
+							easing: 'cubic-bezier(0.4, 0.0, 0.2, 1.0)',
+							delay: delay * 1000,
+							fill: 'forwards',
+						}
+					);
+					observer.unobserve(el);
+				});
+			},
+			{ threshold: 0.1 }
+		);
+		observer.observe(el);
+	}
 
 	onMount(() => {
 		hasPlayed = sessionStorage.getItem('page-animation-played') === 'true';
@@ -29,7 +72,7 @@
 				{ opacity: [0, 1] },
 				{
 					duration: 0.8,
-					ease: [0.4, 0.0, 0.2, 1.0] as [number, number, number, number],
+					ease: EASE,
 					delay: 0.15,
 				}
 			);
@@ -47,43 +90,10 @@
 			);
 		}
 
-		const fadeInOnScroll = (el: HTMLElement | null, delay = 0) => {
-			if (!el) return;
-			const observer = new IntersectionObserver(
-				(entries) => {
-					entries.forEach((entry) => {
-						if (!entry.isIntersecting) return;
-						animate(
-							el,
-							{ opacity: [0, 1] },
-							{
-								duration: 0.6,
-								ease: [0.4, 0.0, 0.2, 1.0] as [number, number, number, number],
-								delay,
-							}
-						);
-						el.animate(
-							[
-								{ filter: 'blur(8px)', transform: 'translateY(10px)' },
-								{ filter: 'blur(0px)', transform: 'translateY(0px)' },
-							],
-							{
-								duration: 600,
-								easing: 'cubic-bezier(0.4, 0.0, 0.2, 1.0)',
-								delay: delay * 1000,
-								fill: 'forwards',
-							}
-						);
-						observer.unobserve(el);
-					});
-				},
-				{ threshold: 0.1 }
-			);
-			observer.observe(el);
-		};
-
-		fadeInOnScroll(dividerEl, 0);
+		fadeInOnScroll(divider1El, 0);
 		fadeInOnScroll(friendsHeadingEl, 0.1);
+		fadeInOnScroll(divider2El, 0);
+		fadeInOnScroll(blogHeadingEl, 0.1);
 
 		sessionStorage.setItem('page-animation-played', 'true');
 	});
@@ -116,20 +126,28 @@
 		<!-- Hero Section -->
 		<section class="relative overflow-hidden">
 			<div class="hero-glow"></div>
-			<div class="container mx-auto max-w-3xl md:max-w-4xl px-8 pt-16 pb-12 md:pt-24 md:pb-16">
+			<div class="hero-noise"></div>
+			<div class="container mx-auto max-w-3xl md:max-w-4xl px-8 pt-16 pb-8 md:pt-24 md:pb-12 relative z-10">
 				<div
 					bind:this={heroEl}
 					style={hasPlayed ? '' : 'opacity: 0; filter: blur(8px); transform: translateY(12px);'}
 				>
 					<Name />
+					<TypedTagline />
+					<SocialLinks />
 				</div>
 			</div>
 		</section>
 
-		<!-- Divider -->
+		<!-- Now Listening -->
+		<section class="container mx-auto max-w-3xl md:max-w-4xl px-8 py-6">
+			<NowListening />
+		</section>
+
+		<!-- Divider 1 -->
 		<div class="container mx-auto max-w-3xl md:max-w-4xl px-8">
 			<div
-				bind:this={dividerEl}
+				bind:this={divider1El}
 				class="section-divider"
 				style={hasPlayed ? '' : 'opacity: 0;'}
 			></div>
@@ -147,6 +165,29 @@
 				<p class="section-subtitle">Some of the amazing people I'm connected with around the web.</p>
 			</div>
 			<Avatars />
+		</section>
+
+		<!-- Divider 2 -->
+		<div class="container mx-auto max-w-3xl md:max-w-4xl px-8">
+			<div
+				bind:this={divider2El}
+				class="section-divider"
+				style={hasPlayed ? '' : 'opacity: 0;'}
+			></div>
+		</div>
+
+		<!-- Latest Blog Posts Section -->
+		<section class="container mx-auto max-w-3xl md:max-w-4xl px-8 py-12 md:py-16">
+			<div
+				bind:this={blogHeadingEl}
+				class="section-header"
+				style={hasPlayed ? '' : 'opacity: 0; filter: blur(8px); transform: translateY(10px);'}
+			>
+				<span class="section-label">Blog</span>
+				<h2 class="section-title">Latest posts</h2>
+				<p class="section-subtitle">Thoughts, tutorials, and things I've been working on lately.</p>
+			</div>
+			<LatestPosts />
 		</section>
 
 		<!-- CTA Section -->
@@ -181,6 +222,17 @@
 		);
 		pointer-events: none;
 		z-index: 0;
+	}
+
+	.hero-noise {
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		pointer-events: none;
+		opacity: 0.035;
+		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+		background-repeat: repeat;
+		background-size: 128px 128px;
 	}
 
 	.section-divider {
